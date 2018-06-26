@@ -202,7 +202,7 @@ table { border-collapse: collapse; border-spacing: 0; }
    ========================================================================== */
 
 #header { width: 800px; margin: 0 auto 0; }
-#headerbg { background: url('https://wizardkingz.github.io/img/header.jpg') top left no-repeat; height: 300px; background-size: 100%; }
+#headerbg { background: url('https://wizardkingz.github.io/header.jpg') top left no-repeat; height: 300px; background-size: 100%; }
 #main { width: 800px; margin: auto; display: table; border-top: 1px solid black; line-height: 150%; }
 #footer { width: 800px; margin: auto; text-align: center; border-top: 1px solid black; padding: 20px 0px 20px; }
 
