@@ -34,19 +34,19 @@ disqus:
   categories: [blog, project] # only show disqus for posts that have these categories
 
 # if you don't have any of social below, comment the line
-facebook: https://www.facebook.com/johnewzhang
+facebook: johnewzhang
 # twitter: mytwitter
 # google: mygoogle
-instagram: https://www.instagram.com/johnewz/
-pinterest: https://www.pinterest.ca/washingtonz/
-linkedin: https://www.linkedin.com/in/johnew-z-07962825/
+instagram: johnewz
+pinterest: washingtonz
+linkedin: johnew-z-07962825
 # youtube: myyoutube
 # spotify: myspotify
-github: https://github.com/WizardKingZ
+github: WizardKingZ
 # gitlab: mygitlab
 # lastfm: mylastfm
 # stackoverflow: 7044681/mystackoverflow
-quora: https://www.quora.com/profile/Johnew-Zhang
+quora: Johnew-Zhang
 # reddit: username
 # medium: medium
 # vimeo: myvimeo
