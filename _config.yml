@@ -12,9 +12,9 @@ picture: assets/images/profile.jpg
 
 # If you want to include your resume, set to true
 # and specify source (external or local).
-resume: true
-resume-external: true
-resume-url: https://google.com/?q=my+resume
+# resume: False
+# resume-external: False
+# resume-url: https://google.com/?q=my+resume
 
 url: https://wizardkingz.github.io
 # your url: http://USERNAME.github.io
@@ -22,7 +22,7 @@ url: https://wizardkingz.github.io
 permalink: /:title/
 
 # To enable google analytics, supply your token below
-# analytics-google: 'UA-MYANALYTICS'
+analytics-google: 'UA-126262267-1'
 
 # To enable piwik tracking, supply your url & site ID below
 # analytics-piwik-url: 'piwik.my-host.com'
@@ -34,24 +34,24 @@ disqus:
   categories: [blog, project] # only show disqus for posts that have these categories
 
 # if you don't have any of social below, comment the line
-facebook: myfacebook
-twitter: mytwitter
+facebook: https://www.facebook.com/johnewzhang
+# twitter: mytwitter
 # google: mygoogle
 # instagram: myinstagram
 # pinterest: mypinterest
-# linkedin: mylinkedin
+linkedin: https://www.linkedin.com/in/johnew-z-07962825/
 # youtube: myyoutube
 # spotify: myspotify
-github: wizardkingz
+github: https://github.com/WizardKingZ
 # gitlab: mygitlab
 # lastfm: mylastfm
 # stackoverflow: 7044681/mystackoverflow
 # quora: userquora
 # reddit: username
-medium: medium
+# medium: medium
 # vimeo: myvimeo
 # lanyrd: mylanyrd
-email: johnew.zhang@columbia
+email: johnew.zhang@columbia.edu
 
 authors:
     johnewzhang:
