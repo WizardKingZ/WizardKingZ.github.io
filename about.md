@@ -4,17 +4,20 @@ layout: page
 ---
 ![Profile Image]({{ site.url }}/{{ site.picture }})
 
-<p></p>
+<p>Johnew Zhang is currently a second-year Master of Science in Financial Economics student at the Columbia Business School. He also holds a Bachelor degree of Mathematics in Mathematical Finance from the University of Waterloo, Canada. He is also a member of the Society of Actuaries, the Casualty Actuary Society and the International Association of Quantitative Finance. </p>
 
-<p></p>
+<p>He is passionate about solving investment problems using model-based and data-driven approaches.  He believes that models should be constructed based on fundamental economic intuition and validated by real-world data so that we can characterize proper risk premiums and alpha.</p>
 
-<h2>Technical Skills</h2>
+<p>He also believes, "'estimation' suggests a Bayesian approach to data, while 'testing' suggests a classical approach. I prefer estimation since I think researchers who want to test often choose models that are more specific than the economics require. They talk of adding restrictions for no reason other than making their models easier to reject."</p>
+
+<h2>Research Interests</h2>
 
 <ul class="skill-list">
 	<li>Theoretical/Empirical Asset Pricing</li>
-	<li>Econometrics</li>
+	<li>Game Theory</li>
+	<li>Bayesian Inference</li>
 	<li>Machine Learning/Deep Learning</li>
-	<li>Numerical Computation</li>
+	<li>Actuarial Science</li>
 </ul>
 
 
