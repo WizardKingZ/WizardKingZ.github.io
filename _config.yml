@@ -1,9 +1,9 @@
 # main text of home
 name: Johnew Zhang
-bio: A Man who travels the world eating noodles
+bio: A mathematician
 
 # twitter summary info
-description: A blog about technology and stuff related
+# description: A blog about technology and stuff related
 
 # if it's an external image, update below for true
 # better with square images
@@ -30,7 +30,7 @@ analytics-google: 'UA-126262267-1'
 
 # if you don't want comments in your posts, leave categories empty
 disqus:
-  shortname: mydisqus # enter this from your disqus account
+  shortname: johnewzhang # enter this from your disqus account
   categories: [blog, project] # only show disqus for posts that have these categories
 
 # if you don't have any of social below, comment the line
