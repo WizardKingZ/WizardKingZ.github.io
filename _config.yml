@@ -37,8 +37,8 @@ disqus:
 facebook: https://www.facebook.com/johnewzhang
 # twitter: mytwitter
 # google: mygoogle
-# instagram: myinstagram
-# pinterest: mypinterest
+instagram: https://www.instagram.com/johnewz/
+pinterest: https://www.pinterest.ca/washingtonz/
 linkedin: https://www.linkedin.com/in/johnew-z-07962825/
 # youtube: myyoutube
 # spotify: myspotify
@@ -46,7 +46,7 @@ github: https://github.com/WizardKingZ
 # gitlab: mygitlab
 # lastfm: mylastfm
 # stackoverflow: 7044681/mystackoverflow
-# quora: userquora
+quora: https://www.quora.com/profile/Johnew-Zhang
 # reddit: username
 # medium: medium
 # vimeo: myvimeo
@@ -56,7 +56,7 @@ email: johnew.zhang@columbia.edu
 authors:
     johnewzhang:
         name: Johnew Zhang
-        bio: A Man who travels the world eating noodles
+        bio: A mathematician
         external-image: false
         picture: assets/images/profile.jpg
         twitter: johnewzhang
