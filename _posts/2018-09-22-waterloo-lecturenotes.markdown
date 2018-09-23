@@ -20,13 +20,13 @@ description: University of Waterloo lecture notes and Professional exam notes
 <ul>
 	<li>Algebra
       <ul>
-      <li><a href="http://WizardKingZ.github.io/assets/pdfs/Algebra Notes .pdf">Chapter 1: The Introduction to Abstract Algebra</a></li>
-      <li><a href="http://WizardKingZ.github.io/assets/pdfs/Algebra Notes 2.pdf">Chapter 2: Modular Arithmetic</a></li>
-      <li><a href="http://WizardKingZ.github.io/assets/pdfs/Algebra Notes 3.pdf">Chapter 3: Cryptography</a></li>
-      <li><a href="http://WizardKingZ.github.io/assets/pdfs/Algebra Notes 4.pdf">Chapter 4: Multiplicative Functions</a></li>
-      <li><a href="http://WizardKingZ.github.io/assets/pdfs/Algebra Notes 5.pdf">Chapter 5: Polynomials</a></li>
-      <li><a href="http://WizardKingZ.github.io/assets/pdfs/Algebra Notes 6.pdf">Chapter 6: Modular Arithmetic for Polynomial</a></li>
-      <li><a href="http://WizardKingZ.github.io/assets/pdfs/Complex Number.pdf">Complex Number</a></li>
+      <li><a href="http://WizardKingZ.github.io/assets/pdfs/Algebra Notes/Algebra Notes .pdf">Chapter 1: The Introduction to Abstract Algebra</a></li>
+      <li><a href="http://WizardKingZ.github.io/assets/pdfs/Algebra Notes/Algebra Notes 2.pdf">Chapter 2: Modular Arithmetic</a></li>
+      <li><a href="http://WizardKingZ.github.io/assets/pdfs/Algebra Notes/Algebra Notes 3.pdf">Chapter 3: Cryptography</a></li>
+      <li><a href="http://WizardKingZ.github.io/assets/pdfs/Algebra Notes/Algebra Notes 4.pdf">Chapter 4: Multiplicative Functions</a></li>
+      <li><a href="http://WizardKingZ.github.io/assets/pdfs/Algebra Notes/Algebra Notes 5.pdf">Chapter 5: Polynomials</a></li>
+      <li><a href="http://WizardKingZ.github.io/assets/pdfs/Algebra Notes/Algebra Notes 6.pdf">Chapter 6: Modular Arithmetic for Polynomial</a></li>
+      <li><a href="http://WizardKingZ.github.io/assets/pdfs/Algebra Notes/Complex Number.pdf">Complex Number</a></li>
     </ul></li>
   <li><a href="http://WizardKingZ.github.io/assets/pdfs/MATH_351_note.pdf">Real Analysis</a></li>
   <li><a href="http://WizardKingZ.github.io/assets/pdfs/CS 241 Note.pdf">Compilers</a></li>
