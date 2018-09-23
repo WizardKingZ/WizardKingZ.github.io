@@ -17,5 +17,5 @@ description: PhD Course Lecture Notes Series
 <h2>Lecture Notes</h2>
 
 <ul>
-	<li><a href="{{ site.url }}/assets/pdfs/Empirical Asset Pricing.pdf">Empirical Asset Pricing</a></li>
+	<li><a href="WizardKingZ.github.io/assets/pdfs/Empirical Asset Pricing.pdf">Empirical Asset Pricing</a></li>
 </ul>
