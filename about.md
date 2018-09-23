@@ -22,10 +22,12 @@ layout: page
 
 <h2>Publications</h2>
 
-<ul class="skill-list">
-	<li><a href="https://github.com/WizardKingZ/variational_autoencoder">Variational Autoencoder</a></li>
-	<li><a href="https://github.com/WizardKingZ/time_series_outlier_detection">Time Series Outlier Detection</a></li>
+<ul>
+	<li><a href="https://www.tandfonline.com/doi/abs/10.1080/10920277.2017.1387573">Short Positions in the First Principal Component Portfolio, NAAJ, V22 Issue 2</a></li>
+	<li><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2493844">Correlation Matrices with the Perron-Frobenius Property, SSRN</a></li>
 </ul>
+
+
 <h2>Computer Skills</h2>
 
 <ul class="skill-list">
@@ -39,9 +41,9 @@ layout: page
 
 <h2>Projects</h2>
 
-<ul>
-	<li><a href="https://www.tandfonline.com/doi/abs/10.1080/10920277.2017.1387573">Short Positions in the First Principal Component Portfolio, NAAJ, V22 Issue 2</a></li>
-	<li><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2493844">Correlation Matrices with the Perron-Frobenius Property, SSRN</a></li>
+<ul class="skill-list">
+	<li><a href="https://github.com/WizardKingZ/variational_autoencoder">Variational Autoencoder</a></li>
+	<li><a href="https://github.com/WizardKingZ/time_series_outlier_detection">Time Series Outlier Detection</a></li>
 </ul>
 
 <h2>Interests</h2>
