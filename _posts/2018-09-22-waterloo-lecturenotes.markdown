@@ -28,7 +28,14 @@ description: University of Waterloo lecture notes and Professional exam notes
       <li><a href="http://WizardKingZ.github.io/assets/pdfs/Algebra Notes/Algebra Notes 6.pdf">Chapter 6: Modular Arithmetic for Polynomial</a></li>
       <li><a href="http://WizardKingZ.github.io/assets/pdfs/Algebra Notes/Complex Number .pdf">Complex Number</a></li>
     </ul></li>
+<li><a href="http://WizardKingZ.github.io/assets/pdfs/MATH147.pdf">Calculus 1 (Credit to Eric Langlois)</a></li>
+<li><a href="http://WizardKingZ.github.io/assets/pdfs/MATH148.pdf">Calculus 2 (Credit to Eric Langlois)</a></li>
+<li><a href="http://WizardKingZ.github.io/assets/pdfs/MATH146.pdf">Linear Algebra (Credit to Eric Langlois)</a></li>
+<li><a href="http://WizardKingZ.github.io/assets/pdfs/MATH245.pdf">Abstract Linear Algebra (Credit to Eric Langlois)</a></li>
+<li><a href="http://WizardKingZ.github.io/assets/pdfs/MATH247.pdf">Introduction to Real Analysis (Credit to Eric Langlois)</a></li>
+<li><a href="http://WizardKingZ.github.io/assets/pdfs/MATH249.pdf">Introduction to Combinatorics (Credit to Eric Langlois)</a></li>
   <li><a href="http://WizardKingZ.github.io/assets/pdfs/PMATH_351_note.pdf">Real Analysis</a></li>
+  <li><a href="http://WizardKingZ.github.io/assets/pdfs/PMATH 450.pdf">Lebesgue Integration and Fourier Analysis (Credit to ML Baker)</a></li>
   <li><a href="http://WizardKingZ.github.io/assets/pdfs/CS 241 Note.pdf">Compilers</a></li>
   <li><a href="http://WizardKingZ.github.io/assets/pdfs/CO_255_notes.pdf">Introduction to Optimization</a></li>
 	<li><a href="http://WizardKingZ.github.io/assets/pdfs/AMATH242_notes.pdf">Numerical Computation</a></li>
