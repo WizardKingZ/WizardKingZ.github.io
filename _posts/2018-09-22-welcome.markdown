@@ -1,0 +1,14 @@
+---
+title: "Welcome!"
+layout: post
+date: 2018-09-22 21:10
+headerImage: false
+tag:
+- welcome
+star: true
+category: blog
+author: johnewzhang
+description: Welcome!
+---
+
+Welcome to my personal website! I plan to update this site regularly throughout my time as a M.S. student at Columbia University, where I am focusing on financial economics. I hope to not only post about the progress of my financial economics research, but to also explore other ideas at the forefront of machine learning and make them more accessible, whether that be in the form of paper summaries or Python tutorials. Look for the website to pick up more content in the upcoming months and years.
