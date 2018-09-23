@@ -17,5 +17,11 @@ description: PhD Course Lecture Notes Series
 <h2>Lecture Notes</h2>
 
 <ul>
+	<li><a href="http://WizardKingZ.github.io/assets/pdfs/Finance Theory.pdf">Finance Theory</a></li>
+	<li><a href="http://WizardKingZ.github.io/assets/pdfs/Introduction to Econometrics.pdf">Introduction to Econometrics</a></li>
+	<li><a href="http://WizardKingZ.github.io/assets/pdfs/Microeconomics Theory.pdf">Microeconomics Theory</a></li>
+	<li><a href="http://WizardKingZ.github.io/assets/pdfs/Time Series.pdf">Finanical Econometrics-Time Series</a></li>
 	<li><a href="http://WizardKingZ.github.io/assets/pdfs/Empirical Asset Pricing.pdf">Empirical Asset Pricing</a></li>
+	<li><a href="http://WizardKingZ.github.io/assets/pdfs/Market Microstructure.pdf">Market Microstructure</a></li>
+	
 </ul>
