@@ -1,0 +1,22 @@
+---
+title: "Variational Autoencoder"
+layout: post
+date: 2018-09-22 21:10
+tag: 
+  - Variational Autoencoder
+  - Probablistics Machine Learning
+  - Deep Learning
+headerImage: true
+projects: true
+hidden: true # don't count this post in blog pagination
+description: "Variational Autoencoder"
+category: project
+author: johnewzhang
+externalLink: false
+---
+
+<a href="http://WizardKingZ.github.io/assets/pdfs/Final Report.pdf">Variational Autoencoder</a>
+
+---
+
+
