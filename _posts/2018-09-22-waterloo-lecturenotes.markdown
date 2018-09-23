@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "University of Waterloo lecture notes and Professional exam notes"
 layout: post
 blog: true
 date: 2018-09-22 22:00
