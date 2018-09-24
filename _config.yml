@@ -35,7 +35,7 @@ analytics-google: 'UA-126262267-1'
 
 # if you don't have any of social below, comment the line
 facebook: johnewzhang
-# twitter: mytwitter
+twitter: ZhangJohnew
 # google: mygoogle
 instagram: johnewz
 pinterest: washingtonz
@@ -54,24 +54,18 @@ quora: Johnew-Zhang
 email: johnew.zhang@columbia.edu
 
 authors:
-    johndoe:
-        name: John Doe
-        bio: A Man who travels the world eating noodles
+    projohnewzhang:
+        name: Johnew Zhang
+        bio: Researcher 
         external-image: false
-        picture: assets/images/profile.jpg
-        twitter: johndoe
-    jamesfoster:
-        name: James Foster
-        bio: A Man who develops software with coffee
-        external-image: false
-        picture: assets/images/james.jpg
-        twitter: jamesfoster
+        picture: assets/images/professional.jpg
+        twitter: ZhangJohnew
     johnewzhang:
         name: Johnew Zhang
-        bio: A mathematician
+        bio: Researcher
         external-image: false
         picture: assets/images/profile.jpg
-        twitter: Imagination is more important than knowledge
+        twitter: ZhangJohnew
 
 # do you want a larger site? change the option below
 # options: [normal, large] | default: normal
