@@ -11,7 +11,7 @@ projects: true
 hidden: true # don't count this post in blog pagination
 description: "Variational Autoencoder"
 category: project
-author: johnewzhang
+author: projohnewzhang
 externalLink: false
 ---
 
