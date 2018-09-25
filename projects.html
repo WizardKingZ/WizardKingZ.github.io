@@ -3,9 +3,6 @@ layout: page
 title: Projects
 ---
 <section class="list">
-   {% if site.posts.size == 0 %}
-		<p class="text-center">Nothing published yet!</p>
-    {% elsif site.paginate %}
     {% for post in site.posts %}
         {% if post.projects %}
             <div class="item {% if post.star %}star{% endif %}">
@@ -16,15 +13,4 @@ title: Projects
             </div>
         {% endif %}
     {% endfor %}
-    
-    {% include pagination.html%}
-	{% else %}
-		{% for post in site.posts %}
-			{% if post.projects %}
-				{% if post.hidden != true %}
-					{% include project-post.html %}
-				{% endif %}
-			{% endif %}
-		{% endfor %}
-    {% endif %}
 </section>
