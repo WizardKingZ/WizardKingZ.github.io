@@ -19,7 +19,7 @@ title: Projects
 		{% for post in site.posts %}
 			{% if post.category == 'projects' %}
 				{% if post.hidden != true %}
-					{% include blog-post.html %}
+					{% include project-post.html %}
 				{% endif %}
 			{% endif %}
 		{% endfor %}
