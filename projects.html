@@ -20,7 +20,7 @@ title: Projects
     {% include pagination.html%}
 	{% else %}
 		{% for post in site.posts %}
-			{% if post.category == 'projects' %}
+			{% if post.projects %}
 				{% if post.hidden != true %}
 					{% include project-post.html %}
 				{% endif %}
