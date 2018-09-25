@@ -15,20 +15,6 @@ author: projohnewzhang
 externalLink: false
 ---
 
----
-title: "Test"
-layout: post
-blog: true
-date: 2018-09-24 21:20
-headerImage: false
-tag:
-- test
-star: true
-category: blog
-author: johnewzhang
-description: Test
----
-
 As images can be considered as realizations drawn from a latent variable model, we are implementing a variational autoencoder using neural networks as the variational family to approximate the Bayesian representation. Unlike the other parametric distribution, neural networks can approximate arbitrary distribution reasonably well. In this project, we are also interested in examining the effectiveness of such encoders on the SVHN dataset. By comparing different architectures, we hope to understand how the dimension of the latent space affects the learned representation and visualize the learned manifold for low dimensional latent representations. Lastly, we will do a comparison among different variational autoencoders.
 
 --- 
