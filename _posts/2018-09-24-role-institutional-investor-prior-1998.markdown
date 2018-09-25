@@ -5,7 +5,9 @@ blog: true
 date: 2018-09-24 21:20
 headerImage: false
 tag:
-- test
+  - finance
+  - panel regression
+  - institutional investor
 star: true
 category: blog
 author: johnewzhang
