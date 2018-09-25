@@ -17,7 +17,7 @@ title: Projects
     {% include pagination.html%}
 	{% else %}
 		{% for post in site.posts %}
-			{% if post.category == 'blog' %}
+			{% if post.category == 'projects' %}
 				{% if post.hidden != true %}
 					{% include blog-post.html %}
 				{% endif %}
