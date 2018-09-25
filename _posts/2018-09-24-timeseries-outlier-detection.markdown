@@ -1,16 +1,15 @@
 ---
 title: "Multi-Variate Time Series Outlier Detection"
 layout: post
+projects: true
 date: 2018-09-24 21:10
+headerImage: false
 tag: 
   - Time Series
   - Intervention Analysis
-headerImage: true
-projects: true
-description: Multi-Variate Time Series Outlier Detection
 category: projects
 author: projohnewzhang
-externalLink: false
+description: Multi-Variate Time Series Outlier Detection
 ---
 
 Let $$x_t =(x_{1t}, \cdots, x_{kt})'$$ be a k-dimensional time series that follows a vector autoregressive integrated moving-average, ARIMA, model
