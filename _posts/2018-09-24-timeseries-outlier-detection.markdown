@@ -179,9 +179,22 @@ for (i in 1:length(res)) {
 ```
 
 Finally, you can obtain the result as follow
-<p align="center"> 
-<img src="{{site.base_url}}/assets/images/timeseriesoutlierdetection/image1.png">
-</p>
+
+\begin{array}{c|c} 
+\text{Time Index} & \text{Type} \\\
+\hline 43 & \text{MTC} \\\
+55 & \text{MTC} \\\
+265 & \text{MIO} \\\
+113 & \text{MTC} \\\
+199 & \text{MTC} \\\
+235 & \text{MLS} \\\
+91 & \text{MTC} \\\
+262 & \text{MIO} \\\
+288 & \text{MLS} \\\
+287 & \text{MLS} \\\
+82 & \text{MLS} \\\
+\end{array}
+
 ---
 ## References
 
