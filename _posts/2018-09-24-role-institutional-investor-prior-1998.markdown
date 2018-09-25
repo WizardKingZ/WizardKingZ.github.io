@@ -8,7 +8,7 @@ tag:
   - finance
   - panel regression
   - institutional investor
-star: true
+star: false
 category: blog
 author: projohnewzhang
 description: The Role of Institutional Investor Prior 1998
