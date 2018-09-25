@@ -10,7 +10,7 @@ tag:
   - institutional investor
 star: true
 category: blog
-author: johnewzhang
+author: projohnewzhang
 description: The Role of Institutional Investor Prior 1998
 ---
 
