@@ -44,13 +44,14 @@ $$y_t = x_t + \alpha(B) \omega \xi_t^{(h)},$$
 
 where 
 
-| $$\alpha(B)$$ | Type | 
-| ------------- | ----- |
-| $$\Psi (B)$$ | multivariate innovational outlier |
-| $$I$$ | multivariate additive outlier |
-| $$(I - B)^{-1}$$  | multivariate level shift |
-| $$\{D(\delta)\}^{-1}$$ | multivariate temporary change |
-
+\begin{array}{c|c}
+$$\alpha(B)$$ &  \text{Type} \\\  
+\hline
+$$\Psi (B)$$ & \text{multivariate innovational outlier} \\\
+$$I$$ & \text{multivariate additive outlier} \\\
+$$(I - B)^{-1}$$  &  \text{multivariate level shift} \\\
+$$\{D(\delta)\}^{-1}$$  & \text{multivariate temporary change} \\\
+\end{array}
 
 Here, $$\Psi$$ is the MA representation of VARMA model. Next, we can multiply above equation by $$\Pi(B)$$ and subtract a constant term from both sides, we have
 
