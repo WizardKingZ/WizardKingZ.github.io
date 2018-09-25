@@ -9,7 +9,7 @@ tag:
 headerImage: true
 projects: true
 description: "Variational Autoencoder"
-category: project
+category: projects
 author: projohnewzhang
 externalLink: false
 ---
