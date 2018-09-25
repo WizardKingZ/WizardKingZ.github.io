@@ -45,7 +45,7 @@ He also believes,
 
 <ul class="skill-list">
 	<li><a href="https://wizardkingz.github.io/VAE/">Variational Autoencoder</a></li>
-	<li><a href="https://github.com/WizardKingZ/time_series_outlier_detection">Time Series Outlier Detection</a></li>
+	<li><a href="https://wizardkingz.github.io/timeseries-outlier-detection/">Time Series Outlier Detection</a></li>
 </ul>
 
 <h2>Interests</h2>
