@@ -12,7 +12,7 @@ tag:
 star: false
 category: blog
 author: johnewzhang
-description: University of Waterloo lecture notes and Professional exam notes
+description: University of Waterloo Lecture Notes and Professional Exam Notes
 ---
 
 <h2>Lecture Notes</h2>
