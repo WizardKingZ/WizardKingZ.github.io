@@ -132,7 +132,7 @@ The variational autoencoder based on Kingma, Welling (2014) can learn the SVHN d
 
 My code is available <a href="https://github.com/WizardKingZ/variational_autoencoder">here</a>.
 
-# Reference
+## References
 
 * [stat.ML] Diederik P. Kingma and Max Welling, Auto-Encoding Variational Bayes, 2014. 
 * [stat.ML] Carl Doersch, Tutorial on Variational Autoencoders, 2016.
