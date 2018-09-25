@@ -7,7 +7,6 @@ tag:
   - Intervention Analysis
 headerImage: true
 projects: true
-hidden: true # don't count this post in blog pagination
 description: Multi-Variate Time Series Outlier Detection
 category: project
 author: projohnewzhang
