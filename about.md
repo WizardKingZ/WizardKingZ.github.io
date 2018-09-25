@@ -8,7 +8,9 @@ layout: page
 
 <p>He is passionate about solving investment problems using model-based and data-driven approaches.  He believes that models should be constructed based on fundamental economic intuition and validated by real-world data so that we can characterize proper risk premiums and alpha.</p>
 
-<p>He also believes, "'estimation' suggests a Bayesian approach to data, while 'testing' suggests a classical approach. I prefer estimation since I think researchers who want to test often choose models that are more specific than the economics require. They talk of adding restrictions for no reason other than making their models easier to reject."</p>
+He also believes, 
+
+>"Estimation" suggests a Bayesian approach to data, while "testing" suggests a classical approach. I prefer estimation since I think researchers who want to test often choose models that are more specific than the economics require. They talk of adding restrictions for no reason other than making their models easier to reject.
 
 <h2>Research Interests</h2>
 
