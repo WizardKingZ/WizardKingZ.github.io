@@ -128,7 +128,7 @@ __Step 5__: Once an outlier is detected, we will adjust the original time series
 One can download the "outlier_detection.R" code <a href="https://github.com/WizardKingZ/time_series_outlier_detection">here</a>. Before using this program, please make sure MTS library is also installed. We will use the gas furnace data as an example. First, let's load the data
 
 ```R 
-rate<-gas.furnace$InputGasRate
+rate <- gas.furnace$InputGasRate
 co2 <- gas.furnace$CO2
 ```
 Then we will use the following blocks to get the outlier
