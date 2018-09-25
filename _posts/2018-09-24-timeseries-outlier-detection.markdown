@@ -22,11 +22,11 @@ where
 
 $$\Phi(B) = I - \sum_{i=1}^p \Phi_iB^p, \Theta(B) = I - \sum_{i=1}^p \Theta_iB^p$$ 
 
-are $$k \times k$$ matrix polynomials of finite degrees $$p$$ and $$q$$, $$B$$ is the backshift operator such that $$Bx_t = x_{t-1}$$, $$c$$ is a k-dimensional constant vector, and $$\{\epsilon = (\epsilon_{1t}, \cdots, \epsilon_{kt})'\}$$ is a sequence of independent and identically distributed Gaussian random vector with zero mean and positive-definite covariance matrix $$\Sigma$$. We assume that $$\Phi(B)$$ and $$\Theta(B)$$ are left caprice and that all of the zeros of the determinants $$\vert\Phi(B)\vert$$ and $$\vert\Theta(B)\vert$$ are on or outside the unit circle.  
+are $$k \times k$$ matrix polynomials of finite degrees $$p$$ and $$q$$, $$B$$ is the backshift operator such that $$Bx_t = x_{t-1}$$, $$c$$ is a k-dimensional constant vector, and $$\{\varepsilon = (\varepsilon_{1t}, \cdots, \varepsilon_{kt})'\}$$ is a sequence of independent and identically distributed Gaussian random vector with zero mean and positive-definite covariance matrix $$\Sigma$$. We assume that $$\Phi(B)$$ and $$\Theta(B)$$ are left caprice and that all of the zeros of the determinants $$\vert\Phi(B)\vert$$ and $$\vert\Theta(B)\vert$$ are on or outside the unit circle.  
 
 Define the autoregressive representation as
 
-$$\Pi(B)x_t = c_0 +\epsilon_t$$ 
+$$\Pi(B)x_t = c_0 +\varepsilon_t$$ 
 
 where 
 
@@ -34,7 +34,7 @@ $$\Pi(B) = I - \sum_{i=1}^{\infty} \Pi_i B^i = \{\Theta(B)\}^{-1}\Phi(B)$$
 
 Define the moving-average representation as 
 
-$$x_t = c^* +\Psi(B) \epsilon_t$$
+$$x_t = c^* +\Psi(B) \varepsilon_t$$
 
 where 
 
@@ -97,7 +97,7 @@ where $$x_t$$ is the adjusted series and $$y_t$$ is the original series.
 
 Suppose observed time series has no outlier and provide model $$ARMA(p, q)$$
 
-__Step 1__: Use ML estimation to estimate $$\Phi, \Theta$$ and $$\Sigma$$. (MTS provides VARMA function to perform conditional ML estimation. As a result, the first p residuals are assumed to be zero)
+__Step 1__: Use Maximum-Likelihood estimation to estimate $$\Phi, \Theta$$ and $$\Sigma$$. 
 
 __Step 2__:  Use resulted estimation to calculate estimated residuals, $$\hat{a}_t$$ and the estimated AR representation, $$\hat{\Pi}_i$$
 
