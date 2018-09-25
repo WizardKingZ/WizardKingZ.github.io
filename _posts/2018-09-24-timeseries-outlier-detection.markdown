@@ -14,13 +14,13 @@ description: Multi-Variate Time Series Outlier Detection
 
 Let $$x_t =(x_{1t}, \cdots, x_{kt})'$$ be a k-dimensional time series that follows a vector autoregressive integrated moving-average, ARIMA, model
 
-$$\Phi(B) x_t = c + \Theta(B)\epsilon_t,$$
+$$\Phi(B) x_t = c + \Theta(B)\varepsilon_t,$$
 
 where 
 
 $$\Phi(B) = I - \sum_{i=1}^p \Phi_iB^p, \Theta(B) = I - \sum_{i=1}^p \Theta_iB^p$$ 
 
-are $$k \times k$$ matrix polynomials of finite degrees $$p$$ and $$q$$, $$B$$ is the backshift operator such that $$Bx_t = x_{t-1}$$, $$c$$ is a k-dimensional constant vector, and $$\{\varepsilon = (\varepsilon_{1t}, \cdots, \varepsilon_{kt})'\}$$ is a sequence of independent and identically distributed Gaussian random vector with zero mean and positive-definite covariance matrix $$\Sigma$$. We assume that $$\Phi(B)$$ and $$\Theta(B)$$ are left caprice and that all of the zeros of the determinants $$\vert\Phi(B)\vert$$ and $$\vert\Theta(B)\vert$$ are on or outside the unit circle.  
+are $$k \times k$$ matrix polynomials of finite degrees $$p$$ and $$q$$, $$B$$ is the backshift operator such that $$Bx_t = x_{t-1}$$, $$c$$ is a $$k$$-dimensional constant vector, and $$\{\varepsilon = (\varepsilon_{1t}, \cdots, \varepsilon_{kt})'\}$$ is a sequence of independent and identically distributed Gaussian random vector with zero mean and positive-definite covariance matrix $$\Sigma$$. We assume that $$\Phi(B)$$ and $$\Theta(B)$$ are left caprice and that all of the zeros of the determinants $$\vert\Phi(B)\vert$$ and $$\vert\Theta(B)\vert$$ are on or outside the unit circle.  
 
 Define the autoregressive representation as
 
@@ -54,7 +54,7 @@ I & \text{multivariate additive outlier} \\\
 
 Here, $$\Psi$$ is the MA representation of VARMA model. Next, we can multiply above equation by $$\Pi(B)$$ and subtract a constant term from both sides, we have
 
-$$a_t = \epsilon_t + \Pi(B)\alpha(B)\omega \xi_t^{(h)}$$
+$$a_t = \varepsilon_t + \Pi(B)\alpha(B)\omega \xi_t^{(h)}$$
 
 Here let's write $$\Pi(B)\alpha(B)$$ as $$\Pi^*(B)$$. Therefore, if we suppose $$\hat{a}_t$$ is the estimated residuals and $$\hat{\Pi}_i$$ is the estimated coefficients of the autoregressive representation, we have the following
 
