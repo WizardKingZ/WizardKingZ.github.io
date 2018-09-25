@@ -107,7 +107,7 @@ __Step 4__:  To test the significance of a multivariate outlier at time index h,
 * $$J_{i,h} = \hat{\omega}_{i, h}'\Sigma_{i, h}^{-1}\hat{\omega}_{i, h}$$ where $$i = I, A, L \text{ or } T$$.  (chi-square random variable with $$k$$ degrees of freedom)
 * The maximum $$z$$-statistics
         
-$$C_{i, h} =\frac{\max_{1 \leq j \leq k} \vert\hat{\omega}_{j, i, h}}{\sqrt{\sigma_{j, i, h}}}$$
+$$C_{i, h} =\frac{\max_{1 \leq j \leq k} \vert\hat{\omega}_{j, i, h}\vert}{\sqrt{\sigma_{j, i, h}}}$$
 
 where $$\hat{\omega}_{j, i, h}$$ and $$\sigma_{j, i, h}$$ are the $$n$$th element of $$\hat{\omega}_{i, h}$$ and the $$(j, j)$$th element of $$\Sigma_{i, h}$$ respectively. 
 
