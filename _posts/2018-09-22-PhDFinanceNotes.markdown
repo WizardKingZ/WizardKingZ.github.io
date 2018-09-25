@@ -8,7 +8,7 @@ tag:
 - academicnotes
 - finance
 - economics
-star: true
+star: false
 category: blog
 author: johnewzhang
 description: PhD Course Lecture Notes Series

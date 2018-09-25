@@ -6,7 +6,7 @@ date: 2018-09-22 21:10
 headerImage: false
 tag:
 - welcome
-star: true
+star: false
 category: blog
 author: johnewzhang
 description: Welcome!
