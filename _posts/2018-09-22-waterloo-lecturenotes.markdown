@@ -9,7 +9,7 @@ tag:
 - waterloo
 - cas
 - soa
-star: true
+star: false
 category: blog
 author: johnewzhang
 description: University of Waterloo lecture notes and Professional exam notes
