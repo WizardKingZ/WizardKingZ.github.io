@@ -130,4 +130,6 @@ The variational autoencoder based on Kingma, Welling (2014) can learn the SVHN d
 
 ---
 
+My code is available <a href="https://github.com/WizardKingZ/variational_autoencoder">here</a>.
+
 
