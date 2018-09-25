@@ -8,7 +8,7 @@ tag:
 headerImage: true
 projects: true
 description: Multi-Variate Time Series Outlier Detection
-category: project
+category: projects
 author: projohnewzhang
 externalLink: false
 ---
