@@ -45,11 +45,11 @@ Based on Doersch (2016), we can have the following relationship for our KL metri
 
 $$\log p(X) - D_{KL}(q_{\theta}(z\vert X)\|p_{\phi}(z\vert X)) = E_q[\log p_{\phi}(X\vert z)] - D_{KL}(q_{\theta}(z\vert X)\|p(z))$$
 
-This is the core of the variational autoencoder used in the report. Since $$D_{KL}(q_{\theta}(z \vert X)\|p_{\phi}(z\vert X))$$ is non-negative and, in general, needs to be minimized, the right hand side acts as the lower bound of the log-likelihood function of the marginal image distribution. Let's denote it as
+This is the core of the variational autoencoder used in the report. Since $$D_{KL}(q_{\theta}(z \vert X)\|p_{\phi}(z\vert X))$$ is non-negative and, in general, needs to be minimized, the right-hand side acts as the lower bound of the log-likelihood function of the marginal image distribution. Let's denote it as
 
 $$\mathcal{L}(X, \phi, \theta) = E_q[\log p_{\phi}(X \vert z)] - D_{KL}(q_{\theta}(z\vert X)\|p(z))$$
 
-Intuitively, we can maximize the log-likelihood function, that is, maximize the $$\mathcal{L}(X, \phi, \theta)$$. $$\mathcal{L}(X, \phi, \theta)$$ consists of two parts, the reconstruction error and the the KL divergence of the approximate posterior from the prior. 
+Intuitively, we can maximize the log-likelihood function, that is, maximize the $$\mathcal{L}(X, \phi, \theta)$$. $$\mathcal{L}(X, \phi, \theta)$$ consists of two parts, the reconstruction error and the KL divergence of the approximate posterior from the prior. 
 
 One can use Monte-Carlo EM method to estimate the $$\theta$$ and $$\phi$$ but it can be slow. Here, we will use the stochastic gradient descent through the backpropagation in a neural network. In order to do this, we have to use a reparameterization trick to provide inputs $$z$$ for $$p_{\phi}(X\vert z)$$. Now consider two networks, the autoencoding network (encoder) and the reconstruction network (decoder). The encoder takes a set of image and outputs its hidden features; the decoder consumes some hidden features sampled from the prior distribution of the latent state variables and generates parameters in the distribution $$p_{\phi}(X\vert z)$$. Kingma, Welling (2014) says the sampled input to the decoder, $$\mathbf{z}$$ can be expressed as a deterministic variable $$g_{\theta}(x, \varepsilon)$$, where $$\varepsilon$$ is called an auxiliary variable. For example, in the univariate Gaussian case, $$\mathbf{z} = \mu + \sigma \varepsilon$$, where $$\varepsilon \sim N(0, 1)$$. 
 
@@ -59,7 +59,7 @@ Typically, people use Gaussian as the variational inference family for Encoder d
 
 $$\frac{1}{2}\left(tr(\Sigma\left(X, \theta)^{-1}\Sigma\right)+(\mu(X, \theta) - \mu)'\Sigma(X, \theta)(\mu(X, \theta) - \mu) - k + \log\left(\frac{\vert\Sigma(X, \theta)\vert}{\vert\Sigma\vert}\right)\right)$$
 
-where $$k$$ is the dimension of number of latent features. 
+where $$k$$ is the dimension of the number of latent features. 
 
 If we assume the prior distribution of the latent state model is a standard multivariate Gaussian, then the KL divergence is 
 
@@ -69,7 +69,7 @@ For the reparameterization part, we can sample from $$N(\mu(X, \theta), \Sigma(X
 
 $$\mathbf{z} = \mu(X, \theta) + \sqrt{tr(\Sigma(X, \theta))}\varepsilon$$
 
-Lastly, the distribution of the decoder can be chosen as either Bernoulli or Gaussian. For Gaussian, we use diagonal matrix for its covariance matrix. 
+Lastly, the distribution of the decoder can be chosen as either Bernoulli or Gaussian. For Gaussian, we use a diagonal matrix for its covariance matrix. 
 
 ## Empirical Analysis
 
@@ -77,7 +77,7 @@ In this section, we will discuss the details of our experiment on the MNIST and 
 
 ### MNIST Data 
 
-In the first experiment on the MNIST dataset, we used a simple fully connected neural network for Gaussian encoder and Bernoulli decoder for various dimensionalities of the latent space. In Figure 1, we have an average result from the generative decoder based on the sample data shown in 1a. As the dimension increases in the latent space, we see a significant improvement on the decoder. In the later SVHN model, we will observe similar behavior. In the 2 dimensional space, it appears only 0, 1, 3, 8 and 9 are recognized. In 1c, 6 and 7 get recognized. In 1d and 1e, all digits can be represented by the decoder.
+In the first experiment on the MNIST dataset, we used a simple fully connected neural network for Gaussian encoder and Bernoulli decoder for various dimensionalities of the latent space. In Figure 1, we have an average result from the generative decoder based on the sample data shown in 1a. As the dimension increases in the latent space, we see a significant improvement on the decoder. In the later SVHN model, we will observe a similar behavior. In the 2 dimensional space, it appears only 0, 1, 3, 8 and 9 are recognized. In 1c, 6 and 7 get recognized. In 1d and 1e, all digits can be represented by the decoder.
 
 <p align="center"> 
 <img src="{{site.base_url}}/assets/images/vae/image2.png">
@@ -91,7 +91,7 @@ In Figure 2, 2a shows the space learned by our autoencoder. It is consistent fro
 
 ### SVHN Data
 
-It is natural to start from the model used in the MNIST case and then progress towards more complicated architectures. Hence, we will start our experiment from fully connected networks to convolutional network. 
+It is natural to start from the model used in the MNIST case and then progress towards more complicated architectures. Hence, we will start our experiment from fully connected networks to a convolutional network. 
 
 <p align="center"> 
 <img src="{{site.base_url}}/assets/images/vae/image4.png">
@@ -115,13 +115,13 @@ Convolutional neural networks are good at doing image processing and computer vi
 
 #### Experiments with Bernoulli Decoder and Convolutional Neural Network
 
-Let's continue with the Bernoulli decoder. In Figure 2c, the learned manifold looks similar to 2b. In addition, color blue is also included. This can be considered as the feature of color spectrum. While increasing the dimensions, we do observe the vast improvement on generated images in Figure 4. At 100D latent space, the generated images are almost the same as the sample data. 
+Let's continue with the Bernoulli decoder. In Figure 2c, the learned manifold looks similar to 2b. In addition, the color blue is also included. This can be considered as the feature of the color spectrum. While increasing the dimensions, we do observe the vast improvement on generated images in Figure 4. At 100D latent space, the generated images are almost the same as the sample data. 
 
 #### Experiments with Gaussian Decoder and Convolutional Neural Network
 
-Lastly, since RGB is not a probability, Gaussian decoders may be more appropriate than Bernoulli decoders. From Figure 5, under the same neural network architecture, the performance is similar to the Bernoulli version so there might not be an advantage using Gaussian. However, one issue for Gaussian is that it can produce negative means and we have to apply sigmoid functions on the means so they are forced to be between 0 and 1. 
+Lastly, since RGB is not a probability, Gaussian decoders may be more appropriate than Bernoulli decoders. From Figure 5, under the same neural network architecture, the performance is similar to the Bernoulli version so there might not be an advantage of using Gaussian. However, one issue for Gaussian is that it can produce negative means and we have to apply sigmoid functions on the means so they are forced to be between 0 and 1. 
 
-Interestingly, in Figure 2d, the learned manifold with 2 latent features under Gaussian assumption produce more separation between light and dark colors, and the digit 8 is more apparent. It is arguable that the autoencoder with a Gaussian decoder may learn faster than the ones with Bernoulli. 
+Interestingly, in Figure 2d, the learned manifold with 2 latent features under the Gaussian assumption produce more separation between light and dark colors, and the digit 8 is more apparent. It is arguable that the autoencoder with a Gaussian decoder may learn faster than the ones with Bernoulli. 
 
 
 # Conclusion 
@@ -132,4 +132,7 @@ The variational autoencoder based on Kingma, Welling (2014) can learn the SVHN d
 
 My code is available <a href="https://github.com/WizardKingZ/variational_autoencoder">here</a>.
 
+# Reference
 
+* [stat.ML] Diederik P. Kingma and Max Welling, Auto-Encoding Variational Bayes, 2014. 
+* [stat.ML] Carl Doersch, Tutorial on Variational Autoencoders, 2016.
