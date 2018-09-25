@@ -1,17 +1,17 @@
 ---
 title: "Variational Autoencoder"
 layout: post
+projects: true
 date: 2018-09-22 21:10
+headerImage: false
 tag: 
   - Variational Autoencoder
   - Probablistics Machine Learning
   - Deep Learning
-headerImage: true
-projects: true
-description: "Variational Autoencoder"
-category: projects
 author: projohnewzhang
-externalLink: false
+star: false
+category: projects
+description: Variational Autoencoder
 ---
 
 As images can be considered as realizations drawn from a latent variable model, we are implementing a variational autoencoder using neural networks as the variational family to approximate the Bayesian representation. Unlike the other parametric distribution, neural networks can approximate arbitrary distribution reasonably well. In this project, we are also interested in examining the effectiveness of such encoders on the SVHN dataset. By comparing different architectures, we hope to understand how the dimension of the latent space affects the learned representation and visualize the learned manifold for low dimensional latent representations. Lastly, we will do a comparison among different variational autoencoders.
