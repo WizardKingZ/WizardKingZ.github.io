@@ -115,7 +115,7 @@ We define the overall test statistics as
 
 $$J_{\max}(i, h_i) = \max_h J_{i, h}, C_{\max}(i, h_{i}^*) = \max_h C_{i, h}, (i = I, A, L, T)$$
 
-where $$h_i$$ denotes the time index when the maximum of the test statistics $$J_{i, h}$$ occurs and $$h_{i}^*$$ denotes the time index when the maximum f $$C_{i, h}$$ occurs.
+where $$h_i$$ denotes the time index when the maximum of the test statistics $$J_{i, h}$$ occurs and $$h_{i}^*$$ denotes the time index when the maximum of $$C_{i, h}$$ occurs.
 
 In case of multiple significant joint test statistics, we identify the outlier type based on the test that has the smallest empirical p-value. If none of $$J_{\max}$$ are significant, $$C_{\max}$$ will be tested. Otherwise, our procedure end. 
 
