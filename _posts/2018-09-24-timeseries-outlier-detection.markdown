@@ -123,8 +123,67 @@ __Step 5__: Once an outlier is detected, we will adjust the original time series
 
 ---
 
-My code is available <a href="https://github.com/WizardKingZ/time_series_outlier_detection">here</a>.
+# Code Walk Through
 
+One can download the "outlier_detection.R" code <a href="https://github.com/WizardKingZ/time_series_outlier_detection">here</a>. Before using this program, please make sure MTS library is also installed. We will use the gas furnace data as an example. First, let's load the data
+
+```R 
+rate<-gas.furnace$InputGasRate
+co2 <- gas.furnace$CO2
+```
+Then we will use the following blocks to get the outlier
+
+```R
+n <- length(co2)
+## delta value for temporary change is normally set to be 0.7
+delta <- 0.7
+xt = gas.furnace
+
+res = list()
+it = 1
+while (TRUE) {
+  out = outlierDetect(xt, p, q, k, n, delta, critical.j, critical.c)
+  
+  if (out$Outlier[1, 1] == 0) {
+    break;
+  } else {
+  
+    l = list()
+    l$Outlier = out$Outlier
+    l$Jmax = out$Jmax
+    l$Cmax = out$Cmax
+  
+    xt = out$xt
+    print(l)
+    res[[it]] = l
+    it = it + 1
+  }
+}
+##
+## report returns a summary of outlier and its statistics for each individual iteration
+## each interation takes two rows
+## first row contains Jmax, Cmax value for each type of outlier and the position of the identified outlier
+## first 4 columns are for Jmax from type 1 to 4 and column 5 to 8 are for Cmax from type 1 to 4
+## the 9th column is the type of the identified outlier and the 10th is the time index
+## the second row contains time indexes for each Jmax and Cmax
+##
+report = matrix(0, length(res)*2, 10)
+
+for (i in 1:length(res)) {
+  item = res[[i]]
+  index =2*i - 1
+  report[index, 1:4] = item$Jmax[, 1]
+  report[index+1, 1:4] = item$Jmax[, 2] 
+  report[index, 5:8] = item$Cmax[, 1]
+  report[index+1, 5:8] = item$Cmax[, 2]
+  report[index, 9:10] =item$Outlier
+}
+```
+
+Finally, you can obtain the result as follow
+<p align="center"> 
+<img src="{{site.base_url}}/assets/images/timeseriesoutlierdetection/image1.png">
+</p>
 ---
 ## References
 
