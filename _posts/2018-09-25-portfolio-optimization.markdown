@@ -100,3 +100,9 @@ To provide some intuition on the $$G$$ and $$h$$ in the constraints, consider th
 \end{align}
 
 $$G$$ in the constraints have two identity matrices stacked and $$h$$ is a stacked vector with positive of the upper constraints and negative of the lower constraints.
+
+I will add more functionality overtime. In the next iteration, I will include the following
+
+* Hansen-Jaganathan bound test
+* Black-Litterman Model
+* Factor Models for estimating Stochastic Discount Factors
