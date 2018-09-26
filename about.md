@@ -56,14 +56,14 @@ He also believes,
 	<li>Tennis</li>
 	<li>Violin</li>
 	<li>Sports Analytics</li>
-	<li>Calligraphy</li>
-</ul>
-<p align="center"> 
-	<table style="width:100%">
+	<li>Calligraphy <br> <p align="center"> 
+<table style="width:100%">
   <tr>
     <td><img src="{{site.base_url}}/assets/images/about/image1.png"></td>
     <td><img src="{{site.base_url}}/assets/images/about/image2.png"></td> 
     <td><img src="{{site.base_url}}/assets/images/about/image3.png"></td>
   </tr>
 </table>
-</p> 
+</p></li>
+</ul>
+ 
