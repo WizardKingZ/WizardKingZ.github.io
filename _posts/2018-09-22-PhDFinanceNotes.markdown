@@ -18,12 +18,12 @@ description: PhD Course Lecture Notes Series
 
 ## Finance and Economics
 
-* <a href="http://WizardKingZ.github.io/assets/pdfs/Finance Theory.pdf">Finance Theory</a>
-* <a href="http://WizardKingZ.github.io/assets/pdfs/Microeconomics Theory.pdf">Microeconomics Theory</a><
-* <a href="http://WizardKingZ.github.io/assets/pdfs/Empirical Asset Pricing.pdf">Empirical Asset Pricing</a>
-* <a href="http://WizardKingZ.github.io/assets/pdfs/Market Microstructure.pdf">Market Microstructure</a>
+* <a href="{{site.base_url}}/assets/pdfs/Finance Theory.pdf">Finance Theory</a>
+* <a href="{{site.base_url}}/assets/pdfs/Microeconomics Theory.pdf">Microeconomics Theory</a><
+* <a href="{{site.base_url}}/assets/pdfs/Empirical Asset Pricing.pdf">Empirical Asset Pricing</a>
+* <a href="{{site.base_url}}/assets/pdfs/Market Microstructure.pdf">Market Microstructure</a>
 
 ## Econometrics
 
-* <a href="http://WizardKingZ.github.io/assets/pdfs/Introduction to Financial Econometrics.pdf">Introduction to Econometrics</a>
-* <a href="http://WizardKingZ.github.io/assets/pdfs/Finanical Econometrics-Time Series.pdf">Time Series</a>
+* <a href="{{site.base_url}}/assets/pdfs/Introduction to Financial Econometrics.pdf">Introduction to Econometrics</a>
+* <a href="{{site.base_url}}/assets/pdfs/Finanical Econometrics-Time Series.pdf">Time Series</a>
