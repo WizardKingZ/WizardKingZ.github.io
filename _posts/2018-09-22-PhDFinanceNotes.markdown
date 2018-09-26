@@ -19,7 +19,7 @@ description: PhD Course Lecture Notes Series
 ## Finance and Economics
 
 * <a href="{{site.base_url}}/assets/pdfs/Finance Theory.pdf">Finance Theory</a>
-* <a href="{{site.base_url}}/assets/pdfs/Microeconomics Theory.pdf">Microeconomics Theory</a><
+* <a href="{{site.base_url}}/assets/pdfs/Microeconomics Theory.pdf">Microeconomics Theory</a>
 * <a href="{{site.base_url}}/assets/pdfs/Empirical Asset Pricing.pdf">Empirical Asset Pricing</a>
 * <a href="{{site.base_url}}/assets/pdfs/Market Microstructure.pdf">Market Microstructure</a>
 
