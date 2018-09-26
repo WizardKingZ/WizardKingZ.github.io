@@ -56,4 +56,5 @@ He also believes,
 	<li>Tennis</li>
 	<li>Violin</li>
 	<li>Sports Analytics</li>
+	<li>Calligraphy</li>
 </ul>
