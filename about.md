@@ -44,8 +44,8 @@ He also believes,
 <h2>Projects</h2>
 
 <ul class="skill-list">
-	<li><a href="https://wizardkingz.github.io/VAE/">Variational Autoencoder</a></li>
-	<li><a href="https://wizardkingz.github.io/timeseries-outlier-detection/">Time Series Outlier Detection</a></li>
+	<li><a href="{{site.base_url}}/VAE/">Variational Autoencoder</a></li>
+	<li><a href="{{site.base_url}}/timeseries-outlier-detection/">Time Series Outlier Detection</a></li>
 </ul>
 
 <h2>Interests</h2>
