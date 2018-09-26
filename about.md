@@ -52,8 +52,8 @@ He also believes,
 
 <ul class="skill-list">
 	<li>Investing</li>
-	<li>Basketball</li>
-	<li>Tennis</li>
-	<li>Violin</li>
+	<li>:basketball:</li>
+	<li>:tennis:</li>
+	<li>:violin:</li>
 	<li>Sports Analytics</li>
 </ul>
