@@ -59,9 +59,9 @@ He also believes,
 	<li>Calligraphy <br> <p align="center"> 
 <table style="width:100%">
   <tr>
-    <td><img src="{{site.base_url}}/assets/images/about/image1.png"></td>
-    <td><img src="{{site.base_url}}/assets/images/about/image2.png"></td> 
-    <td><img src="{{site.base_url}}/assets/images/about/image3.png"></td>
+    <td><img src="{{site.base_url}}/assets/images/about/image1.jpg"></td>
+    <td><img src="{{site.base_url}}/assets/images/about/image2.jpg"></td> 
+    <td><img src="{{site.base_url}}/assets/images/about/image3.jpg"></td>
   </tr>
 </table>
 </p></li>
