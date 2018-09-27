@@ -43,7 +43,7 @@ rts = res.mean()*252
 cov = res.cov()*252
 
 ## Initialize the MarkowitzPortfolio with the expected return, covariance and asset names
-port = MarkowitzPortfolio(rts.values, cov.values, rts.index, riskFreeRate=0.46)
+port = MarkowitzPortfolio(rts.values, cov.values, rts.index, riskFreeRate=0.046)
 
 ## set the target return as 0.1 
 ## you can set risk aversion or target volatility as well
@@ -84,9 +84,7 @@ Let's continue to use the FF-5 Factor data. However we are interested in a portf
 We can set up the following constraints
 
 ```python
-constraints = {'G': np.append(-np.diag(np.ones(5)), np.diag(np.ones(5))).reshape(10, 5), 
-               'h': np.array([100., 100., 100., 100., 100.,
-                              0., -50., 0, 0., 50.])/100.}
+constraints = {'MKT': [0, 1], 'HML': [0.5, 1], 'SMB': [0, 1], 'RMW': [0, 1], 'CMA': [-.5, 1]}
 ## obtain weights allocated on each asset
 weights = port.get_allocations(configuration=configuration)
 ```
