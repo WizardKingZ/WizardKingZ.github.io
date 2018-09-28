@@ -90,7 +90,8 @@ Let's continue to use the FF-5 Factor data. However we are interested in a portf
 We can set up the following constraints
 
 ```python
-constraints = {'MKT': [0, 1], 'HML': [0.5, 1], 'SMB': [0, 1], 'RMW': [0, 1], 'CMA': [-.5, 1]}
+constraints = {'Market': [0, 1], 'HML': [0.5, 1], 'SMB': [0, 1], 'RMW': [0, 1], 'CMA': [-.5, 1]}
+configuration['constraints'] = constraints
 ## obtain weights allocated on each asset
 weights = port.get_allocations(configuration=configuration)
 ```
