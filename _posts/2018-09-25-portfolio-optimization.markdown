@@ -2,7 +2,7 @@
 title: "Portfolio Optimization Library"
 layout: post
 library: true
-date: 2018-09-25 21:10
+date: 2018-09-27 21:10
 headerImage: false
 tag: 
   - Portfolio Theory
@@ -35,8 +35,17 @@ pip uinstall portfolio_optimization
 ```python
 ## import MarkowitzPortfolio 
 from portfolio_optimization import MarkowitzPortfolio
+import numpy as np
 
 ## Load the Fama-French Five Factor Dataset to calculate annualized return and covariance
+rts = np.array([0.11, 0.07, 0.09, 0.08, 0.08])
+cov = np.array([[ 0.02429666, -0.00152062, -0.00257011, -0.00192057, -0.00334549],
+                [-0.00152062,  0.00678308,  0.00049368, -0.001378  ,  0.0001344 ],
+                [-0.00257011,  0.00049368,  0.00632746, -0.00028724,  0.00255663],
+                [-0.00192057, -0.001378  , -0.00028724,  0.00335282,  0.00019159],
+                [-0.00334549,  0.0001344 ,  0.00255663,  0.00019159,  0.00334773]])
+ffFactorNames = ['Market', 'SMB', 'HML', 'RMW', 'CMA']
+
 ## Initialize the MarkowitzPortfolio with the expected return, covariance and asset names
 ## both cov and rts are numpy arrays. rts is a row vector 
 ## ffFactorNames should be a list
