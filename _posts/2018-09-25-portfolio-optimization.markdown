@@ -103,10 +103,10 @@ $$G$$ in the constraints have two identity matrices stacked and $$h$$ is a stack
 Investors are interested in incorporating views, when they are solving asset allocation problems. For example,
 
 \begin{array}{c|cc} 
-\text{View} & \text{Confidence Level} & \text{Plus and Minus}\\\
-\hline \text{Market outperforms by 1%} & 95 & 5% \\\
-\text{SMB beats RMW by 1%} & 90 & 5%\\\
-\text{A portfolio of 20\% of SMB and 80\% of HML beats RMW by 1%} & 99 & 1%\\\
+\text{View} & \text{Confidence Level} & \text{Plus and Minus \%}\\\
+\hline \text{Market outperforms by 1\%} & 95 & 5 \\\
+\text{SMB beats RMW by 1\%} & 90 & 5\\\
+\text{A portfolio of 20\% of SMB and 80\% of HML beats RMW by 1\%} & 99 & 1\\\
 \end{array}
 
 We can use ```BlackLittermanPortfolio``` to incorporate these views
