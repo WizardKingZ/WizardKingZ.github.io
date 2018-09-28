@@ -38,6 +38,8 @@ from portfolio_optimization import MarkowitzPortfolio
 
 ## Load the Fama-French Five Factor Dataset to calculate annualized return and covariance
 ## Initialize the MarkowitzPortfolio with the expected return, covariance and asset names
+## both cov and rts are numpy arrays. rts is a row vector 
+## ffFactorNames should be a list
 port = MarkowitzPortfolio(rts, cov, ffFactorNames, riskFreeRate=0.046)
 
 ## set the target return as 0.1 
