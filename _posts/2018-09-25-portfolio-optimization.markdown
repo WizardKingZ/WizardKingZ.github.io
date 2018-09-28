@@ -98,16 +98,6 @@ configuration['constraints'] = constraints
 weights = port.get_allocations(configuration=configuration)
 ```
 
-To provide some intuition on the $$G$$ and $$h$$ in the constraints, consider the following quadratic programming problem
-
-\begin{align}
-\min_{x} &\frac{1}{2}x'Px + q'x \\\
-\text{subject to } & Gx \leq h \\\
-& Ax = b \\\
-\end{align}
-
-$$G$$ in the constraints have two identity matrices stacked and $$h$$ is a stacked vector with positive of the upper constraints and negative of the lower constraints.
-
 ## Black-Litterman Portfolio Allocation
 
 Investors are interested in incorporating views, when they are solving asset allocation problems. For example,
@@ -151,3 +141,4 @@ I will add more functionality overtime. In the next iteration, I will include th
 
 * Hansen-Jaganathan bound test
 * Factor Models for estimating Stochastic Discount Factors
+* Epstein-Zin preference-based portfolio optimization
