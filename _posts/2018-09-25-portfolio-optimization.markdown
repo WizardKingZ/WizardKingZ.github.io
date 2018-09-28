@@ -135,7 +135,7 @@ weights = port.get_allocations(configuration=configuration)
 port.reset()
 ```
 
-As we mentioned the $$R^2$$ of the modeled returns, we will introduce some factor modeling tools in the later iteration. For beginners, let's consider the widely used factor models, Captial Asset Pricing Model (CAPM). In general, if you use the CAPM to estimate returns, the $$R^2$$ typically is below 15\%. Hence, the parameter in the ```update_view``` member function would be typically set below 15\% (e.g. we set at 10\%).
+As we mentioned the $$R^2$$ of the modeled returns, we will introduce some factor modeling tools in the later iteration. For beginners, let's consider the widely used factor models, Captial Asset Pricing Model (CAPM). In general, if you use the CAPM to estimate returns, the $$R^2$$ typically is below 15%. Hence, the parameter in the ```update_view``` member function would be typically set below 15% (e.g. we set at 10%).
 
 ---
 
