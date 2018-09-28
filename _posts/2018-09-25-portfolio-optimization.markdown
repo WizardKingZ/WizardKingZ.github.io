@@ -65,8 +65,7 @@ weights = port.get_allocations(configuration=configuration)
 port.display_efficient_frontier(assetsAnnotation=True, 
                                 specialPortfolioAnnotation=True, 
                                 addTangencyLine=True, 
-                                upper_bound=0.14, 
-                                path="pic/efficient_frontier_with_cml.png")
+                                upper_bound=0.14)
 ```
 
 <p align="center"> 
