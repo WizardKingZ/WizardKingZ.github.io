@@ -52,5 +52,3 @@ db.raw_sql('SELECT date,dji FROM djones.djdaily limit 10')
 crsp = db.raw_sql('select cusip,permno,date,bidlo,askhi from crsp.dsf LIMIT 100')
 ```
 
-Enjoy :simple_smile:
-
