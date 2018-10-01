@@ -26,7 +26,9 @@ description: "Tutorial: WRDS Data Access Via Python API"
 
 For Mac user, you can create the ```.pgpass``` under ```/Users/username```.
 
-```wrds-pgdata.wharton.upenn.edu:9737:wrds:your_username:your_password```
+```unix
+wrds-pgdata.wharton.upenn.edu:9737:wrds:your_username:your_password
+```
 
 where your_username is your WRDS username and your_password is your WRDS password. 
 
