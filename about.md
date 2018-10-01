@@ -53,11 +53,11 @@ He also believes,
 <ul class="skill-list">
 	<li>Investing</li>
 	<li>Basketball</li>
-	<li>Tennis</li>
+	<li>Tennis (3.5 under NTRP player rating scale)</li>
 	<li>Violin</li>
 	<li>Sports Analytics</li>
 	<li>Calligraphy <br> <p align="center"> 
-<table style="width:100%">
+<table style="width:80%">
   <tr>
     <td><img src="{{site.base_url}}/assets/images/about/image1.jpg"></td>
     <td><img src="{{site.base_url}}/assets/images/about/image2.jpg"></td> 
