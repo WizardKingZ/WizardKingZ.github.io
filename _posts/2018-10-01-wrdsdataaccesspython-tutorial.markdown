@@ -2,16 +2,16 @@
 title: "Tutorial: WRDS Data Access Via Python API"
 layout: post
 blog: true
-date: 2018-10-01 12:59
+date: 2018-10-01 00:00
 headerImage: false
 tag:
 - finance
-- python
 - research
+- python
 star: false
 category: blog
 author: johnewzhang
-description: Tutorial: WRDS Data Access Via Python API
+description: "Tutorial: WRDS Data Access Via Python API"
 ---
 
 ## Prerequisites
