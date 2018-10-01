@@ -5,13 +5,13 @@ blog: true
 date: 2018-09-22 21:20
 headerImage: false
 tag:
-- academicnotes
+- notes
 - finance
 - economics
 star: false
 category: blog
 author: johnewzhang
-description: "Notes: PhD Course Lecture Notes Series"
+description: "PhD Course Lecture Notes Series"
 ---
 
 # Lecture Notes
