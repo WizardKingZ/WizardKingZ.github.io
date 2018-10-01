@@ -5,14 +5,14 @@ blog: true
 date: 2018-09-22 22:00
 headerImage: false
 tag:
-- academicnotes
+- notes
 - waterloo
 - cas
 - soa
 star: false
 category: blog
 author: johnewzhang
-description: "Notes: University of Waterloo Lecture Notes and Professional Exam Notes"
+description: "University of Waterloo Lecture Notes and Professional Exam Notes"
 ---
 
 # Lecture Notes
