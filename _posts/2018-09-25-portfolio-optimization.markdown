@@ -8,10 +8,10 @@ tag:
   - Portfolio Theory
   - Optimization
   - Finance
-  - Python
+  - python
 category: library
 author: projohnewzhang
-description: "Library: Portfolio Optimization"
+description: "Portfolio Optimization"
 ---
 
 As an ongoing effort to provide more finance-related python library, I will start with the portfolio optimization library. This page documents the Hello-World version.
