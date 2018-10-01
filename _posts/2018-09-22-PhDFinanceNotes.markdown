@@ -1,5 +1,5 @@
 ---
-title: "Columbia Finance and Economics PhD Course Lecture Notes"
+title: "Notes: Columbia Finance and Economics PhD Course Lecture Notes"
 layout: post
 blog: true
 date: 2018-09-22 21:20
@@ -11,7 +11,7 @@ tag:
 star: false
 category: blog
 author: johnewzhang
-description: PhD Course Lecture Notes Series
+description: "Notes: PhD Course Lecture Notes Series"
 ---
 
 # Lecture Notes
