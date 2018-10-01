@@ -1,5 +1,5 @@
 ---
-title: "Portfolio Optimization Library"
+title: "Library: Portfolio Optimization"
 layout: post
 library: true
 date: 2018-09-27 21:10
@@ -11,7 +11,7 @@ tag:
   - Python
 category: library
 author: projohnewzhang
-description: Portfolio Optimization Library
+description: "Library: Portfolio Optimization"
 ---
 
 As an ongoing effort to provide more finance-related python library, I will start with the portfolio optimization library. This page documents the Hello-World version.
