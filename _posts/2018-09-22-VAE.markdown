@@ -82,7 +82,7 @@ In the first experiment on the MNIST dataset, we used a simple fully connected n
 <img src="{{site.base_url}}/assets/images/vae/image2.png">
 </p> 
 
-In Figure 2, 2a shows the space learned by our autoencoder. It is consistent from what we see in the 2D case in Figure 1b. We know that the MNIST images are only $$28\times 28$$ so it may not seem to bad to use low dimensional latent space to represent it and using a Bernoulli decoder makes sense here because the images are only black and white. Now, when we move from MNIST to SVHN, the input size is getting increased to $$\times 32\times 3$$ (RGB images). With the complexity of images, we may not get as good representation under low dimensional settings. In the SVHN data section, we will discuss the architectures we have looked at and how they do.
+In Figure 2, 2a shows the space learned by our autoencoder. It is consistent from what we see in the 2D case in Figure 1b. We know that the MNIST images are only $$28\times 28$$ so it may not seem to bad to use low dimensional latent space to represent it and using a Bernoulli decoder makes sense here because the images are only black and white. Now, when we move from MNIST to SVHN, the input size is getting increased to $$32 \times 32\times 3$$ (RGB images). With the complexity of images, we may not get as good representation under low dimensional settings. In the SVHN data section, we will discuss the architectures we have looked at and how they do.
 
 <p align="center"> 
 <img src="{{site.base_url}}/assets/images/vae/image3.png">
