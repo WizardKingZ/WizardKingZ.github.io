@@ -8,10 +8,11 @@ tag:
   - finance
   - panel regression
   - institutional investor
+  - research
 star: false
 category: blog
 author: projohnewzhang
-description: "Research: The Role of Institutional Investor Prior 1998"
+description: "The Role of Institutional Investor Prior 1998"
 ---
 
 We study the role of institutional investors who invest in public traded US companies using WRDS dataset through 1980 to 1997. We find that all institutional investors dislike high volatile stocks. During this period, there is little evidence that active monitoring was done by the independent institutional investors and significantly it shows grey institutions did not intervene with the management of the companies they invested in. 
