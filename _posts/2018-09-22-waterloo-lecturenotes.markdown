@@ -1,5 +1,5 @@
 ---
-title: "University of Waterloo Lecture Notes and Professional Exam Notes"
+title: "Notes: University of Waterloo Lecture Notes and Professional Exam Notes"
 layout: post
 blog: true
 date: 2018-09-22 22:00
@@ -12,7 +12,7 @@ tag:
 star: false
 category: blog
 author: johnewzhang
-description: University of Waterloo Lecture Notes and Professional Exam Notes
+description: "Notes: University of Waterloo Lecture Notes and Professional Exam Notes"
 ---
 
 # Lecture Notes
