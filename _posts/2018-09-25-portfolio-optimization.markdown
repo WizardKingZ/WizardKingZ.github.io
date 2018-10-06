@@ -27,7 +27,7 @@ pip install git+https://github.com/WizardKingZ/portfolio_optimization.git
 It is easy to underinstall it.
 
 ```unix
-pip uinstall portfolio_optimization
+pip uninstall portfolio_optimization
 ```
 
 # Get Started
