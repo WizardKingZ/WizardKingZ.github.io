@@ -24,7 +24,7 @@ If you have python 2.7 installed, you can run the following in your terminal
 pip install git+https://github.com/WizardKingZ/portfolio_optimization.git
 ```
 
-It is easy to underinstall it.
+It is easy to uninstall it.
 
 ```unix
 pip uninstall portfolio_optimization
