@@ -141,4 +141,4 @@ I will add more functionality overtime. In the next iteration, I will include th
 
 * Hansen-Jaganathan bound test
 * Factor Models for estimating Stochastic Discount Factors
-* Epstein-Zin preference-based portfolio optimization
+* Style Analysis
