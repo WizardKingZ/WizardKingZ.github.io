@@ -1,5 +1,5 @@
 ---
-title: "Intertemporal CAPM: Evidence with Modern Data"
+title: "Research: Intertemporal CAPM: Evidence with Modern Data"
 layout: post
 blog: true
 date: 2018-12-24 00:00
@@ -81,11 +81,11 @@ $$\beta_{i, V} \equiv \frac{Cov(r_{i, t}, N_{V, t})}{Var(r_{M, t} - E_{t-1} r_{M
 
 and estimate the betas with a lag
 
-$$\hat{\beta}_{i, CF} = \frac{Cov(r_{i, t}, N_{CF, t})}{Var(N_{CF, t} - N_{DR, t}+ I_{V}N_{V, t})}+\frac{Cov(r_{i, t}, N_{CF, t-1})}{Var(N_{CF, t} - N_{DR, t}+ I_{V}N_{V, t})}$$
+$$\widehat{\beta}_{i, CF} = \frac{Cov(r_{i, t}, N_{CF, t})}{Var(N_{CF, t} - N_{DR, t}+ I_{V}N_{V, t})}+\frac{Cov(r_{i, t}, N_{CF, t-1})}{Var(N_{CF, t} - N_{DR, t}+ I_{V}N_{V, t})}$$
 
-$$\hat{\beta}_{i, DR} = \frac{Cov(r_{i, t}, -N_{DR, t})}{Var(N_{CF, t} - N_{DR, t}+ I_{V}N_{V, t})} +\frac{Cov(r_{i, t}, -N_{DR, t-1})}{Var(N_{CF, t} - N_{DR, t}+ I_{V}N_{V, t})}$$
+$$\widehat{\beta}_{i, DR} = \frac{Cov(r_{i, t}, -N_{DR, t})}{Var(N_{CF, t} - N_{DR, t}+ I_{V}N_{V, t})} +\frac{Cov(r_{i, t}, -N_{DR, t-1})}{Var(N_{CF, t} - N_{DR, t}+ I_{V}N_{V, t})}$$
 
-$$\hat{\beta}_{i, V} = \frac{Cov(r_{i, t}, N_{V, t})}{Var(N_{CF, t} - N_{DR, t}+ I_{V}N_{V, t})} + \frac{Cov(r_{i, t}, N_{V, t-1})}{Var(N_{CF, t} - N_{DR, t}+ I_{V}N_{V, t})}$$
+$$\widehat{\beta}_{i, V} = \frac{Cov(r_{i, t}, N_{V, t})}{Var(N_{CF, t} - N_{DR, t}+ I_{V}N_{V, t})} + \frac{Cov(r_{i, t}, N_{V, t-1})}{Var(N_{CF, t} - N_{DR, t}+ I_{V}N_{V, t})}$$
 
 where $$I_V = 1$$ if we are using three beta model; else, $$I_V = 0$$. According to Campbell, they include one lag of the market's news terms in the numerator because during the early sample period, not all stocks in their test-asset portfolios were traded frequently and synchronously.  
 
