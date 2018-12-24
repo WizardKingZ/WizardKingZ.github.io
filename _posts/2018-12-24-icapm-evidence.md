@@ -83,7 +83,7 @@ and estimate the betas with a lag
 
 $$\hat{\beta}_{i, CF} = \frac{Cov(r_{i, t}, N_{CF, t})}{Var(N_{CF, t} - N_{DR, t}+ I_{V}N_{V, t})}+\frac{Cov(r_{i, t}, N_{CF, t-1})}{Var(N_{CF, t} - N_{DR, t}+ I_{V}N_{V, t})}$$
 
-$$\ha{\beta}_{i, DR} = \frac{Cov(r_{i, t}, -N_{DR, t})}{Var(N_{CF, t} - N_{DR, t}+ I_{V}N_{V, t})} +\frac{Cov(r_{i, t}, -N_{DR, t-1})}{Var(N_{CF, t} - N_{DR, t}+ I_{V}N_{V, t})}$$
+$$\hat{\beta}_{i, DR} = \frac{Cov(r_{i, t}, -N_{DR, t})}{Var(N_{CF, t} - N_{DR, t}+ I_{V}N_{V, t})} +\frac{Cov(r_{i, t}, -N_{DR, t-1})}{Var(N_{CF, t} - N_{DR, t}+ I_{V}N_{V, t})}$$
 
 $$\hat{\beta}_{i, V} = \frac{Cov(r_{i, t}, N_{V, t})}{Var(N_{CF, t} - N_{DR, t}+ I_{V}N_{V, t})} + \frac{Cov(r_{i, t}, N_{V, t-1})}{Var(N_{CF, t} - N_{DR, t}+ I_{V}N_{V, t})}$$
 
@@ -145,9 +145,9 @@ Table VI reports beta estimates for the 25 size- and book-to-market portfolios o
 
 Lastly, with the estimated betas, we can run our cross-sectional regressions
 
-$$\bar{R}_i^e  &= g_0 + g_1\hat{\beta}_{i, CF} + g_2\ha{\beta}_{i, DR} + e_i$$
+$$\bar{R}_i^e  = g_0 + g_1\hat{\beta}_{i, CF} + g_2\ha{\beta}_{i, DR} + e_i$$
 
-$$\bar{R}_i^e  &= g_0 + g_1\hat{\beta}_{i, CF} + g_2\ha{\beta}_{i, DR} + g_3\hat{\beta}_{i, V} + e_i$$
+$$\bar{R}_i^e  = g_0 + g_1\hat{\beta}_{i, CF} + g_2\ha{\beta}_{i, DR} + g_3\hat{\beta}_{i, V} + e_i$$
 
 respectively, where $$\bar{R}_{i}^e\equiv \bar{R}_i -\bar{R}_{rf}$$ denotes the sample average simple excess return on asset $$i$$. The implied risk-aversion coefficient can be recovered by $$g_1/g_2$$. Table VII shows that traditional CAPM and two-beta ICAPM explains the cross-sectional variations very poorly. In the earlier subsection, it suggests that the innovations from the cash-flow and discount rate co-moves in the majority of the updated period (2001-2018), especially during the financial crisis, so we can expect the two-beta ICAPM’s performance falls off. Encouragingly, the three-beta ICAPMs explains more than 50% of variation in the cross-section average excess returns. The two-beta ICAPM has implied risk aversion of 4.38, while the three-beta ICAPM shows about 3. A visual summary of these results is provided in Figure 3, where we multiply 1,200 on the estimate to show annualized return percentage point.
 
