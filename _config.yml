@@ -62,13 +62,13 @@ authors:
         bio: Researcher 
         external-image: false
         picture: assets/images/professional.jpg
-        twitter: ZhangJohnew
+        twitter: johnew_zhang
     johnewzhang:
         name: Johnew Zhang
         bio: Researcher
         external-image: false
         picture: assets/images/profile.jpg
-        twitter: ZhangJohnew
+        twitter: johnew_zhang
 
 # do you want a larger site? change the option below
 # options: [normal, large] | default: normal
