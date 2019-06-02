@@ -4,7 +4,7 @@ layout: page
 ---
 ![Profile Image]({{ site.url }}/{{ site.picture }})
 
-<p>Johnew Zhang (张俊琪) is currently a second-year Master of Science in Financial Economics student at the Columbia Business School. He also holds a Bachelor degree of Mathematics in Mathematical Finance from the University of Waterloo, Canada. He is also a member of the Society of Actuaries, the Casualty Actuary Society and the International Association of Quantitative Finance. </p>
+<p>Johnew Zhang (张俊琪) is an incoming principal credit investment associate at the Canada Pension Plan Investment Board. He holds a Master degree of Science in Financial Economics from the Columbia Business School, United States of America, and a Bachelor degree of Mathematics in Mathematical Finance from the University of Waterloo, Canada. He is also a member of the Society of Actuaries, the Casualty Actuary Society and the International Association of Quantitative Finance. </p>
 
 <p>He is passionate about solving investment problems using model-based and data-driven approaches.  He believes that models should be constructed based on fundamental economic intuition and validated by real-world data so that we can characterize proper risk premiums and alpha.</p>
 
