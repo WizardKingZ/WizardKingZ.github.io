@@ -18,7 +18,7 @@ As an ongoing effort to provide more finance-related python library, I will star
 
 # Installation
 
-If you have python 2.7 installed, you can run the following in your terminal
+If you have python 3.6+ installed, you can run the following in your terminal
 
 ```unix
 pip install git+https://github.com/WizardKingZ/portfolio_optimization.git
