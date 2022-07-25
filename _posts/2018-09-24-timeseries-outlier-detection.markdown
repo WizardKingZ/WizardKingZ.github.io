@@ -44,13 +44,13 @@ $$y_t = x_t + \alpha(B) \omega \xi_t^{(h)},$$
 
 where 
 
-\begin{array}{c|c} 
+$$\begin{array}{c|c} 
 \alpha(B) & \text{Type} \\\
 \hline \Psi (B) & \text{multivariate innovational outlier} \\\
 I & \text{multivariate additive outlier} \\\
 (I - B)^{-1} & \text{multivariate level shift} \\\
 {D(\delta)}^{-1} & \text{multivariate temporary change} \\\
-\end{array}
+\end{array}$$
 
 Here, $$\Psi$$ is the MA representation of VARMA model. Next, we can multiply above equation by $$\Pi(B)$$ and subtract a constant term from both sides, we have
 
@@ -180,7 +180,7 @@ for (i in 1:length(res)) {
 
 Finally, you can obtain the result as follow
 
-\begin{array}{c|c} 
+$$\begin{array}{c|c} 
 \text{Time Index} & \text{Type} \\\
 \hline 43 & \text{MTC} \\\
 55 & \text{MTC} \\\
@@ -193,7 +193,7 @@ Finally, you can obtain the result as follow
 288 & \text{MLS} \\\
 287 & \text{MLS} \\\
 82 & \text{MLS} \\\
-\end{array}
+\end{array}$$
 
 ---
 ## References
