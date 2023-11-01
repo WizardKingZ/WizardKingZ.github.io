@@ -78,7 +78,7 @@ Let's continue to use the FF-5 Factor data. However we are interested in a portf
 
 $$\begin{array}{c|cc} 
 \text{Asset} & \text{Lower Bound %} & \text{Upper Bound %}\\\
-\hline \text{MKT} & 0 & 100 \\\
+\\\hline \text{MKT} & 0 & 100 \\\
 \text{HML} & 50 & 100\\\
 \text{SMB} & 0 & 100 \\\
 \text{RMW} & 0 & 100 \\\
@@ -104,7 +104,7 @@ Investors are interested in incorporating views, when they are solving asset all
 
 $$\begin{array}{c|cc} 
 \text{View} & \text{Confidence Level %} & \text{Plus and Minus %}\\\
-\hline \text{Market outperforms by 1%} & 95 & 5 \\\
+\\\hline \text{Market outperforms by 1%} & 95 & 5 \\\
 \text{SMB beats RMW by 1%} & 90 & 5\\\
 \text{A portfolio of 20% of SMB and 80% of HML beats RMW by 1%} & 99 & 1\\\
 \end{array}$$
