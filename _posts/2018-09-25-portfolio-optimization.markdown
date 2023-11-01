@@ -76,14 +76,14 @@ port.display_efficient_frontier(assetsAnnotation=True,
 
 Let's continue to use the FF-5 Factor data. However we are interested in a portfolio with the following constraints
 
-\begin{array}{c|cc} 
+$$\begin{array}{c|cc} 
 \text{Asset} & \text{Lower Bound %} & \text{Upper Bound %}\\\
 \hline \text{MKT} & 0 & 100 \\\
 \text{HML} & 50 & 100\\\
 \text{SMB} & 0 & 100 \\\
 \text{RMW} & 0 & 100 \\\
 \text{CMA} & -50 & 100 \\\
-\end{array}
+\end{array}$$
 
 We can set up the following constraints
 
@@ -102,12 +102,12 @@ weights = port.get_allocations(configuration=configuration)
 
 Investors are interested in incorporating views, when they are solving asset allocation problems. For example,
 
-\begin{array}{c|cc} 
+$$\begin{array}{c|cc} 
 \text{View} & \text{Confidence Level %} & \text{Plus and Minus %}\\\
 \hline \text{Market outperforms by 1%} & 95 & 5 \\\
 \text{SMB beats RMW by 1%} & 90 & 5\\\
 \text{A portfolio of 20% of SMB and 80% of HML beats RMW by 1%} & 99 & 1\\\
-\end{array}
+\end{array}$$
 
 We can use ```BlackLittermanPortfolio``` to incorporate these views
 
