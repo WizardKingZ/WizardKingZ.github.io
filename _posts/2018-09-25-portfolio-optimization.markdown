@@ -15,7 +15,6 @@ description: "Portfolio Optimization"
 ---
 
 As an ongoing effort to provide more finance-related Python libraries, I will start with the portfolio optimization library. This page documents the Hello-World version.
-{: style="text-align: justify"}
 
 # Installation
 
