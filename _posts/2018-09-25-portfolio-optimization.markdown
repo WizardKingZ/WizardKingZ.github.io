@@ -14,7 +14,7 @@ author: projohnewzhang
 description: "Portfolio Optimization"
 ---
 
-As an ongoing effort to provide more finance-related python library, I will start with the portfolio optimization library. This page documents the Hello-World version.
+As an ongoing effort to provide more finance-related Python libraries, I will start with the portfolio optimization library. This page documents the Hello-World version.
 
 # Installation
 
@@ -133,11 +133,11 @@ weights = port.get_allocations(configuration=configuration)
 port.reset()
 ```
 
-As we mentioned the $$R^2$$ of the modeled returns, we will introduce some factor modeling tools in the later iteration. For beginners, let's consider the widely used factor models, Captial Asset Pricing Model (CAPM). In general, if you use the CAPM to estimate returns, the $$R^2$$ typically is below 15%. Hence, the parameter in the ```update_view``` member function would be typically set below 15% (e.g. we set at 10%).
+As we mentioned the $$R^2$$ of the modeled returns, we will introduce some factor modeling tools in the later iteration. For beginners, let's consider the widely used factor model, Captial Asset Pricing Model (CAPM). In general, if you use the CAPM to estimate returns, the $$R^2$$ typically is below 15%. Hence, the parameter in the ```update_view``` member function would be typically set below 15% (e.g. we set it at 10%).
 
 ---
 
-I will add more functionality overtime. In the next iteration, I will include the following
+I will add more functionality over time. In the next iteration, I will include the following
 
 * Hansen-Jaganathan bound test
 * Factor Models for estimating Stochastic Discount Factors
