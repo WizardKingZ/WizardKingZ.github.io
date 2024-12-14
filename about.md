@@ -4,13 +4,13 @@ layout: page
 ---
 ![Profile Image]({{ site.url }}/{{ site.picture }})
 
-<p>Johnew Zhang (张俊琪) is a Financial Services/FinTech investor at CPP Investments, focusing on sub-investment grade private credit opportunities, including structured credit, corporate credit, platform equity investments, public L/S equities, and fund investments in the FinTech and Financial Services sectors across North America and Latin America. Additionally, he sourced and evaluated esoteric and uncorrelated asset classes such as media rights and insurance assets. He contributed to firm-wide data-driven investing initiatives and market mapping for the blockchain and crypto investment space. </p>
+<p align="justify">Johnew Zhang (张俊琪) is a Financial Services/FinTech investor at CPP Investments, focusing on sub-investment grade private credit opportunities, including structured credit, corporate credit, platform equity investments, public L/S equities, and fund investments in the FinTech and Financial Services sectors across North America and Latin America. Additionally, he sourced and evaluated esoteric and uncorrelated asset classes such as media rights and insurance assets. He contributed to firm-wide data-driven investing initiatives and market mapping for the blockchain and crypto investment space. </p>
 
-<p>Before CPP Investments, he worked as an actuarial professional specializing in Reserving, Product & Pricing, and Advanced Analytics in the Property & Casualty industry. He also has experience in mobile software development.</p>
+<p align="justify">Before CPP Investments, he worked as an actuarial professional specializing in Reserving, Product & Pricing, and Advanced Analytics in the Property & Casualty industry. He also has experience in mobile software development.</p>
 
-<p>Outside work, he enjoys traveling for nature and culture, playing and watching sports, investing, and reading non-fiction. He is a Boston Celtics and Coldplay fan.</p>
+<p align="justify">Outside work, he enjoys traveling for nature and culture, playing and watching sports, investing, and reading non-fiction. He is a Boston Celtics and Coldplay fan.</p>
 
-<p>He holds a BMath in Mathematical Finance from the University of Waterloo and an MSci in Financial Economics from Columbia Business School. His academic interests include Asset Pricing, Corporate Finance Theory, Bayesian Inference, and Machine Learning, with relevant publications on portfolio management. He is also a member of the Society of Actuaries, the Casualty Actuary Society, and the International Association of Quantitative Finance. </p>
+<p align="justify">He holds a BMath in Mathematical Finance from the University of Waterloo and an MSci in Financial Economics from Columbia Business School. His academic interests include Asset Pricing, Corporate Finance Theory, Bayesian Inference, and Machine Learning, with relevant publications on portfolio management. He is also a member of the Society of Actuaries, the Casualty Actuary Society, and the International Association of Quantitative Finance. </p>
 
 <h2>Research Interests</h2>
 
