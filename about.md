@@ -4,18 +4,19 @@ layout: page
 ---
 ![Profile Image]({{ site.url }}/{{ site.picture }})
 
-<p>Johnew Zhang (张俊琪) is a Financial Services/FinTech investor at the CPP Investments. He holds a M.S. degree in Financial Economics from the Columbia Business School, and a B.Math. degree in Mathematical Finance from the University of Waterloo. He is also a member of the Society of Actuaries, the Casualty Actuary Society and the International Association of Quantitative Finance. </p>
+<p>Johnew Zhang (张俊琪) is a Financial Services/FinTech investor at CPP Investments, focusing on sub-investment grade private credit opportunities, including structured credit, corporate credit, platform equity investments, public L/S equities, and fund investments in the FinTech and Financial Services sectors across North America and Latin America. Additionally, he sourced and evaluated esoteric and uncorrelated asset classes such as media rights and insurance assets. He contributed to firm-wide data-driven investing initiatives and market mapping for the blockchain and crypto investment space. </p>
 
-<p>He is passionate about solving investment problems using model-based and data-driven approaches.  He believes that models should be constructed based on fundamental economic intuition and validated by real-world data so that we can characterize proper risk premiums and alpha.</p>
+<p>Before CPP Investments, he worked as an actuarial professional specializing in Reserving, Product & Pricing, and Advanced Analytics in the Property & Casualty industry. He also has experience in mobile software development.</p>
 
-He also believes, 
+<p>Outside work, he enjoys traveling for nature and culture, playing and watching sports, investing, and reading non-fiction. He is a Boston Celtics and Coldplay fan.</p>
 
->"Estimation" suggests a Bayesian approach to data, while "testing" suggests a classical approach. I prefer estimation since I think researchers who want to test often choose models that are more specific than the economics require. They talk of adding restrictions for no reason other than making their models easier to reject.
+<p>He holds a BMath in Mathematical Finance from the University of Waterloo and an MSci in Financial Economics from Columbia Business School. His academic interests include Asset Pricing, Corporate Finance Theory, Bayesian Inference, and Machine Learning, with relevant publications on portfolio management. He is also a member of the Society of Actuaries, the Casualty Actuary Society, and the International Association of Quantitative Finance. </p>
 
 <h2>Research Interests</h2>
 
 <ul class="skill-list">
-	<li>Asset Pricing</li>
+	<li>Empirical/Theoretical Asset Pricing</li>
+	<li>Empirical/Theoretical Corporate Finance</li>
 	<li>Game Theory</li>
 	<li>Bayesian Inference</li>
 	<li>Machine Learning</li>
@@ -28,7 +29,6 @@ He also believes,
 	<li><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2493844">Correlation Matrices with the Perron-Frobenius Property</a>, SSRN</li>
 </ul>
 
-
 <h2>Computer Skills</h2>
 
 <ul class="skill-list">
@@ -36,8 +36,6 @@ He also believes,
 	<li>R</li>
 	<li>C++</li>
 	<li>OCaml</li>
-	<li>MATLAB</li>
-	<li>SAS</li>
 </ul>
 
 <h2>Projects</h2>
@@ -53,6 +51,7 @@ He also believes,
 	<li>Investing</li>
 	<li>Basketball</li>
 	<li>Tennis (3.5 under NTRP player rating scale)</li>
+	<li>Golf</li>
 	<li>Violin</li>
 	<li>Sports Analytics</li>
 	<li>Calligraphy <br> <p align="center"> 
