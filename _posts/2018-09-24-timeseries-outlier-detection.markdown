@@ -45,7 +45,7 @@ $$y_t = x_t + \alpha(B) \omega \xi_t^{(h)},$$
 where 
 
 $$\begin{array}{c|c} 
-\alpha(B) & \text{Type} \\\
+\textbf{\alpha(B)} & \textbf{Type} \\\
 \Psi (B) & \text{multivariate innovational outlier} \\\
 I & \text{multivariate additive outlier} \\\
 (I - B)^{-1} & \text{multivariate level shift} \\\
