@@ -38,7 +38,7 @@ where
 
 $$\Psi(B) = I - \sum_{i=1}^{\infty} \Psi_i B^i = \{\Phi(B)\}^{-1}\Theta(B)$$
 
-Before diving into the algorithm, we will make some more definitions. Denote the observed time series by $$y_t =(y_{1t}, \cdots, y_{kt})'$$ and let $$\omega = (\omega_1, \cdots, \omega_k)'$$ be the size of the initial impact of an outlier on the series $$x_t$$. The four types of univariate outlier can be generalized to the multivariate case
+Before diving into the algorithm, we will make some more definitions. Denote the observed time series by $$y_t =(y_{1t}, \cdots, y_{kt})'$$ and let $$\omega = (\omega_1, \cdots, \omega_k)'$$ be the size of the initial impact of an outlier on the series $$x_t$$. The four types of univariate outliers can be generalized to the multivariate case
 
 $$y_t = x_t + \alpha(B) \omega \xi_t^{(h)},$$
 
@@ -46,13 +46,13 @@ where
 
 $$\begin{array}{c|c} 
 \alpha(B) & \text{Type} \\\
-\hline \Psi (B) & \text{multivariate innovational outlier} \\\
+\Psi (B) & \text{multivariate innovational outlier} \\\
 I & \text{multivariate additive outlier} \\\
 (I - B)^{-1} & \text{multivariate level shift} \\\
 {D(\delta)}^{-1} & \text{multivariate temporary change} \\\
 \end{array}$$
 
-Here, $$\Psi$$ is the MA representation of VARMA model. Next, we can multiply above equation by $$\Pi(B)$$ and subtract a constant term from both sides, we have
+Here, $$\Psi$$ is the MA representation of VARMA model. Next, we can multiply the above equation by $$\Pi(B)$$ and subtract a constant term from both sides, we have
 
 $$a_t = \varepsilon_t + \Pi(B)\alpha(B)\omega \xi_t^{(h)}$$
 
@@ -70,7 +70,7 @@ For the $$\Pi^*$$, we can obtain by calculating the coefficient of $$\Pi(B)\alph
 
 $$I - \sum_{i=1}^{\infty} \Pi^*_i B^i = \left(I - \sum_{i=1}^{\infty} \Pi_i B^i)(I - \delta B\right)^{-1}$$
 
-Hence, above is just a simple polynomial division. In general, suppose three polynomials 
+Hence, the above is just a simple polynomial division. In general, suppose three polynomials 
 
 $$\Pi(B) = I - \sum_{i=1}^{\infty} \Pi_i B^i,$$ $$\Phi(B) = I - \sum_{i=1}^{p} \Phi_i B^i$$ and $$\Theta(B)= I - \sum_{i=1}^{q} \Theta_i B^i$$ 
 
@@ -82,9 +82,9 @@ Then
 
 $$\Pi_i = \Phi_i + \sum_{j = 1}^{i} \Theta_j\Pi_{i-j}$$ 
 
-where $$i = j$$, $$\Pi_{i - j} = -I$$, if $$i > p$$, $$\Phi_i = 0$$ and if $$j > q$$, $$\Theta_j = 0$$. Therefore, use the above reclusive relation, we can obtain the polynomial representation for temporary change. 
+where $$i = j$$, $$\Pi_{i - j} = -I$$, if $$i > p$$, $$\Phi_i = 0$$ and if $$j > q$$, $$\Theta_j = 0$$. Therefore, we can obtain the polynomial representation for temporary change using the above reclusive relation. 
 
-In addition, the covariance matrix of the estimator is $$\Sigma_{i, h} = \left(\sum_{i=0}^{n-h} \hat{\Pi^*}'_i\Sigma^{-1}\hat{\Pi^*}_i\right)^{-1}$$. Lastly, to reduce the effect of one particular outlier, we can just proceed to the following equation 
+In addition, the covariance matrix of the estimator is $$\Sigma_{i, h} = \left(\sum_{i=0}^{n-h} \hat{\Pi^*}'_i\Sigma^{-1}\hat{\Pi^*}_i\right)^{-1}$$. Lastly, to reduce the effect of one particular outlier, we can proceed to the following equation 
 
 $$x_t = y_t - \alpha(B) \omega \xi_t^{(h)}$$ 
 
@@ -93,7 +93,7 @@ where $$x_t$$ is the adjusted series and $$y_t$$ is the original series.
 
 ## Algorithm
 
-Suppose observed time series has no outlier and provide model $$ARMA(p, q)$$
+Suppose the observed time series has no outlier and provide model $$ARMA(p, q)$$
 
 __Step 1__: Use Maximum-Likelihood estimation to estimate $$\Phi, \Theta$$ and $$\Sigma$$. 
 
@@ -115,7 +115,7 @@ $$J_{\max}(i, h_i) = \max_h J_{i, h}, C_{\max}(i, h_{i}^*) = \max_h C_{i, h}, (i
 
 where $$h_i$$ denotes the time index when the maximum of the test statistics $$J_{i, h}$$ occurs and $$h_{i}^*$$ denotes the time index when the maximum of $$C_{i, h}$$ occurs.
 
-In case of multiple significant joint test statistics, we identify the outlier type based on the test that has the smallest empirical p-value. If none of $$J_{\max}$$ are significant, $$C_{\max}$$ will be tested. Otherwise, our procedure end. 
+In the case of multiple significant joint test statistics, we identify the outlier type based on the test that has the smallest empirical p-value. If none of $$J_{\max}$$ are significant, $$C_{\max}$$ will be tested. Otherwise, our procedure ends. 
 
 __Step 5__: Once an outlier is detected, we will adjust the original time series by subtracting $$\alpha(B)\omega \varepsilon_t^{(h)}$$ Then the process jumps back to Step 1.
 
@@ -158,9 +158,9 @@ while (TRUE) {
   }
 }
 ##
-## report returns a summary of outlier and its statistics for each individual iteration
-## each interation takes two rows
-## first row contains Jmax, Cmax value for each type of outlier and the position of the identified outlier
+## report returns a summary of the outlier and its statistics for each individual iteration
+## each interaction takes two rows
+## first row contains Jmax, Cmax value for each type of outlier, and the position of the identified outlier
 ## first 4 columns are for Jmax from type 1 to 4 and column 5 to 8 are for Cmax from type 1 to 4
 ## the 9th column is the type of the identified outlier and the 10th is the time index
 ## the second row contains time indexes for each Jmax and Cmax
@@ -178,11 +178,11 @@ for (i in 1:length(res)) {
 }
 ```
 
-Finally, you can obtain the result as follow
+Finally, you can obtain the results as follows
 
 $$\begin{array}{c|c} 
-\text{Time Index} & \text{Type} \\\
-\hline 43 & \text{MTC} \\\
+\textbf{Time Index} & \textbf{Type} \\\
+43 & \text{MTC} \\\
 55 & \text{MTC} \\\
 265 & \text{MIO} \\\
 113 & \text{MTC} \\\
