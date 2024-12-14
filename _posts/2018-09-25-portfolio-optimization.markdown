@@ -77,7 +77,7 @@ port.display_efficient_frontier(assetsAnnotation=True,
 Let's continue to use the FF-5 Factor data. However we are interested in a portfolio with the following constraints
 
 $$\begin{array}{c|c|c} 
-\text{Asset} & \text{Lower Bound %} & \text{Upper Bound %}\\\
+\textbf{Asset} & \textbf{Lower Bound %} & \textbf{Upper Bound %}\\\
 \text{MKT} & 0 & 100 \\\
 \text{HML} & 50 & 100\\\
 \text{SMB} & 0 & 100 \\\
@@ -103,7 +103,7 @@ weights = port.get_allocations(configuration=configuration)
 Investors are interested in incorporating views, when they are solving asset allocation problems. For example,
 
 $$\begin{array}{c|c|c} 
-\text{View} & \text{Confidence Level %} & \text{Plus and Minus %}\\\
+\textbf{View} & \textbf{Confidence Level %} & \textbf{Plus and Minus %}\\\
 \text{Market outperforms by 1%} & 95 & 5 \\\
 \text{SMB beats RMW by 1%} & 90 & 5\\\
 \text{A portfolio of 20% of SMB and 80% of HML beats RMW by 1%} & 99 & 1\\\
