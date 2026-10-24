@@ -10,29 +10,29 @@ tags: ["finance", "research", "python"]
 
 ## Prerequisites
 
-* An active account with the Wharton WRDS Web Service
+* An active Wharton Research Data Services (WRDS) account
 * Python 2.7+ or 3.0+
-* ```wrds``` Python library; if you don't have it, install it (```pip install wrds```)
+* The ```wrds``` Python library (install it with ```pip install wrds```)
 
 ## Setup
 
-### To create .pgpass file
+### Create the .pgpass file
 
-For Mac user, you can create the ```.pgpass``` under ```/Users/username```.
+On a Mac, create the ```.pgpass``` file under ```/Users/username``` with the following line:
 
 ```unix
 wrds-pgdata.wharton.upenn.edu:9737:wrds:your_username:your_password
 ```
 
-where your_username is your WRDS username and your_password is your WRDS password. 
+Replace your_username and your_password with your WRDS username and password.
 
-#### To restrict file permissions:
+#### Restrict file permissions
 
 ```chmod 600 ~/.pgpass```
 
 ## Getting Started
 
-Now, you have set up your WRDS profile and can access your WRDS account through the Python API.
+With the profile set up, you can access your WRDS account through the Python API:
 
 ```python
 import wrds

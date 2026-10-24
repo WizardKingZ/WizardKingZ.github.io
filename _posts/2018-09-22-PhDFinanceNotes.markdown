@@ -7,16 +7,16 @@ summary: "Lecture notes from PhD coursework at Columbia: finance theory, microec
 tags: ["notes", "finance", "economics"]
 ---
 
-# Lecture Notes
+## Lecture Notes
 
-## Finance and Economics
+### Finance and Economics
 
-* <a href="{{site.base_url}}/assets/pdfs/Finance Theory.pdf">Finance Theory</a>
-* <a href="{{site.base_url}}/assets/pdfs/Microeconomics Theory.pdf">Microeconomics Theory</a>
-* <a href="{{site.base_url}}/assets/pdfs/Empirical Asset Pricing.pdf">Empirical Asset Pricing</a>
-* <a href="{{site.base_url}}/assets/pdfs/Market Microstructure.pdf">Market Microstructure</a>
+* [Finance Theory](</assets/pdfs/Finance Theory.pdf>)
+* [Microeconomic Theory](</assets/pdfs/Microeconomics Theory.pdf>)
+* [Empirical Asset Pricing](</assets/pdfs/Empirical Asset Pricing.pdf>)
+* [Market Microstructure](</assets/pdfs/Market Microstructure.pdf>)
 
-## Econometrics
+### Econometrics
 
-* <a href="{{site.base_url}}/assets/pdfs/Introduction to Financial Econometrics.pdf">Introduction to Econometrics</a>
-* <a href="{{site.base_url}}/assets/pdfs/Finanical Econometrics-Time Series.pdf">Time Series</a>
+* [Introduction to Econometrics](</assets/pdfs/Introduction to Financial Econometrics.pdf>)
+* [Time Series](</assets/pdfs/Finanical Econometrics-Time Series.pdf>)

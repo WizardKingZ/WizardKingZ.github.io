@@ -8,24 +8,26 @@ summary: "A pip-installable Python library for mean-variance portfolios and the 
 tags: ["portfolio theory", "optimization", "finance", "python"]
 ---
 
-As an ongoing effort to provide more finance-related Python libraries, I will start with the portfolio optimization library. This page documents the Hello-World version.
+As part of an ongoing effort to provide finance-related Python libraries, I will start with portfolio optimization. This page documents the library's Hello-World version.
 
-# Installation
+## Installation
 
-If you have python 3.6+ installed, you can run the following in your terminal
+If you have Python 3.6+ installed, run the following in your terminal:
 
 ```unix
 pip install git+https://github.com/WizardKingZ/portfolio_optimization.git
 ```
 
-It is easy to uninstall it.
+To uninstall it, run:
 
 ```unix
 pip uninstall portfolio_optimization
 ```
 
-# Get Started
-## Unconstrained Portfolio
+## Getting Started
+
+### Unconstrained Portfolio
+
 ```python
 ## import MarkowitzPortfolio 
 from portfolio_optimization import MarkowitzPortfolio
@@ -62,13 +64,11 @@ port.display_efficient_frontier(assetsAnnotation=True,
                                 upper_bound=0.14)
 ```
 
-<p align="center"> 
-<img src="{{site.base_url}}/assets/images/portfolio_optimization/efficient_frontier_with_cml.png">
-</p>
+![Efficient frontier with the capital market line for the five Fama-French factors](/assets/images/portfolio_optimization/efficient_frontier_with_cml.png)
 
-## Constrained Portfolio
+### Constrained Portfolio
 
-Let's continue to use the FF-5 Factor data. However we are interested in a portfolio with the following constraints
+Continuing with the Fama-French five-factor (FF-5) data, suppose you want a portfolio with the following constraints:
 
 $$\begin{array}{c|c|c} 
 \textbf{Asset} & \textbf{Lower Bound %} & \textbf{Upper Bound %}\\\
@@ -79,7 +79,7 @@ $$\begin{array}{c|c|c}
 \text{CMA} & -50 & 100 \\\
 \end{array}$$
 
-We can set up the following constraints
+Set up these constraints as follows:
 
 ```python
 constraints = {'Market': [0, 1], 
@@ -92,9 +92,9 @@ configuration['constraints'] = constraints
 weights = port.get_allocations(configuration=configuration)
 ```
 
-## Black-Litterman Portfolio Allocation
+### Black-Litterman Portfolio Allocation
 
-Investors are interested in incorporating views, when they are solving asset allocation problems. For example,
+Investors often want to incorporate their own views when solving asset allocation problems. For example:
 
 $$\begin{array}{c|c|c} 
 \textbf{View} & \textbf{Confidence Level %} & \textbf{Plus and Minus %}\\\
@@ -103,7 +103,7 @@ $$\begin{array}{c|c|c}
 \text{A portfolio of 20% of SMB and 80% of HML beats RMW by 1%} & 99 & 1\\\
 \end{array}$$
 
-We can use ```BlackLittermanPortfolio``` to incorporate these views
+Use ```BlackLittermanPortfolio``` to incorporate these views:
 
 ```python
 from portfolio_optimization import BlackLittermanPortfolio
@@ -127,12 +127,12 @@ weights = port.get_allocations(configuration=configuration)
 port.reset()
 ```
 
-As we mentioned the $$R^2$$ of the modeled returns, we will introduce some factor modeling tools in the later iteration. For beginners, let's consider the widely used factor model, Capital Asset Pricing Model (CAPM). In general, if you use the CAPM to estimate returns, the $$R^2$$ typically is below 15%. Hence, the parameter in the ```update_view``` member function would be typically set below 15% (e.g. we set it at 10%).
+The second argument of ```update_view``` is the $$R^2$$ of your modeled returns; I will add factor modeling tools in a later iteration. As a starting point, consider the most widely used factor model, the Capital Asset Pricing Model (CAPM). CAPM-estimated returns typically have an $$R^2$$ below 15%, so set this parameter below 15% (the example above uses 10%).
 
 ---
 
-I will add more functionality over time. In the next iteration, I will include the following
+I will add more functionality over time. The next iteration will include:
 
-* Hansen-Jaganathan bound test
-* Factor Models for estimating Stochastic Discount Factors
-* Style Analysis
+* Hansen-Jagannathan bound test
+* Factor models for estimating stochastic discount factors
+* Style analysis

@@ -19,14 +19,16 @@ baseurl: ""
 email: johnew.zhang@gmail.com
 linkedin: johnewzhang
 github: WizardKingZ
-twitter: johnew_zhang
+x: johnew_zhang
 instagram: johnewz
 facebook: johnewzhang
 
 # jekyll-seo-tag
 author: Johnew Zhang
-twitter_card:
+twitter:
   username: johnew_zhang
+  card: summary
+logo: /assets/images/share-logo.png
 social:
   name: Johnew Zhang
   links:
@@ -99,6 +101,9 @@ defaults:
     values:
       layout: post
       math: true
+  - scope: { path: "" }
+    values:
+      image: /assets/images/share-logo.png
 
 exclude:
   - Gemfile
