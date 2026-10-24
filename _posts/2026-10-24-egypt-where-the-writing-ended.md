@@ -5,6 +5,7 @@ pillar: culture
 series: travel
 topic: Egypt, November 2023
 math: false
+hieroglyphs: true
 summary: "A week in Egypt, told in the order of its history: from the first stone pyramid at Saqqara to the last hieroglyphs ever carved, at Philae."
 tags: ["travel", "Egypt", "history"]
 image: /assets/images/egypt-2023/step-pyramid.jpg
@@ -29,12 +30,33 @@ Egyptologists divide ancient Egypt into kingdoms, when one king ruled the whole 
 | Ptolemaic | 332–30 BC | Kom Ombo, Edfu, most of Philae |
 | Roman | 30 BC–AD 395 | Esna, Philae |
 
+## The Nile and the Two Lands
+
+Everything in Egypt depends on the Nile. The river flows north, from Aswan to the Mediterranean, so Upper Egypt is the south, upstream, and Lower Egypt is the north, the delta. Egyptians called their country Kemet, "the black land" <span class="hg" role="img" aria-label="Kemet in hieroglyphs">𓆎𓅓𓏏𓊖</span>, after the dark silt the flood left on the fields. The desert on either side was Deshret, "the red land."
+
+Each half had its own emblems, and they appear on almost everything I saw:
+
+<ul class="glyphs">
+<li><span class="hg" role="img" aria-label="White crown in hieroglyphs">𓋑</span>White crown: Upper Egypt</li>
+<li><span class="hg" role="img" aria-label="Red crown in hieroglyphs">𓋔</span>Red crown: Lower Egypt</li>
+<li><span class="hg" role="img" aria-label="Double crown in hieroglyphs">𓋖</span>Double crown: the king of both</li>
+<li><span class="hg" role="img" aria-label="Lotus in hieroglyphs">𓆸</span>Lotus: the plant of Upper Egypt</li>
+<li><span class="hg" role="img" aria-label="Papyrus in hieroglyphs">𓇉</span>Papyrus: the plant of Lower Egypt</li>
+<li><span class="hg" role="img" aria-label="King of Upper and Lower Egypt in hieroglyphs">𓇓𓆤</span>"King of Upper and Lower Egypt": the sedge of the south and the bee of the north</li>
+</ul>
+
+The two plants carry the same idea into architecture. Temple columns are carved as bundles of papyrus or lotus, and the sides of royal thrones, including those of the colossi at Abu Simbel, show the sema-tawy, "uniting the Two Lands": a lotus and a papyrus tied around the sign for "unite" <span class="hg" role="img" aria-label="Sema in hieroglyphs">𓄥</span>.
+
+Papyrus was also Egypt's paper. Scribes cut the plant's pith into strips, laid them crosswise, and pressed them into sheets, and the Greek word for the plant, *papyros*, gave English the word *paper*. Carved hieroglyphs were the formal script for monuments; on papyrus, scribes wrote faster, cursive forms.
+
+Royal names were written inside a cartouche, an oval loop of rope that protected the name it enclosed. I have drawn a few in this post, with the signs in a single line for simplicity.
+
 ## Old Kingdom: the pyramid age
 
 c. 2686–2181 BC · Saqqara, Dahshur, Giza · Day 1
 {: .dayline}
 
-Egypt became one country around 3100 BC, when the kings of Upper Egypt, the Nile valley in the south, took Lower Egypt, the delta in the north. They ruled from Memphis, near modern Cairo. By the Old Kingdom the king was treated as a god on earth, and the state's main project was his tomb. I started where that project started.
+Egypt became one country around 3100 BC, when the kings of Upper Egypt took Lower Egypt. They ruled from Memphis, near modern Cairo. By the Old Kingdom the king was treated as a god on earth, and the state's main project was his tomb. I started where that project started.
 
 The Step Pyramid of Djoser at Saqqara, designed by the architect Imhotep around 2670 BC, is the oldest large stone building in the world. It is six mastabas stacked into a staircase to the sky, and you can see the idea being invented.
 
@@ -42,7 +64,7 @@ The Step Pyramid of Djoser at Saqqara, designed by the architect Imhotep around 
 *The Step Pyramid of Djoser at Saqqara.*
 {: .caption}
 
-At Dahshur, the Bent Pyramid of Sneferu shows that invention going wrong. Partway up, the builders reduced the angle, probably because the structure was becoming unstable. Sneferu then built the Red Pyramid nearby with the correction applied, and his son Khufu took the lesson to Giza.
+At Dahshur, the Bent Pyramid of Sneferu <span class="cartouche" role="img" aria-label="Sneferu in hieroglyphs">𓋴𓄤𓂋𓅱</span> shows that invention going wrong. Partway up, the builders reduced the angle, probably because the structure was becoming unstable. Sneferu then built the Red Pyramid nearby with the correction applied, and his son Khufu <span class="cartouche" role="img" aria-label="Khufu in hieroglyphs">𓐍𓅱𓆑𓅱</span> took the lesson to Giza.
 
 ![The Bent Pyramid of Sneferu at Dahshur](/assets/images/egypt-2023/bent-pyramid.jpg)
 *The Bent Pyramid at Dahshur. The change of angle is visible about halfway up.*
@@ -51,7 +73,7 @@ At Dahshur, the Bent Pyramid of Sneferu shows that invention going wrong. Partwa
 The Great Pyramid remained the tallest man-made structure on earth for nearly 4,000 years. Inside, the climb up the Grand Gallery to the King's Chamber is steep, hot, and cramped, and the chamber itself is bare granite. That emptiness is the point. Everything else I saw that week, from Abu Simbel's colossi to the last hieroglyphs at Philae, descends from the confidence this building expressed.
 
 ![The Sphinx with the pyramids of Khafre and Khufu behind it](/assets/images/egypt-2023/giza-sphinx.jpg)
-*The Sphinx, probably carved for Khafre, with his pyramid and Khufu's behind it.*
+*The Sphinx, probably carved for Khafre <span class="cartouche" role="img" aria-label="Khafre in hieroglyphs">𓇳𓈍𓆑</span>, with his pyramid and Khufu's behind it.*
 {: .caption}
 
 Lunch was at Khufu's, a restaurant on the Giza plateau whose terrace looks straight at the Great Pyramid. Its chef, Mostafa Seif, reworks the rural dishes he grew up with, and in 2025 it was named the best restaurant in Egypt and ranked fourth on the Middle East and North Africa's 50 Best list. I ordered hamam, roast pigeon. Pigeon is a staple of Egyptian cooking, and the mud-brick dovecotes that house the birds are still a common sight in villages along the Nile.
@@ -70,7 +92,7 @@ The Old Kingdom ended in more than a century of division. Kings from Thebes, mod
 
 ### Karnak: a city of temples
 
-Karnak is less a temple than a city of temples, enlarged by king after king for some 2,000 years. The 134 columns of the Great Hypostyle Hall, completed under Seti I and Ramesses II, are the reason to go, and the scale is difficult to convey. Standing among them, you feel the purpose of the design, which was to make a human feel small before Amun.
+Karnak is less a temple than a city of temples, enlarged by king after king for some 2,000 years. The 134 columns of the Great Hypostyle Hall, completed under Seti I and Ramesses II, are the reason to go, and the scale is difficult to convey. Standing among them, you feel the purpose of the design, which was to make a human feel small before Amun <span class="hg" role="img" aria-label="Amun in hieroglyphs">𓇋𓏠𓈖</span>, whose name means "the hidden one." The columns of the central aisle are carved as open papyrus flowers.
 
 The kings of this period also changed how they were buried. Egyptians built for the living on the east bank and buried their dead on the west, where the sun sets. Pyramids had proven too easy to rob, so the New Kingdom's kings cut their tombs instead into a hidden valley on the west bank, the Valley of the Kings.
 
@@ -86,7 +108,7 @@ Hatshepsut ruled as pharaoh for about 20 years, from around 1479 BC. Her terrace
 
 Luxor Temple, begun under Amenhotep III around 1390 BC, carries the marks of the religious crisis that followed. His son Akhenaten abandoned Amun for the single sun disc of the Aten and moved the capital to a new city. The Luxor Museum, small and well lit, was the best-curated collection of the trip.
 
-The crisis ended with Tutankhamun, who was born Tutankhaten, changed his name, and restored Amun. He was a minor king who died at about 19, which is why his burial matters: it alone filled rooms of the Egyptian Museum on Tahrir Square, where I saw it with an Egyptologist on my first day. That made it easier to imagine what the great pharaohs, whose tombs were robbed in antiquity, once took with them. Since my visit, most of the collection, including the gold mask, has moved to the Grand Egyptian Museum near Giza, which opened fully in November 2025 and shows the whole burial in one place for the first time.
+The crisis ended with Tutankhamun <span class="cartouche" role="img" aria-label="Tutankhamun in hieroglyphs">𓇋𓏠𓈖𓏏𓅱𓏏𓋹</span>, who was born Tutankhaten, changed his name, and restored Amun. The name means "living image of Amun." Amun's name is written first in the cartouche out of respect, and the ankh <span class="hg" role="img" aria-label="Ankh in hieroglyphs">𓋹</span>, the sign for life, sits at the end. He was a minor king who died at about 19, which is why his burial matters: it alone filled rooms of the Egyptian Museum on Tahrir Square, where I saw it with an Egyptologist on my first day. That made it easier to imagine what the great pharaohs, whose tombs were robbed in antiquity, once took with them. Since my visit, most of the collection, including the gold mask, has moved to the Grand Egyptian Museum near Giza, which opened fully in November 2025 and shows the whole burial in one place for the first time.
 
 I also went down into his tomb in the Valley of the Kings. It is small for a king's, and only the burial chamber is painted, but the treasure I had seen in Cairo came out of these few rooms, and the king's mummy still lies here.
 
@@ -98,7 +120,7 @@ That afternoon I was back at the Winter Palace, which opened in 1907. Lord Carna
 
 ### Seti I and Ramesses II
 
-The tomb of Seti I has the finest painted reliefs I saw in Egypt. His son Ramesses II reigned for 66 years, and he is everywhere: in the courtyard he added to Luxor Temple, in the tomb of his chief queen, Nefertari, and above all at Abu Simbel.
+The tomb of Seti I has the finest painted reliefs I saw in Egypt. His son Ramesses II <span class="cartouche" role="img" aria-label="Ramesses in hieroglyphs">𓇳𓄟𓋴𓋴</span>, whose name means "Ra bore him," reigned for 66 years, and he is everywhere: in the courtyard he added to Luxor Temple, in the tomb of his chief queen, Nefertari, and above all at Abu Simbel.
 
 ![Colossus of Ramesses II in the courtyard of Luxor Temple](/assets/images/egypt-2023/luxor-temple.jpg)
 *Ramesses II in the courtyard he added to Luxor Temple.*
@@ -171,7 +193,7 @@ Philae is where the story ends. In the UNESCO campaign, the temple of Isis was d
 *Philae, the temple of Isis, rebuilt on Agilkia Island.*
 {: .caption}
 
-The inscription of AD 394 is a few lines on a wall here. After it, Egyptians wrote their language in Coptic, an alphabet based on Greek, and no one could read hieroglyphs again until Jean-François Champollion deciphered them in 1822. Some 3,000 years after Djoser's pyramid, this is where the writing ended.
+The inscription of AD 394 is a few lines on a wall here. After it, Egyptians wrote their language in Coptic, an alphabet based on Greek, and no one could read hieroglyphs again until Jean-François Champollion deciphered them in 1822. He started from royal names in cartouches: Ptolemy <span class="cartouche" role="img" aria-label="Ptolemy in hieroglyphs">𓊪𓏏𓅱𓃭𓅓𓇋𓇋𓋴</span> on the Rosetta Stone, and Cleopatra on an obelisk taken from Philae itself. Some 3,000 years after Djoser's pyramid, this is where the writing ended.
 
 ## The route
 

@@ -164,6 +164,11 @@ a.card:hover h3{text-decoration:underline}
 .prose .pair figure{margin:0}
 .prose .pair img{width:100%;max-height:none;margin:0 0 8px}
 .prose .pair figcaption{font-family:var(--mono);font-size:12px;line-height:1.5;color:var(--muted);text-align:center}
+.hg{font-family:"Noto Sans Egyptian Hieroglyphs",serif;font-size:1.3em;line-height:1;white-space:nowrap}
+.cartouche{display:inline-block;font-family:"Noto Sans Egyptian Hieroglyphs",serif;font-size:1.35em;line-height:1.35;white-space:nowrap;border:1.5px solid currentColor;border-right-width:4px;border-radius:1em;padding:0 .45em;margin:0 .1em;vertical-align:-.1em}
+.prose .glyphs{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px;margin:4px 0 22px;padding:0;list-style:none}
+.prose .glyphs li{margin:0;background:var(--surface);border:1px solid var(--rule);border-radius:3px;padding:10px 12px;font-size:14px;line-height:1.35;color:var(--ink-2)}
+.prose .glyphs .hg{display:block;font-size:40px;line-height:1.2;color:var(--ink);margin-bottom:4px}
 .takeaway{display:flex;gap:12px;align-items:baseline;margin:0 0 24px}
 .takeaway b{flex:none;font-family:var(--ui);font-size:10px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:var(--surface);background:var(--pc,var(--accent));padding:3px 8px}
 .takeaway span{font-size:16px;font-weight:600;line-height:1.45}
