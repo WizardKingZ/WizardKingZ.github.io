@@ -1,18 +1,13 @@
 ---
-title: "Research: Essay on Asset Returns with Intertemporal CAPM"
-layout: post
-blog: true
+title: "Essay on Asset Returns with Intertemporal CAPM"
 date: 2019-05-22 00:00
-headerImage: false
-tag:
-  - finance
-  - icapm
-  - stochastical volatility
-  - cross-section return
-star: false
-category: blog
-author: projohnewzhang
-description: "Research: Essay on Asset Returns with Intertemporal CAPM"
+pillar: academic
+series: research
+topic: asset pricing
+venue: Columbia Business School
+summary: "Replicating Campbell–Vuolteenaho and Campbell et al. on 1963–2018 data: cash-flow betas no longer separate value from growth, but news about market volatility does."
+takeaway: "Small and value stocks require a smaller hedging premium than large and growth stocks, and that difference, rather than cash-flow beta, is what the modern data supports."
+tags: ["finance", "ICAPM", "stochastic volatility", "cross-section returns"]
 ---
 
 This paper replicates the return decomposition methodologies proposed by Campbell and Vuolteenaho (2004) and Campbell, Giglio, Polk, and Turley (2018), which explained the size and value “anomalies” in stock returns. We show that due to the co-movement of the cash flow and discount risk in the modern period, there is little evidence that the value stocks have significantly higher betas than the growth stocks; however, the news about expected future market volatility can disentangle the size-and-value puzzle effectively. Empirically, small stocks and value stocks require less hedging premium than large and growth stocks. Lastly, their methodology shows some ability to price the abnormal returns of popular equity strategies and currency carry trade premiums.

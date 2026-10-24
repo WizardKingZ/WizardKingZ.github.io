@@ -1,18 +1,11 @@
 ---
-title: "Research: The Role of Institutional Investor Prior 1998"
-layout: post
-blog: true
+title: "The Role of Institutional Investors Prior to 1998"
 date: 2018-09-24 21:20
-headerImage: false
-tag:
-  - finance
-  - panel regression
-  - institutional investor
-  - research
-star: false
-category: blog
-author: projohnewzhang
-description: "The Role of Institutional Investor Prior 1998"
+pillar: academic
+series: research
+topic: corporate finance
+summary: "Institutional ownership of US non-financial firms, 1980–1997: every type of institution avoids volatile stocks, and there is little sign of active monitoring."
+tags: ["finance", "panel regression", "institutional investor", "research"]
 ---
 
 We study the role of institutional investors who invest in publicly traded US companies using WRDS dataset through 1980 to 1997. We find that all institutional investors dislike highly volatile stocks. During this period, there is little evidence that active monitoring was done by the independent institutional investors and significantly it shows grey institutions did not intervene with the management of the companies they invested in. 
@@ -27,7 +20,7 @@ In the first section, we discuss the data derived from our analysis. The next tw
 
 # Data Description
 
-Our analysis uses data from CRSP, COMPUSTAT, and COMPUSTAT_company. CRSP includes the adjusted stock return (RET), volatility (SIMGA), and institutional ownership information. Due to severe mapping errors, the institutional ownership information is only correct prior to 1998 and this is primarily the constraint for the analysis done in this paper. There are five types of ownership, banks (IOB), insurance companies (IOIC), mutual funds (IOMF), independent investment advisors (IOIA), and others (including pension fund and university endowment fund; IOO). We define banks, insurance companies, and others to be grey institutions (IOGREY), and mutual funds and independent investment advisors to be independent institutions (IOINDEP). Our financial statement level data is from COMPUSTAT and COMPUSTAT_company. COMPUSTAT_company provides the industry classifications (DNUM). In our analysis, we remove the financial industry (DNUM between 6000 and 6999) since financial institutions are already complicated investors and should have no impact by institutional ownership. Table I summarizes the firm characteristics, institutional ownership, and operating performance between 1980 and 1997. 
+Our analysis uses data from CRSP, COMPUSTAT, and COMPUSTAT_company. CRSP includes the adjusted stock return (RET), volatility (SIGMA), and institutional ownership information. Due to severe mapping errors, the institutional ownership information is only correct prior to 1998 and this is primarily the constraint for the analysis done in this paper. There are five types of ownership, banks (IOB), insurance companies (IOIC), mutual funds (IOMF), independent investment advisors (IOIA), and others (including pension fund and university endowment fund; IOO). We define banks, insurance companies, and others to be grey institutions (IOGREY), and mutual funds and independent investment advisors to be independent institutions (IOINDEP). Our financial statement level data is from COMPUSTAT and COMPUSTAT_company. COMPUSTAT_company provides the industry classifications (DNUM). In our analysis, we remove the financial industry (DNUM between 6000 and 6999) since financial institutions are already complicated investors and should have no impact by institutional ownership. Table I summarizes the firm characteristics, institutional ownership, and operating performance between 1980 and 1997. 
 
 <p align="center"> 
 <img src="{{site.base_url}}/assets/images/role_of_institutional_investor_prior_1998/image1.png">
@@ -59,7 +52,7 @@ Lastly, if correct mapping data for institutional ownership is provided after 19
 
 ---
 
-## Varialble Definitions
+## Variable Definitions
 
 <p align="center"> 
 <img src="{{site.base_url}}/assets/images/role_of_institutional_investor_prior_1998/image4.png">

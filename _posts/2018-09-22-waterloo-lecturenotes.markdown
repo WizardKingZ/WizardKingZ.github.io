@@ -1,18 +1,10 @@
 ---
-title: "Notes: University of Waterloo Lecture Notes and Professional Exam Notes"
-layout: post
-blog: true
+title: "University of Waterloo Lecture Notes and Actuarial Exam Notes"
 date: 2018-09-22 22:00
-headerImage: false
-tag:
-- notes
-- waterloo
-- cas
-- soa
-star: false
-category: blog
-author: johnewzhang
-description: "University of Waterloo Lecture Notes and Professional Exam Notes"
+pillar: academic
+series: notes
+summary: "Notes from a math degree, algebra through option pricing, plus study notes for SOA and CAS exams MFE, C and S."
+tags: ["notes", "waterloo", "cas", "soa"]
 ---
 
 # Lecture Notes

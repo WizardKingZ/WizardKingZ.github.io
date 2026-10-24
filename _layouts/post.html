@@ -1,51 +1,55 @@
 ---
-layout: page
+layout: default
 ---
+{%- assign p = site.pillars | where: "id", page.pillar | first -%}
+{%- assign words = content | strip_html | number_of_words -%}
+{%- assign mins = words | divided_by: 220 | at_least: 1 -%}
+{%- assign series_name = site.series_names[page.series] | default: page.series -%}
+<main class="inner p-{{ page.pillar }}" style="padding-top:18px;padding-bottom:60px">
+  {%- if p %}
+  <a class="back" href="{{ '/' | append: p.id | append: '/' | relative_url }}{% if page.series %}#{{ page.series }}{% endif %}">← {{ p.name }}{% if series_name %} · {{ series_name }}{% endif %}</a>
+  {%- else %}
+  <a class="back" href="{{ '/' | relative_url }}">← Home</a>
+  {%- endif %}
 
-{% include Math_Jax.html %}
+  <header class="post-head">
+    {%- if series_name %}<div class="eyebrow">{{ series_name }}{% if page.topic %} · {{ page.topic }}{% endif %}</div>{% endif %}
+    <h1>{{ page.title }}</h1>
+    <div class="post-meta"><span>{{ page.date | date: "%-d %B %Y" }}</span><span>{{ mins }} min read</span>{% if page.venue %}<span>{{ page.venue }}</span>{% endif %}</div>
+  </header>
 
-{% if page.image and page.headerImage %}
-    <img class="title-image" src="{{ page.image }}" alt="{{ page.title }}">
-{% endif %}
+  <div class="cols" style="gap:24px 56px">
+    <article class="prose" id="prose">
+      {%- if page.takeaway %}
+      <p class="takeaway"><b>Takeaway</b><span>{{ page.takeaway }}</span></p>
+      {%- endif %}
+      {{ content }}
+    </article>
+    <aside class="post-aside">
+      <nav class="toc" id="toc" aria-label="On this page" hidden>
+        <div class="eyebrow" style="color:var(--muted);margin-bottom:8px">On this page</div>
+      </nav>
+      {%- if page.tags.size > 0 %}
+      <div class="tags">{% for t in page.tags %}<a class="tag" href="{{ '/tags/' | relative_url }}#{{ t | slugify }}">{{ t }}</a>{% endfor %}</div>
+      {%- endif %}
+      {%- if page.pdf %}<a class="btn" href="{{ page.pdf | relative_url }}">Download PDF</a>{% endif %}
+    </aside>
+  </div>
 
-<h1 class="title">{{ page.title }}</h1>
-
-<span class="date">
-    <time datetime="{{ page.date | date:"%d-%m-%Y" }}">{{ page.date | date: "%A. %B %d, %Y" }}</time>
-    {% if site.read-time %} - {% include read-time.html %}{% endif %}
-</span>
-
-{% if site.show-tags %}
-    <div class="post-tags">
-        {% for tag in page.tags %}
-            <a class="item" href="{{ site.url }}/tags/#{{ tag | slugify }}">{{ tag }}</a>
-        {% endfor %}
+  <footer class="post-foot">
+    <div class="author">
+      <img src="{{ site.picture | relative_url }}" alt="" width="56" height="56">
+      <div style="flex:1 1 260px;min-width:0">
+        <div style="font-weight:700">{{ site.name }}</div>
+        <div style="font-size:14px;color:var(--ink-2)">Investor in financial services and FinTech. Mathematician and financial economist by training.</div>
+      </div>
+      <a class="btn solid" href="{{ '/about/' | relative_url }}">About me</a>
     </div>
-{% endif %}
-
-{{content}}
-
-{% if page.blog and site.blog-nav-links %}
-    <div class="blog-navigation">
-        {% if page.previous.url %}
-            <a class="prev" href="{{ site.url }}{{ page.previous.url }}">&laquo; {{ page.previous.title }}</a>
-        {% else %}
-            <a class="prev"></a>
-        {% endif %}
-        {% if page.next.url %}
-            <a class="next" href="{{ site.url }}{{ page.next.url }}">{{ page.next.title }} &raquo;</a>
-        {% endif %}
+    {%- assign prev = page.previous -%}{%- if prev.hidden -%}{%- assign prev = prev.previous -%}{%- endif -%}
+    {%- assign next = page.next -%}{%- if next.hidden -%}{%- assign next = next.next -%}{%- endif -%}
+    <div class="prevnext">
+      {%- if prev %}<a href="{{ prev.url | relative_url }}"><div class="eyebrow" style="color:var(--muted)">← Older</div><div class="serif">{{ prev.title }}</div></a>{% endif %}
+      {%- if next %}<a href="{{ next.url | relative_url }}" style="text-align:right"><div class="eyebrow" style="color:var(--muted)">Newer →</div><div class="serif">{{ next.title }}</div></a>{% endif %}
     </div>
-{% endif %}
-
-{% if site.related %}
-    {% include related.html %}
-{% endif %}
-
-{% if site.show-author %}
-    {% include author.html %}
-{% endif %}
-
-{% if site.disqus %}
-    {% include disqus.html %}
-{% endif %}
+  </footer>
+</main>

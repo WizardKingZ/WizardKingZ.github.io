@@ -1,8 +1,7 @@
 ---
 layout: default
 ---
-{% include header.html %}
-
-{{content}}
-
-{% include footer.html %}
+<main class="inner" style="padding-top:28px;padding-bottom:48px">
+  <div class="page-head"><div class="eyebrow">{{ page.eyebrow | default: site.name }}</div><h1>{{ page.title }}</h1></div>
+  <div class="prose">{{ content }}</div>
+</main>

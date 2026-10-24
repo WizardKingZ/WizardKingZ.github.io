@@ -1,0 +1,879 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Johnew's Kitchen</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Source+Sans+3:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: Trident house format (dark band, underline tabs, ruled section heads) recast as a chef's site — photo-led recipe cards, a cookbook-style recipe page, kitchen reference tables. */
+:root{
+  color-scheme:light;
+  --ground:#f6f6f2; --surface:#ffffff; --surface-2:#eeefe9; --ink:#17201b; --ink-2:#47524b; --muted:#5f6b63; --ctl:#8e978f;
+  --rule:#d6d9d1; --line-2:#c3c8bf;
+  --band:#18231d; --band-text:#f1f3ee;
+  --accent:#1f6b52; --accent-soft:#e3efe9; --chili:#b23a26; --chili-soft:#f6e4df; --amber:#a2680f; --amber-soft:#f5ead7;
+  --display:"DM Serif Display","Iowan Old Style",Georgia,serif;
+  --body:"Source Sans 3",-apple-system,"Segoe UI",Arial,sans-serif;
+  --ui:Arial,Helvetica,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  color-scheme:dark;
+  --ground:#101512; --surface:#171d19; --surface-2:#1f2621; --ink:#e7ece7; --ink-2:#b8c2ba; --muted:#86928a; --ctl:#56615a;
+  --rule:#2f3832; --line-2:#3d473f; --band:#0b100d; --band-text:#eef2ec;
+  --accent:#5dbb95; --accent-soft:#183026; --chili:#ec7a63; --chili-soft:#3a201a; --amber:#e0a648; --amber-soft:#35290f;
+}}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --ground:#101512; --surface:#171d19; --surface-2:#1f2621; --ink:#e7ece7; --ink-2:#b8c2ba; --muted:#86928a; --ctl:#56615a;
+  --rule:#2f3832; --line-2:#3d473f; --band:#0b100d; --band-text:#eef2ec;
+  --accent:#5dbb95; --accent-soft:#183026; --chili:#ec7a63; --chili-soft:#3a201a; --amber:#e0a648; --amber-soft:#35290f;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--body);font-size:15px;line-height:1.55;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--band)}
+h1,h2,h3,h4{margin:0;text-wrap:balance}
+a{color:inherit}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.wrap{padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+@media (min-width:900px){.wrap{padding-left:max(28px,env(safe-area-inset-left,0px));padding-right:max(28px,env(safe-area-inset-right,0px))}}
+.inner{max-width:1240px;margin:0 auto}
+/* Header */
+.hdr{position:sticky;top:env(safe-area-inset-top,0px);z-index:20}
+.band{background:var(--band);color:var(--band-text)}
+.band .inner{display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px;padding-block:12px}
+.brand{display:flex;align-items:center;gap:12px;min-width:0}
+.mark{flex:none;width:32px;height:32px;border:1.5px solid var(--band-text);display:grid;place-items:center;font-family:var(--display);font-size:17px;line-height:1}
+.band h1{font-family:var(--ui);font-size:14.5px;letter-spacing:.16em;text-transform:uppercase;font-weight:700}
+.band .sub{opacity:.78;font-family:var(--ui);font-size:11.5px;letter-spacing:.02em;margin-top:1px}
+.tog{margin-left:auto;font-family:var(--ui);font-size:12px;font-weight:600;letter-spacing:.05em;color:var(--band-text);background:transparent;border:1px solid color-mix(in srgb,var(--band-text) 55%,transparent);padding:7px 14px;border-radius:2px;cursor:pointer;white-space:nowrap}
+.tog:hover{background:color-mix(in srgb,var(--band-text) 12%,transparent)}
+nav.tabs{background:var(--surface);border-bottom:1px solid var(--rule)}
+nav.tabs ul{list-style:none;margin:0 auto;padding:0;display:flex;overflow-x:auto;scrollbar-width:none;max-width:1240px}
+nav.tabs ul::-webkit-scrollbar{display:none}
+nav.tabs a{display:block;padding:11px 12px 9px;font-family:var(--ui);font-size:12.5px;font-weight:500;color:var(--muted);text-decoration:none;border-bottom:2px solid transparent;white-space:nowrap}
+nav.tabs a:hover{color:var(--ink)}
+nav.tabs a[aria-current="page"]{color:var(--ink);font-weight:700;border-bottom-color:var(--accent)}
+nav.tabs li[hidden]{display:none}
+/* Sections */
+section{padding-block:22px 56px}
+section:not(.active){display:none}
+.eyebrow{font-family:var(--ui);font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:var(--accent);font-weight:700}
+.shead{border-bottom:2px solid var(--ink);padding-bottom:7px;margin-bottom:12px}
+.shead h2{font-family:var(--display);font-weight:400;font-size:clamp(26px,3vw,34px);line-height:1.1;margin-top:4px}
+.lede{font-size:14px;color:var(--ink-2);max-width:72ch;margin:0 0 20px}
+/* Stats line */
+.stats{font-family:var(--mono);font-size:12.5px;color:var(--ink-2);margin:-8px 0 18px;display:flex;flex-wrap:wrap;gap:2px 16px}
+.stats b{color:var(--ink);font-weight:500}
+/* KPI strip (unused) */
+.kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule);border-radius:3px;overflow:hidden;margin-bottom:22px}
+@media (max-width:640px){.kpis{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.kpi{background:var(--surface);padding:11px 13px}
+.kpi .l{font-family:var(--ui);font-size:10px;letter-spacing:.11em;text-transform:uppercase;font-weight:700;color:var(--accent)}
+.kpi .v{font-family:var(--ui);font-size:23px;font-weight:700;margin-top:5px;font-variant-numeric:tabular-nums}
+.kpi .v small{font-size:13px;color:var(--muted);font-weight:500}
+.kpi .d{font-size:12px;color:var(--ink-2);margin-top:2px}
+/* Filters */
+.filters{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:flex-end;margin-bottom:18px}
+.fgroup{display:flex;flex-direction:column;gap:4px;min-width:0}
+.fgroup label{font-family:var(--ui);font-size:10px;letter-spacing:.11em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.fgroup select,.fgroup input{font:inherit;font-size:13.5px;padding:7px 10px;border:1px solid var(--ctl);background:var(--surface);color:var(--ink);border-radius:2px;min-width:140px;min-height:40px}
+.fgroup input{min-width:200px}
+.clear{font-family:var(--ui);font-size:12px;padding:8px 12px;min-height:40px;border:1px solid var(--ctl);background:transparent;color:var(--ink-2);border-radius:2px;cursor:pointer}
+/* Recipe cards */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:18px}
+.ghead{grid-column:1/-1;display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 12px;border-bottom:1px solid var(--rule);padding:18px 0 6px}
+.ghead:first-child{padding-top:0}
+.ghead h3{font-family:var(--display);font-weight:400;font-size:22px;line-height:1.15;margin:0}
+.ghead .n{font-family:var(--mono);font-size:11.5px;color:var(--muted)}
+.ghead p{flex-basis:100%;font-size:12.5px;color:var(--ink-2);margin:0}
+.rc{background:var(--surface);border:1px solid var(--rule);border-radius:3px;overflow:hidden;display:flex;flex-direction:column;text-align:left;padding:0;cursor:pointer;transition:transform .15s,border-color .15s}
+.rc:hover{border-color:var(--line-2);transform:translateY(-2px)}
+.rc .ph{aspect-ratio:4/3;background:var(--surface-2);overflow:hidden;max-width:100%}
+.rc .ph img{width:100%;height:100%;object-fit:cover;display:block}
+.rc .ph .noimg{height:100%;display:grid;place-items:center;font-family:var(--display);font-size:40px;color:var(--line-2)}
+.rc .bd{padding:12px 14px 14px;display:flex;flex-direction:column;gap:6px;min-width:0}
+.rc .cu{font-family:var(--ui);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.rc{color:inherit;text-decoration:none}
+.rc h3{font-family:var(--display);font-weight:400;font-size:22px;line-height:1.15}
+.rc .meta{display:flex;flex-wrap:wrap;gap:4px 14px;font-family:var(--mono);font-size:11.5px;color:var(--muted)}
+.chips{display:flex;flex-wrap:wrap;gap:5px}
+.chip{font-family:var(--ui);font-size:10.5px;letter-spacing:.04em;padding:2px 7px;border-radius:2px;background:var(--surface-2);color:var(--ink-2)}
+.chip.d-Easy{background:var(--accent-soft);color:var(--accent)}
+.chip.d-Normal{background:var(--amber-soft);color:var(--amber)}
+.chip.d-Effort{background:var(--chili-soft);color:var(--chili)}
+.empty{border:1px dashed var(--line-2);border-radius:3px;padding:28px 22px;background:var(--surface);color:var(--ink-2);max-width:640px}
+.empty h3{font-family:var(--display);font-weight:400;font-size:22px;color:var(--ink);margin-bottom:6px}
+.empty p{margin:0}
+/* Recipe page */
+.back{font-family:var(--ui);font-size:12px;background:none;border:0;padding:0;min-height:44px;color:var(--accent);cursor:pointer;font-weight:700;letter-spacing:.04em;margin-bottom:14px}
+.rhero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:clamp(20px,3vw,40px);align-items:start;margin-bottom:26px}
+@media (max-width:860px){.rhero{grid-template-columns:1fr}}
+.rhero .photo{border-radius:3px;overflow:hidden;background:var(--surface-2);aspect-ratio:4/3;max-width:100%}
+.rhero .photo img{width:100%;height:100%;object-fit:cover;display:block}
+.rhero h2{font-family:var(--display);font-weight:400;font-size:clamp(34px,4.4vw,54px);line-height:1.02;margin:6px 0 10px}
+.rhero .summary{font-size:15.5px;color:var(--ink-2);margin:0 0 16px;max-width:60ch}
+.facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--rule);border-left:1px solid var(--rule);margin-bottom:16px}
+.facts div{padding:9px 11px;border-right:1px solid var(--rule);border-bottom:1px solid var(--rule);min-width:0}
+.facts dt{font-family:var(--ui);font-size:10px;letter-spacing:.11em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.facts dd{margin:2px 0 0;font-weight:600;font-size:14px}
+.facts dd.t{font-family:var(--mono);font-weight:500}
+.timeline{display:flex;height:8px;border-radius:2px;overflow:hidden;margin:4px 0 4px;background:var(--surface-2)}
+.timeline span{display:block}
+.tl-legend{display:flex;flex-wrap:wrap;gap:4px 14px;font-family:var(--mono);font-size:11px;color:var(--muted)}
+.tl-legend i{display:inline-block;width:8px;height:8px;border-radius:1px;margin-right:5px;vertical-align:0}
+.cols{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(20px,3vw,44px);align-items:start}
+@media (max-width:900px){.cols{grid-template-columns:1fr}}
+.panel h3{font-family:var(--ui);font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;border-bottom:2px solid var(--ink);padding-bottom:6px;margin-bottom:10px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.scale{margin-left:auto;display:flex;align-items:center;gap:6px;font-family:var(--ui);font-size:11.5px;letter-spacing:.06em;text-transform:none;font-weight:500;color:var(--ink-2)}
+.scale button{width:44px;height:44px;font-size:18px;border:1px solid var(--ctl);background:var(--surface);border-radius:2px;cursor:pointer;font-weight:700;line-height:1}
+.scale output{font-family:var(--mono);font-size:13px;min-width:22px;text-align:center;color:var(--ink)}
+.igroup{margin-bottom:16px}
+.igroup h4{font-family:var(--display);font-weight:400;font-size:18px;margin-bottom:4px;color:var(--accent)}
+.ing{list-style:none;margin:0;padding:0}
+.ing li{border-bottom:1px dotted var(--rule)}
+.ing label{display:grid;grid-template-columns:22px 86px minmax(0,1fr);gap:8px;align-items:baseline;padding:10px 0;min-height:44px;cursor:pointer}
+.ing input{margin:0;width:18px;height:18px;accent-color:var(--accent);transform:translateY(3px)}
+.ing .q{font-family:var(--mono);font-size:12.5px;color:var(--ink);text-align:right;font-variant-numeric:tabular-nums}
+.ing .n{min-width:0}
+.ing .note{color:var(--muted);font-size:13px}
+.ing li.done .n,.ing li.done .q{color:var(--muted);text-decoration:line-through}
+.steps{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:2px}
+.step{display:grid;grid-template-columns:44px minmax(0,1fr);gap:12px;padding:12px 0;border-bottom:1px solid var(--rule)}
+.step .no{font-family:var(--display);font-size:30px;line-height:1;color:var(--accent)}
+.step h4{font-family:var(--ui);font-size:14px;font-weight:700;margin-bottom:4px;display:flex;flex-wrap:wrap;align-items:center;gap:8px}
+.step p{margin:0 0 4px;color:var(--ink-2)}
+.step ul{margin:2px 0 4px;padding-left:18px;color:var(--ink-2)}
+.timer{font-family:var(--mono);font-size:12.5px;font-weight:500;padding:0 14px;min-height:44px;border-radius:2px;border:1px solid var(--ctl);background:var(--surface);cursor:pointer;color:var(--ink-2)}
+.timer.run{background:var(--accent);border-color:var(--accent);color:var(--surface)}
+.timer.end{background:var(--chili);border-color:var(--chili);color:var(--surface)}
+.step.done .no{color:var(--muted)}
+.step.done p,.step.done li{opacity:.55}
+.stepchk{font-family:var(--ui);font-size:12.5px;font-weight:600;background:var(--surface);border:1px solid var(--ctl);border-radius:2px;color:var(--ink-2);cursor:pointer;padding:0 16px;min-height:44px;margin-top:6px}
+.step.done .stepchk{border-color:var(--rule);color:var(--muted)}
+.step.current{background:var(--accent-soft);box-shadow:-12px 0 0 var(--accent-soft),12px 0 0 var(--accent-soft);border-bottom-color:transparent}
+.step.current .no{color:var(--accent)}
+.step.current .stepchk{background:var(--accent);border-color:var(--accent);color:var(--surface)}
+.notes{margin-top:22px;background:var(--surface);border:1px solid var(--rule);border-radius:3px;padding:14px 16px}
+.notes h3{border:0;padding:0;margin-bottom:8px;color:var(--chili)}
+.notes.why{background:var(--accent-soft);border-color:transparent}
+.notes.why h3{color:var(--accent)}
+.notes ul{margin:0;padding-left:18px}
+.notes li{margin-bottom:6px}
+.notes li b{font-weight:700}
+.src a{color:var(--accent)}
+a.rl{color:var(--accent);text-decoration:none;border-bottom:1px solid color-mix(in srgb,var(--accent) 35%,transparent);cursor:pointer}
+a.rl:hover{border-bottom-color:var(--accent)}
+.rl.gone{color:inherit;border:0;cursor:text}
+.workhorses .chip{font-size:12.5px;padding:6px 10px;background:var(--surface);border:1px solid var(--rule);color:var(--ink)}
+.workhorses .chip b{font-family:var(--mono);font-weight:500;color:var(--accent);margin-left:6px}
+td.mine{font-size:13px}
+td.mine .n{font-family:var(--mono);color:var(--muted);margin-right:6px}
+.src{margin-top:14px;font-family:var(--mono);font-size:11.5px;color:var(--muted)}
+/* Reference */
+.refgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-bottom:26px}
+@media (max-width:1000px){.refgrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:640px){.refgrid{grid-template-columns:1fr}}
+.card{background:var(--surface);border:1px solid var(--rule);border-radius:3px;padding:13px 15px;min-width:0}
+.card h4{font-family:var(--display);font-weight:400;font-size:19px;margin:4px 0 6px}
+.card p{margin:0;font-size:14px;color:var(--ink-2)}
+.card .rule{margin-top:8px;padding-top:8px;border-top:1px dashed var(--rule);font-size:13.5px}
+.card .rule b{color:var(--accent)}
+h3.sub{font-family:var(--ui);font-size:13px;font-weight:700;margin:0 0 10px}
+.tablewrap{overflow-x:auto;border:1px solid var(--rule);border-radius:3px;background:var(--surface);margin-bottom:26px}
+table{border-collapse:collapse;width:100%;font-size:13px}
+th,td{padding:7px 10px;border-bottom:1px solid var(--rule);text-align:left;vertical-align:top}
+th{font-family:var(--ui);font-size:10px;letter-spacing:.08em;text-transform:uppercase;font-weight:700;background:var(--surface-2);white-space:nowrap}
+tbody tr:last-child td{border-bottom:0}
+td.r,th.r{text-align:right;font-family:var(--mono);font-variant-numeric:tabular-nums;white-space:nowrap}
+td.k{font-weight:600}
+tr.grp td{background:var(--accent-soft);color:var(--accent);font-family:var(--ui);font-weight:700;font-size:10px;letter-spacing:.12em;text-transform:uppercase;padding:5px 10px}
+.pill{font-family:var(--ui);font-size:10.5px;padding:2px 7px;border-radius:2px;white-space:nowrap}
+.s-Short{background:var(--chili-soft);color:var(--chili)}
+.s-Medium{background:var(--amber-soft);color:var(--amber)}
+.s-Long{background:var(--accent-soft);color:var(--accent)}
+.flow{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px;margin-bottom:22px}
+@media (max-width:900px){.flow{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.flow div{background:var(--surface-2);border-top:3px solid var(--accent);border-radius:3px;padding:10px 12px;font-size:13.5px}
+.flow b{display:block;font-family:var(--ui);font-size:10px;letter-spacing:.12em;color:var(--accent);margin-bottom:3px;text-transform:uppercase}
+code{font-family:var(--mono);font-size:12.5px;background:var(--surface-2);padding:1px 5px;border-radius:2px}
+.foot{border-top:1px solid var(--rule);padding-block:18px 34px;font-family:var(--ui);font-size:11.5px;color:var(--muted)}
+.loading{color:var(--muted);font-family:var(--mono);font-size:12px}
+
+/* Course jump nav */
+.jump{position:sticky;top:var(--stick,0px);z-index:10;background:var(--ground);margin:0 -4px 6px;padding:8px 4px;display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;border-bottom:1px solid var(--rule)}
+.jump::-webkit-scrollbar{display:none}
+.jump a{flex:none;font-family:var(--ui);font-size:12px;font-weight:600;text-decoration:none;color:var(--ink-2);border:1px solid var(--ctl);border-radius:2px;padding:0 12px;min-height:36px;display:inline-flex;align-items:center;gap:6px;white-space:nowrap}
+.jump a span{font-family:var(--mono);font-weight:400;color:var(--muted)}
+.ghead{scroll-margin-top:calc(var(--stick,0px) + 60px)}
+/* Filters wrapper */
+.fwrap>summary{display:none}
+/* Cook-mode bar */
+.cookbar{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;margin:0 0 14px}
+.cookbar .back{margin:0}
+.pdfbtn{margin-left:auto}
+.pdfbtn+.wake{margin-left:0}
+.wake{font-family:var(--ui);font-size:12px;font-weight:600;background:var(--surface);border:1px solid var(--ctl);border-radius:2px;color:var(--ink-2);padding:0 14px;min-height:44px;cursor:pointer}
+.wake[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--surface)}
+.reset{font-family:var(--ui);font-size:11.5px;background:none;border:0;color:var(--muted);text-decoration:underline;cursor:pointer;padding:10px 0;min-height:44px}
+/* Timer dock */
+#timerDock{position:fixed;right:max(12px,env(safe-area-inset-right,0px));bottom:max(12px,env(safe-area-inset-bottom,0px));z-index:40;display:flex;flex-direction:column;gap:6px;max-width:min(320px,calc(100vw - 24px))}
+#timerDock[hidden]{display:none}
+.dk{display:grid;grid-template-columns:minmax(0,1fr) auto auto;align-items:center;gap:10px;background:var(--band);color:var(--band-text);border-radius:3px;padding:6px 6px 6px 12px;box-shadow:0 6px 20px rgba(0,0,0,.22);font-family:var(--ui);font-size:12.5px}
+.dk.end{background:var(--chili)}
+.dk .t{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;cursor:pointer}
+.dk .t small{display:block;opacity:.7;font-size:10.5px}
+.dk .c{font-family:var(--mono);font-size:15px;font-variant-numeric:tabular-nums}
+.dk button{background:transparent;border:1px solid color-mix(in srgb,var(--band-text) 45%,transparent);color:var(--band-text);border-radius:2px;width:36px;height:36px;cursor:pointer}
+/* Sticky ingredients on desktop */
+@media (min-width:901px){.cols>.panel:first-child{position:sticky;top:calc(var(--stick,0px) + 12px);max-height:calc(100vh - var(--stick,0px) - 24px);overflow:auto;overscroll-behavior:contain;padding-right:6px}}
+#navRecipeA{max-width:42vw;overflow:hidden;text-overflow:ellipsis}
+.tablewrap td:last-child{min-width:180px}
+.ulink{display:inline-block;padding:2px 0}
+@media (max-width:640px){
+  .hdr{display:contents}
+  nav.tabs{position:sticky;top:env(safe-area-inset-top,0px);z-index:20}
+  .grid{grid-template-columns:1fr;gap:10px}
+  .rc{flex-direction:row;align-items:stretch}
+  .rc:hover{transform:none}
+  .rc .ph{flex:none;width:108px;aspect-ratio:auto;min-height:108px}
+  .rc .bd{padding:10px 12px;gap:4px}
+  .rc h3{font-size:18px}
+  .rc .chips{display:none}
+  .fwrap>summary{display:flex;align-items:center;min-height:44px;font-family:var(--ui);font-size:12.5px;font-weight:700;letter-spacing:.04em;cursor:pointer;color:var(--ink-2);border:1px solid var(--ctl);border-radius:2px;padding:0 12px;margin-bottom:12px;list-style:none}
+  .fwrap>summary::-webkit-details-marker{display:none}
+  .fwrap>summary::after{content:"▾";margin-left:auto}
+  .fwrap[open]>summary::after{content:"▴"}
+  .fgroup,.fgroup select,.fgroup input{width:100%;min-width:0}
+  .filters{display:grid;grid-template-columns:1fr 1fr}
+  .filters .fgroup:first-child{grid-column:1/-1}
+  .facts{grid-template-columns:repeat(2,minmax(0,1fr))}
+  #v-pantry th:nth-child(2),#v-pantry td:nth-child(2):not([colspan]){display:none}
+}
+@media print{
+  .hdr,.foot,.cookbar,.pdfbtn,.timer,.stepchk,.reset,#timerDock,.scale button,.jump,.ing input{display:none!important}
+  body{background:#fff;color:#000;font-size:11pt}
+  section{padding:0}
+  .cols{grid-template-columns:1fr 1.4fr}
+  .cols>.panel:first-child{position:static;max-height:none;overflow:visible}
+  .rhero{grid-template-columns:1fr 2fr}
+  .step,.igroup,.notes{break-inside:avoid}
+  .step.current{background:none;box-shadow:none}
+  .step.done p,.step.done li{opacity:1}
+  .ing li.done .n,.ing li.done .q{text-decoration:none;color:inherit}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+<script>(function(){var t=null;try{t=localStorage.getItem('jk-theme')}catch(e){}if(t)document.documentElement.setAttribute('data-theme',t)})();</script>
+
+<header class="hdr">
+  <div class="band wrap"><div class="inner">
+    <div class="brand"><div class="mark">J</div><div><h1>Johnew's Kitchen</h1><div class="sub" id="bandSub">Home recipes · Toronto</div></div></div>
+    <button type="button" class="tog" id="themeTog">Dark mode</button>
+  </div></div>
+  <nav class="tabs wrap" aria-label="Sections"><ul>
+    <li><a href="#recipes" data-v="recipes">Recipes</a></li>
+    <li id="navRecipe" hidden><a href="#recipes" data-v="recipe" id="navRecipeA">Recipe</a></li>
+    <li><a href="#kitchen" data-v="kitchen">Kitchen Notes</a></li>
+    <li><a href="#drinks" data-v="drinks">Bar</a></li>
+    <li><a href="#pantry" data-v="pantry">Pantry</a></li>
+    <li><a href="#method" data-v="method">How It Works</a></li>
+  </ul></nav>
+</header>
+
+<main>
+<!-- RECIPES -->
+<section id="v-recipes" class="wrap"><div class="inner">
+  <div class="shead"><div class="eyebrow">The collection</div><h2>Cooked, kept, and cooked again</h2></div>
+  <p class="lede">Every recipe here is one I've cooked and kept. Each follows the same format: metric quantities, ingredients grouped by stage, titled steps with doneness cues, and chef's notes for next time.</p>
+  <p class="stats" id="stats"></p>
+  <details class="fwrap" id="fwrap" open><summary>Filter and order</summary>
+  <div class="filters">
+    <div class="fgroup"><label for="fq">Search</label><input id="fq" type="search" placeholder="Dish or ingredient"></div>
+    <div class="fgroup"><label for="fc">Cuisine</label><select id="fc"><option value="">All</option></select></div>
+    <div class="fgroup"><label for="ft">Type</label><select id="ft"><option value="">All</option></select></div>
+    <div class="fgroup"><label for="fp">Protein</label><select id="fp"><option value="">All</option></select></div>
+    <div class="fgroup"><label for="fd">Difficulty</label><select id="fd"><option value="">All</option></select></div>
+    <div class="fgroup"><label for="fs">Order</label><select id="fs"><option value="course">By course</option><option value="cuisine">By cuisine</option><option value="az">A–Z</option><option value="quick">Quickest first</option><option value="new">Newest first</option></select></div>
+    <button type="button" class="clear" id="fclear">Clear filters</button>
+  </div>
+  </details>
+  <nav class="jump" id="jump" aria-label="Jump to course" hidden></nav>
+  <div class="grid" id="grid"></div>
+  <div class="empty" id="empty" hidden>
+    <h3>No recipes on the shelf yet</h3>
+    <p>Recipes appear here when the home-chef skill posts them. Ask for a recipe, convert one you have or describe a dish, then say yes when it asks to post it.</p>
+  </div>
+  <div class="empty" id="nomatch" hidden><h3>Nothing matches</h3><p>Loosen a filter, or clear them all to see every recipe.</p></div>
+</div></section>
+
+<!-- RECIPE -->
+<section id="v-recipe" class="wrap"><div class="inner" id="recipeBody"><p class="loading">Loading recipe…</p></div></section>
+
+<!-- KITCHEN NOTES -->
+<section id="v-kitchen" class="wrap"><div class="inner">
+  <div class="shead"><div class="eyebrow">Kitchen notes · what my recipes keep teaching me</div><h2>Go by thermometer, not the clock</h2></div>
+  <p class="lede">These are the rules behind the braises, broths, steaks and wok dishes I cook most. Each one points back to the recipes where it matters.</p>
+  <div class="flow">
+    <div><b>1 · Salt</b>First, and by weight. Dry-brine the skin a day ahead, as in the <a class="rl" data-r="adam-liaws-shandong-roast-chicken">Shandong chicken</a> and the <a class="rl" data-r="roast-chicken-thighs-with-figs">fig chicken</a>.</div>
+    <div><b>2 · Acid</b>The finish that makes a rich dish taste light: black vinegar in the <a class="rl" data-r="adam-liaws-shandong-roast-chicken">Shandong sauce</a>, lime in <a class="rl" data-r="marions-kitchen-thai-steak-salad">Marion's steak salad</a>.</div>
+    <div><b>3 · Umami</b>Pair a glutamate with a nucleotide. <a class="rl" data-r="dashi-stock">Dashi</a> is kombu plus bonito, and the <a class="rl" data-r="taiwanese-beef-noodle-soup">beef noodle soup</a> stacks tomato, soy and bean paste on beef.</div>
+    <div><b>4 · Fat</b>Carries aroma. The duck fat and lard oil in the <a class="rl" data-r="double-soup-shoyu-ramen">shoyu ramen</a> and the rendered fat trimming in the <a class="rl" data-r="japanese-wagyu-steak">wagyu</a> do the heavy lifting.</div>
+    <div><b>5 · Heat &amp; browning</b>Dry surfaces, hot pan, no crowding. The <a class="rl" data-r="dry-aged-steak">reverse sear</a> and the <a class="rl" data-r="pad-kra-pao">pad kra pao</a> both live or die on this.</div>
+  </div>
+  <h3 class="sub">Internal temperatures, and where I use them</h3>
+  <div class="tablewrap"><table>
+    <thead><tr><th>Food</th><th class="r">Health Canada min °C / °F</th><th class="r">My target, served °C / °F</th><th>In my recipes</th></tr></thead>
+    <tbody>
+      <tr><td class="k">Beef, lamb · medium-rare</td><td class="r">63 / 145</td><td class="r">52–54 / 126–129</td><td><a class="rl" data-r="dry-aged-steak">Dry-aged steak</a>, <a class="rl" data-r="japanese-wagyu-steak">wagyu</a>, <a class="rl" data-r="garlic-soy-steak-don">steak don</a>, <a class="rl" data-r="cumin-lamb-chops">cumin lamb chops</a></td></tr>
+      <tr><td class="k">Beef, lamb · medium</td><td class="r">71 / 160</td><td class="r">57–60 / 135–140</td><td><a class="rl" data-r="marions-kitchen-thai-steak-salad">Marion's Thai steak salad</a>; pull about 5 °C / 9 °F under</td></tr>
+      <tr><td class="k">Duck breast</td><td class="r">74 / 165</td><td class="r">54–57 / 129–135</td><td><a class="rl" data-r="air-fryer-peking-duck">Air fryer Peking duck</a>, <a class="rl" data-r="seared-duck-breast-with-mash-and-asparagus">seared duck breast</a>; served pink, the French way</td></tr>
+      <tr><td class="k">Ground meat</td><td class="r">71 / 160</td><td class="r">71 / 160</td><td><a class="rl" data-r="pad-kra-pao">Pad kra pao</a>; grinding spreads surface bacteria</td></tr>
+      <tr><td class="k">Pork chops and roasts</td><td class="r">71 / 160</td><td class="r">63 / 145 + rest</td><td><a class="rl" data-r="adam-liaws-tonkatsu">Tonkatsu</a>; 63 °C / 145 °F with a 3-minute rest is the USDA figure</td></tr>
+      <tr><td class="k">Chicken thighs, legs, wings</td><td class="r">74 / 165</td><td class="r">80–85 / 176–185</td><td><a class="rl" data-r="three-cup-chicken">Three-cup</a>, <a class="rl" data-r="nagoya-tebasaki-wings">tebasaki</a>, <a class="rl" data-r="chicken-karaage">karaage</a>, <a class="rl" data-r="roast-chicken-thighs-with-figs">fig chicken</a>; collagen softens up here</td></tr>
+      <tr><td class="k">Whole birds</td><td class="r">82 / 180</td><td class="r">82 / 180</td><td><a class="rl" data-r="adam-liaws-shandong-roast-chicken">Shandong chicken</a>, <a class="rl" data-r="herb-butter-roast-turkey-dijon-gravy">roast turkey</a>; never pull poultry early</td></tr>
+      <tr><td class="k">Fish</td><td class="r">70 / 158</td><td class="r">–</td><td><a class="rl" data-r="cantonese-steamed-fish">Steamed fish</a>, <a class="rl" data-r="adam-liaws-teriyaki-salmon">teriyaki salmon</a>; freeze raw fish at −20 °C / −4 °F for 7 days</td></tr>
+      <tr><td class="k">Shellfish, leftovers, eggs</td><td class="r">74 / 165</td><td class="r">74 / 165</td><td><a class="rl" data-r="cantonese-ginger-scallion-lobster">Lobster</a>, <a class="rl" data-r="red-curry-coconut-mussels">mussels</a>; chill within 2 hours, reheat to 74 °C / 165 °F</td></tr>
+    </tbody></table></div>
+  <div class="refgrid">
+    <div class="card"><div class="eyebrow">Braising · my biggest habit</div><h4>Barely trembling, never boiling</h4><p>Collagen starts melting around 70 °C / 158 °F and speeds up toward 82 °C / 180 °F. Hold the liquid at 85–90 °C / 185–194 °F on the lowest burner or in a 135–150 °C / 275–300 °F oven for 2–3 hours.</p><div class="rule"><b>Where:</b> <a class="rl" data-r="taiwanese-beef-noodle-soup">beef noodle soup</a>, <a class="rl" data-r="red-wine-braised-oxtail">oxtail</a>, <a class="rl" data-r="galbi-jjim">galbi-jjim</a>, <a class="rl" data-r="gordon-ramsays-fiery-lamb-shanks">lamb shanks</a>, <a class="rl" data-r="taiwanese-braised-pork-knuckle-rice">pork knuckle</a>. All are better the next day.</div></div>
+    <div class="card"><div class="eyebrow">Dashi · the base I reuse</div><h4>Kombu low, bonito off the heat</h4><p>Bring 30 g kombu up slowly and lift it out at about 80 °C / 176 °F, then steep 25 g bonito off the heat for 5 minutes. Don't press the flakes.</p><div class="rule"><b>Builds:</b> <a class="rl" data-r="miso-soup">miso soup</a>, <a class="rl" data-r="seafood-chashu-udon">seafood chashu udon</a>, and any Japanese braise that needs depth.</div></div>
+    <div class="card"><div class="eyebrow">Salt by weight</div><h4>Not all teaspoons are equal</h4><p>Diamond Crystal kosher salt is about 3 g per tsp, Morton kosher about 5 g, table salt about 6 g. Pasta water for the <a class="rl" data-r="seafood-spaghetti-allo-scoglio">scoglio</a> wants about 7 g per litre.</p><div class="rule"><b>House salt:</b> "kosher salt" in these recipes means Diamond Crystal. Use about half the volume of Morton or table salt.</div></div>
+    <div class="card"><div class="eyebrow">Frying · twice is the trick</div><h4>Low, rest, then hot</h4><p>Fry once at 160 °C / 320 °F to cook through, rest, then again at 180 °C / 355 °F to crisp. The second fry drives off the moisture the first one left.</p><div class="rule"><b>Where:</b> <a class="rl" data-r="chicken-karaage">karaage</a>, <a class="rl" data-r="nagoya-tebasaki-wings">tebasaki</a>; <a class="rl" data-r="adam-liaws-tonkatsu">tonkatsu</a> goes once at 170 °C / 340 °F.</div></div>
+    <div class="card"><div class="eyebrow">Spices &amp; chilli</div><h4>Toast, then bloom in fat</h4><p>Toast whole spices dry for 1–3 minutes and bloom ground spices in oil for 20–40 s. Capsaicin lives in the membranes and dissolves in fat and alcohol.</p><div class="rule"><b>Where:</b> the cumin crust on the <a class="rl" data-r="xinjiang-cumin-lamb-skewers">lamb skewers</a>, the spice bag in the <a class="rl" data-r="taiwanese-beef-noodle-soup">beef noodle soup</a>, the curry paste in the <a class="rl" data-r="thai-green-curry-chicken">green curry</a>.</div></div>
+    <div class="card"><div class="eyebrow">Ramen · my two-day project</div><h4>Tare names the bowl</h4><p>Each bowl of my <a class="rl" data-r="double-soup-shoyu-ramen">double soup shoyu</a> gets 30–45 ml tare, 1 tbsp aroma oil and 400 ml boiling soup, then noodles drained hard.</p><div class="rule"><b>Rule:</b> a weak tare can't be rescued by a strong broth. Taste the tare on its own first.</div></div>
+  </div>
+  <h3 class="sub">How I cook each cuisine</h3>
+  <div class="tablewrap"><table>
+    <thead><tr><th>Cuisine</th><th>Base</th><th>Salt &amp; umami</th><th>On my table</th></tr></thead>
+    <tbody id="cuisineBody">
+      <tr data-c="Chinese"><td class="k">Chinese &amp; Taiwanese</td><td>Garlic, ginger, scallion</td><td>Soy, Shaoxing wine, doubanjiang, rock sugar</td><td class="mine"></td></tr>
+      <tr data-c="Japanese"><td class="k">Japanese</td><td>Dashi</td><td>Soy, miso, mirin, sake</td><td class="mine"></td></tr>
+      <tr data-c="Thai"><td class="k">Thai</td><td>Curry paste fried in coconut fat</td><td>Fish sauce; finish with lime and palm sugar</td><td class="mine"></td></tr>
+      <tr data-c="Korean"><td class="k">Korean</td><td>Jang</td><td>Ganjang, Korean pear, sesame</td><td class="mine"></td></tr>
+      <tr data-c="Italian"><td class="k">Italian</td><td>Soffritto, or garlic and chilli in olive oil</td><td>Parmigiano, anchovy, the sea itself</td><td class="mine"></td></tr>
+      <tr data-c="French"><td class="k">French</td><td>Mirepoix, 2:1:1 by weight</td><td>Stock, wine, butter to finish</td><td class="mine"></td></tr>
+      <tr data-c="Mediterranean"><td class="k">Mediterranean</td><td>Olive oil, garlic, herbs</td><td>Lemon, oregano, honey and balsamic</td><td class="mine"></td></tr>
+    </tbody></table></div>
+  <h3 class="sub">Ontario seasons, and what I cook with them</h3>
+  <div class="tablewrap"><table>
+    <thead><tr><th>Produce</th><th>Season</th><th>Cook it in</th></tr></thead>
+    <tbody>
+      <tr><td class="k">Asparagus</td><td>May–June</td><td><a class="rl" data-r="seared-duck-breast-with-mash-and-asparagus">Duck breast with mash and asparagus</a>, <a class="rl" data-r="japanese-wagyu-steak">wagyu steak</a></td></tr>
+      <tr><td class="k">Field tomatoes</td><td>July–October</td><td><a class="rl" data-r="marions-kitchen-thai-steak-salad">Thai steak salad</a>, <a class="rl" data-r="seafood-spaghetti-allo-scoglio">scoglio</a>, <a class="rl" data-r="taiwanese-beef-noodle-soup">beef noodle soup</a></td></tr>
+      <tr><td class="k">Figs (imported)</td><td>Late summer–autumn</td><td><a class="rl" data-r="roast-chicken-thighs-with-figs">Roast chicken thighs with figs</a></td></tr>
+      <tr><td class="k">Pumpkin, squash</td><td>September–November</td><td><a class="rl" data-r="pumpkin-coconut-soup">Pumpkin coconut soup</a></td></tr>
+      <tr><td class="k">Apples</td><td>Autumn harvest</td><td>Grated into the <a class="rl" data-r="japanese-beef-curry">beef curry</a> and the <a class="rl" data-r="taiwanese-beef-noodle-soup">beef noodle soup</a> braise</td></tr>
+      <tr><td class="k">Root vegetables</td><td>Autumn–winter</td><td><a class="rl" data-r="oxtail-chicken-soup">Oxtail chicken soup</a>, <a class="rl" data-r="herb-butter-roast-turkey-dijon-gravy">roast turkey</a>, <a class="rl" data-r="herb-chicken-thighs-with-roast-vegetables">herb chicken thighs</a></td></tr>
+    </tbody></table></div>
+</div></section>
+
+<!-- BAR -->
+<section id="v-drinks" class="wrap"><div class="inner">
+  <div class="shead"><div class="eyebrow">The bar · what I pour</div><h2>Three templates run my bar</h2></div>
+  <p class="lede">My drinks come from three of the six classic templates. The <a class="rl" data-r="old-fashioned">Old Fashioned</a> is the stirred one, the <a class="rl" data-r="spicy-margarita">spicy margarita</a> is a Sidecar, and the <a class="rl" data-r="mojito">mojito</a> is a Daiquiri made long. The rest of the six are here for reference.</p>
+  <div class="refgrid">
+    <div class="card"><div class="eyebrow">House · stirred</div><h4><a class="rl" data-r="old-fashioned">Old Fashioned, eight ways</a></h4><p>60 ml spirit, 7.5 ml rich demerara syrup, 2 dashes Angostura and 1 orange, stirred 30 seconds over one big cube. Swap in rye, Japanese whisky, Islay, aged rum, mezcal or Cognac.</p><div class="rule"><b>Zero-proof:</b> cold-brewed Lapsang and Assam tea with alcohol-free bitters.</div></div>
+    <div class="card"><div class="eyebrow">House · shaken</div><h4><a class="rl" data-r="spicy-margarita">Spicy margarita</a></h4><p>I infuse a whole bottle of blanco tequila with jalapeño instead of muddling chilli into each drink. Seeded slices are ready in 15–20 minutes, so taste as it goes, then strain.</p><div class="rule"><b>Rim:</b> salt on the outside of the glass only, so it doesn't fall into the drink.</div></div>
+    <div class="card"><div class="eyebrow">House · long</div><h4><a class="rl" data-r="mojito">Mojito</a></h4><p>45 ml white rum, 20 ml lime, 10 mint leaves and 2 tsp sugar, topped with soda. Press the mint gently, because torn leaves turn bitter.</p><div class="rule"><b>With:</b> it's what I pour with the <a class="rl" data-r="chicken-pad-thai">pad thai</a> and <a class="rl" data-r="marions-kitchen-thai-steak-salad">Thai steak salad</a>.</div></div>
+  </div>
+  <h3 class="sub">What my table drinks</h3>
+  <p class="lede">Counted from the pairing on each of my recipes. Tap a dish to see it.</p>
+  <div class="tablewrap"><table>
+    <thead><tr><th>Pour</th><th class="r">Recipes</th><th>Goes with</th></tr></thead>
+    <tbody id="pourBody"><tr><td colspan="3" class="loading">Counting…</td></tr></tbody>
+  </table></div>
+  <h3 class="sub">Reference specs (ml)</h3>
+  <div class="tablewrap"><table>
+    <thead><tr><th>Cocktail</th><th>Spec</th><th>Method</th></tr></thead>
+    <tbody>
+      <tr class="grp"><td colspan="3">Stirred</td></tr>
+      <tr><td class="k"><a class="rl" data-r="old-fashioned">Old Fashioned</a> · house</td><td>Bourbon 60 · rich demerara 7.5 · 2 Angostura · 1 orange bitters</td><td>Stir 30 s; strain over one big cube; orange peel</td></tr>
+      <tr><td class="k">Negroni</td><td>Gin 30 · Campari 30 · sweet vermouth 30</td><td>Build over ice; stir</td></tr>
+      <tr><td class="k">Dry Martini</td><td>Gin 60 · dry vermouth 10</td><td>Stir; strain; lemon oil or olive</td></tr>
+      <tr><td class="k">Manhattan</td><td>Rye 50 · sweet vermouth 20 · 1 dash Angostura</td><td>Stir; strain; cherry</td></tr>
+      <tr class="grp"><td colspan="3">Shaken</td></tr>
+      <tr><td class="k"><a class="rl" data-r="spicy-margarita">Spicy Margarita</a> · house</td><td>Jalapeño tequila 60 · Cointreau 15 · lime 30 · agave 15</td><td>Shake hard 12 s; strain over fresh ice; salt rim</td></tr>
+      <tr><td class="k">Daiquiri</td><td>White rum 60 · lime 20 · 2 bar spoons sugar</td><td>Dissolve sugar; shake; strain</td></tr>
+      <tr><td class="k">Whiskey Sour</td><td>Bourbon 45 · lemon 25 · syrup 20 · egg white optional</td><td>Shake (harder with egg); strain</td></tr>
+      <tr><td class="k">Tommy's Margarita</td><td>Tequila 60 · lime 30 · agave 30</td><td>Shake; strain over ice</td></tr>
+      <tr class="grp"><td colspan="3">Long</td></tr>
+      <tr><td class="k"><a class="rl" data-r="mojito">Mojito</a> · house</td><td>White rum 45 · lime 20 · 10 mint leaves · 2 tsp sugar · soda 60</td><td>Press the mint gently; build; top with soda</td></tr>
+      <tr><td class="k">Paloma</td><td>Tequila 50 · lime 5 · pinch salt · grapefruit soda 100</td><td>Build; stir</td></tr>
+      <tr><td class="k">Spritz</td><td>Prosecco 90 · Aperol 60 · splash soda</td><td>Build in a wine glass over ice</td></tr>
+    </tbody></table></div>
+  <div class="refgrid">
+    <div class="card"><div class="eyebrow">Hosting</div><h4>Always one zero-proof</h4><p>The tea Old Fashioned, lime soda with a pinch of salt for the Thai dishes, or barley tea with the <a class="rl" data-r="adam-liaws-teriyaki-salmon">teriyaki salmon</a>.</p></div>
+    <div class="card"><div class="eyebrow">Ice</div><h4>More ice, less water</h4><p>Lots of dry, fresh ice chills faster with less dilution than a few half-melted cubes. One big cube for anything stirred and served on the rocks.</p></div>
+    <div class="card"><div class="eyebrow">Keeping</div><h4>Squeeze citrus the same day</h4><p>Vermouth is wine: refrigerated, it keeps about two months. A US jigger holds about 44 ml, so I measure in ml.</p></div>
+  </div>
+</div></section>
+
+<!-- PANTRY -->
+<section id="v-pantry" class="wrap"><div class="inner">
+  <div class="shead"><div class="eyebrow">The pantry · what my recipes call for</div><h2>Buy short-shelf items on the day</h2></div>
+  <p class="lede">Every ingredient across my recipes, grouped by type, with its shelf life and the recipes that use it. I shop at T&amp;T for the Asian staples, a butcher for bony cuts, and St. Lawrence or Kensington Market for anything harder to find.</p>
+  <h3 class="sub">My workhorses</h3>
+  <p class="lede" style="margin-bottom:10px">The ingredients that show up in the most recipes, so they're worth always having in.</p>
+  <div class="chips workhorses" id="pantryTop"></div>
+  <div class="refgrid" style="margin-top:18px">
+    <div class="card"><div class="eyebrow">Always stocked</div><h4>The Asian shelf</h4><p>Light and dark soy, Shaoxing wine, mirin, sake, fish sauce, kombu and katsuobushi, dried shiitake, doubanjiang, rock sugar. Almost every Chinese and Japanese recipe here starts from this shelf.</p></div>
+    <div class="card"><div class="eyebrow">Buy on the day</div><h4>Seafood and herbs</h4><p>Live mussels and lobster, fresh fish, Thai basil, cilantro and mint. They're the short-shelf items, flagged in red in the table below.</p></div>
+    <div class="card"><div class="eyebrow">From the butcher</div><h4>Bony cuts</h4><p>Beef shank, oxtail, short ribs, pork knuckle and lamb shanks for the braises, and chicken frames and trotters for the ramen soup.</p></div>
+  </div>
+  <div class="tablewrap"><table>
+    <thead><tr><th>Ingredient</th><th>Subtype</th><th>Shelf life</th><th>Used in</th></tr></thead>
+    <tbody id="pantryBody"><tr><td colspan="4" class="loading">Loading pantry…</td></tr></tbody>
+  </table></div>
+</div></section>
+
+<!-- METHOD -->
+<section id="v-method" class="wrap"><div class="inner">
+  <div class="shead"><div class="eyebrow">How it works</div><h2>Every recipe follows one format</h2></div>
+  <p class="lede">I cook it, snap it or find it, and the home-chef skill writes it up in this format. Each recipe lands here, with a markdown copy and photo in my Project Cook Recipes folder. <span id="howNums"></span></p>
+  <div class="flow">
+    <div><b>Photo</b>Most of this collection started as a phone photo of dinner, like the <a class="rl" data-r="galbi-jjim">galbi-jjim</a>, the <a class="rl" data-r="cantonese-ginger-scallion-lobster">lobster</a> and the <a class="rl" data-r="taiwanese-braised-pork-knuckle-rice">pork knuckle bento</a>. Claude reads the plate and writes the recipe.</div>
+    <div><b>Convert</b>Paste a recipe, a link or a cookbook page. Adam Liaw's <a class="rl" data-r="adam-liaws-tonkatsu">tonkatsu</a> and <a class="rl" data-r="japanese-beef-curry">beef curry</a> and <a class="rl" data-r="marions-kitchen-thai-steak-salad">Marion's steak salad</a> came in this way.</div>
+    <div><b>Rough name</b>Describe a dish from memory and get a best guess, like the <a class="rl" data-r="nagoya-tebasaki-wings">tebasaki wings</a> or the <a class="rl" data-r="roast-chicken-thighs-with-figs">fig chicken</a>.</div>
+    <div><b>My own</b>The ones I already had written down, like my <a class="rl" data-r="taiwanese-beef-noodle-soup">beef noodle soup</a>, <a class="rl" data-r="dashi-stock">dashi</a> and family <a class="rl" data-r="oxtail-chicken-soup">oxtail soup</a>, go in as written.</div>
+    <div><b>Post</b>It lands here, in the Recipes folder and, on request, in the Recipe Master workbook. The pantry updates itself.</div>
+  </div>
+  <h3 class="sub">House format</h3>
+  <div class="tablewrap"><table>
+    <thead><tr><th>Field</th><th>Rule</th></tr></thead>
+    <tbody>
+      <tr><td class="k">Summary</td><td>Two sentences or fewer, point first: what makes the dish work, then how it's served</td></tr>
+      <tr><td class="k">Facts</td><td>Cuisine, type, protein, difficulty, flavour, serves, prep, cook and rest time, using the Recipe Master vocabulary</td></tr>
+      <tr><td class="k">Course</td><td>Mains, Noodles, Rice, Soups &amp; Stocks, Small Plates, Sweets or Drinks; sets the default order on the Recipes tab</td></tr>
+      <tr><td class="k">Ingredients</td><td>Grouped by stage in order of use; grams, ml and °C; whole counts kept as counts; kosher salt means Diamond Crystal</td></tr>
+      <tr><td class="k">Steps</td><td>Titled and numbered, each with heat, time and a cue you can see, smell or probe; a timer on every waiting step</td></tr>
+      <tr><td class="k">Temperatures</td><td>A target internal temperature for every meat, alongside Health Canada's minimum</td></tr>
+      <tr><td class="k">Why it works</td><td>One or two short reasons the key steps matter, where they apply</td></tr>
+      <tr><td class="k">Chef's notes</td><td>Two to four ways to make it better, each titled as a takeaway and backed by its reason</td></tr>
+      <tr><td class="k">Source</td><td>Johnew's own recipe for anything I cooked, or "Converted from" or "Adapted from" for someone else's. Every recipe links to its original or the closest published recipe.</td></tr>
+      <tr><td class="k">Cook mode</td><td>Tick ingredients and steps as you go (they're remembered), run several timers at once, keep the screen on, and download the recipe as a PDF</td></tr>
+    </tbody></table></div>
+  <h3 class="sub" id="why-ref">Why it works · a quick reference</h3>
+  <p class="lede" style="margin-bottom:12px">The reasoning behind the techniques, acids and herb pairings that keep showing up in my recipes. Each recipe also has its own "Why it works" box.</p>
+  <h3 class="sub">Techniques</h3>
+  <div class="tablewrap"><table>
+    <thead><tr><th>Technique</th><th>Why it works</th><th>In my recipes</th></tr></thead>
+    <tbody>
+      <tr><td class="k">Dry-brining</td><td>Salt draws moisture out and is then reabsorbed. That seasons the meat inside and leaves a dry surface that crisps.</td><td><a class="rl" data-r="adam-liaws-shandong-roast-chicken">Shandong chicken</a>, <a class="rl" data-r="roast-chicken-thighs-with-figs">fig chicken</a></td></tr>
+      <tr><td class="k">Searing</td><td>Browning (the Maillard reaction) builds hundreds of flavour compounds, but only on a dry surface in a hot pan. A wet surface just steams.</td><td><a class="rl" data-r="dry-aged-steak">Dry-aged steak</a>, <a class="rl" data-r="braised-chicken-thighs-with-shiitake-and-spinach">braised chicken</a></td></tr>
+      <tr><td class="k">Reverse sear</td><td>A low oven brings thick steak evenly to temperature and dries the surface. A quick, hard sear then browns it without overcooking the edge.</td><td><a class="rl" data-r="dry-aged-steak">Dry-aged steak</a></td></tr>
+      <tr><td class="k">Deglazing</td><td>Liquid poured into a hot pan lifts the fond, the browned bits stuck to the bottom, and turns them into the sauce. That's most of a sauce's depth.</td><td><a class="rl" data-r="red-wine-braised-oxtail">Oxtail</a>, <a class="rl" data-r="gordon-ramsays-fiery-lamb-shanks">lamb shanks</a>, <a class="rl" data-r="seared-duck-breast-with-mash-and-asparagus">duck breast</a>, <a class="rl" data-r="garlic-soy-steak-don">steak don</a></td></tr>
+      <tr><td class="k">Braising</td><td>Collagen in tough cuts melts into gelatin at about 70–90 °C / 158–194 °F. Slow heat makes the meat tender and the sauce rich.</td><td><a class="rl" data-r="taiwanese-beef-noodle-soup">Beef noodle soup</a>, <a class="rl" data-r="galbi-jjim">galbi-jjim</a>, <a class="rl" data-r="taiwanese-braised-pork-knuckle-rice">pork knuckle</a></td></tr>
+      <tr><td class="k">Blanching meat</td><td>A quick boil pulls out blood and scum, so long braises and broths stay clean and clear.</td><td><a class="rl" data-r="taiwanese-beef-noodle-soup">Beef noodle soup</a>, <a class="rl" data-r="galbi-jjim">galbi-jjim</a>, <a class="rl" data-r="taiwanese-braised-pork-knuckle-rice">pork knuckle</a></td></tr>
+      <tr><td class="k">Blooming in fat</td><td>Most spice and curry-paste aromas dissolve in fat, not water. Fry them in oil first and the whole dish carries them.</td><td><a class="rl" data-r="thai-green-curry-chicken">Green curry</a>, <a class="rl" data-r="japanese-beef-curry">beef curry</a>, <a class="rl" data-r="taiwanese-beef-noodle-soup">bean pastes</a></td></tr>
+      <tr><td class="k">Double frying</td><td>The first fry cooks the meat through. The second, hotter fry drives off the moisture that rose to the surface, so the crust stays crisp.</td><td><a class="rl" data-r="chicken-karaage">Karaage</a>, <a class="rl" data-r="nagoya-tebasaki-wings">tebasaki</a></td></tr>
+      <tr><td class="k">Emulsifying</td><td>Starch from pasta water, or cold butter swirled in off the heat, binds fat and liquid into a glossy sauce that clings.</td><td><a class="rl" data-r="seafood-spaghetti-allo-scoglio">Scoglio</a>, <a class="rl" data-r="gordon-ramsays-fiery-lamb-shanks">lamb shank sauce</a></td></tr>
+      <tr><td class="k">Resting</td><td>Carryover heat finishes the centre, and the meat loses less juice when you slice it.</td><td><a class="rl" data-r="dry-aged-steak">Steaks</a>, <a class="rl" data-r="adam-liaws-shandong-roast-chicken">roast chicken</a>, <a class="rl" data-r="air-fryer-peking-duck">duck</a></td></tr>
+    </tbody></table></div>
+  <h3 class="sub">Acids and alcohol</h3>
+  <div class="tablewrap"><table>
+    <thead><tr><th>Ingredient</th><th>Why it works</th><th>In my recipes</th></tr></thead>
+    <tbody>
+      <tr><td class="k">Vinegar</td><td>Acid cuts fat and makes rich food taste lighter. Black vinegar is malty, rice vinegar is clean, balsamic is sweet.</td><td><a class="rl" data-r="adam-liaws-shandong-roast-chicken">Shandong sauce</a>, <a class="rl" data-r="air-fryer-peking-duck">Peking duck glaze</a>, <a class="rl" data-r="roast-chicken-thighs-with-figs">fig chicken</a></td></tr>
+      <tr><td class="k">Citrus</td><td>Fresh acid plus aromatic oils in the zest. Add it at the end, because heat dulls both.</td><td><a class="rl" data-r="marions-kitchen-thai-steak-salad">Thai steak salad</a>, <a class="rl" data-r="lemon-oregano-chicken-wings">lemon wings</a>, <a class="rl" data-r="seafood-spaghetti-allo-scoglio">scoglio</a></td></tr>
+      <tr><td class="k">Tamarind</td><td>A fruity, rounder sourness than lime. It's the backbone of pad thai.</td><td><a class="rl" data-r="chicken-pad-thai">Pad thai</a></td></tr>
+      <tr><td class="k">Wine to deglaze</td><td>Alcohol dissolves flavour compounds that water can't, and its acid brightens. Reduce it so the harsh alcohol cooks off.</td><td><a class="rl" data-r="red-wine-braised-oxtail">Oxtail</a>, <a class="rl" data-r="gordon-ramsays-fiery-lamb-shanks">lamb shanks</a>, <a class="rl" data-r="seafood-spaghetti-allo-scoglio">scoglio</a></td></tr>
+      <tr><td class="k">Shaoxing, sake, mirin</td><td>Cooking wines add aroma and tame strong meat and fish smells. Mirin adds sweetness and gloss.</td><td><a class="rl" data-r="three-cup-chicken">Three-cup chicken</a>, <a class="rl" data-r="adam-liaws-teriyaki-salmon">teriyaki</a>, <a class="rl" data-r="double-soup-shoyu-ramen">ramen chashu</a></td></tr>
+      <tr><td class="k">Spirits for infusing</td><td>Chilli heat (capsaicin) dissolves in alcohol, so a spirit picks it up fast and evenly.</td><td><a class="rl" data-r="spicy-margarita">Spicy margarita</a></td></tr>
+    </tbody></table></div>
+  <h3 class="sub">Herb and aromatic pairings</h3>
+  <div class="tablewrap"><table>
+    <thead><tr><th>Pairing</th><th>Why it works</th><th>In my recipes</th></tr></thead>
+    <tbody>
+      <tr><td class="k">Ginger and scallion with seafood</td><td>They mask fishy notes and add sharp freshness.</td><td><a class="rl" data-r="cantonese-steamed-fish">Steamed fish</a>, <a class="rl" data-r="cantonese-ginger-scallion-lobster">lobster</a></td></tr>
+      <tr><td class="k">Cilantro, lime and fish sauce</td><td>Fresh, sour and salty all at once, so they balance rich, sweet or fried food.</td><td><a class="rl" data-r="thai-green-curry-chicken">Green curry</a>, <a class="rl" data-r="crawfish-summer-rolls">summer rolls</a>, <a class="rl" data-r="marions-kitchen-thai-steak-salad">steak salad</a></td></tr>
+      <tr><td class="k">Thai or holy basil</td><td>Anise and clove aromas suit chicken and pork. They fade with heat, so add them last.</td><td><a class="rl" data-r="three-cup-chicken">Three-cup chicken</a>, <a class="rl" data-r="pad-kra-pao">pad kra pao</a></td></tr>
+      <tr><td class="k">Mint with lamb and beef</td><td>A cool, fresh lift that cuts fatty richness.</td><td><a class="rl" data-r="red-wine-braised-oxtail">Oxtail</a>, <a class="rl" data-r="marions-kitchen-thai-steak-salad">steak salad</a></td></tr>
+      <tr><td class="k">Cumin and chilli with lamb</td><td>Earthy warmth and heat stand up to lamb's strong flavour.</td><td><a class="rl" data-r="xinjiang-cumin-lamb-skewers">Lamb skewers</a>, <a class="rl" data-r="cumin-lamb-chops">lamb chops</a></td></tr>
+      <tr><td class="k">Star anise and cinnamon in braises</td><td>Sweet, warm spices that hold up to hours of cooking and suit beef and pork.</td><td><a class="rl" data-r="taiwanese-beef-noodle-soup">Beef noodle soup</a>, <a class="rl" data-r="taiwanese-braised-pork-knuckle-rice">pork knuckle</a></td></tr>
+      <tr><td class="k">Thyme, rosemary and sage with roasts</td><td>Woody herbs survive long roasting where soft herbs would burn.</td><td><a class="rl" data-r="herb-butter-roast-turkey-dijon-gravy">Roast turkey</a>, <a class="rl" data-r="roast-chicken-thighs-with-figs">fig chicken</a></td></tr>
+      <tr><td class="k">Oregano and lemon with chicken</td><td>Dried oregano survives the oven, and lemon cuts the fat. It's the Greek pairing.</td><td><a class="rl" data-r="lemon-oregano-chicken-wings">Lemon oregano wings</a></td></tr>
+      <tr><td class="k">Parsley, garlic and lemon zest with seafood</td><td>Fresh and sharp, they lift briny shellfish without masking it.</td><td><a class="rl" data-r="seafood-spaghetti-allo-scoglio">Scoglio</a></td></tr>
+      <tr><td class="k">Dill and parsley in broths</td><td>Bright, grassy herbs freshen a long-simmered soup at the end.</td><td><a class="rl" data-r="oxtail-chicken-soup">Oxtail chicken soup</a></td></tr>
+      <tr><td class="k">Kombu and bonito</td><td>Glutamate plus nucleotides: together they taste far stronger than either alone.</td><td><a class="rl" data-r="dashi-stock">Dashi</a>, <a class="rl" data-r="miso-soup">miso soup</a></td></tr>
+    </tbody></table></div>
+
+</div></section>
+
+</main>
+
+<div id="timerDock" hidden aria-live="polite"></div>
+<footer class="foot wrap"><div class="inner" id="footTxt">Johnew's Kitchen · reference figures from the Food &amp; Beverage Primer (10 Oct 2026): Health Canada, America's Test Kitchen, IBA.</div></footer>
+
+<script>
+(function(){
+  /* theme */
+  var tb=document.getElementById('themeTog');
+  function curDark(){var a=document.documentElement.getAttribute('data-theme');if(a)return a==='dark';return matchMedia('(prefers-color-scheme: dark)').matches}
+  function lab(){tb.textContent=curDark()?'Light mode':'Dark mode'}
+  lab();
+  tb.addEventListener('click',function(){var n=curDark()?'light':'dark';document.documentElement.setAttribute('data-theme',n);try{localStorage.setItem('jk-theme',n)}catch(e){}lab()});
+
+  var esc=function(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})};
+  var recipes=[], pantry=[], current=null, servings=null, timers={};
+
+  /* views */
+  var views=['recipes','recipe','kitchen','drinks','pantry','method'];
+  function show(v){
+    views.forEach(function(x){document.getElementById('v-'+x).classList.toggle('active',x===v)});
+    document.querySelectorAll('nav.tabs a').forEach(function(a){a.setAttribute('aria-current',a.dataset.v===v?'page':'false')});
+    window.scrollTo(0,0);
+  }
+  document.querySelectorAll('nav.tabs a').forEach(function(a){a.addEventListener('click',function(e){
+    if(a.dataset.v==='recipe'){e.preventDefault();if(current)openRecipe(current.slug);return}
+    e.preventDefault();show(a.dataset.v);try{history.replaceState(null,'','#'+a.dataset.v)}catch(_){}
+  })});
+
+  function route(){
+    var h=(location.hash||'').slice(1);
+    if(h.indexOf('r-')===0){var s=h.slice(2);if(recipes.length){if(byslug(s)){openRecipe(s);return}}else{pendingSlug=s;show('recipe');return}}
+    if(views.indexOf(h)>=0&&h!=='recipe'){show(h);return}
+    show('recipes');
+  }
+  var pendingSlug=null;
+  function byslug(s){for(var i=0;i<recipes.length;i++)if(recipes[i].slug===s)return recipes[i];return null}
+
+  /* °C -> °C / °F */
+  var TRE=/([−-])?(\d+(?:\.\d+)?)(?:\s*(–|-|to)\s*([−-])?(\d+(?:\.\d+)?))?\s*°C(?!\s*\/\s*-?\d)/g;
+  function c2f(c,delta){var f=delta?c*1.8:c*1.8+32;return (!delta&&c>=100)?Math.round(f/5)*5:Math.round(f)}
+  function tf(s){s=String(s==null?'':s);return s.replace(TRE,function(m,n1,a,sep,n2,b,off,str){
+    var before=str.slice(Math.max(0,off-16),off),after=str.slice(off+m.length,off+m.length+10);
+    var delta=/(carries over|carry over|over|by|another|rises?|climbs?)\s*(about\s*)?$/i.test(before)||/^\s*(under|below|lower|higher|more|less)\b/i.test(after);
+    var A=(n1?-1:1)*parseFloat(a),B=b!=null?(n2?-1:1)*parseFloat(b):null;
+    var fa=c2f(A,delta),fb=B!=null?c2f(B,delta):null;
+    return m+' / '+(fa<0?'−'+(-fa):fa)+(fb!=null?(sep==='to'?' to ':'–')+(fb<0?'−'+(-fb):fb):'')+' °F'})}
+  /* helpers */
+  function safeImg(r){var u=r&&r.photo&&r.photo.url;u=String(u||'');return /^\/_blob\/[A-Za-z0-9_-]+$/.test(u)||/^photos\/[A-Za-z0-9_-]+\.(jpe?g|png|webp)$/.test(u)||/^https:\/\/[^\s"'<>]+$/.test(u)?u:''}
+  function safeHttps(u){u=String(u||'');return /^https:\/\/[^\s"'<>]+$/.test(u)?u:''}
+  function num(x){x=Number(x);return isFinite(x)&&x>0?x:0}
+  function srcLinks(r){var L=(Array.isArray(r.sourceLinks)?r.sourceLinks:[]).filter(function(l){return l&&safeHttps(l.url)});
+    return L.length?' · '+L.map(function(l){return '<a href="'+esc(safeHttps(l.url))+'" target="_blank" rel="noopener noreferrer nofollow" referrerpolicy="no-referrer">'+esc(l.label||l.url)+'</a>'}).join(' · '):''}
+  function total(r){return (r.prepMin||0)+(r.cookMin||0)}
+  function fmtMin(m){if(!m&&m!==0)return'–';if(m>0&&m<1)return Math.round(m*60)+' sec';if(m<60)return m+' min';var h=Math.floor(m/60),mm=m%60;return h+' h'+(mm?' '+mm:'')}
+  var FR=[[0.125,'⅛'],[0.25,'¼'],[0.333,'⅓'],[0.5,'½'],[0.667,'⅔'],[0.75,'¾']];
+  function frac(x){var w=Math.floor(x),f=x-w;if(f<0.06)return w?String(w):'0';if(f>0.94)return String(w+1);var best=FR[0],d=9;FR.forEach(function(p){var dd=Math.abs(p[0]-f);if(dd<d){d=dd;best=p}});return (w?w:'')+best[1]}
+  var PL={clove:'cloves',slice:'slices',piece:'pieces',head:'heads',sprig:'sprigs',bunch:'bunches',stick:'sticks',cup:'cups',dash:'dashes'};
+  function fmtQty(q,unit,k){
+    if(q==null||q==='')return '';
+    var v=q*k;
+    if(k===1&&(unit==='g'||unit==='ml')&&v<1000&&v>=20)return (Math.round(v*10)/10)+' '+unit;
+    if(unit==='kg'&&v<1){v*=1000;unit='g'} else if(unit==='l'&&v<1){v*=1000;unit='ml'}
+    if(unit==='g'||unit==='ml'){if(v>=1000){return (Math.round(v/100)/10)+(unit==='g'?' kg':' l')}if(v<20){return frac(Math.max(0.5,Math.round(v*2)/2))+' '+unit}var r=v>=100?Math.round(v/10)*10:Math.round(v/5)*5;return r+' '+unit}
+    if(unit==='l'||unit==='kg'){return (Math.round(v*10)/10)+' '+unit}
+    if(unit==='tsp'||unit==='tbsp'){var s=Math.max(0.125,Math.round(v*8)/8);return frac(s)+' '+unit}
+    var c=Math.max(unit==='cup'?0.25:0.5,Math.round(v*(unit==='cup'?4:2))/(unit==='cup'?4:2));
+    return frac(c)+(unit?' '+((c>1&&PL[unit])?PL[unit]:unit):'');
+  }
+  function uniq(arr){var o=[];arr.forEach(function(x){if(x&&o.indexOf(x)<0)o.push(x)});return o.sort()}
+
+  /* index */
+  var F={q:'',c:'',t:'',p:'',d:''};
+  var ORDER='course';try{ORDER=localStorage.getItem('jk-order')||'course'}catch(e){}
+  var COURSES=[['Mains','Braises, roasts and stir-fries, ordered by protein.'],['Noodles','Noodle soups and wok-tossed noodles.'],['Rice','Bowls and plates built on rice.'],['Soups & Stocks','Stocks to build on and soups to finish.'],['Small Plates','Fried, rolled and skewered; good with drinks.'],['Sweets','Desserts and treats.'],['Drinks','Cocktails from the bar templates.']];
+  var PROT=['Beef','Lamb','Pork','Duck','Chicken','Turkey','Fish','Shellfish','Eggs','Tofu','None'];
+  function course(r){if(r.course)return r.course;var t=r.types||[];if(t.some(function(x){return /^Drink/.test(x)}))return 'Drinks';if(t.indexOf('Dessert')>=0)return 'Sweets';if(t.indexOf('Noodles')>=0)return 'Noodles';if(t[0]==='Rice')return 'Rice';if(t[0]==='Soup')return 'Soups & Stocks';if(['Snack','Appetizer','Breakfast / Brunch'].indexOf(t[0])>=0)return 'Small Plates';return 'Mains'}
+  function pidx(r){var i=PROT.indexOf(r.protein);return i<0?PROT.length:i}
+  function byName(a,b){return (a.name||'').localeCompare(b.name||'')}
+  function sortList(list){
+    var L=list.slice();
+    if(ORDER==='az')return [{items:L.sort(byName)}];
+    if(ORDER==='quick')return [{items:L.sort(function(a,b){return (total(a)-total(b))||byName(a,b)})}];
+    if(ORDER==='new')return [{items:L.sort(function(a,b){return String(b.added||'').localeCompare(String(a.added||''))||byName(a,b)})}];
+    if(ORDER==='cuisine'){return uniq(L.map(function(r){return r.cuisine||'Other'})).map(function(c){return {title:c,items:L.filter(function(r){return (r.cuisine||'Other')===c}).sort(byName)}})}
+    var known=COURSES.map(function(c){return c[0]});
+    var groups=COURSES.map(function(c){return {title:c[0],blurb:c[1],items:L.filter(function(r){return course(r)===c[0]}).sort(function(a,b){return c[0]==='Mains'?(pidx(a)-pidx(b))||byName(a,b):byName(a,b)})}});
+    var rest=L.filter(function(r){return known.indexOf(course(r))<0});
+    if(rest.length)groups.push({title:'Other',items:rest.sort(byName)});
+    return groups.filter(function(g){return g.items.length});
+  }
+  function fillSelect(id,vals,keep){var s=document.getElementById(id);var cur=s.value;s.innerHTML='<option value="">All</option>'+vals.map(function(v){return'<option>'+esc(v)+'</option>'}).join('');if(vals.indexOf(cur)>=0)s.value=cur}
+  function renderStats(){
+    var n=recipes.length,el=document.getElementById('stats');if(!n){el.innerHTML='';return}
+    var cs=uniq(recipes.map(function(r){return r.cuisine}));
+    var ts=recipes.map(total).filter(Boolean).sort(function(a,b){return a-b});
+    var sh=pantry.filter(function(p){return p.shelf==='Short'}).length;
+    el.innerHTML='<span><b>'+n+'</b> recipes</span><span><b>'+cs.length+'</b> cuisines</span>'+(ts.length?'<span>median <b>'+esc(fmtMin(ts[Math.floor((ts.length-1)/2)]))+'</b> prep + cook</span>':'')+(pantry.length?'<span><b>'+pantry.length+'</b> pantry items, '+sh+' short-shelf</span>':'');
+  }
+  function gid(t){return 'g-'+String(t).toLowerCase().replace(/[^a-z]+/g,'-')}
+  function renderIndex(){
+    var n=recipes.length;
+    var cs=uniq(recipes.map(function(r){return r.cuisine}));
+    renderStats();renderPersonal();
+    document.getElementById('bandSub').textContent='Home recipes · Toronto · '+n+' recipe'+(n===1?'':'s');
+    fillSelect('fc',cs);
+    fillSelect('ft',uniq([].concat.apply([],recipes.map(function(r){return r.types||[]}))));
+    fillSelect('fp',uniq(recipes.map(function(r){return r.protein}).filter(function(p){return p&&p!=='None'})));
+    fillSelect('fd',['Easy','Normal','Effort'].filter(function(d){return recipes.some(function(r){return r.difficulty===d})}));
+    var list=recipes.filter(function(r){
+      if(F.c&&r.cuisine!==F.c)return false;
+      if(F.t&&(r.types||[]).indexOf(F.t)<0)return false;
+      if(F.p&&r.protein!==F.p)return false;
+      if(F.d&&r.difficulty!==F.d)return false;
+      if(F.q){var hay=(r.name+' '+(r.summary||'')+' '+(r.groups||[]).map(function(g){return g.items.map(function(i){return i.name}).join(' ')}).join(' ')).toLowerCase();if(hay.indexOf(F.q.toLowerCase())<0)return false}
+      return true});
+    document.getElementById('empty').hidden=n>0;
+    document.getElementById('nomatch').hidden=!(n>0&&list.length===0);
+    function card(r){
+      return '<a class="rc" href="#r-'+esc(r.slug)+'" data-s="'+esc(r.slug)+'"><div class="ph">'+(safeImg(r)?'<img src="'+esc(safeImg(r))+'" alt="'+esc(r.photo.alt||r.name)+'" loading="lazy">':'<div class="noimg">'+esc((r.name||'?')[0])+'</div>')+'</div>'+
+        '<div class="bd"><div class="cu">'+esc(r.cuisine||'')+(r.region?' · '+esc(r.region):'')+'</div><h3>'+esc(r.name)+'</h3>'+
+        '<div class="meta"><span>'+esc(fmtMin(total(r)))+'</span><span>Serves '+esc(r.serves||'')+'</span></div>'+
+        '<div class="chips"><span class="chip d-'+(['Easy','Normal','Effort'].indexOf(r.difficulty)>=0?r.difficulty:'x')+'">'+esc(r.difficulty||'')+'</span>'+(r.types||[]).map(function(t){return'<span class="chip">'+esc(t)+'</span>'}).join('')+'</div></div></a>'}
+    document.getElementById('fs').value=ORDER;
+    var groups=sortList(list),jump=document.getElementById('jump');
+    var titled=groups.filter(function(g){return g.title});
+    jump.hidden=titled.length<2;
+    jump.innerHTML=titled.map(function(g){return '<a href="#'+gid(g.title)+'" data-g="'+gid(g.title)+'">'+esc(g.title)+' <span>'+g.items.length+'</span></a>'}).join('');
+    jump.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();var t=document.getElementById(a.dataset.g);if(t)t.scrollIntoView({behavior:'smooth',block:'start'})})});
+    document.getElementById('grid').innerHTML=groups.map(function(g){
+      return (g.title?'<div class="ghead" id="'+gid(g.title)+'"><h3>'+esc(g.title)+'</h3><span class="n">'+g.items.length+' recipe'+(g.items.length===1?'':'s')+'</span>'+(g.blurb?'<p>'+esc(g.blurb)+'</p>':'')+'</div>':'')+g.items.map(card).join('')}).join('');
+    document.querySelectorAll('.rc').forEach(function(b){b.addEventListener('click',function(e){if(e.metaKey||e.ctrlKey||e.shiftKey)return;e.preventDefault();openRecipe(b.dataset.s)})});
+  }
+  ['fq','fc','ft','fp','fd'].forEach(function(id){var el=document.getElementById(id);el.addEventListener(id==='fq'?'input':'change',function(){F[id.slice(1)]=el.value;renderIndex()})});
+  document.getElementById('fs').addEventListener('change',function(e){ORDER=e.target.value;try{localStorage.setItem('jk-order',ORDER)}catch(_){}renderIndex()});
+  document.getElementById('fclear').addEventListener('click',function(){F={q:'',c:'',t:'',p:'',d:''};['fq','fc','ft','fp','fd'].forEach(function(id){document.getElementById(id).value=''});renderIndex()});
+
+  /* recipe page */
+  var prog={ing:{},steps:{}};
+  function loadProg(slug){try{var p=JSON.parse(localStorage.getItem('jk-prog-'+slug)||'null');if(p&&p.ing&&p.steps)return p}catch(e){}return {ing:{},steps:{}}}
+  function saveProg(){if(!current)return;try{var empty=!Object.keys(prog.ing).length&&!Object.keys(prog.steps).length;if(empty)localStorage.removeItem('jk-prog-'+current.slug);else localStorage.setItem('jk-prog-'+current.slug,JSON.stringify(prog))}catch(e){}}
+  function openRecipe(slug){
+    var r=byslug(slug);if(!r){show('recipes');return}
+    if(!current||current.slug!==slug){servings=r.baseServings||1;prog=loadProg(slug)}
+    current=r;
+    document.getElementById('navRecipe').hidden=false;
+    document.getElementById('navRecipeA').textContent=r.name;
+    renderRecipe();show('recipe');
+    try{history.replaceState(null,'','#r-'+slug)}catch(_){}
+  }
+  function stepText(body){
+    var lines=String(body||'').split('\n'),out='',ul=false;
+    lines.forEach(function(l){var t=l.trim();if(!t){if(ul){out+='</ul>';ul=false}return}
+      if(/^[-•]\s*/.test(t)){if(!ul){out+='<ul>';ul=true}out+='<li>'+esc(tf(t.replace(/^[-•]\s*/,'')))+'</li>'}
+      else{if(ul){out+='</ul>';ul=false}out+='<p>'+esc(tf(t))+'</p>'}});
+    if(ul)out+='</ul>';return out;
+  }
+  function tkey(slug,i){return slug+'|'+i}
+  function tlabel(m){return '▶ '+fmtMin(m)}
+  function qtyFor(it){var k=servings/(current.baseServings||1);return fmtQty(it.qty,it.unit,it.perServing?1:k)}
+  function updateQty(){
+    document.getElementById('sOut').textContent=servings;
+    (current.groups||[]).forEach(function(g,gi){g.items.forEach(function(it,ii){var el=document.getElementById('q'+gi+'_'+ii);if(el)el.textContent=qtyFor(it)})});
+  }
+  function markCurrent(scroll){
+    var lis=document.querySelectorAll('#recipeBody .step'),cur=null;
+    lis.forEach(function(li){li.classList.remove('current');if(!cur&&!li.classList.contains('done'))cur=li});
+    if(cur){cur.classList.add('current');if(scroll){var b=cur.getBoundingClientRect();if(b.top<80||b.bottom>innerHeight-40)cur.scrollIntoView({behavior:'smooth',block:'center'})}}
+  }
+  function renderRecipe(){
+    var r=current;
+    var prep=num(r.prepMin),cook=num(r.cookMin),rest=num(r.restMin),all=prep+cook+rest||1;
+    var h='<div class="cookbar"><button type="button" class="back" id="backBtn">← All recipes</button><button type="button" class="wake pdfbtn" id="pdfBtn">Download PDF</button>'+('wakeLock' in navigator?'<button type="button" class="wake" id="wakeBtn" aria-pressed="'+(wake?'true':'false')+'">'+(wake?'Screen stays on':'Keep screen on')+'</button>':'')+'</div>'+
+      '<div class="rhero"><div class="photo">'+(safeImg(r)?'<img src="'+esc(safeImg(r))+'" alt="'+esc(r.photo.alt||r.name)+'">':'')+'</div><div>'+
+      '<div class="eyebrow">'+esc(r.cuisine||'')+(r.region?' · '+esc(r.region):'')+'</div><h2>'+esc(r.name)+'</h2>'+
+      (r.summary?'<p class="summary">'+esc(tf(r.summary))+'</p>':'')+
+      '<dl class="facts">'+
+        '<div><dt>Serves</dt><dd>'+esc(r.serves||'')+'</dd></div>'+
+        '<div><dt>Total</dt><dd class="t">'+esc(fmtMin(prep+cook))+(rest?' + rest':'')+'</dd></div>'+
+        '<div><dt>Difficulty</dt><dd>'+esc(r.difficulty||'')+'</dd></div>'+
+        '<div><dt>Protein</dt><dd>'+esc(r.protein||'')+(r.protein2&&r.protein2!=='None'?' + '+esc(r.protein2):'')+'</dd></div>'+
+        '<div><dt>Type</dt><dd>'+esc((r.types||[]).join(', '))+'</dd></div>'+
+        '<div><dt>Flavour</dt><dd>'+esc((r.flavours||[]).join(', '))+'</dd></div>'+
+      '</dl>'+
+      '<div class="timeline" aria-hidden="true"><span style="width:'+(prep/all*100)+'%;background:var(--amber)"></span><span style="width:'+(cook/all*100)+'%;background:var(--accent)"></span>'+(rest?'<span style="width:'+(rest/all*100)+'%;background:var(--line-2)"></span>':'')+'</div>'+
+      '<div class="tl-legend"><span><i style="background:var(--amber)"></i>Prep '+esc(fmtMin(prep))+'</span><span><i style="background:var(--accent)"></i>Cook '+esc(fmtMin(cook))+'</span>'+(rest?'<span><i style="background:var(--line-2)"></i>Rest '+esc(fmtMin(rest))+(r.restNote?' · '+esc(tf(r.restNote)):'')+'</span>':'')+'</div>'+
+      '</div></div>'+
+      '<div class="cols"><div class="panel"><h3>Ingredients<span class="scale"><span>Servings</span><button type="button" id="sDown" aria-label="Fewer servings">−</button><output id="sOut">'+servings+'</output><button type="button" id="sUp" aria-label="More servings">+</button></span></h3>'+
+      (r.groups||[]).map(function(g,gi){return '<div class="igroup"><h4>'+esc(g.name)+'</h4><ul class="ing">'+g.items.map(function(it,ii){
+        var id=gi+'_'+ii,on=!!prog.ing[id];
+        return '<li'+(on?' class="done"':'')+'><label><input type="checkbox" data-k="'+id+'"'+(on?' checked':'')+'><span class="q" id="q'+id+'">'+esc(qtyFor(it))+'</span><span class="n">'+esc(it.name)+(it.note?' <span class="note">· '+esc(tf(it.note))+'</span>':'')+'</span></label></li>'}).join('')+'</ul></div>'}).join('')+
+      '</div><div class="panel"><h3>Method</h3><ol class="steps">'+
+      (r.steps||[]).map(function(s,si){var d=!!prog.steps[si];return '<li class="step'+(d?' done':'')+'" id="st'+si+'"><div class="no">'+(si+1)+'</div><div><h4>'+esc(s.title)+(num(s.timerMin)?' <button type="button" class="timer" data-i="'+si+'" data-m="'+num(s.timerMin)+'" aria-label="Start '+esc(fmtMin(s.timerMin))+' timer for '+esc(s.title)+'">'+esc(tlabel(s.timerMin))+'</button>':'')+'</h4>'+stepText(s.body)+'<button type="button" class="stepchk" data-i="'+si+'">'+(d?'Undo':'✓ Done')+'</button></div></li>'}).join('')+
+      '</ol>'+
+      ((Array.isArray(r.why)&&r.why.length)?'<div class="notes why"><h3>Why it works</h3><ul>'+r.why.map(function(n){return'<li>'+(n.title?'<b>'+esc(tf(n.title))+'.</b> ':'')+esc(tf(n.text||''))+'</li>'}).join('')+'</ul></div>':'')+
+      ((r.chefNotes&&r.chefNotes.length)?'<div class="notes"><h3>Chef\'s notes · make it better</h3><ul>'+r.chefNotes.map(function(n){return'<li>'+(n.title?'<b>'+esc(tf(n.title))+'.</b> ':'')+esc(tf(n.text||n))+'</li>'}).join('')+'</ul></div>':'')+
+      ((r.serveWith||r.pairing)?'<div class="notes"><h3 style="color:var(--accent)">Serve with</h3><ul>'+(r.serveWith?'<li>'+esc(tf(r.serveWith))+'</li>':'')+(r.pairing?'<li><b>Drink.</b> '+esc(tf(r.pairing))+'</li>':'')+'</ul></div>':'')+
+      '<div class="src">Source: '+esc(r.source||'')+srcLinks(r)+(r.added?' · added '+esc(r.added):'')+'</div>'+
+      '<button type="button" class="reset" id="resetBtn">Clear ticks</button>'+
+      '</div></div>';
+    document.getElementById('recipeBody').innerHTML=h;
+    document.getElementById('backBtn').addEventListener('click',function(){show('recipes');try{history.replaceState(null,'','#recipes')}catch(_){}});
+    document.getElementById('sDown').addEventListener('click',function(){if(servings>1){servings--;updateQty()}});
+    document.getElementById('sUp').addEventListener('click',function(){if(servings<24){servings++;updateQty()}});
+    var wb=document.getElementById('wakeBtn');if(wb)wb.addEventListener('click',toggleWake);
+    document.getElementById('pdfBtn').addEventListener('click',makePdf);
+    document.getElementById('resetBtn').addEventListener('click',function(){prog={ing:{},steps:{}};saveProg();renderRecipe()});
+    document.querySelectorAll('.ing input').forEach(function(c){c.addEventListener('change',function(){c.closest('li').classList.toggle('done',c.checked);if(c.checked)prog.ing[c.dataset.k]=1;else delete prog.ing[c.dataset.k];saveProg()})});
+    document.querySelectorAll('.stepchk').forEach(function(b){b.addEventListener('click',function(){var i=b.dataset.i,li=document.getElementById('st'+i);var d=li.classList.toggle('done');b.textContent=d?'Undo':'✓ Done';if(d)prog.steps[i]=1;else delete prog.steps[i];saveProg();markCurrent(d)})});
+    document.querySelectorAll('.timer').forEach(function(b){
+      b.addEventListener('click',function(){
+        var key=tkey(current.slug,b.dataset.i),t=timers[key];
+        if(t){delete timers[key];tick();return}
+        var s=current.steps[+b.dataset.i];
+        timers[key]={end:Date.now()+b.dataset.m*60000,slug:current.slug,i:+b.dataset.i,title:s.title,recipe:current.name,m:+b.dataset.m};
+        primeAudio();tick();
+      })});
+    markCurrent(false);tick();
+  }
+
+  /* PDF export */
+  var jspdfP=null,dlP=null;
+  function getDownloads(){if(!dlP)dlP=(window.claude&&window.claude.use)?window.claude.use('downloads').catch(function(){return null}):Promise.resolve(null);return dlP}
+  function loadJsPDF(){if(window.jspdf)return Promise.resolve(window.jspdf);if(jspdfP)return jspdfP;
+    jspdfP=new Promise(function(res,rej){var s=document.createElement('script');s.src='https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js';s.onload=function(){window.jspdf?res(window.jspdf):rej(new Error('jsPDF missing'))};s.onerror=function(){jspdfP=null;rej(new Error('jsPDF failed to load'))};document.head.appendChild(s)});return jspdfP}
+  function pdfTxt(s){return tf(s).replace(/−/g,'-').replace(/(\d)?⅓/g,function(m,d){return (d?d+' ':'')+'1/3'}).replace(/(\d)?⅔/g,function(m,d){return (d?d+' ':'')+'2/3'}).replace(/(\d)?⅛/g,function(m,d){return (d?d+' ':'')+'1/8'})
+    .replace(/[‘’]/g,"'").replace(/[“”]/g,'"').replace(/→/g,'->').replace(/[▶✓×]/g,'').replace(/[^\n\x20-\x7E\xA0-\xFF–—•…]/g,'')}
+  function imgData(url){return fetch(url).then(function(r){if(!r.ok)throw 0;return r.blob()}).then(function(b){return new Promise(function(res,rej){var fr=new FileReader();fr.onload=function(){var im=new Image();im.onload=function(){
+      var c=document.createElement('canvas'),s=Math.min(1,900/Math.max(im.width,im.height));c.width=Math.round(im.width*s);c.height=Math.round(im.height*s);c.getContext('2d').drawImage(im,0,0,c.width,c.height);
+      res({data:c.toDataURL('image/jpeg',0.85),w:c.width,h:c.height})};im.onerror=rej;im.src=fr.result};fr.onerror=rej;fr.readAsDataURL(b)})}).catch(function(){return null})}
+  function makePdf(){
+    var btn=document.getElementById('pdfBtn'),r=current;if(!r||btn.disabled)return;
+    btn.disabled=true;btn.textContent='Preparing…';
+    var done=function(t){btn.disabled=false;btn.textContent=t||'Download PDF';if(t)setTimeout(function(){if(btn.isConnected)btn.textContent='Download PDF'},2500)};
+    Promise.all([loadJsPDF(),safeImg(r)?imgData(safeImg(r)):Promise.resolve(null),getDownloads()]).then(function(a){
+      var doc=new a[0].jsPDF({unit:'mm',format:'letter'}),img=a[1],dl=a[2];
+      var W=215.9,H=279.4,M=18,CW=W-2*M,y=M,GREEN=[31,107,82],INK=[23,32,27],MUTED=[95,107,99];
+      function ensure(hh){if(y+hh>H-M-6){doc.addPage();y=M}}
+      function text(t,x,size,style,color,width,font){doc.setFont(font||'helvetica',style||'normal');doc.setFontSize(size);doc.setTextColor.apply(doc,color||INK);
+        var lines=doc.splitTextToSize(pdfTxt(t),width||CW),lh=size*0.42;lines.forEach(function(l){ensure(lh);doc.text(l,x,y+lh*0.8);y+=lh});return lines.length}
+      function head(t){y+=4;ensure(12);doc.setDrawColor.apply(doc,INK);doc.setLineWidth(0.5);text(t.toUpperCase(),M,10,'bold');y+=1;doc.line(M,y,M+CW,y);y+=3}
+      var prep=num(r.prepMin),cook=num(r.cookMin),rest=num(r.restMin);
+      text([r.cuisine,r.region].filter(Boolean).join(' · ').toUpperCase(),M,8,'bold',GREEN);y+=1;
+      text(r.name,M,24,'bold',INK,CW,'times');y+=2;
+      if(r.summary){text(r.summary,M,10.5,'normal',[71,82,75]);y+=2}
+      var facts=['Serves '+(r.serves||servings),'Prep '+fmtMin(prep),'Cook '+fmtMin(cook)];if(rest)facts.push('Rest '+fmtMin(rest)+(r.restNote?' ('+r.restNote+')':''));if(r.difficulty)facts.push(r.difficulty);
+      text(facts.join('   ·   '),M,9,'normal',MUTED);
+      if(servings!==(r.baseServings||1))text('Quantities scaled to '+servings+' servings.',M,9,'italic',MUTED);
+      y+=3;
+      if(img){var iw=CW,ih=iw*img.h/img.w;if(ih>85){ih=85;iw=ih*img.w/img.h}ensure(ih);doc.addImage(img.data,'JPEG',M,y,iw,ih);y+=ih+3}
+      head('Ingredients');
+      (r.groups||[]).forEach(function(g){ensure(10);y+=1;text(g.name,M,11,'bold',GREEN,CW,'times');
+        g.items.forEach(function(it){var q=pdfTxt(qtyFor(it)),nm=it.name+(it.note?' — '+it.note:'');doc.setFont('helvetica','normal');doc.setFontSize(10);
+          var lines=doc.splitTextToSize(pdfTxt(nm),CW-30),lh=4.3;ensure(lh*lines.length);doc.setTextColor.apply(doc,INK);doc.setFont('helvetica','bold');doc.text(q,M+26,y+lh*0.8,{align:'right'});doc.setFont('helvetica','normal');
+          lines.forEach(function(l,i){doc.text(l,M+30,y+lh*0.8);y+=lh});y+=0.6})});
+      head('Method');
+      (r.steps||[]).forEach(function(s,i){ensure(14);var y0=y;doc.setFont('times','bold');doc.setFontSize(16);doc.setTextColor.apply(doc,GREEN);doc.text(String(i+1),M,y+5.5);
+        text(s.title+(num(s.timerMin)?'  ('+fmtMin(num(s.timerMin))+')':''),M+10,11,'bold',INK,CW-10);
+        String(s.body||'').split('\n').forEach(function(l){l=l.trim();if(!l)return;var b=/^[-•]\s*/.test(l);text((b?'•  ':'')+l.replace(/^[-•]\s*/,''),M+10+(b?2:0),10,'normal',[71,82,75],CW-12-(b?2:0))});y+=2.5});
+      if(Array.isArray(r.why)&&r.why.length){head('Why it works');r.why.forEach(function(n){text('•  '+(n.title?n.title+'. ':'')+(n.text||''),M,10,'normal',INK);y+=1})}
+      if(r.chefNotes&&r.chefNotes.length){head("Chef's notes · make it better");r.chefNotes.forEach(function(n){var t=(n.title?n.title+'. ':'')+(n.text||n);text('•  '+t,M,10,'normal',INK);y+=1})}
+      if(r.serveWith||r.pairing){head('Serve with');if(r.serveWith)text(r.serveWith,M,10);if(r.pairing)text('Drink: '+r.pairing,M,10)}
+      y+=4;var src='Source: '+(r.source||'')+(r.added?' · added '+r.added:'');text(src,M,8.5,'normal',MUTED);
+      (Array.isArray(r.sourceLinks)?r.sourceLinks:[]).forEach(function(l){var u=safeHttps(l&&l.url);if(!u)return;ensure(5);doc.setFont('helvetica','normal');doc.setFontSize(8.5);doc.setTextColor.apply(doc,GREEN);doc.textWithLink(pdfTxt((l.label||u)+'  '+u),M,y+3.5,{url:u});y+=4.4});
+      var n=doc.getNumberOfPages();for(var p=1;p<=n;p++){doc.setPage(p);doc.setFont('helvetica','normal');doc.setFontSize(8);doc.setTextColor.apply(doc,MUTED);doc.text("Johnew's Kitchen",M,H-10);doc.text(p+' / '+n,W-M,H-10,{align:'right'})}
+      var fname=(r.slug||'recipe')+'.pdf';
+      if(dl){return dl.save({filename:fname,data:doc.output('blob')}).then(function(){done('Saved')},function(e){var c=e&&e.code;if(c==='declined')done();else if(c==='rate_limited')done('Try again in a moment');else{done();window.print()}})}
+      try{doc.save(fname);done('Saved')}catch(e){done();window.print()}
+    }).catch(function(){done();window.print()});
+  }
+  /* timers */
+  var tickIv=null,actx=null,baseTitle=document.title;
+  function primeAudio(){try{if(!actx){var A=window.AudioContext||window.webkitAudioContext;if(A)actx=new A()}if(actx&&actx.state==='suspended')actx.resume()}catch(e){}}
+  function beep(){try{if(!actx)return;[0,0.35,0.7].forEach(function(d){var o=actx.createOscillator(),g=actx.createGain();o.frequency.value=880;o.connect(g);g.connect(actx.destination);var t=actx.currentTime+d;g.gain.setValueAtTime(0.0001,t);g.gain.exponentialRampToValueAtTime(0.3,t+0.02);g.gain.exponentialRampToValueAtTime(0.0001,t+0.25);o.start(t);o.stop(t+0.3)})}catch(e){}}
+  function clock(left){var h=Math.floor(left/3600),m=Math.floor(left%3600/60),s=left%60;return (h?h+':'+String(m).padStart(2,'0'):m)+':'+String(s).padStart(2,'0')}
+  function tick(){
+    var keys=Object.keys(timers),now=Date.now(),anyEnd=false;
+    keys.forEach(function(k){var t=timers[k];if(!t.fired&&t.end<=now){t.fired=true;beep();try{navigator.vibrate&&navigator.vibrate([300,150,300,150,300])}catch(e){}}if(t.fired)anyEnd=true});
+    document.querySelectorAll('#recipeBody .timer').forEach(function(b){
+      var t=current&&timers[tkey(current.slug,b.dataset.i)];
+      if(!t){b.className='timer';b.textContent=tlabel(+b.dataset.m);return}
+      var left=Math.max(0,Math.round((t.end-now)/1000));
+      if(!left){b.className='timer end';b.textContent='Time’s up · tap to clear'}else{b.className='timer run';b.textContent=clock(left)}
+    });
+    var dock=document.getElementById('timerDock');
+    dock.hidden=!keys.length;
+    dock.innerHTML=keys.sort(function(a,b){return timers[a].end-timers[b].end}).map(function(k){var t=timers[k],left=Math.max(0,Math.round((t.end-now)/1000));
+      return '<div class="dk'+(left?'':' end')+'"><div class="t" data-k="'+esc(k)+'"><small>'+esc(t.recipe)+' · step '+(t.i+1)+'</small>'+esc(t.title)+'</div><div class="c">'+(left?clock(left):'Done')+'</div><button type="button" data-x="'+esc(k)+'" aria-label="Clear timer">×</button></div>'}).join('');
+    dock.querySelectorAll('[data-x]').forEach(function(b){b.addEventListener('click',function(){delete timers[b.dataset.x];tick()})});
+    dock.querySelectorAll('.t').forEach(function(d){d.addEventListener('click',function(){var t=timers[d.dataset.k];if(!t)return;openRecipe(t.slug);var el=document.getElementById('st'+t.i);if(el)el.scrollIntoView({behavior:'smooth',block:'center'})})});
+    document.title=anyEnd?'⏰ Time’s up · '+baseTitle:baseTitle;
+    if(keys.length&&!tickIv)tickIv=setInterval(tick,1000);
+    if(!keys.length&&tickIv){clearInterval(tickIv);tickIv=null}
+  }
+  /* wake lock */
+  var wake=null;
+  function setWakeBtn(){var b=document.getElementById('wakeBtn');if(b){b.setAttribute('aria-pressed',wake?'true':'false');b.textContent=wake?'Screen stays on':'Keep screen on'}}
+  function toggleWake(){
+    if(wake){try{wake.release()}catch(e){}wake=null;wantWake=false;setWakeBtn();return}
+    wantWake=true;navigator.wakeLock.request('screen').then(function(l){wake=l;l.addEventListener('release',function(){wake=null;setWakeBtn()});setWakeBtn()}).catch(function(){wake=null;setWakeBtn()});
+  }
+  var wantWake=false;
+  document.addEventListener('visibilitychange',function(){if(wantWake&&!wake&&document.visibilityState==='visible'&&navigator.wakeLock){navigator.wakeLock.request('screen').then(function(l){wake=l;l.addEventListener('release',function(){wake=null;setWakeBtn()});setWakeBtn()}).catch(function(){})}});
+
+  /* pantry */
+  function ingMatch(key,n){if(!key||!n)return false;if(key===n)return true;var wb=function(hay,needle){return (' '+hay+' ').indexOf(' '+needle+' ')>=0};if(wb(n,key))return true;return n.split(' ').length>1&&wb(key,n)}
+  function norm(s){return String(s||'').toLowerCase().replace(/\(.*?\)/g,'').replace(/[^a-z ]/g,' ').replace(/\s+/g,' ').trim()}
+  function renderPantry(){
+    var tb=document.getElementById('pantryBody');
+    renderStats();renderPersonal();
+    if(!pantry.length){tb.innerHTML='<tr><td colspan="4">The pantry fills in as recipes are posted.</td></tr>';return}
+    var types=uniq(pantry.map(function(p){return p.type}));
+    tb.innerHTML=types.map(function(t){
+      return '<tr class="grp"><td colspan="4">'+esc(t)+'</td></tr>'+pantry.filter(function(p){return p.type===t}).sort(function(a,b){return a.name<b.name?-1:1}).map(function(p){
+        var key=norm(p.match||p.name);
+        var used=usesOf(p);
+        return '<tr><td class="k">'+esc(p.name)+'</td><td>'+esc(p.subtype||'')+'</td><td><span class="pill s-'+(['Short','Medium','Long'].indexOf(p.shelf)>=0?p.shelf:'x')+'">'+esc(p.shelf||'')+'</span></td><td>'+used.map(function(r){return '<a href="#r-'+esc(r.slug)+'" data-s="'+esc(r.slug)+'" class="ulink">'+esc(r.name)+'</a>'}).join(', ')+'</td></tr>'}).join('')}).join('');
+    tb.querySelectorAll('.ulink').forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();openRecipe(a.dataset.s)})});
+  }
+
+
+  /* personal sections */
+  function rlink(r){return '<a class="rl" data-r="'+esc(r.slug)+'" href="#r-'+esc(r.slug)+'">'+esc(r.name)+'</a>'}
+  var POURS=[['Riesling',/riesling/i],['Lager or beer',/lager|beer|singha/i],['Pinot Noir',/pinot noir/i],['Syrah, Grenache or Nebbiolo',/syrah|grenache|nebbiolo/i],['Cabernet',/cabernet/i],['Crisp white (Sauvignon Blanc, Chablis, Assyrtiko)',/sauvignon blanc|chablis|assyrtiko|vermentino|gr[üu]ner|burgundy/i],['Chardonnay',/chardonnay/i],['Tea (oolong, jasmine, hojicha, barley)',/\btea\b|hojicha|genmaicha|oolong/i],['Highball or sake',/highball|sake/i]];
+  function usesOf(p){var key=norm(p.match||p.name);return recipes.filter(function(r){return (r.groups||[]).some(function(g){return g.items.some(function(i){var n=norm(i.name);return ingMatch(key,n)})})})}
+  function renderPersonal(){
+    var have={};recipes.forEach(function(r){have[r.slug]=1});
+    document.querySelectorAll('a.rl[data-r]').forEach(function(a){if(!a.getAttribute('href'))a.setAttribute('href','#r-'+a.dataset.r);a.classList.toggle('gone',recipes.length>0&&!have[a.dataset.r])});
+    document.querySelectorAll('#cuisineBody tr[data-c]').forEach(function(tr){var L=recipes.filter(function(r){return r.cuisine===tr.dataset.c}).sort(byName);var td=tr.querySelector('.mine');
+      td.innerHTML=L.length?'<span class="n">'+L.length+'</span>'+L.slice(0,5).map(rlink).join(', ')+(L.length>5?' and '+(L.length-5)+' more':''):'<span class="n">0</span>Not yet'});
+    var pb=document.getElementById('pourBody');
+    if(pb&&recipes.length){var rows=POURS.map(function(p){return {name:p[0],list:recipes.filter(function(r){return !(r.types||[]).some(function(t){return /^Drink/.test(t)})&&p[1].test(r.pairing||'')}).sort(byName)}}).filter(function(x){return x.list.length}).sort(function(a,b){return b.list.length-a.list.length});
+      pb.innerHTML=rows.map(function(x){return '<tr><td class="k">'+esc(x.name)+'</td><td class="r">'+x.list.length+'</td><td>'+x.list.slice(0,6).map(rlink).join(', ')+(x.list.length>6?' and '+(x.list.length-6)+' more':'')+'</td></tr>'}).join('')}
+    var hn=document.getElementById('howNums');
+    if(hn&&recipes.length){var own=recipes.filter(function(r){return /^Johnew/.test(r.source||'')}).length,conv=recipes.filter(function(r){return /^(Converted|Adapted)/.test(r.source||'')}).length,other=recipes.length-own-conv;
+      hn.textContent='So far: '+recipes.length+' recipes, '+own+' of them my own, '+conv+' converted or adapted from cooks I follow'+(other?', and '+other+' classic bar spec'+(other===1?'':'s'):'')+'.'}
+    var pt=document.getElementById('pantryTop');
+    if(pt&&pantry.length&&recipes.length){var skip=/^(water|ice|kosher salt|salt|black pepper|sea salt)$/i;
+      var top=pantry.filter(function(p){return !skip.test(p.name)}).map(function(p){return {p:p,n:usesOf(p).length}}).filter(function(x){return x.n>1}).sort(function(a,b){return b.n-a.n||a.p.name.localeCompare(b.p.name)}).slice(0,14);
+      pt.innerHTML=top.map(function(x){return '<span class="chip">'+esc(x.p.name)+'<b>'+x.n+'</b></span>'}).join('')}
+  }
+  document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a.rl[data-r]');if(!a||a.classList.contains('gone'))return;if(e.metaKey||e.ctrlKey||e.shiftKey)return;e.preventDefault();openRecipe(a.dataset.r)});
+  /* layout helpers */
+  var mq=matchMedia('(max-width:640px)');
+  function setStick(){var v=mq.matches?document.querySelector('nav.tabs').offsetHeight:document.querySelector('.hdr').offsetHeight;document.documentElement.style.setProperty('--stick',v+'px')}
+  function setFilters(){var d=document.getElementById('fwrap');if(!mq.matches)d.open=true;else if(!F.q&&!F.c&&!F.t&&!F.p&&!F.d)d.open=false}
+  setStick();setFilters();addEventListener('resize',setStick);
+  if(mq.addEventListener)mq.addEventListener('change',function(){setStick();setFilters()});
+
+  /* boot */
+  renderIndex();renderPantry();route();
+  if(window.claude&&window.claude.use){
+    window.claude.use('db').then(function(db){
+      if(!db){document.getElementById('empty').hidden=false;return}
+      db.collection('recipes').orderBy('added','desc').onSnapshot(function(snap){
+        recipes=snap.docs.map(function(d){var x=d.data();return Object.assign({slug:d.id},x)});
+        renderIndex();renderPantry();
+        if(pendingSlug&&byslug(pendingSlug)){var s=pendingSlug;pendingSlug=null;openRecipe(s)}
+        else if(current&&byslug(current.slug)){current=byslug(current.slug);if(document.getElementById('v-recipe').classList.contains('active'))renderRecipe()}
+      },function(){});
+      db.doc('pantry/inventory').onSnapshot(function(d){pantry=(d.exists&&d.data().items)||[];renderPantry()},function(){});
+    });
+  } else {
+    /* Static copy (GitHub Pages): read the exported snapshot next to this page. */
+    Promise.all([fetch('data/recipes.json').then(function(r){return r.json()}),fetch('data/pantry.json').then(function(r){return r.json()}).catch(function(){return {items:[]}})]).then(function(a){
+      recipes=a[0]||[];pantry=(a[1]&&a[1].items)||[];
+      if(!recipes.length){document.getElementById('empty').hidden=false}
+      renderIndex();renderPantry();
+      if(pendingSlug&&byslug(pendingSlug)){var s=pendingSlug;pendingSlug=null;openRecipe(s)}
+    }).catch(function(){document.getElementById('empty').hidden=false});
+  }
+})();
+</script>
+
+<script src="/assets/js/return-strip.js" data-section="Culture" data-section-url="/culture/" data-title="Johnew's Kitchen" defer></script>
+</body></html>

@@ -1,22 +1,16 @@
 ---
-title: "Tutorial: WRDS Data Access Via Python API"
-layout: post
-blog: true
+title: "WRDS Data Access via the Python API"
 date: 2018-10-01 00:00
-headerImage: false
-tag:
-- finance
-- research
-- python
-star: false
-category: blog
-author: johnewzhang
-description: "Tutorial: WRDS Data Access Via Python API"
+pillar: academic
+series: code
+topic: tutorial
+summary: "Setting up a .pgpass file and running your first CRSP queries from Python."
+tags: ["finance", "research", "python"]
 ---
 
 ## Prerequisites
 
-* An active account with the Warton WRDS Web Service
+* An active account with the Wharton WRDS Web Service
 * Python 2.7+ or 3.0+
 * ```wrds``` Python library; if you don't have it, install it (```pip install wrds```)
 

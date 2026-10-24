@@ -1,13 +1,9 @@
-source 'http://rubygems.org'
+source "https://rubygems.org"
 
-gem 'jekyll'
-gem 'rake'
-gem 'rouge'
-gem 'html-proofer'
-gem 'jemoji'
-gem 'jekyll-mentions'
-gem 'jekyll-seo-tag'
-gem 'jekyll-feed'
-gem 'jekyll-sitemap'
-gem 'jekyll-gist'
-gem 'jekyll-paginate'
+# Matches the plugin and Jekyll versions GitHub Pages uses.
+gem "github-pages", group: :jekyll_plugins
+gem "webrick"
+
+group :test do
+  gem "html-proofer"
+end

@@ -1,7 +1,15 @@
-<footer class="footer-main">
-    {{ site.name }} © {{ site.time | date: '%Y' }} <a class="link" href="{{ site.url }}/feed.xml" target="_blank"><svg class="icon icon-rss"><use xlink:href="#icon-rss"></use></svg></a>
-
-    <p class="extra">
-        <a class="link" href="https://github.com/sergiokopplin/indigo">Indigo theme</a> by <a class="link" href="http://koppl.in">Kopplin</a>
-    </p>
+<footer class="site-foot">
+  <div class="inner">
+    <span>© {{ site.time | date: '%Y' }} {{ site.name }} · {{ site.location }}</span>
+    <nav aria-label="Elsewhere">
+      <a href="{{ '/feed.xml' | relative_url }}">RSS</a>
+      <a href="{{ '/tags/' | relative_url }}">Tags</a>
+      {%- if site.linkedin %}<a href="https://www.linkedin.com/in/{{ site.linkedin }}">LinkedIn</a>{% endif %}
+      {%- if site.github %}<a href="https://github.com/{{ site.github }}">GitHub</a>{% endif %}
+      {%- if site.twitter %}<a href="https://x.com/{{ site.twitter }}">X</a>{% endif %}
+      {%- if site.instagram %}<a href="https://www.instagram.com/{{ site.instagram }}">Instagram</a>{% endif %}
+      {%- if site.facebook %}<a href="https://www.facebook.com/{{ site.facebook }}">Facebook</a>{% endif %}
+      {%- if site.email %}<a href="mailto:{{ site.email }}">Email</a>{% endif %}
+    </nav>
+  </div>
 </footer>

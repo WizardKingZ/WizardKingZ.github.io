@@ -1,0 +1,59 @@
+---
+layout: default
+title: About
+permalink: /about/
+description: Johnew Zhang invests in financial services and FinTech at CPP Investments. He trained in mathematical finance at Waterloo and financial economics at Columbia.
+---
+<main class="inner" style="padding-top:36px;padding-bottom:56px">
+  <div class="about-hero">
+    <img class="portrait" src="{{ site.picture | relative_url }}" alt="{{ site.name }}" width="200" height="200">
+    <div class="txt">
+      <div class="eyebrow">About</div>
+      <h1>{{ site.name }} <span>{{ site.name_zh }}</span></h1>
+      <p>Johnew Zhang is a financial services and FinTech investor at CPP Investments. He focuses on sub-investment-grade private credit, including structured credit, corporate credit, platform equity, public long/short equities and fund investments, across North America and Latin America. He has also sourced and evaluated esoteric, uncorrelated assets such as media rights and insurance, and contributed to the firm's data-driven investing initiatives and its market mapping of blockchain and crypto.</p>
+      <p class="second">Before CPP Investments, he was an actuary in property and casualty insurance, working in reserving, product and pricing, and advanced analytics. He also has experience in mobile software development.</p>
+      <div class="hero-links">
+        {%- if site.linkedin %}<a class="btn solid" href="https://www.linkedin.com/in/{{ site.linkedin }}">LinkedIn</a>{% endif %}
+        {%- if site.github %}<a class="btn" href="https://github.com/{{ site.github }}">GitHub</a>{% endif %}
+        {%- if site.email %}<a class="btn" href="mailto:{{ site.email }}">Email</a>{% endif %}
+      </div>
+    </div>
+  </div>
+
+  <div class="cols" style="gap:0 48px">
+    <div class="main">
+      <h2 class="sub">Education</h2>
+      <div class="edu" style="margin-top:14px">
+        <div class="panel p-academic"><div class="eyebrow">Columbia Business School</div><div class="serif" style="font-size:20px;margin-top:3px">M.S., Financial Economics</div></div>
+        <div class="panel p-academic"><div class="eyebrow">University of Waterloo</div><div class="serif" style="font-size:20px;margin-top:3px">BMath, Mathematical Finance</div></div>
+      </div>
+      <p class="mono muted" style="font-size:12.5px;margin:12px 0 0">Member · Society of Actuaries · Casualty Actuarial Society · International Association for Quantitative Finance</p>
+
+      <h2 class="sub">Research</h2>
+      <p style="margin:12px 0 10px;font-size:16px">His academic interests are asset pricing, corporate finance theory, Bayesian inference and machine learning, with published work on portfolio management.</p>
+      <ul class="list-plain">
+        <li><a href="https://www.tandfonline.com/doi/abs/10.1080/10920277.2017.1387573" style="font-weight:600;text-decoration:none">Short Positions in the First Principal Component Portfolio</a><br><span class="mono muted" style="font-size:12px">North American Actuarial Journal 22(2)</span></li>
+        <li><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2493844" style="font-weight:600;text-decoration:none">Correlation Matrices with the Perron–Frobenius Property</a><br><span class="mono muted" style="font-size:12px">SSRN working paper</span></li>
+        <li>Projects: <a href="{{ '/VAE/' | relative_url }}">Variational Autoencoder</a> · <a href="{{ '/timeseries-outlier-detection/' | relative_url }}">Multivariate Time Series Outlier Detection</a> · <a href="{{ '/academic/' | relative_url }}">everything else</a></li>
+      </ul>
+
+      <h2 class="sub">Tools</h2>
+      <div class="tags" style="margin-top:12px"><span class="tag">Python</span><span class="tag">R</span><span class="tag">C++</span><span class="tag">OCaml</span></div>
+    </div>
+
+    <aside style="padding-top:0">
+      <h2 class="sub">Outside work</h2>
+      <ul class="list-plain">
+        <li class="p-culture"><div class="eyebrow">Culture</div>Travel for nature and culture, and reading non-fiction. Cooking at <a href="{{ '/kitchen/' | relative_url }}" style="color:var(--culture);font-weight:600">Johnew's Kitchen</a>.</li>
+        <li class="p-sports"><div class="eyebrow">Sports</div>Boston Celtics fan. Plays basketball, golf and tennis (3.5 on the NTRP scale), and follows sports analytics.</li>
+        <li class="p-investing"><div class="eyebrow">Music</div>Plays the violin; Coldplay fan.</li>
+        <li class="p-academic"><div class="eyebrow">Calligraphy</div>Chinese brush calligraphy since childhood.</li>
+      </ul>
+      <div class="callig">
+        <img src="{{ '/assets/images/about/image1.jpg' | relative_url }}" alt="Calligraphy: 華夏之寶" loading="lazy">
+        <img src="{{ '/assets/images/about/image2.jpg' | relative_url }}" alt="Calligraphy: 大展宏圖" loading="lazy">
+        <img src="{{ '/assets/images/about/image3.jpg' | relative_url }}" alt="Calligraphy: a classical poem in regular script" loading="lazy">
+      </div>
+    </aside>
+  </div>
+</main>

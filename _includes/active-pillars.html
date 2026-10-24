@@ -1,0 +1,8 @@
+{%- comment -%} Sets `active_pillars`: ids of pillars that have visible posts or standalone pages. {%- endcomment -%}
+{%- assign _ap = "" -%}
+{%- for _p in site.pillars -%}
+  {%- assign _n = site.posts | where: "pillar", _p.id | where_exp: "x", "x.hidden != true" | size -%}
+  {%- assign _s = site.data.standalone | where: "pillar", _p.id | size -%}
+  {%- if _n > 0 or _s > 0 -%}{%- assign _ap = _ap | append: _p.id | append: "," -%}{%- endif -%}
+{%- endfor -%}
+{%- assign active_pillars = _ap | split: "," -%}

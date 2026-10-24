@@ -1,15 +1,11 @@
 ---
-title: "Project: Multivariate Time Series Outlier Detection"
-layout: post
-projects: true
+title: "Multivariate Time Series Outlier Detection"
 date: 2018-09-24 21:10
-headerImage: false
-tag: 
-  - Time Series
-  - Intervention Analysis
-category: projects
-author: projohnewzhang
-description: "Multivariate Time Series Outlier Detection"
+pillar: academic
+series: projects
+topic: time series
+summary: "Finding and classifying outliers in vector ARIMA models, with R code built on the MTS package."
+tags: ["time series", "intervention analysis", "R"]
 ---
 
 Let $$x_t =(x_{1t}, \cdots, x_{kt})'$$ be a k-dimensional time series that follows a vector autoregressive integrated moving-average, ARIMA, model
@@ -20,7 +16,7 @@ where
 
 $$\Phi(B) = I - \sum_{i=1}^p \Phi_iB^p, \Theta(B) = I - \sum_{i=1}^p \Theta_iB^p$$ 
 
-are $$k \times k$$ matrix polynomials of finite degrees $$p$$ and $$q$$, $$B$$ is the backshift operator such that $$Bx_t = x_{t-1}$$, $$c$$ is a $$k$$-dimensional constant vector, and $$\{\varepsilon = (\varepsilon_{1t}, \cdots, \varepsilon_{kt})'\}$$ is a sequence of independent and identically distributed Gaussian random vector with zero mean and positive-definite covariance matrix $$\Sigma$$. We assume that $$\Phi(B)$$ and $$\Theta(B)$$ are left caprice and that all of the zeros of the determinants $$\vert\Phi(B)\vert$$ and $$\vert\Theta(B)\vert$$ are on or outside the unit circle.  
+are $$k \times k$$ matrix polynomials of finite degrees $$p$$ and $$q$$, $$B$$ is the backshift operator such that $$Bx_t = x_{t-1}$$, $$c$$ is a $$k$$-dimensional constant vector, and $$\{\varepsilon = (\varepsilon_{1t}, \cdots, \varepsilon_{kt})'\}$$ is a sequence of independent and identically distributed Gaussian random vector with zero mean and positive-definite covariance matrix $$\Sigma$$. We assume that $$\Phi(B)$$ and $$\Theta(B)$$ are left coprime and that all of the zeros of the determinants $$\vert\Phi(B)\vert$$ and $$\vert\Theta(B)\vert$$ are on or outside the unit circle.  
 
 Define the autoregressive representation as
 

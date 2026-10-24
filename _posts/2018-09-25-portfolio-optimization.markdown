@@ -1,17 +1,11 @@
 ---
-title: "Library: Portfolio Optimization"
-layout: post
-library: true
+title: "Portfolio Optimization Library"
 date: 2018-09-27 21:10
-headerImage: false
-tag: 
-  - Portfolio Theory
-  - Optimization
-  - Finance
-  - python
-category: library
-author: projohnewzhang
-description: "Portfolio Optimization"
+pillar: academic
+series: code
+topic: Python
+summary: "A pip-installable Python library for mean-variance portfolios and the efficient frontier."
+tags: ["portfolio theory", "optimization", "finance", "python"]
 ---
 
 As an ongoing effort to provide more finance-related Python libraries, I will start with the portfolio optimization library. This page documents the Hello-World version.
@@ -119,7 +113,7 @@ views = {'Market': {'type': 'absolute', 'scale': 0.01, 'confidence': 95, 'plusmi
          'SMB|RMW' : {'type': 'relative', 'scale': 0.01, 'confidence': 90, 'plusminus%': 5, 'weights': [1., -1.]},
          'SMB|HML|RMW' : {'type': 'relative', 'scale': 0.01, 'confidence': 99, 'plusminus%': 1, 'weights': [.2, .8, -1.]},
          }
-## second paramter is the R^2 used in estimating your modeled expected returns
+## second parameter is the R^2 used in estimating your modeled expected returns
 port.update_views(views, 0.1)
 
 ## Let's use the same parameters
@@ -133,7 +127,7 @@ weights = port.get_allocations(configuration=configuration)
 port.reset()
 ```
 
-As we mentioned the $$R^2$$ of the modeled returns, we will introduce some factor modeling tools in the later iteration. For beginners, let's consider the widely used factor model, Captial Asset Pricing Model (CAPM). In general, if you use the CAPM to estimate returns, the $$R^2$$ typically is below 15%. Hence, the parameter in the ```update_view``` member function would be typically set below 15% (e.g. we set it at 10%).
+As we mentioned the $$R^2$$ of the modeled returns, we will introduce some factor modeling tools in the later iteration. For beginners, let's consider the widely used factor model, Capital Asset Pricing Model (CAPM). In general, if you use the CAPM to estimate returns, the $$R^2$$ typically is below 15%. Hence, the parameter in the ```update_view``` member function would be typically set below 15% (e.g. we set it at 10%).
 
 ---
 

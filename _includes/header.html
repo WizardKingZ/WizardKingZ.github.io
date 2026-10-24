@@ -1,27 +1,21 @@
-{% if page.title == "Home"
-   or page.title == "Blog"
-   or page.title == "Library"
-   or page.title == "Projects"
-   or page.title == "Tags"
-%}{% assign showHeader = true %}{% endif %}
-
-{% if showHeader == true %}
-    <header class="header-home {% if site.animation %}animated{% endif %}">
-        {% if site.about %}
-            <a class="link" href="{{ site.url }}/about">
-                <img class="selfie" alt="{{ site.name }}" src="{% if site.external-image %}{{ site.picture }}{% else %}{{ site.url }}/{{ site.picture }}{% endif %}" />
-            </a>
-        {% else %}
-            <span class="link">
-                <img class="selfie" alt="{{ site.name }}" src="{% if site.external-image %}{{ site.picture }}{% else %}{{ site.url }}/{{ site.picture }}{% endif %}" />
-            </span>
-        {% endif %}
-
-        <h1 class="title">{{ site.name }}</h1>
-        <h2 class="description">{{ site.bio }}</h2>
-
-        {% include social-links.html %}
-    </header>
-{% endif %}
-
-{% include nav.html %}
+{%- include active-pillars.html -%}
+<header>
+  <div class="band">
+    <div class="inner">
+      <a class="brand" href="{{ '/' | relative_url }}">
+        <span class="mark" aria-hidden="true">JZ</span>
+        <span><span class="brand-name">{{ site.name }}</span><span class="brand-sub" style="display:block">{{ site.tagline }}</span></span>
+      </a>
+      <button class="band-btn" type="button" id="themeBtn" aria-label="Switch between light and dark mode">Dark mode</button>
+    </div>
+  </div>
+  <nav class="tabs" aria-label="Sections">
+    <ul>
+      <li><a href="{{ '/' | relative_url }}"{% if page.layout == 'home' %} aria-current="page"{% endif %}>Home</a></li>
+      {%- for p in site.pillars %}{% if active_pillars contains p.id %}
+      <li class="p-{{ p.id }}"><a href="{{ '/' | append: p.id | append: '/' | relative_url }}"{% if page.pillar == p.id %} aria-current="page"{% endif %}>{{ p.name }}</a></li>
+      {%- endif %}{% endfor %}
+      <li><a href="{{ '/about/' | relative_url }}"{% if page.url == '/about/' %} aria-current="page"{% endif %}>About</a></li>
+    </ul>
+  </nav>
+</header>

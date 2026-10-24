@@ -1,0 +1,73 @@
+---
+layout: default
+---
+{%- include active-pillars.html -%}
+{%- assign visible = site.posts | where_exp: "x", "x.hidden != true" -%}
+<main>
+  <section class="inner hero">
+    <div class="hero-text">
+      <div class="eyebrow">{{ site.location }} · writing since 2018</div>
+      <h1>{{ page.headline }}</h1>
+      <p>{{ page.intro }}</p>
+      <div class="hero-links">
+        <a class="btn solid" href="#latest">Latest writing</a>
+        <a class="btn" href="{{ '/about/' | relative_url }}">About me</a>
+        <span class="mono">
+          {%- if site.linkedin %}<a href="https://www.linkedin.com/in/{{ site.linkedin }}">LinkedIn</a>{% endif %}
+          {%- if site.github %}<a href="https://github.com/{{ site.github }}">GitHub</a>{% endif %}
+          {%- if site.email %}<a href="mailto:{{ site.email }}">Email</a>{% endif %}
+        </span>
+      </div>
+    </div>
+    <div class="hero-photo"><img class="portrait" src="{{ site.picture | relative_url }}" alt="{{ site.name }}" width="220" height="220"></div>
+  </section>
+
+  <section class="inner" id="latest">
+    <div class="shead">
+      <div><div class="eyebrow">Latest</div><h2>Recent writing</h2></div>
+      <a class="more" href="{{ '/tags/' | relative_url }}">Browse by tag →</a>
+    </div>
+    {%- for post in visible limit: page.latest_count %}
+      {% include post-row.html post=post show_pillar=true %}
+    {%- endfor %}
+  </section>
+
+  <section class="inner">
+    <div class="shead"><div><div class="eyebrow">The site</div><h2>What I write about</h2></div></div>
+    <div class="cards">
+      {%- for p in site.pillars %}{% if active_pillars contains p.id %}
+      {%- assign n = site.posts | where: "pillar", p.id | where_exp: "x", "x.hidden != true" | size -%}
+      {%- assign apps = site.data.standalone | where: "pillar", p.id -%}
+      <a class="card top p-{{ p.id }}" href="{{ '/' | append: p.id | append: '/' | relative_url }}">
+        <div class="eyebrow">{{ p.name }}</div>
+        <h3>{{ p.title }}</h3>
+        <p>{{ p.blurb }}</p>
+        <div class="foot">{% if n > 0 %}{{ n }} post{% if n != 1 %}s{% endif %}{% endif %}{% for a in apps %}{% if n > 0 or forloop.index > 1 %} · {% endif %}{{ a.title }}{% endfor %}</div>
+      </a>
+      {%- endif %}{% endfor %}
+    </div>
+  </section>
+
+  {%- if site.data.standalone.size > 0 or site.github %}
+  <section class="inner" style="padding-bottom:56px">
+    <div class="shead"><div><div class="eyebrow">Elsewhere</div><h2>Things I build and keep</h2></div></div>
+    <div class="cards">
+      {%- for a in site.data.standalone %}
+      <a class="card p-{{ a.pillar }}" href="{{ a.url | relative_url }}">
+        {%- if a.image %}<div class="card-photo"><img src="{{ a.image | relative_url }}" alt="" loading="lazy"></div>{% endif %}
+        <div class="eyebrow">{{ a.title }}</div>
+        <h3>{{ a.eyebrow }}</h3>
+        <p>{{ a.blurb }}</p>
+      </a>
+      {%- endfor %}
+      {%- if site.github %}
+      <a class="card p-academic" href="https://github.com/{{ site.github }}">
+        <div class="eyebrow">GitHub · {{ site.github }}</div>
+        <h3>Code</h3>
+        <p>The portfolio optimization library, multivariate outlier detection in R, and the variational autoencoder.</p>
+      </a>
+      {%- endif %}
+    </div>
+  </section>
+  {%- endif %}
+</main>

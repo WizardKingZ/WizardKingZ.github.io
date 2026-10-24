@@ -1,17 +1,10 @@
 ---
-title: "Notes: Columbia Finance and Economics PhD Course Lecture Notes"
-layout: post
-blog: true
+title: "Columbia PhD Course Notes in Finance and Economics"
 date: 2018-09-22 21:20
-headerImage: false
-tag:
-- notes
-- finance
-- economics
-star: false
-category: blog
-author: johnewzhang
-description: "PhD Course Lecture Notes Series"
+pillar: academic
+series: notes
+summary: "Lecture notes from PhD coursework at Columbia: finance theory, microeconomic theory, empirical asset pricing, market microstructure and econometrics."
+tags: ["notes", "finance", "economics"]
 ---
 
 # Lecture Notes

@@ -1,0 +1,62 @@
+---
+layout: default
+---
+{%- assign p = site.pillars | where: "id", page.pillar | first -%}
+{%- assign posts = site.posts | where: "pillar", page.pillar | where_exp: "x", "x.hidden != true" -%}
+{%- assign apps = site.data.standalone | where: "pillar", page.pillar -%}
+{%- assign aside = content | strip -%}
+<main class="inner p-{{ page.pillar }}" style="padding-top:26px;padding-bottom:56px">
+  <div class="page-head">
+    <div class="eyebrow">{{ p.name }}</div>
+    <h1>{{ p.title }}</h1>
+  </div>
+  <p class="lede">{{ page.lede | default: p.blurb }}</p>
+  <p class="stats">
+    {%- for s in p.series %}{% assign c = posts | where: "series", s | size %}{% if c > 0 %}<span><b>{{ c }}</b> {{ site.series_names[s] | downcase }}</span>{% endif %}{% endfor %}
+    {%- for a in apps %}<span><b>1</b> {{ a.title }}</span>{% endfor %}
+  </p>
+  {%- if posts.size > 0 %}
+  <nav class="chips" aria-label="Jump to group">
+    {%- if apps.size > 0 %}<a class="chip" href="#pages">Pages <b>{{ apps.size }}</b></a>{% endif %}
+    {%- for s in p.series %}{% assign c = posts | where: "series", s | size %}{% if c > 0 %}<a class="chip" href="#{{ s }}">{{ site.series_names[s] }} <b>{{ c }}</b></a>{% endif %}{% endfor %}
+  </nav>
+  {%- endif %}
+
+  <div class="cols">
+    <div class="main">
+      {%- if apps.size > 0 %}
+      <h2 class="sub" id="pages">Pages <span>standalone</span></h2>
+      <div class="cards narrow" style="margin-top:12px">
+        {%- for a in apps %}
+        <a class="card" href="{{ a.url | relative_url }}">
+          {%- if a.image %}<div class="card-photo"><img src="{{ a.image | relative_url }}" alt="" loading="lazy"></div>{% endif %}
+          <div class="eyebrow">{{ a.title }}</div>
+          <h3>{{ a.eyebrow }}</h3>
+          <p>{{ a.blurb }}</p>
+        </a>
+        {%- endfor %}
+      </div>
+      {%- endif %}
+
+      {%- for s in p.series %}
+        {%- assign group = posts | where: "series", s -%}
+        {%- if group.size > 0 %}
+        <h2 class="sub" id="{{ s }}">{{ site.series_names[s] }} <span>{{ group.size }}</span></h2>
+        <div class="list-tight">{% for post in group %}{% include post-row.html post=post %}{% endfor %}</div>
+        {%- endif %}
+      {%- endfor %}
+      {%- assign other = posts | where_exp: "x", "p.series contains x.series" -%}
+      {%- if other.size < posts.size %}
+        <h2 class="sub" id="more">More</h2>
+        <div class="list-tight">{% for post in posts %}{% unless p.series contains post.series %}{% include post-row.html post=post %}{% endunless %}{% endfor %}</div>
+      {%- endif %}
+
+      {%- if posts.size == 0 and apps.size == 0 %}
+      <div class="empty"><p style="margin:0">Nothing here yet.</p></div>
+      {%- endif %}
+    </div>
+    {%- if aside != "" %}
+    <aside>{{ content }}</aside>
+    {%- endif %}
+  </div>
+</main>
