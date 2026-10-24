@@ -93,7 +93,13 @@ Day 5 · Friday 24 November
 
 Thebes, modern Luxor, was the religious capital of the New Kingdom, the period from about 1550 to 1070 BC when Egypt was at its height. Egyptians built for the living on the east bank and buried their dead on the west, where the sun sets. The New Kingdom's kings stopped building pyramids, which had proven too easy to rob, and cut their tombs instead into a hidden valley on the west bank.
 
-In the Valley of the Kings, the tomb of Seti I, father of Ramesses II, has the finest painted reliefs I saw in Egypt. Nearby, Hatshepsut's terraced temple at Deir el-Bahari reads almost as modern architecture. She ruled as pharaoh for about 20 years, and her successor later tried to erase her from the record.
+In the Valley of the Kings, the tomb of Seti I, father of Ramesses II, has the finest painted reliefs I saw in Egypt. I also went down into Tutankhamun's own tomb. It is small for a king's, and only the burial chamber is painted, but it connects back to the first day: the treasure I had seen in Cairo came out of these few rooms, and the king's mummy still lies here.
+
+![Painted burial chamber of Tutankhamun's tomb with his stone sarcophagus](/assets/images/egypt-2023/tutankhamun-tomb.jpg)
+*Tutankhamun's burial chamber. On the right, his successor Ay performs the Opening of the Mouth ritual on the king, shown as Osiris; the stone sarcophagus is in the foreground.*
+{: .caption}
+
+Nearby, Hatshepsut's terraced temple at Deir el-Bahari reads almost as modern architecture. She ruled as pharaoh for about 20 years, and her successor later tried to erase her from the record.
 
 ![Hatshepsut's terraced temple below the cliffs of Deir el-Bahari](/assets/images/egypt-2023/hatshepsut.jpg)
 *Hatshepsut's temple at Deir el-Bahari.*
