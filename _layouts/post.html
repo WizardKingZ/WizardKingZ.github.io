@@ -36,6 +36,9 @@ layout: default
     </aside>
   </div>
 
+  {%- if page.pillar == "investing" and site.disclaimer %}
+  <p class="disclaimer">{{ site.disclaimer }}</p>
+  {%- endif %}
   <footer class="post-foot">
     <div class="author">
       <img src="{{ site.picture | relative_url }}" alt="" width="56" height="56">

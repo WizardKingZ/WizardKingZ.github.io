@@ -11,6 +11,7 @@ layout: default
     <h1>{{ p.title }}</h1>
   </div>
   <p class="lede">{{ page.lede | default: p.blurb }}</p>
+  {%- if page.pillar == "investing" and site.disclaimer %}<p class="disclaimer" style="margin:0 0 14px">{{ site.disclaimer }}</p>{% endif %}
   <p class="stats">
     {%- for s in p.series %}{% assign c = posts | where: "series", s | size %}{% if c > 0 %}<span><b>{{ c }}</b> {{ site.series_names[s] | downcase }}</span>{% endif %}{% endfor %}
     {%- for a in apps %}<span><b>1</b> {{ a.title }}</span>{% endfor %}

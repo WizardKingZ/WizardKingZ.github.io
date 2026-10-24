@@ -9,7 +9,7 @@ summary: "A first draft of how I invest in financial institutions: what I analyz
 tags: ["investing", "principles", "financials", "structured credit"]
 ---
 
-Going into 2026, I wrote down a first draft of my investment principles. It is a living framework, shaped by my own path: trained as an actuary, educated as a financial economist, and practiced across structured credit and financials investing. These views are my own, not those of CPP Investments.
+Going into 2026, I wrote down a first draft of my investment principles. It is a living framework, shaped by my own path: trained as an actuary, educated as a financial economist, and practiced across structured credit and financials investing.
 
 My focus is financial institutions (FIG) across equity, credit, and structured and asset-backed investments. Over time, I expect the framework to extend to financial-adjacent business services, such as brokers, payments, and intermediated platforms, once I understand that ecosystem well.
 

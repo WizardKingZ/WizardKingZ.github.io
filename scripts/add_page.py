@@ -22,7 +22,7 @@ import sys
 PILLARS = {"investing": "Investing", "academic": "Academic", "culture": "Culture", "sports": "Sports"}
 DATA = "_data/standalone.yml"
 STRIP = ('<script src="/assets/js/return-strip.js" data-section="{section}" '
-         'data-section-url="/{pillar}/" data-title="{title}" defer></script>')
+         'data-section-url="/{pillar}/" data-title="{title}"{note} defer></script>')
 
 
 def yaml_str(s):
@@ -52,7 +52,7 @@ def read_entries():
 
 
 def write_entries(entries, header):
-    keys = ["slug", "title", "pillar", "url", "eyebrow", "blurb", "image"]
+    keys = ["slug", "title", "pillar", "url", "eyebrow", "blurb", "image", "note"]
     out = [header.rstrip("\n")] if header else []
     for e in entries:
         first = True
@@ -72,6 +72,7 @@ def main():
     ap.add_argument("--eyebrow")
     ap.add_argument("--blurb")
     ap.add_argument("--image", help="site path to a card image, e.g. /kitchen/photos/x.jpg")
+    ap.add_argument("--note", help="short note shown in the return strip on wide screens")
     a = ap.parse_args()
 
     if not os.path.exists("_config.yml"):
@@ -86,7 +87,7 @@ def main():
             sys.exit("A new page needs --title and --pillar.")
         entry = {"slug": a.slug, "url": f"/{a.slug}/"}
         entries.append(entry)
-    for k in ("title", "pillar", "eyebrow", "blurb", "image"):
+    for k in ("title", "pillar", "eyebrow", "blurb", "image", "note"):
         v = getattr(a, k)
         if v:
             entry[k] = v
@@ -94,7 +95,8 @@ def main():
     html = open(a.html, encoding="utf-8").read()
     html = re.sub(r'\s*<script src="/assets/js/return-strip\.js"[^>]*></script>', "", html)
     strip = STRIP.format(section=PILLARS[entry["pillar"]], pillar=entry["pillar"],
-                         title=entry["title"].replace('"', "&quot;"))
+                         title=entry["title"].replace('"', "&quot;"),
+                         note=(' data-note="' + entry["note"].replace('"', "&quot;") + '"') if entry.get("note") else "")
     idx = html.lower().rfind("</body>")
     html = (html[:idx] + strip + "\n" + html[idx:]) if idx >= 0 else (html + "\n" + strip + "\n")
     if html.lstrip().startswith("---"):

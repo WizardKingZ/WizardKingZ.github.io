@@ -1,9 +1,17 @@
 # Standalone HTML pages hosted on this site (copied in as-is, with a return strip).
 # Add one with: python3 scripts/add_page.py <file.html> <slug> --title "..." --pillar <id> --blurb "..."
-- slug: kitchen
-  title: Johnew's Kitchen
-  pillar: culture
-  url: /kitchen/
-  eyebrow: Recipes, cooked and kept
-  blurb: Every recipe I've cooked and kept, in one format, with kitchen notes, the bar, and the pantry.
-  image: /kitchen/photos/b025bd6202646402cb9dfd194bda8013.jpg
+- slug: "kitchen"
+  title: "Johnew's Kitchen"
+  pillar: "culture"
+  url: "/kitchen/"
+  eyebrow: "Recipes, cooked and kept"
+  blurb: "Every recipe I've cooked and kept, in one format, with kitchen notes, the bar, and the pantry."
+  image: "/kitchen/photos/b025bd6202646402cb9dfd194bda8013.jpg"
+- slug: "macro-monitor"
+  title: "Trident Macro Monitor"
+  pillar: "investing"
+  url: "/macro-monitor/"
+  eyebrow: "Liquidity, rates, credit, and the cycle"
+  blurb: "My macro dashboard: liquidity, rates, credit, equities, commodities and FX, growth and inflation, and fiscal, updated as a periodic snapshot."
+  image: "/assets/images/cards/macro-monitor.jpg"
+  note: "Views are my own, not CPP Investments'. Not investment advice."

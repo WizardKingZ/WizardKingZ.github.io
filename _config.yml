@@ -23,6 +23,11 @@ x: johnew_zhang
 instagram: johnewz
 facebook: johnewzhang
 
+# Shown on Investing posts, the Investing page and investing tools.
+disclaimer: >-
+  The views here are my own and do not represent those of CPP Investments.
+  Nothing here is investment advice.
+
 # jekyll-seo-tag
 author: Johnew Zhang
 twitter:
