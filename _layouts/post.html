@@ -3,7 +3,7 @@ layout: default
 ---
 {%- assign p = site.pillars | where: "id", page.pillar | first -%}
 {%- assign words = content | strip_html | number_of_words -%}
-{%- assign mins = words | divided_by: 220 | at_least: 1 -%}
+{%- assign mins = words | plus: 199 | divided_by: 200 | at_least: 1 -%}
 {%- assign series_name = site.series_names[page.series] | default: page.series -%}
 <main class="inner p-{{ page.pillar }}" style="padding-top:18px;padding-bottom:60px">
   {%- if p %}

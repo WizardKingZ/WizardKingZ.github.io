@@ -1,7 +1,7 @@
 {%- comment -%} Params: post, show_pillar (bool) {%- endcomment -%}
 {%- assign _post = include.post -%}
 {%- assign _words = _post.content | strip_html | number_of_words -%}
-{%- assign _mins = _words | divided_by: 220 | at_least: 1 -%}
+{%- assign _mins = _words | plus: 199 | divided_by: 200 | at_least: 1 -%}
 {%- assign _pil = site.pillars | where: "id", _post.pillar | first -%}
 <a class="row p-{{ _post.pillar }}" href="{{ _post.url | relative_url }}">
   <span class="rd">{{ _post.date | date: "%-d %b %Y" }}</span>
