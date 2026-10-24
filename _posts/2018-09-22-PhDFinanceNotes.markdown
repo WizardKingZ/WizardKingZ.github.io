@@ -3,7 +3,7 @@ title: "Columbia PhD Course Notes in Finance and Economics"
 date: 2018-09-22 21:20
 pillar: academic
 series: notes
-summary: "Lecture notes from PhD coursework at Columbia: finance theory, microeconomic theory, empirical asset pricing, market microstructure and econometrics."
+summary: "Lecture notes from PhD coursework at Columbia: finance theory, microeconomic theory, empirical asset pricing, market microstructure, and econometrics."
 tags: ["notes", "finance", "economics"]
 ---
 

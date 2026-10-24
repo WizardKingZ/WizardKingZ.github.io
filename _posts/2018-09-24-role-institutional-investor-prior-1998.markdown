@@ -4,7 +4,7 @@ date: 2018-09-24 21:20
 pillar: academic
 series: research
 topic: corporate finance
-summary: "Institutional ownership of US non-financial firms, 1980–1997: every type of institution avoids volatile stocks, and there is little sign of active monitoring."
+summary: "Institutional ownership of US non-financial firms, 1980–1997: every type of institution avoids volatile stocks, and independent institutions show little sign of active monitoring."
 tags: ["finance", "panel regression", "institutional investor", "research"]
 ---
 
