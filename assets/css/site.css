@@ -160,6 +160,10 @@ a.card:hover h3{text-decoration:underline}
 .prose .caption img{margin-bottom:8px}
 .prose .caption em{display:block;font-style:normal;font-family:var(--mono);font-size:12px;line-height:1.5;color:var(--muted);text-align:center;max-width:620px;margin:0 auto}
 .prose img{max-height:640px;width:auto}
+.prose .pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:4px 0 22px}
+.prose .pair figure{margin:0}
+.prose .pair img{width:100%;max-height:none;margin:0 0 8px}
+.prose .pair figcaption{font-family:var(--mono);font-size:12px;line-height:1.5;color:var(--muted);text-align:center}
 .takeaway{display:flex;gap:12px;align-items:baseline;margin:0 0 24px}
 .takeaway b{flex:none;font-family:var(--ui);font-size:10px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:var(--surface);background:var(--pc,var(--accent));padding:3px 8px}
 .takeaway span{font-size:16px;font-weight:600;line-height:1.45}
