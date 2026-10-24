@@ -1,6 +1,6 @@
 ---
 title: "Where the Writing Ended: Three Thousand Years of Egypt in Seven Days"
-date: 2026-10-24 12:00
+date: 2023-11-30 12:00
 pillar: culture
 series: travel
 topic: Egypt, November 2023
@@ -84,7 +84,7 @@ The Great Pyramid remained the tallest man-made structure on earth for nearly 4,
 
 The Sphinx has gone by several names. By the New Kingdom, Egyptians worshipped it as Horemakhet, "Horus in the horizon," and Thutmose IV cleared the sand from its body and set up the Dream Stela between its paws. In Arabic it is Abu al-Hol, "the father of dread." "Sphinx" itself is a Greek word.
 
-Lunch was at Khufu's, a restaurant on the Giza plateau whose terrace looks straight at the Great Pyramid. Its chef, Mostafa Seif, reworks the rural dishes he grew up with. In 2025 the restaurant was named the best in Egypt and ranked fourth on the Middle East and North Africa's 50 Best list. I ordered hamam, roast pigeon. Pigeon is a staple of Egyptian cooking, and the mud-brick dovecotes that house the birds are still a common sight in villages along the Nile.
+Lunch was at Khufu's, a restaurant on the Giza plateau whose terrace looks straight at the Great Pyramid. Its chef, Mostafa Seif, reworks the rural dishes he grew up with. The restaurant has since been named the best in Egypt and ranked fourth on the Middle East and North Africa's 50 Best list for 2025. I ordered hamam, roast pigeon. Pigeon is a staple of Egyptian cooking, and the mud-brick dovecotes that house the birds are still a common sight in villages along the Nile.
 
 <div class="pair">
   <figure><img src="/assets/images/egypt-2023/khufus-terrace.jpg" alt="Johnew at a table on Khufu's terrace with the Great Pyramid behind" loading="lazy"><figcaption>The terrace at Khufu's.</figcaption></figure>
@@ -118,7 +118,7 @@ Luxor Temple, begun under Amenhotep III around 1390 BC, carries the marks of the
 
 The crisis ended with Tutankhamun <span class="cartouche" role="img" aria-label="Tutankhamun in hieroglyphs">𓇋𓏠𓈖𓏏𓅱𓏏𓋹</span>, who was born Tutankhaten, changed his name, and restored Amun. The name means "living image of Amun." Amun's name is written first in the cartouche out of respect, and the ankh <span class="hg" role="img" aria-label="Ankh in hieroglyphs">𓋹</span>, the sign for life, sits at the end.
 
-Tutankhamun was a minor king who died at about 19, yet his burial alone filled rooms of the Egyptian Museum on Tahrir Square, where I saw it with an Egyptologist on my first day. That made it easier to imagine what the great pharaohs, whose tombs were robbed in antiquity, once took with them. Since my visit, most of the collection, including the gold mask, has moved to the Grand Egyptian Museum near Giza, which opened fully in November 2025 and shows the whole burial in one place for the first time.
+Tutankhamun was a minor king who died at about 19, yet his burial alone filled rooms of the Egyptian Museum on Tahrir Square, where I saw it with an Egyptologist on my first day. That made it easier to imagine what the great pharaohs, whose tombs were robbed in antiquity, once took with them. *Update, 2026:* since my visit, most of the collection, including the gold mask, has moved to the Grand Egyptian Museum near Giza, which opened fully in November 2025 and shows the whole burial in one place for the first time.
 
 I also went down into his tomb in the Valley of the Kings. It is small for a king's, and only the burial chamber is painted, but the treasure I had seen in Cairo came out of these few rooms, and the king's mummy still lies here.
 
