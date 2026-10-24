@@ -200,6 +200,12 @@ a.card:hover h3{text-decoration:underline}
 
 .disclaimer{max-width:740px;margin:30px 0 0;padding:10px 14px;border:1px solid var(--rule);border-radius:3px;background:var(--surface);font-size:13px;line-height:1.5;color:var(--muted)}
 
+.tools{margin:12px 0 0;display:flex;flex-direction:column;gap:8px}
+.tools>div{display:grid;grid-template-columns:150px minmax(0,1fr);gap:10px;align-items:center}
+.tools dt{font-family:var(--ui);font-size:11px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:var(--muted)}
+.tools dd{margin:0}
+@media (max-width:500px){.tools>div{grid-template-columns:1fr;gap:4px}}
+
 /* Footer */
 .site-foot{border-top:2px solid var(--ink);margin-top:20px}
 .site-foot .inner{display:flex;flex-wrap:wrap;gap:8px 20px;padding-top:18px;padding-bottom:34px;font-family:var(--ui);font-size:12px;color:var(--muted)}
