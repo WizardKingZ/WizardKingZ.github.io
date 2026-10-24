@@ -155,6 +155,11 @@ a.card:hover h3{text-decoration:underline}
 .prose pre{background:var(--surface);border:1px solid var(--rule);border-radius:3px;padding:12px 14px;overflow-x:auto;font-size:13.5px;line-height:1.5}
 .prose pre code{background:none;padding:0;font-size:inherit}
 .prose mjx-container[display="true"]{overflow-x:auto;overflow-y:hidden;padding:4px 0}
+.prose .dayline{font-family:var(--mono);font-size:12.5px;color:var(--muted);margin:-6px 0 14px}
+.prose .caption{margin:4px 0 22px}
+.prose .caption img{margin-bottom:8px}
+.prose .caption em{display:block;font-style:normal;font-family:var(--mono);font-size:12px;line-height:1.5;color:var(--muted);text-align:center;max-width:620px;margin:0 auto}
+.prose img{max-height:640px;width:auto}
 .takeaway{display:flex;gap:12px;align-items:baseline;margin:0 0 24px}
 .takeaway b{flex:none;font-family:var(--ui);font-size:10px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:var(--surface);background:var(--pc,var(--accent));padding:3px 8px}
 .takeaway span{font-size:16px;font-weight:600;line-height:1.45}
