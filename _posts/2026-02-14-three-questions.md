@@ -1,6 +1,6 @@
 ---
 title: "Three Questions I Keep Asking"
-date: 2026-02-01 09:00
+date: 2026-02-14 09:00
 pillar: investing
 series: essays
 topic: reflections
