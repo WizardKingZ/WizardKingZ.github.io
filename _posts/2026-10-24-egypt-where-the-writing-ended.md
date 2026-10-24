@@ -22,12 +22,12 @@ Egyptologists divide ancient Egypt into kingdoms, when one king ruled the whole 
 | Period | Dates | Where I saw it |
 |---|---|---|
 | Early Dynastic | c. 3100–2686 BC | — |
-| Old Kingdom | c. 2686–2181 BC | Saqqara, Dahshur, Giza |
+| Old Kingdom | c. 2686–2181 BC | Memphis, Saqqara, Dahshur, Giza |
 | First Intermediate and Middle Kingdom | c. 2181–1650 BC | — |
 | Second Intermediate | c. 1650–1550 BC | — |
 | New Kingdom | c. 1550–1069 BC | Karnak, Luxor Temple, the Valleys of the Kings and Queens, Abu Simbel, the Egyptian Museum |
 | Third Intermediate and Late Period | c. 1069–332 BC | The Nubian Museum and a Nubian village, Aswan |
-| Ptolemaic | 332–30 BC | Kom Ombo, Edfu, most of Philae |
+| Ptolemaic | 332–30 BC | Kom Ombo, Edfu, most of Philae, the Rosetta Stone (British Museum) |
 | Roman | 30 BC–AD 395 | Esna, Philae |
 
 ## The Nile and the Two Lands
@@ -53,10 +53,16 @@ Royal names were written inside a cartouche, an oval loop of rope that protected
 
 ## Old Kingdom: the pyramid age
 
-c. 2686–2181 BC · Saqqara, Dahshur, Giza · Day 1
+c. 2686–2181 BC · Memphis, Saqqara, Dahshur, Giza · Day 1
 {: .dayline}
 
 Egypt became one country around 3100 BC, when the kings of Upper Egypt took Lower Egypt. They ruled from Memphis, near modern Cairo. By the Old Kingdom the king was treated as a god on earth, and the state's main project was his tomb. I started where that project started.
+
+Little of Memphis survives above ground, largely because later builders carried off its stone. At its open-air museum, a limestone colossus of Ramesses II lies on its back, a reminder that the city stayed a royal seat long after the pyramid age.
+
+![Fallen limestone colossus of Ramesses II at Memphis](/assets/images/egypt-2023/memphis-ramesses.jpg)
+*The fallen colossus of Ramesses II at Memphis.*
+{: .caption}
 
 The Step Pyramid of Djoser at Saqqara, designed by the architect Imhotep around 2670 BC, is the oldest large stone building in the world. It is six mastabas stacked into a staircase to the sky, and you can see the idea being invented.
 
@@ -76,7 +82,9 @@ The Great Pyramid remained the tallest man-made structure on earth for nearly 4,
 *The Sphinx, probably carved for Khafre <span class="cartouche" role="img" aria-label="Khafre in hieroglyphs">𓇳𓈍𓆑</span>, with his pyramid and Khufu's behind it.*
 {: .caption}
 
-Lunch was at Khufu's, a restaurant on the Giza plateau whose terrace looks straight at the Great Pyramid. Its chef, Mostafa Seif, reworks the rural dishes he grew up with, and in 2025 it was named the best restaurant in Egypt and ranked fourth on the Middle East and North Africa's 50 Best list. I ordered hamam, roast pigeon. Pigeon is a staple of Egyptian cooking, and the mud-brick dovecotes that house the birds are still a common sight in villages along the Nile.
+The Sphinx has gone by several names. By the New Kingdom, Egyptians worshipped it as Horemakhet, "Horus in the horizon," and Thutmose IV cleared the sand from its body and set up the Dream Stela between its paws. In Arabic it is Abu al-Hol, "the father of dread." "Sphinx" itself is a Greek word.
+
+Lunch was at Khufu's, a restaurant on the Giza plateau whose terrace looks straight at the Great Pyramid. Its chef, Mostafa Seif, reworks the rural dishes he grew up with. In 2025 the restaurant was named the best in Egypt and ranked fourth on the Middle East and North Africa's 50 Best list. I ordered hamam, roast pigeon. Pigeon is a staple of Egyptian cooking, and the mud-brick dovecotes that house the birds are still a common sight in villages along the Nile.
 
 <div class="pair">
   <figure><img src="/assets/images/egypt-2023/khufus-terrace.jpg" alt="Johnew at a table on Khufu's terrace with the Great Pyramid behind" loading="lazy"><figcaption>The terrace at Khufu's.</figcaption></figure>
@@ -108,7 +116,9 @@ Hatshepsut ruled as pharaoh for about 20 years, from around 1479 BC. Her terrace
 
 Luxor Temple, begun under Amenhotep III around 1390 BC, carries the marks of the religious crisis that followed. His son Akhenaten abandoned Amun for the single sun disc of the Aten and moved the capital to a new city. The Luxor Museum, small and well lit, was the best-curated collection of the trip.
 
-The crisis ended with Tutankhamun <span class="cartouche" role="img" aria-label="Tutankhamun in hieroglyphs">𓇋𓏠𓈖𓏏𓅱𓏏𓋹</span>, who was born Tutankhaten, changed his name, and restored Amun. The name means "living image of Amun." Amun's name is written first in the cartouche out of respect, and the ankh <span class="hg" role="img" aria-label="Ankh in hieroglyphs">𓋹</span>, the sign for life, sits at the end. He was a minor king who died at about 19, which is why his burial matters: it alone filled rooms of the Egyptian Museum on Tahrir Square, where I saw it with an Egyptologist on my first day. That made it easier to imagine what the great pharaohs, whose tombs were robbed in antiquity, once took with them. Since my visit, most of the collection, including the gold mask, has moved to the Grand Egyptian Museum near Giza, which opened fully in November 2025 and shows the whole burial in one place for the first time.
+The crisis ended with Tutankhamun <span class="cartouche" role="img" aria-label="Tutankhamun in hieroglyphs">𓇋𓏠𓈖𓏏𓅱𓏏𓋹</span>, who was born Tutankhaten, changed his name, and restored Amun. The name means "living image of Amun." Amun's name is written first in the cartouche out of respect, and the ankh <span class="hg" role="img" aria-label="Ankh in hieroglyphs">𓋹</span>, the sign for life, sits at the end.
+
+Tutankhamun was a minor king who died at about 19, yet his burial alone filled rooms of the Egyptian Museum on Tahrir Square, where I saw it with an Egyptologist on my first day. That made it easier to imagine what the great pharaohs, whose tombs were robbed in antiquity, once took with them. Since my visit, most of the collection, including the gold mask, has moved to the Grand Egyptian Museum near Giza, which opened fully in November 2025 and shows the whole burial in one place for the first time.
 
 I also went down into his tomb in the Valley of the Kings. It is small for a king's, and only the burial chamber is painted, but the treasure I had seen in Cairo came out of these few rooms, and the king's mummy still lies here.
 
@@ -117,6 +127,10 @@ I also went down into his tomb in the Valley of the Kings. It is small for a kin
 {: .caption}
 
 That afternoon I was back at the Winter Palace, which opened in 1907. Lord Carnarvon, who financed Howard Carter's excavation, was a regular guest. After the tomb was found in 1922, the hotel became the base for the world's press, and Carter posted news of the find on its noticeboard.
+
+![Sunset over the Nile from the Winter Palace in Luxor](/assets/images/egypt-2023/winter-palace-sunset.jpg)
+*Sunset over the Nile from the Winter Palace.*
+{: .caption}
 
 ### Seti I and Ramesses II
 
@@ -153,9 +167,9 @@ The Nubian Museum in Aswan tells that story, and it also tells the modern one. T
 *A Nubian village on the west bank near Aswan.*
 {: .caption}
 
-An afternoon in a Nubian village gave the other side of the dam's story. Nubian houses are painted in bright colors and patterns, and Nubian languages are still spoken at home. Over tea, it was hard not to think about the inversion of history the 25th Dynasty represents.
+An afternoon in a Nubian village gave the other side of the dam's story. Nubian houses are painted in bright colors and patterns, and Nubian languages are still spoken at home. Over tea, I kept thinking about the inversion of history the 25th Dynasty represents: for once, Nubia ruled Egypt.
 
-I stayed at the Old Cataract, a Victorian hotel that Thomas Cook built in 1899 for its Nile travelers. Agatha Christie is said to have written part of *Death on the Nile* on its terrace. The terrace at sunset is still the hotel's real attraction, and I would not swap it for anything newer. The best view of it, though, is from the water: a felucca at sunset, the traditional Nile sailboat, with no engine, only wind, sand dunes on the west bank and the hotel lit up on the bluff. It was the best hour of the trip.
+I stayed at the Old Cataract, a Victorian hotel that Thomas Cook built in 1899 for its Nile travelers. Agatha Christie is said to have written part of *Death on the Nile* on its terrace. The terrace at sunset is still the hotel's real attraction, and I would not swap it for anything newer. The best view of it, though, is from a felucca, the traditional Nile sailboat, which has no engine and moves only with the wind. At sunset, with sand dunes on the west bank and the hotel lit up on the bluff, it was the best hour of the trip.
 
 ![The Old Cataract hotel seen from a felucca on the Nile](/assets/images/egypt-2023/old-cataract-felucca.jpg)
 *The Old Cataract from the river.*
@@ -189,17 +203,27 @@ Rome took Egypt from Cleopatra, and Roman emperors in turn had themselves carved
 
 Philae is where the story ends. In the UNESCO campaign, the temple of Isis was dismantled and rebuilt block by block on higher ground on Agilkia Island, which is why the most romantic site in Egypt is also, in a sense, a reconstruction. Its importance lies not in its age, since most of what stands is Ptolemaic and Roman, but in its longevity. Isis was still worshipped here long after Christianity became Rome's official religion, and the temple stayed open until Justinian closed it around AD 537.
 
+![The first pylon of the temple of Isis at Philae](/assets/images/egypt-2023/philae-pylon.jpg)
+*The first pylon at Philae, where Ptolemy XII smites his enemies before Isis, as he does at Edfu.*
+{: .caption}
+
 ![Columns of the temple of Isis at Philae](/assets/images/egypt-2023/philae.jpg)
 *Philae, the temple of Isis, rebuilt on Agilkia Island.*
 {: .caption}
 
-The inscription of AD 394 is a few lines on a wall here. After it, Egyptians wrote their language in Coptic, an alphabet based on Greek, and no one could read hieroglyphs again until Jean-François Champollion deciphered them in 1822. He started from royal names in cartouches: Ptolemy <span class="cartouche" role="img" aria-label="Ptolemy in hieroglyphs">𓊪𓏏𓅱𓃭𓅓𓇋𓇋𓋴</span> on the Rosetta Stone, and Cleopatra on an obelisk taken from Philae itself. Some 3,000 years after Djoser's pyramid, this is where the writing ended.
+The inscription of AD 394 is a few lines on a wall here. After it, Egyptians wrote their language in Coptic, an alphabet based on Greek, and no one could read hieroglyphs for some 1,400 years.
+
+![The Rosetta Stone in the British Museum](/assets/images/egypt-2023/rosetta-stone.jpg)
+*The Rosetta Stone, British Museum.*
+{: .caption}
+
+The key turned out to be a Ptolemaic decree. The Rosetta Stone, which French soldiers found in 1799 and which has been in the British Museum since 1802, records a decree of 196 BC in three scripts: hieroglyphs, Demotic, and Greek. Because the Greek could be read, Jean-François Champollion could match the royal names in its cartouches, Ptolemy <span class="cartouche" role="img" aria-label="Ptolemy in hieroglyphs">𓊪𓏏𓅱𓃭𓅓𓇋𓇋𓋴</span> first, and then Cleopatra on an obelisk taken from Philae itself. He announced the decipherment in 1822. Some 3,000 years after Djoser's pyramid, Philae is where the writing ended, and a name carved under the Ptolemies is where it was read again.
 
 ## The route
 
 | Day | Date | Base | What I did |
 |---|---|---|---|
-| 1 | Mon 20 Nov | Cairo (Four Seasons Nile Plaza) | Saqqara (Djoser), Dahshur (Bent Pyramid), Giza (inside the Great Pyramid) and the Sphinx; lunch at Khufu's; Egyptian Museum with an Egyptologist |
+| 1 | Mon 20 Nov | Cairo (Four Seasons Nile Plaza) | Memphis, Saqqara (Djoser), Dahshur (Bent Pyramid), Giza (inside the Great Pyramid) and the Sphinx; lunch at Khufu's; Egyptian Museum with an Egyptologist |
 | 2 | Tue 21 Nov | Aswan (Old Cataract) | Flight to Aswan; High Dam, Philae, Nubian village and tea |
 | 3 | Wed 22 Nov | Aswan (Old Cataract) | Flight to Abu Simbel and back; Nubian Museum; felucca at sunset |
 | 4 | Thu 23 Nov | Luxor (Winter Palace) | Drive north (~3.5 h) via Kom Ombo, Edfu, and Esna |
