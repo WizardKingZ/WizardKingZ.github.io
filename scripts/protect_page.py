@@ -34,6 +34,46 @@ import tempfile
 DAILY_YEARS, WEEKLY_YEARS, SIG = 5, 20, 4
 MARK = "<!-- protected-page -->"
 
+# Licensed sources that are never published. Their series are removed; each
+# affected chart keeps its title, commentary and guide, with the plot replaced
+# by a short notice. Match is on the series' source label.
+EXCLUDE = {"J.P. Morgan": r"J\.P\. Morgan", "Green Street": r"Green Street"}
+
+
+def exclude_licensed(data, app):
+    S = data["series"]
+    owner = {}
+    for k, s in S.items():
+        for name, pat in EXCLUDE.items():
+            if re.search(pat, s.get("source") or ""):
+                owner[k] = name
+    for k in owner:
+        del S[k]
+        (data.get("meta", {}).get("last_dates") or {}).pop(k, None)
+
+    def fix_s(m):
+        keys = re.findall(r"'([^']+)'", m.group(1))
+        gone = [k for k in keys if k in owner]
+        if not gone:
+            return m.group(0)
+        left = [k for k in keys if k not in owner]
+        if left:
+            return "s:[" + ",".join(f"'{k}'" for k in left) + "]"
+        who = " and ".join(sorted({owner[k] for k in gone}))
+        return f"s:[], licensed:'{who}'"
+
+    app = re.sub(r"\bs:\[((?:'[^']*'\s*,?\s*)*)\]", fix_s, app)
+    # Range scoreboard rows: drop excluded pairs, then any group left empty.
+    app = re.sub(r"\['(" + "|".join(map(re.escape, owner)) + r")','[^']*'\],?", "", app) if owner else app
+    app = re.sub(r",\]\]", "]]", app)
+    app = re.sub(r"\s*\['[^']*', \[\]\],?", "", app)
+    # Card for a withheld chart: title, commentary and guide, no plot.
+    patch = ("function cardHTML(id, c){\n  if(c.licensed) return `<div class=\"card\"><div class=\"ch\"><h3>${c.t}</h3></div>"
+             "${noteHTML(c)}<div class=\"plot pending\">Chart not shown: licensed ${c.licensed} data<br>"
+             "<small>The commentary is my own read of it.</small></div>${explHTML(c)}</div>`;")
+    app = app.replace("function cardHTML(id, c){", patch, 1)
+    return app, len(owner)
+
 
 def rnd(v):
     if isinstance(v, bool) or not isinstance(v, (int, float)) or v == 0 or not math.isfinite(v):
@@ -112,6 +152,7 @@ def main():
     app = body[end:].lstrip(";\n ")
     before = len(json.dumps(data, separators=(",", ":")))
 
+    app, n_lic = exclude_licensed(data, app)
     built = dt.date.fromisoformat(data["meta"]["built"][:10])
     for s in data["series"].values():
         nat = s.get("native") or {}
@@ -144,7 +185,7 @@ def main():
         html = html.replace("</body>", f'<p style="text-align:center;font-size:12px;opacity:.7">{notice}</p></body>', 1)
 
     open(path, "w", encoding="utf-8").write(html)
-    print(f"Data {before/1e6:.1f} MB -> {len(payload)/1e6:.1f} MB; {n_src} source labels cleaned; "
+    print(f"Data {before/1e6:.1f} MB -> {len(payload)/1e6:.1f} MB; {n_lic} licensed series removed; {n_src} source labels cleaned; "
           f"page now {len(html)/1e6:.1f} MB.")
 
 
