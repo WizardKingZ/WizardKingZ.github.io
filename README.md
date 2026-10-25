@@ -35,6 +35,17 @@ python3 scripts/add_page.py ~/Downloads/page.html my-page \
 
 This writes `my-page/index.html` and lists the page in `_data/standalone.yml`, so it shows on the home page and in its pillar's tab. Run the same command again to replace the HTML with a newer copy.
 
+### Trident Macro Monitor
+
+To refresh the Monitor, copy in the new export, then pack its data so the page source isn't readable:
+
+```bash
+python3 scripts/add_page.py ~/Downloads/trident-macro-monitor.html macro-monitor
+python3 scripts/protect_page.py macro-monitor/index.html
+```
+
+`protect_page.py` rounds the data, swaps internal file names for provider names, minifies the code, and gzips and encodes everything. It also drops the PDF library and adds the copyright line to the footer. The browser unpacks it on load. This stops casual copying but not a determined visitor. It needs `node`.
+
 ### Johnew's Kitchen
 
 The Kitchen keeps its recipes in its own database on claude.ai, so the copy here reads a snapshot from `kitchen/data/recipes.json`, `kitchen/data/pantry.json` and `kitchen/photos/`. To refresh it, ask Claude to re-export the Kitchen to this folder.
