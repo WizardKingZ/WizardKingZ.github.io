@@ -48,30 +48,30 @@ social:
 pillars:
   - id: investing
     name: Investing
-    title: Financial services, FinTech, and complex situations
+    title: Financial Services, FinTech, and Complex Situations
     blurb: Essays, theses, and the frameworks I use to underwrite.
     series: [essays, theses, notes]
   - id: academic
     name: Academic
-    title: Mathematics and economics
+    title: Mathematics and Economics
     blurb: Research papers, machine-learning projects, code, and lecture notes from Waterloo and Columbia.
     series: [research, projects, code, notes]
   - id: culture
     name: Culture
-    title: Travel, food, and history
+    title: Travel, Food, and History
     blurb: Travel journals, places worth the trip, and every recipe in Johnew's Kitchen.
     series: [travel, food, history, books]
   - id: sports
     name: Sports
-    title: Celtics, tennis, and the numbers
+    title: Celtics, Tennis, and the Numbers
     blurb: Notes on the Celtics, the games I play, and sports analytics.
     series: [celtics, tennis, analytics]
 
 series_names:
   research: Research
   projects: Projects
-  code: Code & tutorials
-  notes: Lecture notes
+  code: Code & Tutorials
+  notes: Lecture Notes
   essays: Essays
   theses: Theses
   travel: Travel

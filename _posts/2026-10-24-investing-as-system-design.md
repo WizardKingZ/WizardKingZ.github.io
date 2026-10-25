@@ -9,13 +9,13 @@ summary: "Where my investing comes from: model the structure of a system, test i
 tags: ["investing", "asset pricing", "corporate finance", "financials", "framework"]
 ---
 
-## Two levels of the same question
+## Two Levels of the Same Question
 
 In December 2016, before starting a master's in financial economics, I wrote that I wanted to learn how capital is allocated efficiently at two levels: inside a single company and across a portfolio. Ten years later, I still work on those two questions. What has changed is how I answer them: I start with the structure of the system, test it against data, and design a solution around a defined objective.
 
 The same letter listed two side interests, leverage and illiquidity. My path has run through actuarial work, private credit, asset-based finance, special situations, and public markets. This essay traces how each step shaped the habit.
 
-## Math and actuarial work taught me to price risk
+## Math and Actuarial Work Taught Me to Price Risk
 
 My undergraduate training combined pure mathematics, finance, and computer science. My first career was as a property and casualty actuary, in reserving, pricing, and analytics. Both taught me to treat a problem as a system: define the parts, write down how they interact, then solve.
 
@@ -23,7 +23,7 @@ Actuarial work is about pricing risk and managing it, and that made my framework
 
 What these tools did not give me was judgment about which problems were worth solving. Give me a well-posed problem and I can model it, prove it, or code it. Deciding which problem to pose is economics.
 
-## At the portfolio level, I model the system before I test it
+## At the Portfolio Level, I Model the System Before I Test It
 
 Financial economics supplied the questions, starting with asset pricing. Every asset reduces to one line: price equals expected payoff, discounted by how much investors value money in the states where that payoff arrives. In symbols, with p the price, x the payoff, and m the stochastic discount factor:
 
@@ -41,7 +41,7 @@ I have worked that way since, and it is how I came to see investing as a system-
 
 The thesis also left me cycle-aware. Investors pay to avoid more than lost cash flow; they also pay to avoid bad news about future volatility and, to a lesser degree, about discount rates. Both swing with the cycle. Patient capital gets paid when discount rates are high, which is exactly when most investors cannot wait.
 
-## I chose businesses over signals
+## I Chose Businesses over Signals
 
 The 2016 letter ended with a plan to run a quantitative hedge fund. I did not follow it, for two reasons.
 
@@ -49,7 +49,7 @@ The first is that insurance had already shown me I like businesses: how a compan
 
 The second is candor about my edge. I do not expect to out-compute the market, or to win a race on speed or on spotting patterns others miss. When I win, it is because I understand a system better than its price does. That pointed me toward businesses, contracts, and capital structures, where patient understanding gets paid.
 
-## At the company level, control decides the payoff
+## At the Company Level, Control Decides the Payoff
 
 Asset pricing values a claim once its payoff is given. Corporate finance asks who shapes the payoff. Modigliani and Miller (1958) describe a world where capital structure does not matter. The rest of the field explains why it does, and the part that shaped me most is control.
 
@@ -64,7 +64,7 @@ Venture debt is my favorite puzzle in the field. Why lend to a company with no e
 
 This is why governance and incentives come first in [my order of analysis](/investment-principles-v1/). Before I model fundamentals, I want to know who decides, what they are paid to want, and what the documents let them do.
 
-## Investing is a design problem
+## Investing Is a Design Problem
 
 Put the two levels together and investing becomes a system-design problem. A strategy earns money for a reason, and the reason sits in the structure: who bears which risk, who controls which decision, and what the price assumes. Once I understand that, the rest is design. I have an objective (a return at a given level of risk) and constraints (liquidity, leverage, time horizon, and what can be known). The job is to build the mix of instrument, structure, and position size that meets the objective within those constraints.
 
@@ -78,7 +78,7 @@ In public markets, the game is information. [Glosten](https://business.columbia.
 
 Financial institutions sit where the two problems meet. A bank, an insurer, or a specialty lender is a balance sheet of contracts, priced by a market whose discount rate swings with the cycle. These institutions also run on leverage and liquidity, my two side interests from 2016. That is why I specialize in them, and why one view can be expressed through equity, credit, or structured paper.
 
-## Markets adapt, so the framework is only v1.0
+## Markets Adapt, So the Framework Is Only v1.0
 
 The 2016 letter also named an interest in Andrew Lo's Adaptive Markets Hypothesis (2004), which he later expanded in *Adaptive Markets* (2017). Lo describes markets less as a fixed equilibrium than as an ecosystem: a strategy that works attracts capital until it stops working. I still think that is right, and it has a personal consequence. A framework that never changes will eventually be priced out.
 
@@ -86,7 +86,7 @@ That is why I called [my principles v1.0](/investment-principles-v1/), and why I
 
 Project Trident is the current version of this approach. I define it as a structural model of financial institutions and the markets that price them, run as a repeatable process. It works out how each institution makes and loses money, finds where the market misprices it, chooses the claim that best expresses the view, and sizes and monitors that claim within a portfolio. The three prongs are long/short financials equity, asset-based and structured credit, and special situations, which share one underwriting process and one macro view underneath. Put simply, Trident is a system I am building to understand other systems. I will open it one piece at a time in later essays.
 
-## The short version
+## The Short Version
 
 Structure tells me what can happen. Data tells me what is likely. Design decides what I own and how I am protected if I am wrong. Curiosity keeps all three current.
 

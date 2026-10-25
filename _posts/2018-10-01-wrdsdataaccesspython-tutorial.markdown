@@ -16,7 +16,7 @@ tags: ["finance", "research", "python"]
 
 ## Setup
 
-### Create the .pgpass file
+### Create the .pgpass File
 
 On a Mac, create the ```.pgpass``` file under ```/Users/username``` with the following line:
 
@@ -26,7 +26,7 @@ wrds-pgdata.wharton.upenn.edu:9737:wrds:your_username:your_password
 
 Replace your_username and your_password with your WRDS username and password.
 
-#### Restrict file permissions
+#### Restrict File Permissions
 
 ```chmod 600 ~/.pgpass```
 

@@ -15,7 +15,7 @@ redirect_from:
 
 On a wall at Philae, near Aswan, there is a short inscription carved in AD 394. It is the last dated text anyone wrote in Egyptian hieroglyphs. No later one has been found, and the script that had recorded some 3,500 years of kings went silent. I stood in front of it in November 2023, and only later realized that the week had covered nearly the whole arc of that civilization, from its first stone building to its last word. So I have written it up in the order of Egypt's history rather than the order of my route.
 
-## The periods, and where I saw them
+## The Periods, and Where I Saw Them
 
 Egyptologists divide ancient Egypt into kingdoms, when one king ruled the whole Nile valley, and intermediate periods, when that unity broke down. The dates below are approximate.
 
@@ -51,7 +51,7 @@ Papyrus was also Egypt's paper. Scribes cut the plant's pith into strips, laid t
 
 Royal names were written inside a cartouche, an oval loop of rope that protected the name it enclosed. I have drawn a few in this post, with the signs in a single line for simplicity.
 
-## Old Kingdom: the pyramid age
+## Old Kingdom: The Pyramid Age
 
 c. 2686–2181 BC · Memphis, Saqqara, Dahshur, Giza · Day 1
 {: .dayline}
@@ -91,14 +91,14 @@ Lunch was at Khufu's, a restaurant on the Giza plateau whose terrace looks strai
   <figure><img src="/assets/images/egypt-2023/khufus-hamam.jpg" alt="Roast pigeon on greens and grains" loading="lazy"><figcaption>Hamam at Khufu's.</figcaption></figure>
 </div>
 
-## New Kingdom: empire, and the houses of eternity
+## New Kingdom: Empire, and the Houses of Eternity
 
 c. 1550–1069 BC · Luxor, Abu Simbel, Cairo · Days 1, 3, 5, and 6
 {: .dayline}
 
 The Old Kingdom ended in more than a century of division. Kings from Thebes, modern Luxor, reunited the country around 2055 BC in what is now called the Middle Kingdom. That unity broke again when the Hyksos, rulers of Near Eastern origin, took the north, and another Theban dynasty expelled them around 1550 BC. The New Kingdom that followed was Egypt at its height: an empire reaching into Nubia and the Levant, run from Thebes and devoted to its god, Amun.
 
-### Karnak: a city of temples
+### Karnak: A City of Temples
 
 Karnak is less a temple than a city of temples, enlarged by king after king for some 2,000 years. The 134 columns of the Great Hypostyle Hall, completed under Seti I and Ramesses II, are the reason to go, and the scale is difficult to convey. Standing among them, you feel the purpose of the design, which was to make a human feel small before Amun <span class="hg" role="img" aria-label="Amun in hieroglyphs">𓇋𓏠𓈖</span>, whose name means "the hidden one." The columns of the central aisle are carved as open papyrus flowers.
 
@@ -154,7 +154,7 @@ Abu Simbel sits about 40 kilometers from the Sudanese border, and I flew there f
 
 The historian's footnote is that Kadesh was not a victory. It was close to a draw, and some 15 years later Egypt and the Hittites signed what is often cited as the earliest surviving peace treaty. Abu Simbel is therefore one of history's great works of political messaging. It is also a survivor. In the 1960s, UNESCO cut the whole temple into blocks and moved it 65 meters higher to save it from the lake behind the new Aswan High Dam. The temple faces east, and twice a year the rising sun still reaches the statues in its inner sanctuary.
 
-## Third Intermediate and Late Period: Nubia's turn
+## Third Intermediate and Late Period: Nubia's Turn
 
 c. 1069–332 BC · Aswan · Days 2 and 3
 {: .dayline}
@@ -175,7 +175,7 @@ I stayed at the Old Cataract, a Victorian hotel that Thomas Cook built in 1899 f
 *The Old Cataract from the river.*
 {: .caption}
 
-## Ptolemaic Egypt: Greek kings in pharaohs' dress
+## Ptolemaic Egypt: Greek Kings in Pharaohs' Dress
 
 332–30 BC · Kom Ombo, Edfu · Day 4
 {: .dayline}
@@ -194,7 +194,7 @@ Edfu, dedicated to Horus, is the best-preserved temple in Egypt. Granite falcons
 *My best impression of an archaeologist, among the columns at Edfu.*
 {: .caption}
 
-## Roman Egypt: where the writing ended
+## Roman Egypt: Where the Writing Ended
 
 30 BC–AD 395 · Esna, Philae · Days 2 and 4
 {: .dayline}
@@ -219,7 +219,7 @@ The inscription of AD 394 is a few lines on a wall here. After it, Egyptians wro
 
 The key turned out to be a Ptolemaic decree. The Rosetta Stone, which French soldiers found in 1799 and which has been in the British Museum since 1802, records a decree of 196 BC in three scripts: hieroglyphs, Demotic, and Greek. Because the Greek could be read, Jean-François Champollion could match the royal names in its cartouches, Ptolemy <span class="cartouche" role="img" aria-label="Ptolemy in hieroglyphs">𓊪𓏏𓅱𓃭𓅓𓇋𓇋𓋴</span> first, and then Cleopatra on an obelisk taken from Philae itself. He announced the decipherment in 1822. Some 3,000 years after Djoser's pyramid, Philae is where the writing ended, and a name carved under the Ptolemies is where it was read again.
 
-## The route
+## The Route
 
 | Day | Date | Base | What I did |
 |---|---|---|---|

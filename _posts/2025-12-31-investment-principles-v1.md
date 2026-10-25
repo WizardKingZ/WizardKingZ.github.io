@@ -13,13 +13,13 @@ Going into 2026, I wrote down a first draft of my investment principles. It is a
 
 My focus is financial institutions (FIG) across equity, credit, and structured and asset-backed investments. Over time, I expect the framework to extend to financial-adjacent business services, such as brokers, payments, and intermediated platforms, once I understand that ecosystem well.
 
-## How I think about investing
+## How I Think about Investing
 
 - **Investing is an optimization problem under uncertainty.** Risk premia and capital allocation matter.
 - **Domain expertise is earned, not read.** Real understanding comes from reasoning like an operator, especially in regulated balance-sheet businesses.
 - **Curiosity and humility are prerequisites,** because frameworks must evolve with markets.
 
-## How I analyze, before choosing the capital structure
+## How I Analyze, before Choosing the Capital Structure
 
 1. Governance and incentives
 2. Industry structure and evolution
@@ -29,7 +29,7 @@ My focus is financial institutions (FIG) across equity, credit, and structured a
 
 Only then do I decide whether the asset, the credit, or the equity is the right expression.
 
-## Where this shows up today
+## Where This Shows Up Today
 
 - Long/short financials equity
 - Asset-based and structured credit

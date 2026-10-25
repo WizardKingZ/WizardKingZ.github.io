@@ -12,13 +12,13 @@ tags: ["investing", "ABF", "financials", "risk", "structured credit"]
 
 My birthday passed two weeks ago, and looking back on the last 15 years, from actuarial work to financial economics to investing in asset-based finance (ABF) and financials, three questions have stayed with me.
 
-## 1. How do you get your money back?
+## 1. How Do You Get Your Money Back?
 
 This is the first and most important question. It matters for returns, but also because we carry a fiduciary duty to those who entrust us with capital. If you cannot clearly map the path from capital deployed to capital returned, you are relying on hope.
 
 This matters most in private markets. Unlike in public markets, you cannot sell a piece tomorrow, so you need a structured, time-bound approach to exits. Otherwise, you are just selling a story and a dream.
 
-## 2. Do you truly understand the risks you're taking?
+## 2. Do You Truly Understand the Risks You're Taking?
 
 I think about risk in two layers.
 
@@ -26,11 +26,11 @@ The qualitative layer is business logic: origination quality, underwriting disci
 
 The quantitative layer is pricing. Where is the return actually coming from: market beta, illiquidity, complexity, or term? If you can't decompose the drivers of return, you're guessing.
 
-## 3. Can you design the right architecture around that risk?
+## 3. Can You Design the Right Architecture around That Risk?
 
 The third question is structural. In insurance, the architecture is risk allocation, reinsurance, capital buffers, and disciplined asset-liability management. In credit, it is covenants, concentration limits, subordination, and funding matched to asset duration. Documentation isn't paperwork; it's how you turn a model into a controlled box. Structure determines whether you survive when you're wrong.
 
-## What I've learned
+## What I've Learned
 
 Technology and data are table stakes. Everyone has models, and some would say AI can now build one quickly. My edge has never been data mining. It is thinking about durability: building the right mousetrap.
 
