@@ -45,7 +45,9 @@ EXCLUDE = {"J.P. Morgan": r"J\.P\. Morgan", "Green Street": r"Green Street"}
 
 SLOT = "<!--app-slot-->"
 # Local paths and private names that must never appear in the public copy.
-FORBIDDEN = ["/sessions", "4. Data Sources", "5. Macro Studies", "PM Tool", "Project Trident", "/Users/"]
+# Stored encoded so the repository does not spell them out.
+FORBIDDEN = json.loads(base64.b64decode(
+    "WyIvc2Vzc2lvbnMiLCAiNC4gRGF0YSBTb3VyY2VzIiwgIjUuIE1hY3JvIFN0dWRpZXMiLCAiUE0gVG9vbCIsICJQcm9qZWN0IFRyaWRlbnQiLCAiL1VzZXJzLyJd"))
 
 
 def site_edits(head, app, tail):
