@@ -34,9 +34,9 @@ import tempfile
 DAILY_YEARS, WEEKLY_YEARS, SIG = 5, 20, 4
 MARK = "<!-- protected-page -->"
 
-# Licensed sources that are never published. Their series are removed; each
-# affected chart keeps its title, commentary and guide, with the plot replaced
-# by a short notice. Match is on the series' source label.
+# Licensed sources that are never published. Their series are removed, and so
+# is every chart left with nothing to draw (with its note and guide).
+# Match is on the series' source label.
 EXCLUDE = {"J.P. Morgan": r"J\.P\. Morgan", "Green Street": r"Green Street"}
 
 
@@ -67,12 +67,56 @@ def exclude_licensed(data, app):
     app = re.sub(r"\['(" + "|".join(map(re.escape, owner)) + r")','[^']*'\],?", "", app) if owner else app
     app = re.sub(r",\]\]", "]]", app)
     app = re.sub(r"\s*\['[^']*', \[\]\],?", "", app)
-    # Card for a withheld chart: title, commentary and guide, no plot.
-    patch = ("function cardHTML(id, c){\n  if(c.licensed) return `<div class=\"card\"><div class=\"ch\"><h3>${c.t}</h3></div>"
-             "${noteHTML(c)}<div class=\"plot pending\">Chart not shown: licensed ${c.licensed} data<br>"
-             "<small>The commentary is my own read of it.</small></div>${explHTML(c)}</div>`;")
-    app = app.replace("function cardHTML(id, c){", patch, 1)
-    return app, len(owner)
+    # Remove every chart left with no published series, with its note and guide.
+    app, titles = drop_charts(app)
+    notes = data.get("commentary", {}).get("notes", {})
+    for t in titles:
+        for k in [k for k in notes if k == t or k.startswith(t + " | ")]:
+            del notes[k]
+        data.get("guide", {}).pop(t, None)
+    app = app.replace(" (see the J.P. Morgan series below)", "")
+    for g in data.get("guide", {}).values():
+        for k, v in g.items():
+            if isinstance(v, list):
+                g[k] = [x.replace("; J.P. Morgan series continues it", "") if isinstance(x, str) else x for x in v]
+    return app, len(owner), titles
+
+
+def drop_charts(app):
+    """Delete `{t:'...', ... licensed:'...' ...}` chart objects, matching braces outside strings."""
+    out, titles, i = [], [], 0
+    for m in re.finditer(r"\{t:'", app):
+        if m.start() < i:
+            continue
+        depth, j, q = 0, m.start(), None
+        while j < len(app):
+            ch = app[j]
+            if q:
+                if ch == "\\":
+                    j += 1
+                elif ch == q:
+                    q = None
+            elif ch in "'\"`":
+                q = ch
+            elif ch == "{":
+                depth += 1
+            elif ch == "}":
+                depth -= 1
+                if depth == 0:
+                    break
+            j += 1
+        obj = app[m.start():j + 1]
+        if "licensed:'" in obj:
+            end = j + 1
+            while end < len(app) and app[end] in " \t":
+                end += 1
+            if end < len(app) and app[end] == ",":
+                end += 1
+            out.append(app[i:m.start()])
+            titles.append(re.match(r"\{t:'((?:[^'\\]|\\.)*)'", obj).group(1))
+            i = end
+    out.append(app[i:])
+    return "".join(out), titles
 
 
 def rnd(v):
@@ -152,7 +196,7 @@ def main():
     app = body[end:].lstrip(";\n ")
     before = len(json.dumps(data, separators=(",", ":")))
 
-    app, n_lic = exclude_licensed(data, app)
+    app, n_lic, dropped = exclude_licensed(data, app)
     built = dt.date.fromisoformat(data["meta"]["built"][:10])
     for s in data["series"].values():
         nat = s.get("native") or {}
@@ -185,7 +229,7 @@ def main():
         html = html.replace("</body>", f'<p style="text-align:center;font-size:12px;opacity:.7">{notice}</p></body>', 1)
 
     open(path, "w", encoding="utf-8").write(html)
-    print(f"Data {before/1e6:.1f} MB -> {len(payload)/1e6:.1f} MB; {n_lic} licensed series removed; {n_src} source labels cleaned; "
+    print(f"Data {before/1e6:.1f} MB -> {len(payload)/1e6:.1f} MB; {n_lic} licensed series and {len(dropped)} charts removed; {n_src} source labels cleaned; "
           f"page now {len(html)/1e6:.1f} MB.")
 
 
