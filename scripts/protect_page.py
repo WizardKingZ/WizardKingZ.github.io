@@ -14,7 +14,10 @@ What it does to the embedded `const DATA = {...}` and the app script after it:
   2. Minifies the app code, then gzips and base64-encodes data and code
      together, so neither is readable in the page source. The browser
      unpacks it on load (DecompressionStream, in all current browsers).
-  3. Drops the jsPDF library, since the PDF download is disabled.
+  3. Applies the public-site edits: no To-do tab, PDF download hidden and the
+     jsPDF library dropped, no J.P. Morgan or Green Street data or charts, and
+     a copyright line in the footer.
+  4. Refuses to write if any licensed series or private path is left.
 
 This deters casual copying. It cannot stop a determined visitor: any data a
 browser can chart, the visitor's browser already has.
@@ -38,6 +41,41 @@ MARK = "<!-- protected-page -->"
 # is every chart left with nothing to draw (with its note and guide).
 # Match is on the series' source label.
 EXCLUDE = {"J.P. Morgan": r"J\.P\. Morgan", "Green Street": r"Green Street"}
+
+
+SLOT = "<!--app-slot-->"
+# Local paths and private names that must never appear in the public copy.
+FORBIDDEN = ["/sessions", "4. Data Sources", "5. Macro Studies", "PM Tool", "Project Trident", "/Users/"]
+
+
+def site_edits(head, app, tail):
+    """Public-site presentation: no To-do tab and no PDF download."""
+    app = re.sub(r"\{id:'todo',\s*label:'[^']*'\},?\s*", "", app)
+    m = re.search(r"const TODO\s*=\s*\[", app)
+    if m:
+        depth, j, q = 0, m.end() - 1, None
+        while j < len(app):
+            ch = app[j]
+            if q:
+                if ch == "\\":
+                    j += 1
+                elif ch == q:
+                    q = None
+            elif ch in "'\"`":
+                q = ch
+            elif ch == "[":
+                depth += 1
+            elif ch == "]":
+                depth -= 1
+                if depth == 0:
+                    break
+            j += 1
+        app = app[:m.start()] + "const TODO = []" + app[j + 1:]
+    html = head + SLOT + tail
+    html = re.sub(r'<section id="todo" class="tab"(?! hidden)', '<section id="todo" class="tab" hidden style="display:none!important"', html)
+    if "#pdfbtn,#pdfdlg{display:none!important}" not in html:
+        html = html.replace("</style>", "#pdfbtn,#pdfdlg{display:none!important}\n</style>", 1)
+    return html, app
 
 
 def exclude_licensed(data, app):
@@ -196,6 +234,8 @@ def main():
     app = body[end:].lstrip(";\n ")
     before = len(json.dumps(data, separators=(",", ":")))
 
+    html, app = site_edits(html[:sm.start()], app, html[sm.end():])
+    sm = None  # positions changed; html is now head + tail around a placeholder
     app, n_lic, dropped = exclude_licensed(data, app)
     built = dt.date.fromisoformat(data["meta"]["built"][:10])
     for s in data["series"].values():
@@ -215,7 +255,7 @@ def main():
               "const t=await new Response(new Blob([b]).stream().pipeThrough(new DecompressionStream('gzip'))).text();"
               "const s=document.createElement('script');s.textContent=t;document.body.appendChild(s);"
               "document.getElementById('pk').remove();})();</script>")
-    html = html[:sm.start()] + loader + html[sm.end():]
+    html = html.replace(SLOT, loader, 1)
 
     # Drop jsPDF: the PDF download is disabled on the site.
     html = re.sub(r"<script>\s*/\*\* @license\s*\*\s*\* jsPDF.*?</script>", "", html, count=1, flags=re.S)
@@ -227,6 +267,12 @@ def main():
                       html, count=1, flags=re.S)
     if not n:
         html = html.replace("</body>", f'<p style="text-align:center;font-size:12px;opacity:.7">{notice}</p></body>', 1)
+
+    # Self-check before writing: nothing licensed or private may ship.
+    bad = [k for k in data["series"] if re.match(r"(jpm|gs)_", k)]
+    bad += [s for s in FORBIDDEN if s in code or s in html]
+    if bad:
+        sys.exit("Refusing to write; found: " + ", ".join(bad[:10]))
 
     open(path, "w", encoding="utf-8").write(html)
     print(f"Data {before/1e6:.1f} MB -> {len(payload)/1e6:.1f} MB; {n_lic} licensed series and {len(dropped)} charts removed; {n_src} source labels cleaned; "

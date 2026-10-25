@@ -37,7 +37,7 @@ This writes `my-page/index.html` and lists the page in `_data/standalone.yml`, s
 
 ### Trident Macro Monitor
 
-To refresh the Monitor, copy in the new export, then pack its data so the page source isn't readable:
+A scheduled task refreshes this copy every Sunday evening, after the private weekly Monitor update has published. It reads the private artifact, runs the two commands below, checks the page, and pushes it. It never changes the private Monitor or its update. To do it by hand, copy in the new export, then pack its data so the page source isn't readable:
 
 ```bash
 python3 scripts/add_page.py ~/Downloads/trident-macro-monitor.html macro-monitor
