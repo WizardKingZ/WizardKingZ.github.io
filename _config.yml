@@ -28,6 +28,10 @@ disclaimer: >-
   The views here are my own and do not represent those of my employer.
   Nothing here is investment advice.
 
+# Google Analytics 4 measurement ID. Loaded only on the live site
+# (JEKYLL_ENV=production, which GitHub Pages sets), not in local previews.
+google_analytics: G-ZBQ25JW26B
+
 # jekyll-seo-tag
 author: Johnew Zhang
 twitter:

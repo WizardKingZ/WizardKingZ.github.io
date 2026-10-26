@@ -33,4 +33,13 @@
     (note ? '<span class="jz-note">' + esc(note) + '</span>' : '') +
     '<a class="jz-b" href="/">← Back to the site</a>';
   document.body.insertBefore(bar, document.body.firstChild);
+  // Google Analytics on standalone pages, live site only (not local previews).
+  var GA = 'G-ZBQ25JW26B';
+  if (/\.github\.io$/.test(location.hostname) && !window.gtag) {
+    var g = document.createElement('script'); g.async = true;
+    g.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA; document.head.appendChild(g);
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function () { window.dataLayer.push(arguments); };
+    window.gtag('js', new Date()); window.gtag('config', GA);
+  }
 })();
