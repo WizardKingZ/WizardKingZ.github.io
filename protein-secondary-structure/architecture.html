@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Hybrid convolutional–recurrent architecture for protein secondary-structure prediction.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%233d2254'/%3E%3Ctext x='32' y='39' text-anchor='middle' font-family='Arial' font-size='18' font-weight='700' fill='white'%3EJZ%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="assets/site.css">
+  <script>if(/\.github\.io$/.test(location.hostname)){var g=document.createElement('script');g.async=true;g.src='https://www.googletagmanager.com/gtag/js?id=G-ZBQ25JW26B';document.head.appendChild(g);window.dataLayer=window.dataLayer||[];window.gtag=function(){dataLayer.push(arguments)};gtag('js',new Date());gtag('config','G-ZBQ25JW26B');}</script>
+  <title>Architecture · Protein Secondary Structure Prediction</title>
+</head>
+<body>
+  <div class="progress" id="progress"></div>
+  <header>
+    <div class="sitebar"><div class="wrap"><a href="https://wizardkingz.github.io/">JOHNEW ZHANG</a><span>/</span><a href="https://wizardkingz.github.io/academic/#projects" style="font-weight:400;letter-spacing:0;color:inherit">Projects</a><span>/ Protein Secondary Structure Prediction</span></div></div>
+    <div class="band"><div class="wrap band-inner"><div class="mark">JZ</div><div class="brand"><h1>Protein Secondary Structure Prediction</h1><p>Hybrid convolutional–recurrent sequence model</p></div><div class="actions"><button class="action" id="theme" type="button" aria-label="Switch to dark mode"><span>Dark mode</span></button></div></div></div>
+    <nav aria-label="Report pages"><div class="wrap nav-inner"><a class="nav-link" href="index.html">Overview</a><a class="nav-link" href="data.html">Data</a><a class="nav-link on" href="architecture.html" aria-current="page">Architecture</a><a class="nav-link" href="results.html">Results</a><a class="nav-link" href="explorer.html">3D structures</a><a class="nav-link" href="code.html">Code</a></div></nav>
+  </header>
+  <main class="wrap page-main">
+<section id="architecture" aria-labelledby="architecture-title">
+      <div class="section-head"><span class="section-num">03</span><h2 id="architecture-title">The network alternates local extraction and global context</h2><span class="section-kicker">Model</span></div>
+      <p class="bottom-line"><b>Architecture</b>Parallel convolutions capture motifs at multiple local scales. Bidirectional recurrent blocks then propagate information across the sequence, while concatenation creates explicit skip paths.</p>
+      <div class="architecture"><div class="arch-copy"><div class="eyebrow">3.45m-parameter documented model</div><h3 style="font-family:Georgia,serif;font-size:29px;line-height:1.2;color:var(--purple-dark);margin:8px 0">Convolution → recurrence → skip → repeat</h3><ul class="layer-list"><li><b>1</b><span><strong>Embedding:</strong> 128-dimensional learned representation.</span></li><li><b>2</b><span><strong>Local features:</strong> parallel Conv1D branches with kernel widths 3 and 5.</span></li><li><b>3</b><span><strong>Global features:</strong> a 200-unit bidirectional GRU.</span></li><li><b>4</b><span><strong>Refinement:</strong> two Conv1D(1)–BiGRU blocks with a skip connection from the first recurrent layer.</span></li><li><b>5</b><span><strong>Classification:</strong> 256- and 128-unit dense layers followed by a nine-way time-distributed softmax.</span></li></ul></div><div class="arch-figure"><img src="assets/model-architecture.png" alt="TensorFlow graph of the final protein secondary-structure model"></div></div>
+      <div class="model-stats"><div class="model-stat"><b>3</b><span>bidirectional recurrent layers</span></div><div class="model-stat"><b>4</b><span>one-dimensional convolutions</span></div><div class="model-stat"><b>3</b><span>dense/output layers</span></div></div>
+      <div class="table-wrap" style="margin-top:18px"><table><thead><tr><th>Layer group</th><th>Output shape</th><th class="num">Parameters</th><th>Role</th></tr></thead><tbody><tr><td><strong>Embedding + parallel convolutions</strong></td><td>(512, 384)</td><td class="num">134,144</td><td>Learn tokens and local motifs</td></tr><tr><td><strong>Bidirectional 1</strong></td><td>(512, 400)</td><td class="num">702,000</td><td>First global context pass</td></tr><tr><td><strong>Conv1D 3 + Bidirectional 2</strong></td><td>(512, 400)</td><td class="num">1,233,700</td><td>Refine concatenated local/global features</td></tr><tr><td><strong>Conv1D 4 + Bidirectional 3</strong></td><td>(512, 400)</td><td class="num">1,241,700</td><td>Second refinement with skip connection</td></tr><tr><td><strong>Dense + time-distributed output</strong></td><td>(512, 9)</td><td class="num">136,713</td><td>Per-residue classification</td></tr><tr><td><strong>Total</strong></td><td>—</td><td class="num"><strong>3,448,257</strong></td><td>Documented architecture</td></tr></tbody></table></div>
+    </section>
+  </main>
+  <footer><div class="wrap"><span>Protein Secondary Structure Prediction</span><span>Course project, Deep Learning (COMS W4995), Columbia University, fall 2018 · © Johnew Zhang · Structure coordinates: RCSB PDB</span></div></footer>
+  <script src="assets/site.js"></script>
+
+</body>
+</html>
+

@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Interactive experimental protein structures colored by saved model predictions.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%233d2254'/%3E%3Ctext x='32' y='39' text-anchor='middle' font-family='Arial' font-size='18' font-weight='700' fill='white'%3EJZ%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="assets/site.css">
+  <script>if(/\.github\.io$/.test(location.hostname)){var g=document.createElement('script');g.async=true;g.src='https://www.googletagmanager.com/gtag/js?id=G-ZBQ25JW26B';document.head.appendChild(g);window.dataLayer=window.dataLayer||[];window.gtag=function(){dataLayer.push(arguments)};gtag('js',new Date());gtag('config','G-ZBQ25JW26B');}</script>
+  <title>3D Structures · Protein Secondary Structure Prediction</title>
+</head>
+<body>
+  <div class="progress" id="progress"></div>
+  <header>
+    <div class="sitebar"><div class="wrap"><a href="https://wizardkingz.github.io/">JOHNEW ZHANG</a><span>/</span><a href="https://wizardkingz.github.io/academic/#projects" style="font-weight:400;letter-spacing:0;color:inherit">Projects</a><span>/ Protein Secondary Structure Prediction</span></div></div>
+    <div class="band"><div class="wrap band-inner"><div class="mark">JZ</div><div class="brand"><h1>Protein Secondary Structure Prediction</h1><p>Hybrid convolutional–recurrent sequence model</p></div><div class="actions"><button class="action" id="theme" type="button" aria-label="Switch to dark mode"><span>Dark mode</span></button></div></div></div>
+    <nav aria-label="Report pages"><div class="wrap nav-inner"><a class="nav-link" href="index.html">Overview</a><a class="nav-link" href="data.html">Data</a><a class="nav-link" href="architecture.html">Architecture</a><a class="nav-link" href="results.html">Results</a><a class="nav-link on" href="explorer.html" aria-current="page">3D structures</a><a class="nav-link" href="code.html">Code</a></div></nav>
+  </header>
+  <main class="wrap page-main">
+    <section id="explorer" aria-labelledby="explorer-title">
+      <div class="section-head"><span class="section-num">05</span><h2 id="explorer-title">Experimental structures reveal the model’s predictions in three dimensions</h2><span class="section-kicker">Interactive 3D</span></div>
+      <p class="bottom-line"><b>Actual geometry</b>The viewer traces experimentally resolved Cα coordinates from the Protein Data Bank and colors them with the model’s saved Q8 predictions.</p>
+      <div class="structure-toolbar">
+        <div class="structure-tabs" role="tablist" aria-label="Protein structures">
+          <button class="structure-tab on" type="button" data-pdb="1tua">1TUA</button>
+          <button class="structure-tab" type="button" data-pdb="1tuv">1TUV</button>
+          <button class="structure-tab" type="button" data-pdb="1tvg">1TVG</button>
+        </div>
+        <button class="rotate-toggle" id="rotate-toggle" type="button">Auto-rotate</button>
+      </div>
+      <div class="structure-card">
+        <div class="structure-copy"><h3 id="structure-title">1TUA · APE0754 · KH-domain protein</h3><p id="structure-subtitle">Aeropyrum pernix · 1.50 Å X-ray diffraction</p></div>
+        <div class="canvas-wrap"><canvas id="structure-canvas" aria-label="Interactive three-dimensional protein backbone"></canvas><div class="canvas-hint">Drag to rotate · scroll to zoom</div></div>
+      </div>
+      <div class="structure-legend" aria-label="Secondary structure colors"><span><i class="legend-helix"></i>Helix H / I / G</span><span><i class="legend-sheet"></i>Sheet E / B</span><span><i class="legend-turn"></i>Turn T</span><span><i class="legend-bend"></i>Bend S</span><span><i class="legend-coil"></i>Coil –</span></div>
+      <div class="structure-foot">
+        <p class="structure-source"><strong>How to read this.</strong> Shape comes from experimentally deposited PDB coordinates; color comes from the saved model output aligned to the resolved amino-acid sequence. Unresolved residues have no geometry and therefore do not appear. <a id="pdb-link" href="https://www.rcsb.org/structure/1TUA" target="_blank" rel="noopener">Open the source entry at RCSB PDB</a>.</p>
+        <div class="viewer-stats"><div class="viewer-stat"><span>Resolved Cα</span><b id="resolved-count">—</b></div><div class="viewer-stat"><span>Input residues</span><b id="sequence-count">—</b></div></div>
+      </div>
+      <div class="grid-2">
+        <article class="card"><div class="eyebrow">Geometry</div><h3>The backbone is experimental</h3><p>The viewer projects real three-dimensional Cα coordinates rather than generating a decorative protein-like shape.</p></article>
+        <article class="card"><div class="eyebrow">Model overlay</div><h3>Color remains a prediction</h3><p>Purple, blue, orange, green, and gray encode the model’s Q8 class at each aligned residue; they do not replace the deposited structure annotation.</p></article>
+      </div>
+    </section>
+  </main>
+  <footer><div class="wrap"><span>Protein Secondary Structure Prediction</span><span>Course project, Deep Learning (COMS W4995), Columbia University, fall 2018 · © Johnew Zhang · Structure coordinates: RCSB PDB</span></div></footer>
+  <script src="assets/site.js"></script>
+  <script src="assets/protein-data.js"></script>
+  <script src="assets/structure-data.js"></script>
+  <script src="assets/viewer.js"></script>
+</body>
+</html>
+

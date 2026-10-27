@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Protein sequence data and residue-level Q8 prediction objective.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%233d2254'/%3E%3Ctext x='32' y='39' text-anchor='middle' font-family='Arial' font-size='18' font-weight='700' fill='white'%3EJZ%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="assets/site.css">
+  <script>if(/\.github\.io$/.test(location.hostname)){var g=document.createElement('script');g.async=true;g.src='https://www.googletagmanager.com/gtag/js?id=G-ZBQ25JW26B';document.head.appendChild(g);window.dataLayer=window.dataLayer||[];window.gtag=function(){dataLayer.push(arguments)};gtag('js',new Date());gtag('config','G-ZBQ25JW26B');}</script>
+  <title>Data · Protein Secondary Structure Prediction</title>
+</head>
+<body>
+  <div class="progress" id="progress"></div>
+  <header>
+    <div class="sitebar"><div class="wrap"><a href="https://wizardkingz.github.io/">JOHNEW ZHANG</a><span>/</span><a href="https://wizardkingz.github.io/academic/#projects" style="font-weight:400;letter-spacing:0;color:inherit">Projects</a><span>/ Protein Secondary Structure Prediction</span></div></div>
+    <div class="band"><div class="wrap band-inner"><div class="mark">JZ</div><div class="brand"><h1>Protein Secondary Structure Prediction</h1><p>Hybrid convolutional–recurrent sequence model</p></div><div class="actions"><button class="action" id="theme" type="button" aria-label="Switch to dark mode"><span>Dark mode</span></button></div></div></div>
+    <nav aria-label="Report pages"><div class="wrap nav-inner"><a class="nav-link" href="index.html">Overview</a><a class="nav-link on" href="data.html" aria-current="page">Data</a><a class="nav-link" href="architecture.html">Architecture</a><a class="nav-link" href="results.html">Results</a><a class="nav-link" href="explorer.html">3D structures</a><a class="nav-link" href="code.html">Code</a></div></nav>
+  </header>
+  <main class="wrap page-main">
+<section id="data" aria-labelledby="data-title">
+      <div class="section-head"><span class="section-num">02</span><h2 id="data-title">Each protein becomes a fixed-width sequence of residue labels</h2><span class="section-kicker">Data and objective</span></div>
+      <p class="bottom-line"><b>Bottom line</b>The input is a variable-length amino-acid sequence; the target is a parallel Q8 label sequence. Padding standardizes the tensor shape, and the custom metric removes padded positions from evaluation.</p>
+      <div class="pipeline" aria-label="Data processing pipeline"><div class="stage"><div class="stage-n">Input</div><h3>Amino-acid sequence</h3><p>Each row contains a protein sequence and its residue-level expected labels.</p></div><div class="arrow">→</div><div class="stage"><div class="stage-n">Encode</div><h3>Tokenize n-grams</h3><p>The reusable code supports n-grams; the executed `main.py` sets n = 1.</p></div><div class="arrow">→</div><div class="stage"><div class="stage-n">Shape</div><h3>Pad or truncate</h3><p>Short sequences are post-padded; long sequences are pre-truncated to 512 positions.</p></div><div class="arrow">→</div><div class="stage"><div class="stage-n">Target</div><h3>Classify each residue</h3><p>A nine-way softmax represents eight Q8 states plus padding.</p></div></div>
+      <div class="grid-2">
+        <article class="card"><div class="eyebrow">Dataset profile</div><h3>Most sequences fit comfortably, but the tail is long</h3><div class="table-wrap" style="border:0"><table style="min-width:0"><tbody><tr><td><strong>Training rows</strong></td><td class="num">6,566</td></tr><tr><td><strong>Test rows</strong></td><td class="num">119</td></tr><tr><td><strong>Training median length</strong></td><td class="num">308</td></tr><tr><td><strong>Training mean length</strong></td><td class="num">435.55</td></tr><tr><td><strong>Training maximum</strong></td><td class="num">7,540</td></tr><tr><td><strong>Training rows ≤512</strong></td><td class="num">4,960</td></tr></tbody></table></div></article>
+        <article class="card"><div class="eyebrow">Residue-label mix</div><h3>Helices and strands dominate the labeled positions</h3><div class="class-row"><b>H</b><div class="track"><i class="bar" style="--w:100%"></i></div><span>32.84%</span></div><div class="class-row"><b>E</b><div class="track"><i class="bar" style="--w:68.76%"></i></div><span>22.58%</span></div><div class="class-row"><b>–</b><div class="track"><i class="bar" style="--w:59.50%"></i></div><span>19.54%</span></div><div class="class-row"><b>T</b><div class="track"><i class="bar" style="--w:33.98%"></i></div><span>11.16%</span></div><div class="class-row"><b>S</b><div class="track"><i class="bar" style="--w:24.94%"></i></div><span>8.19%</span></div><div class="class-row"><b>G</b><div class="track"><i class="bar" style="--w:12.06%"></i></div><span>3.96%</span></div><div class="class-row"><b>B</b><div class="track"><i class="bar" style="--w:3.53%"></i></div><span>1.16%</span></div><div class="class-row"><b>I</b><div class="track"><i class="bar" style="--w:1.74%"></i></div><span>0.57%</span></div></article>
+      </div>
+    </section>
+  </main>
+  <footer><div class="wrap"><span>Protein Secondary Structure Prediction</span><span>Course project, Deep Learning (COMS W4995), Columbia University, fall 2018 · © Johnew Zhang · Structure coordinates: RCSB PDB</span></div></footer>
+  <script src="assets/site.js"></script>
+
+</body>
+</html>
+

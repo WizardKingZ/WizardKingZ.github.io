@@ -3,12 +3,12 @@
 {%- assign _words = _post.content | strip_html | number_of_words -%}
 {%- assign _mins = _words | plus: 199 | divided_by: 200 | at_least: 1 -%}
 {%- assign _pil = site.pillars | where: "id", _post.pillar | first -%}
-<a class="row p-{{ _post.pillar }}" href="{{ _post.url | relative_url }}">
+<a class="row p-{{ _post.pillar }}" href="{{ _post.link | default: _post.url | relative_url }}">
   <span class="rd">{{ _post.date | date: "%-d %b %Y" }}</span>
   <span>
     {%- if include.show_pillar %}<span class="eyebrow" style="display:block">{{ _pil.name }} · {{ site.series_names[_post.series] | default: _post.series }}</span>{% endif %}
     <span class="rt" style="display:block">{{ _post.title }}</span>
     {%- if _post.summary %}<span class="rs" style="display:block">{{ _post.summary }}</span>{% endif %}
   </span>
-  <span class="rm">{{ _mins }} min</span>
+  <span class="rm">{% if _post.link %}Interactive{% else %}{{ _mins }} min{% endif %}</span>
 </a>

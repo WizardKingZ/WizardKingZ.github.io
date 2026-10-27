@@ -51,8 +51,8 @@ layout: default
     {%- assign prev = page.previous -%}{%- if prev.hidden -%}{%- assign prev = prev.previous -%}{%- endif -%}
     {%- assign next = page.next -%}{%- if next.hidden -%}{%- assign next = next.next -%}{%- endif -%}
     <div class="prevnext">
-      {%- if prev %}<a href="{{ prev.url | relative_url }}"><div class="eyebrow" style="color:var(--muted)">← Older</div><div class="serif">{{ prev.title }}</div></a>{% endif %}
-      {%- if next %}<a href="{{ next.url | relative_url }}" style="text-align:right"><div class="eyebrow" style="color:var(--muted)">Newer →</div><div class="serif">{{ next.title }}</div></a>{% endif %}
+      {%- if prev %}<a href="{{ prev.link | default: prev.url | relative_url }}"><div class="eyebrow" style="color:var(--muted)">← Older</div><div class="serif">{{ prev.title }}</div></a>{% endif %}
+      {%- if next %}<a href="{{ next.link | default: next.url | relative_url }}" style="text-align:right"><div class="eyebrow" style="color:var(--muted)">Newer →</div><div class="serif">{{ next.title }}</div></a>{% endif %}
     </div>
   </footer>
 </main>

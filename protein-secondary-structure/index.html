@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Overview of the protein secondary-structure prediction model.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%233d2254'/%3E%3Ctext x='32' y='39' text-anchor='middle' font-family='Arial' font-size='18' font-weight='700' fill='white'%3EJZ%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="assets/site.css">
+  <script>if(/\.github\.io$/.test(location.hostname)){var g=document.createElement('script');g.async=true;g.src='https://www.googletagmanager.com/gtag/js?id=G-ZBQ25JW26B';document.head.appendChild(g);window.dataLayer=window.dataLayer||[];window.gtag=function(){dataLayer.push(arguments)};gtag('js',new Date());gtag('config','G-ZBQ25JW26B');}</script>
+  <title>Overview · Protein Secondary Structure Prediction</title>
+</head>
+<body>
+  <div class="progress" id="progress"></div>
+  <header>
+    <div class="sitebar"><div class="wrap"><a href="https://wizardkingz.github.io/">JOHNEW ZHANG</a><span>/</span><a href="https://wizardkingz.github.io/academic/#projects" style="font-weight:400;letter-spacing:0;color:inherit">Projects</a><span>/ Protein Secondary Structure Prediction</span></div></div>
+    <div class="band"><div class="wrap band-inner"><div class="mark">JZ</div><div class="brand"><h1>Protein Secondary Structure Prediction</h1><p>Hybrid convolutional–recurrent sequence model</p></div><div class="actions"><button class="action" id="theme" type="button" aria-label="Switch to dark mode"><span>Dark mode</span></button></div></div></div>
+    <nav aria-label="Report pages"><div class="wrap nav-inner"><a class="nav-link on" href="index.html" aria-current="page">Overview</a><a class="nav-link" href="data.html">Data</a><a class="nav-link" href="architecture.html">Architecture</a><a class="nav-link" href="results.html">Results</a><a class="nav-link" href="explorer.html">3D structures</a><a class="nav-link" href="code.html">Code</a></div></nav>
+  </header>
+  <main class="wrap page-main">
+<article class="hero" aria-labelledby="report-title">
+      <div class="hero-copy"><div class="eyebrow">Project report</div><h2 id="report-title">Protein Secondary Structure Prediction</h2><p class="hero-lede">A hybrid convolutional–recurrent sequence model that combines local amino-acid patterns with long-range context to predict Q8 structure labels.</p></div>
+      <aside class="hero-side"><div class="meta-label">Objective</div><div class="meta-value">Residue-level Q8 structure classification</div><div class="meta-label">Model family</div><div class="meta-value">1D CNNs + stacked bidirectional GRUs + skip connections</div><div class="meta-label">Recorded result</div><div class="meta-value">64.05% mean masked accuracy across ten validation runs</div><div class="thesis">The model combines local motif extraction with bidirectional context to classify secondary structure at each amino-acid position.</div></aside>
+    </article>
+<section id="overview" aria-labelledby="overview-title">
+      <div class="section-head"><span class="section-num">01</span><h2 id="overview-title">Local convolutions and global recurrence produce 64.05% recorded accuracy</h2><span class="section-kicker">Executive summary</span></div>
+      <div class="executive">
+        <div class="exec-main"><div class="eyebrow">Abstract</div><h3 class="exec-title">The task is residue-level classification, not whole-protein prediction.</h3><p>We predict an eight-state secondary-structure label for every amino acid in a protein sequence. The model first learns a token embedding, then uses parallel 1D convolutions to extract local motifs. Three bidirectional recurrent layers add sequence-wide context, while skip connections preserve earlier representations. Two dense layers and a time-distributed softmax generate one label per position.</p><p>The 3.45m-parameter configuration uses Adam at a learning rate of 0.0004 and 50% recurrent dropout in the later recurrent layers. Ten recorded validation runs average 64.05%, ranging from 59.52% to 65.80%. Because the training workflow reused one network instance across the runs, the mean is a recorded benchmark rather than an independent cross-validation estimate.</p><ol class="takeaways"><li><strong>The architecture matches the structure of the problem.</strong> Convolutions capture short motifs; bidirectional recurrence captures upstream and downstream context.</li><li><strong>The result stabilizes after the first run.</strong> Nine of ten recorded runs fall between 63.06% and 65.80%.</li><li><strong>The evaluation is directional, not definitive.</strong> Reusing one trained model across runs makes the later validation scores interdependent.</li></ol></div>
+        <aside class="exec-side"><div class="eyebrow">Evidence read-through</div><div class="finding"><h3>Accuracy averages 64.05%</h3><p>The simple mean of the ten logged validation accuracies matches the model documentation’s rounded 64.0% result.</p></div><div class="finding"><h3>The model is context-heavy</h3><p>Three bidirectional recurrent layers account for ~69% of the documented 3.45m parameters.</p></div><div class="finding"><h3>The metric excludes padding</h3><p>The custom accuracy masks target class 0, so padded positions do not inflate the reported score.</p></div></aside>
+      </div>
+      <div class="kpis"><div class="kpi"><div class="kpi-label">Mean recorded accuracy</div><div class="kpi-value">64.05%</div><div class="kpi-note">Ten logged validation runs</div></div><div class="kpi"><div class="kpi-label">Documented parameters</div><div class="kpi-value">3.45m</div><div class="kpi-note">All documented as trainable</div></div><div class="kpi"><div class="kpi-label">Training proteins</div><div class="kpi-value">6,566</div><div class="kpi-note">5909–5910 training samples per run</div></div><div class="kpi"><div class="kpi-label">Sequence width</div><div class="kpi-value">512</div><div class="kpi-note">Post-padded or truncated positions</div></div></div>
+    </section>
+  </main>
+  <footer><div class="wrap"><span>Protein Secondary Structure Prediction</span><span>Course project, Deep Learning (COMS W4995), Columbia University, fall 2018 · © Johnew Zhang · Structure coordinates: RCSB PDB</span></div></footer>
+  <script src="assets/site.js"></script>
+
+</body>
+</html>
+

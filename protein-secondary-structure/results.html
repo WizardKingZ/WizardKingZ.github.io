@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Recorded validation results for the protein secondary-structure model.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%233d2254'/%3E%3Ctext x='32' y='39' text-anchor='middle' font-family='Arial' font-size='18' font-weight='700' fill='white'%3EJZ%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="assets/site.css">
+  <script>if(/\.github\.io$/.test(location.hostname)){var g=document.createElement('script');g.async=true;g.src='https://www.googletagmanager.com/gtag/js?id=G-ZBQ25JW26B';document.head.appendChild(g);window.dataLayer=window.dataLayer||[];window.gtag=function(){dataLayer.push(arguments)};gtag('js',new Date());gtag('config','G-ZBQ25JW26B');}</script>
+  <title>Results · Protein Secondary Structure Prediction</title>
+</head>
+<body>
+  <div class="progress" id="progress"></div>
+  <header>
+    <div class="sitebar"><div class="wrap"><a href="https://wizardkingz.github.io/">JOHNEW ZHANG</a><span>/</span><a href="https://wizardkingz.github.io/academic/#projects" style="font-weight:400;letter-spacing:0;color:inherit">Projects</a><span>/ Protein Secondary Structure Prediction</span></div></div>
+    <div class="band"><div class="wrap band-inner"><div class="mark">JZ</div><div class="brand"><h1>Protein Secondary Structure Prediction</h1><p>Hybrid convolutional–recurrent sequence model</p></div><div class="actions"><button class="action" id="theme" type="button" aria-label="Switch to dark mode"><span>Dark mode</span></button></div></div></div>
+    <nav aria-label="Report pages"><div class="wrap nav-inner"><a class="nav-link" href="index.html">Overview</a><a class="nav-link" href="data.html">Data</a><a class="nav-link" href="architecture.html">Architecture</a><a class="nav-link on" href="results.html" aria-current="page">Results</a><a class="nav-link" href="explorer.html">3D structures</a><a class="nav-link" href="code.html">Code</a></div></nav>
+  </header>
+  <main class="wrap page-main">
+<section id="results" aria-labelledby="results-title">
+      <div class="section-head"><span class="section-num">04</span><h2 id="results-title">Nine validation runs cluster near 64–66%; the first run is the outlier</h2><span class="section-kicker">Training and results</span></div>
+      <p class="bottom-line"><b>Result</b>The ten logged accuracies average 64.05% with a 1.76pp sample standard deviation. Because one network instance continues learning across the runs, the sequence is a recorded training benchmark rather than an independent cross-validation estimate.</p>
+      <div class="results-grid"><div class="fold-chart"><h3>Recorded validation accuracy by run</h3><p class="chart-sub">Bars are scaled from 55% to 67% to show dispersion.</p><div class="folds"><div class="fold"><b>59.52</b><i style="--h:37.7%"></i><span>1</span></div><div class="fold"><b>63.06</b><i style="--h:67.2%"></i><span>2</span></div><div class="fold"><b>64.60</b><i style="--h:80%"></i><span>3</span></div><div class="fold"><b>64.13</b><i style="--h:76.1%"></i><span>4</span></div><div class="fold"><b>63.74</b><i style="--h:72.8%"></i><span>5</span></div><div class="fold"><b>64.82</b><i style="--h:81.8%"></i><span>6</span></div><div class="fold"><b>64.87</b><i style="--h:82.3%"></i><span>7</span></div><div class="fold"><b>65.23</b><i style="--h:85.3%"></i><span>8</span></div><div class="fold"><b>65.80</b><i style="--h:90%"></i><span>9</span></div><div class="fold"><b>64.68</b><i style="--h:80.7%"></i><span>10</span></div></div></div><div class="read-stack"><div class="read"><div class="read-label">Optimizer</div><h3>Adam at 0.0004</h3><p>The training script uses categorical cross-entropy and a padding-aware custom accuracy metric.</p></div><div class="read"><div class="read-label">Regularization</div><h3>50% recurrent dropout</h3><p>The documented architecture applies recurrent dropout to the second and third recurrent layers.</p></div><div class="read warn"><div class="read-label">Interpretation</div><h3>Validation runs are not independent</h3><p>The code creates the network once, then trains that same instance for one epoch in every recorded run.</p></div></div></div>
+      <div class="table-wrap" style="margin-top:18px"><table><thead><tr><th>Statistic</th><th class="num">Value</th><th>Interpretation</th></tr></thead><tbody><tr><td><strong>Mean</strong></td><td class="num">64.05%</td><td>Matches the recorded 64.0% after rounding</td></tr><tr><td><strong>Minimum</strong></td><td class="num">59.52%</td><td>Run 1</td></tr><tr><td><strong>Maximum</strong></td><td class="num">65.80%</td><td>Run 9</td></tr><tr><td><strong>Sample standard deviation</strong></td><td class="num">1.76pp</td><td>Mostly driven by the low first run</td></tr><tr><td><strong>Validation loss range</strong></td><td class="num">0.5906–0.7077</td><td>Lowest loss occurs in run 9</td></tr></tbody></table></div>
+    </section>
+  </main>
+  <footer><div class="wrap"><span>Protein Secondary Structure Prediction</span><span>Course project, Deep Learning (COMS W4995), Columbia University, fall 2018 · © Johnew Zhang · Structure coordinates: RCSB PDB</span></div></footer>
+  <script src="assets/site.js"></script>
+
+</body>
+</html>
+
