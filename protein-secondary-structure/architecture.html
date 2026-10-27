@@ -25,7 +25,7 @@
       <div class="table-wrap" style="margin-top:18px"><table><thead><tr><th>Layer group</th><th>Output shape</th><th class="num">Parameters</th><th>Role</th></tr></thead><tbody><tr><td><strong>Embedding + parallel convolutions</strong></td><td>(512, 384)</td><td class="num">134,144</td><td>Learn tokens and local motifs</td></tr><tr><td><strong>Bidirectional 1</strong></td><td>(512, 400)</td><td class="num">702,000</td><td>First global context pass</td></tr><tr><td><strong>Conv1D 3 + Bidirectional 2</strong></td><td>(512, 400)</td><td class="num">1,233,700</td><td>Refine concatenated local/global features</td></tr><tr><td><strong>Conv1D 4 + Bidirectional 3</strong></td><td>(512, 400)</td><td class="num">1,241,700</td><td>Second refinement with skip connection</td></tr><tr><td><strong>Dense + time-distributed output</strong></td><td>(512, 9)</td><td class="num">136,713</td><td>Per-residue classification</td></tr><tr><td><strong>Total</strong></td><td>—</td><td class="num"><strong>3,448,257</strong></td><td>Documented architecture</td></tr></tbody></table></div>
     </section>
   </main>
-  <footer><div class="wrap"><span>Protein Secondary Structure Prediction</span><span>Course project, Deep Learning (COMS W4995), Columbia University, fall 2018 · © Johnew Zhang · Structure coordinates: RCSB PDB</span></div></footer>
+  <footer><div class="wrap"><span>Protein Secondary Structure Prediction</span><span>© Johnew Zhang · Structure coordinates: RCSB PDB</span></div></footer>
   <script src="assets/site.js"></script>
 
 </body>
