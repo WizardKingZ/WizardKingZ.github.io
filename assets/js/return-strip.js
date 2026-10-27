@@ -16,11 +16,12 @@
     '.jz-strip .jz-c{color:#5d6672;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}' +
     '.jz-strip .jz-b{margin-left:auto;font-weight:700;letter-spacing:.04em;color:#1f4e8c;white-space:nowrap;min-height:38px;display:inline-flex;align-items:center}' +
     '.jz-strip a:hover{text-decoration:underline}' +
+    '.jz-strip a.jz-s{color:#1f4e8c;font-weight:600;text-decoration:underline;text-underline-offset:2px}' +
     '.jz-strip .jz-note{margin-left:auto;color:#5d6672;font-size:11px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}.jz-strip .jz-note+.jz-b{margin-left:16px}' +
     '@media (max-width:1000px){.jz-strip .jz-note{display:none}.jz-strip .jz-note+.jz-b{margin-left:auto}}' +
     '@media (max-width:560px){.jz-strip .jz-c{display:none}}' +
-    '@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .jz-strip{background:#0f1319;border-color:#2c3440;color:#e3e8ef}:root:not([data-theme="light"]) .jz-strip .jz-c{color:#8f99a7}:root:not([data-theme="light"]) .jz-strip .jz-b{color:#6ea3e6}}' +
-    ':root[data-theme="dark"] .jz-strip{background:#0f1319;border-color:#2c3440;color:#e3e8ef}:root[data-theme="dark"] .jz-strip .jz-c{color:#8f99a7}:root[data-theme="dark"] .jz-strip .jz-b{color:#6ea3e6}' +
+    '@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .jz-strip{background:#0f1319;border-color:#2c3440;color:#e3e8ef}:root:not([data-theme="light"]) .jz-strip .jz-c{color:#8f99a7}:root:not([data-theme="light"]) .jz-strip .jz-b{color:#6ea3e6}:root:not([data-theme="light"]) .jz-strip a.jz-s{color:#6ea3e6}}' +
+    ':root[data-theme="dark"] .jz-strip{background:#0f1319;border-color:#2c3440;color:#e3e8ef}:root[data-theme="dark"] .jz-strip .jz-c{color:#8f99a7}:root[data-theme="dark"] .jz-strip .jz-b{color:#6ea3e6}:root[data-theme="dark"] .jz-strip a.jz-s{color:#6ea3e6}' +
     '@media print{.jz-strip{display:none}}';
   var st = document.createElement('style'); st.textContent = css; document.head.appendChild(st);
   var bar = document.createElement('nav');
@@ -29,9 +30,9 @@
   function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
   bar.innerHTML =
     '<a class="jz-n" href="/"><span class="jz-m" aria-hidden="true">JZ</span>Johnew Zhang</a>' +
-    '<span class="jz-c">' + (section ? '/ <a href="' + esc(sectionUrl) + '">' + esc(section) + '</a> ' : '') + '/ ' + esc(title) + '</span>' +
+    '<span class="jz-c">' + (section ? '/ <a class="jz-s" href="' + esc(sectionUrl) + '">' + esc(section) + '</a> ' : '') + '/ ' + esc(title) + '</span>' +
     (note ? '<span class="jz-note">' + esc(note) + '</span>' : '') +
-    '<a class="jz-b" href="/">← Back to the site</a>';
+    '<a class="jz-b" href="' + esc(section ? sectionUrl : '/') + '">← Back to ' + esc(section || 'the site') + '</a>';
   document.body.insertBefore(bar, document.body.firstChild);
   // Google Analytics on standalone pages, live site only (not local previews).
   var GA = 'G-ZBQ25JW26B';
