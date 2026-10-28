@@ -184,6 +184,12 @@ Abu Simbel sits about 40 kilometers from the Sudanese border, and I flew there f
 *The colossi of Ramesses II. One lost its upper body in an ancient earthquake; the head still lies at its feet.*
 {: .caption}
 
+Inside, the walls of the great hall tell the official story. Ramesses rides into battle in his chariot, bow drawn, far larger than anyone around him, and the Kadesh scene on the north wall comes with a text in which he claims he won alone after his army abandoned him.
+
+![Relief of Ramesses II firing a bow from his chariot](/assets/images/egypt-2023/abu-simbel-chariot.jpg)
+*Ramesses II in his chariot, from the battle reliefs in the great hall at Abu Simbel.*
+{: .caption}
+
 The historian's footnote is that Kadesh was not a victory. It was close to a draw, and some 15 years later Egypt and the Hittites signed what is often cited as the earliest surviving peace treaty. Abu Simbel is therefore one of history's great works of political messaging. It is also a survivor. In the 1960s, UNESCO cut the whole temple into blocks and moved it 65 meters higher to save it from the lake behind the new Aswan High Dam. The temple faces east, and twice a year the rising sun still reaches the statues in its inner sanctuary.
 
 ## Third Intermediate and Late Period: Nubia's Turn
