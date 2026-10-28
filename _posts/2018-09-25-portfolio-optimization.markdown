@@ -5,7 +5,7 @@ pillar: academic
 series: code
 topic: Python
 summary: "A pip-installable Python library for mean-variance portfolios and the efficient frontier."
-tags: ["portfolio theory", "optimization", "finance", "python"]
+tags: ["portfolio theory", "optimization", "finance", "Python"]
 ---
 
 As part of an ongoing effort to provide finance-related Python libraries, I will start with portfolio optimization. This page documents the library's Hello-World version.

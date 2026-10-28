@@ -5,7 +5,7 @@ pillar: academic
 series: projects
 topic: machine learning
 summary: "The Kingma–Welling VAE on MNIST and SVHN, and how the size of the latent space shapes what the model learns."
-tags: ["variational autoencoder", "probabilistic machine learning", "deep learning", "python"]
+tags: ["variational autoencoder", "probabilistic machine learning", "deep learning", "Python"]
 ---
 
 Because images can be viewed as realizations drawn from a latent variable model, we implemented a variational autoencoder that uses neural networks as the variational family to approximate the Bayesian representation. Unlike standard parametric distributions, neural networks can approximate arbitrary distributions reasonably well. We tested the model on MNIST and on the harder SVHN dataset, comparing architectures to see how the dimension of the latent space affects the learned representation and visualizing the learned manifold for low-dimensional latent spaces. With a convolutional encoder, the variational autoencoder learns SVHN reasonably well, and its generated images improve as the latent dimension grows.

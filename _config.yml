@@ -4,7 +4,7 @@
 title: Johnew Zhang
 name: Johnew Zhang
 name_zh: 张俊琪
-tagline: Investing · Mathematics & economics · Culture · Sports
+tagline: Investing · Mathematics & Economics · Culture · Sports
 description: >-
   Johnew Zhang on financial services, fintech, and complex situations,
   with research, projects, and lecture notes in mathematics and economics.
@@ -54,7 +54,7 @@ pillars:
   - id: investing
     name: Investing
     title: Financial Services, FinTech, and Complex Situations
-    blurb: Essays, theses, and the frameworks I use to underwrite.
+    blurb: Essays, primers, and the frameworks I use to underwrite.
     series: [essays, theses, notes]
   - id: academic
     name: Academic

@@ -4,7 +4,7 @@ date: 2018-09-22 22:00
 pillar: academic
 series: notes
 summary: "Notes from a math degree, from algebra to option pricing, plus study notes for actuarial exams MFE, C, and S."
-tags: ["notes", "waterloo", "cas", "soa"]
+tags: ["notes", "Waterloo", "CAS", "SOA"]
 ---
 
 ## Lecture Notes

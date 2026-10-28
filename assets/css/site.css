@@ -239,3 +239,6 @@ a.card:hover h3{text-decoration:underline}
 .motto-src a{color:inherit}
 @media (max-width:1000px){.kv{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:600px){.kv{grid-template-columns:1fr}.motto{padding:16px 14px 12px}}
+
+/* Keep wide equations from pushing the page sideways on phones */
+.prose mjx-container[display="true"]{overflow-x:auto;overflow-y:hidden;max-width:100%}

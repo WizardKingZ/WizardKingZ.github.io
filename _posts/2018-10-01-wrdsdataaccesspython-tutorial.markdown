@@ -5,7 +5,7 @@ pillar: academic
 series: code
 topic: tutorial
 summary: "Setting up a .pgpass file and running your first CRSP queries from Python."
-tags: ["finance", "research", "python"]
+tags: ["finance", "research", "Python"]
 ---
 
 ## Prerequisites

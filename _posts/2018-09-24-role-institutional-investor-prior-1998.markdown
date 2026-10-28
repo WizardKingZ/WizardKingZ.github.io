@@ -5,7 +5,7 @@ pillar: academic
 series: research
 topic: corporate finance
 summary: "Institutional ownership of US non-financial firms, 1980–1997: every type of institution avoids volatile stocks, and independent institutions show little sign of active monitoring."
-tags: ["finance", "panel regression", "institutional investor", "research"]
+tags: ["finance", "panel regression", "institutional investors", "research"]
 ---
 
 I study the role of institutional investors in publicly traded US companies, using WRDS data from 1980 to 1997. I find that all institutional investors dislike highly volatile stocks. During this period, independent institutional investors show little evidence of active monitoring, and the evidence significantly shows that grey institutions do not intervene in the management of the companies they invest in.

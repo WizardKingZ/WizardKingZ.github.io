@@ -5,7 +5,7 @@ pillar: academic
 series: projects
 topic: machine learning
 summary: "A hybrid convolutional–recurrent model that predicts the eight-state secondary structure of each amino acid, with an interactive 3D viewer of its predictions."
-tags: ["deep learning", "sequence models", "keras", "python"]
+tags: ["deep learning", "sequence models", "Keras", "Python"]
 link: /protein-secondary-structure/
 redirect_to: /protein-secondary-structure/
 math: false

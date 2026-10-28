@@ -21,6 +21,7 @@ import sys
 
 PILLARS = {"investing": "Investing", "academic": "Academic", "culture": "Culture", "sports": "Sports"}
 DATA = "_data/standalone.yml"
+SITE = "https://wizardkingz.github.io"
 STRIP = ('<script src="/assets/js/return-strip.js" data-section="{section}" '
          'data-section-url="/{pillar}/" data-title="{title}"{note} defer></script>')
 
@@ -97,6 +98,23 @@ def main():
     strip = STRIP.format(section=PILLARS[entry["pillar"]], pillar=entry["pillar"],
                          title=entry["title"].replace('"', "&quot;"),
                          note=(' data-note="' + entry["note"].replace('"', "&quot;") + '"') if entry.get("note") else "")
+    # Link-preview tags (description, Open Graph, Twitter card) from the listing.
+    html = re.sub(r"\s*<!-- jz-meta -->.*?<!-- /jz-meta -->", "", html, flags=re.S)
+    if entry.get("blurb"):
+        attr = lambda v: v.replace("&", "&amp;").replace('"', "&quot;")
+        url = SITE + entry["url"]
+        tags = [f'<meta name="description" content="{attr(entry["blurb"])}">',
+                f'<meta property="og:title" content="{attr(entry["title"])}">',
+                f'<meta property="og:description" content="{attr(entry["blurb"])}">',
+                '<meta property="og:type" content="website">',
+                f'<meta property="og:url" content="{url}">',
+                f'<link rel="canonical" href="{url}">']
+        if entry.get("image"):
+            tags += [f'<meta property="og:image" content="{SITE + entry["image"]}">',
+                     '<meta name="twitter:card" content="summary_large_image">']
+        block = "<!-- jz-meta -->" + "".join(tags) + "<!-- /jz-meta -->"
+        h = html.lower().find("</head>")
+        html = (html[:h] + block + html[h:]) if h >= 0 else (block + html)
     idx = html.lower().rfind("</body>")
     html = (html[:idx] + strip + "\n" + html[idx:]) if idx >= 0 else (html + "\n" + strip + "\n")
     if html.lstrip().startswith("---"):
