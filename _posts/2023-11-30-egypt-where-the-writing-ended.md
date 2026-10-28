@@ -207,7 +207,7 @@ Philae is where the story ends. In the UNESCO campaign, the temple of Isis was d
 *The first pylon at Philae, where Ptolemy XII smites his enemies before Isis, as he does at Edfu.*
 {: .caption}
 
-![Columns of the temple of Isis at Philae](/assets/images/egypt-2023/philae.jpg)
+![Johnew leaning on a column among the carved capitals at Philae](/assets/images/egypt-2023/philae.jpg)
 *Philae, the temple of Isis, rebuilt on Agilkia Island.*
 {: .caption}
 
