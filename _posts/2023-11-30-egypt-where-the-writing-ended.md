@@ -82,7 +82,7 @@ The Great Pyramid remained the tallest man-made structure on earth for nearly 4,
 *The Sphinx, probably carved for Khafre <span class="cartouche" role="img" aria-label="Khafre in hieroglyphs">𓇳𓈍𓆑</span>, with his pyramid and Khufu's behind it.*
 {: .caption}
 
-The Sphinx has gone by several names. By the New Kingdom, Egyptians worshipped it as Horemakhet, "Horus in the horizon," and Thutmose IV cleared the sand from its body and set up the Dream Stela between its paws. In Arabic it is Abu al-Hol, "the father of dread." "Sphinx" itself is a Greek word.
+The Sphinx has gone by several names. By the New Kingdom, Egyptians worshipped it as Horemakhet, "Horus in the horizon," and Thutmose IV cleared the sand from its body and set up the Dream Stela between its paws. Egyptians also called sphinx statues shesep-ankh, "living image" <span class="hg" role="img" aria-label="Shesep-ankh in hieroglyphs">𓊏𓊪𓋹</span>. In Arabic it is Abu al-Hol, "the father of dread." "Sphinx" itself is a Greek word, possibly borrowed from shesep-ankh, or from a Greek verb meaning "to squeeze."
 
 Lunch was at Khufu's, a restaurant on the Giza plateau whose terrace looks straight at the Great Pyramid. Its chef, Mostafa Seif, reworks the rural dishes he grew up with. The restaurant has since been named the best in Egypt and ranked fourth on the Middle East and North Africa's 50 Best list for 2025. I ordered hamam, roast pigeon. Pigeon is a staple of Egyptian cooking, and the mud-brick dovecotes that house the birds are still a common sight in villages along the Nile.
 
@@ -230,3 +230,47 @@ The key turned out to be a Ptolemaic decree. The Rosetta Stone, which French sol
 | 5 | Fri 24 Nov | Luxor | West Bank: Valley of the Kings (Seti I, Tutankhamun), Hatshepsut's temple, Valley of the Queens (Nefertari); afternoon at the hotel |
 | 6 | Sat 25 Nov | Cairo | Karnak, Luxor Temple, Luxor Museum; evening flight to Cairo |
 | 7 | Sun 26 Nov | — | Flight home from Cairo |
+
+## Appendix: Reading a Cartouche
+
+Hieroglyphs are not an alphabet. Most signs stand for a whole word or for two or three consonants, some are silent and only show what kind of word it is, and vowels were not written at all. About 25 signs, though, each stand for a single consonant, and scribes used them to spell foreign names. That gave Champollion his way in: Ptolemy and Cleopatra were Greek names, spelled out sound by sound.
+
+Here are those signs, in the order Egyptologists list them. Each shows what the sign depicts and the letter scholars use for its sound; the sounds themselves are approximate.
+
+<ul class="glyphs">
+<li><span class="hg" role="img" aria-label="Vulture in hieroglyphs">𓄿</span>Vulture: ꜣ, a catch in the throat, usually read as "a"</li>
+<li><span class="hg" role="img" aria-label="Reed leaf in hieroglyphs">𓇋</span>Reed leaf: i, read as "i" or "y"</li>
+<li><span class="hg" role="img" aria-label="Two reed leaves in hieroglyphs">𓇌</span>Two reed leaves: y</li>
+<li><span class="hg" role="img" aria-label="Forearm in hieroglyphs">𓂝</span>Forearm: ꜥ, a sound from deep in the throat, usually read as "a"</li>
+<li><span class="hg" role="img" aria-label="Quail chick in hieroglyphs">𓅱</span>Quail chick: w, read as "w" or "u"</li>
+<li><span class="hg" role="img" aria-label="Foot in hieroglyphs">𓃀</span>Foot: b</li>
+<li><span class="hg" role="img" aria-label="Stool in hieroglyphs">𓊪</span>Stool: p</li>
+<li><span class="hg" role="img" aria-label="Horned viper in hieroglyphs">𓆑</span>Horned viper: f</li>
+<li><span class="hg" role="img" aria-label="Owl in hieroglyphs">𓅓</span>Owl: m</li>
+<li><span class="hg" role="img" aria-label="Water in hieroglyphs">𓈖</span>Water: n</li>
+<li><span class="hg" role="img" aria-label="Mouth in hieroglyphs">𓂋</span>Mouth: r</li>
+<li><span class="hg" role="img" aria-label="Reed shelter in hieroglyphs">𓉔</span>Reed shelter: h</li>
+<li><span class="hg" role="img" aria-label="Twisted flax in hieroglyphs">𓎛</span>Twisted flax: ḥ, a stronger h</li>
+<li><span class="hg" role="img" aria-label="Placenta in hieroglyphs">𓐍</span>Placenta: ḫ, "kh" as in Scottish loch</li>
+<li><span class="hg" role="img" aria-label="Animal's belly in hieroglyphs">𓄡</span>Animal's belly: ẖ, a softer "kh"</li>
+<li><span class="hg" role="img" aria-label="Door bolt in hieroglyphs">𓊃</span>Door bolt: z</li>
+<li><span class="hg" role="img" aria-label="Folded cloth in hieroglyphs">𓋴</span>Folded cloth: s</li>
+<li><span class="hg" role="img" aria-label="Pool in hieroglyphs">𓈙</span>Pool: š, "sh"</li>
+<li><span class="hg" role="img" aria-label="Hillside in hieroglyphs">𓈎</span>Hillside: q, a k made further back</li>
+<li><span class="hg" role="img" aria-label="Basket in hieroglyphs">𓎡</span>Basket: k</li>
+<li><span class="hg" role="img" aria-label="Jar stand in hieroglyphs">𓎼</span>Jar stand: g</li>
+<li><span class="hg" role="img" aria-label="Bread loaf in hieroglyphs">𓏏</span>Bread loaf: t</li>
+<li><span class="hg" role="img" aria-label="Tethering rope in hieroglyphs">𓍿</span>Tethering rope: ṯ, "ch"</li>
+<li><span class="hg" role="img" aria-label="Hand in hieroglyphs">𓂧</span>Hand: d</li>
+<li><span class="hg" role="img" aria-label="Cobra in hieroglyphs">𓆓</span>Cobra: ḏ, "dj"</li>
+</ul>
+
+Ptolemy's cartouche <span class="cartouche" role="img" aria-label="Ptolemy in hieroglyphs">𓊪𓏏𓅱𓃭𓅓𓇋𓇋𓋴</span> uses six of them, plus one extra. Read left to right, it gives p, t, w, then a lion <span class="hg" role="img" aria-label="Lion in hieroglyphs">𓃭</span>, then m, y, and s. Egyptian had no sign for l, so scribes of the Greek period borrowed the lion for it. Without vowels, *p-t-w-l-m-y-s* is as close as the script gets to the Greek *Ptolemaios*.
+
+The other cartouches in this post mix in larger signs:
+
+- **Khufu** <span class="cartouche" role="img" aria-label="Khufu in hieroglyphs">𓐍𓅱𓆑𓅱</span>: placenta, quail chick, viper, quail chick, or *ḫ-w-f-w*. Every sign is in the list above.
+- **Sneferu** <span class="cartouche" role="img" aria-label="Sneferu in hieroglyphs">𓋴𓄤𓂋𓅱</span>: s, then a heart and windpipe <span class="hg" role="img" aria-label="Nefer in hieroglyphs">𓄤</span>, one sign for the three consonants *n-f-r*, meaning "good." The r after it repeats the sign's last sound as a reading aid, and w ends the name.
+- **Ramesses** <span class="cartouche" role="img" aria-label="Ramesses in hieroglyphs">𓇳𓄟𓋴𓋴</span>: the sun disk is Ra, written first out of respect; three fox skins <span class="hg" role="img" aria-label="Mes in hieroglyphs">𓄟</span> stand for *ms*, "born of"; two folded cloths add *s-s*. Together, "Ra is the one who bore him."
+
+The sign list follows Alan Gardiner's *Egyptian Grammar*, the standard reference since 1927.
