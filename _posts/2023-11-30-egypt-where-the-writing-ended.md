@@ -21,8 +21,8 @@ Egyptologists divide ancient Egypt into kingdoms, when one king ruled the whole 
 
 | Period | Dates | Where I saw it |
 |---|---|---|
-| Early Dynastic | c. 3100–2686 BC | — |
-| Old Kingdom | c. 2686–2181 BC | Memphis, Saqqara, Dahshur, Giza |
+| Early Dynastic | c. 3100–2686 BC | The Narmer Palette, Egyptian Museum |
+| Old Kingdom | c. 2686–2181 BC | Memphis, Saqqara, Dahshur, Giza, Djoser's statue at the Egyptian Museum |
 | First Intermediate and Middle Kingdom | c. 2181–1650 BC | — |
 | Second Intermediate | c. 1650–1550 BC | — |
 | New Kingdom | c. 1550–1069 BC | Karnak, Luxor Temple, the Valleys of the Kings and Queens, Abu Simbel, the Egyptian Museum |
@@ -56,7 +56,15 @@ Royal names were written inside a cartouche, an oval loop of rope that protected
 c. 2686–2181 BC · Memphis, Saqqara, Dahshur, Giza · Day 1
 {: .dayline}
 
-Egypt became one country around 3100 BC, when the kings of Upper Egypt took Lower Egypt. They ruled from Memphis, near modern Cairo. By the Old Kingdom the king was treated as a god on earth, and the state's main project was his tomb. I started where that project started.
+Egypt became one country around 3100 BC, when the kings of Upper Egypt took Lower Egypt. The best-known record of that moment is the Narmer Palette in the Egyptian Museum, a siltstone slab about 63 centimeters tall. On one side, King Narmer wears the white crown of Upper Egypt and raises a mace over a kneeling enemy from the Delta; on the other, he wears the red crown of Lower Egypt.
+
+![The Narmer Palette in its case at the Egyptian Museum in Cairo](/assets/images/egypt-2023/narmer-palette.jpg)
+*The Narmer Palette, Egyptian Museum, Cairo. Narmer, in the white crown, strikes an enemy from the Delta.*
+{: .caption}
+
+The palette matters less as a record of events than as a template. It is one of the earliest images of an Egyptian king, the earliest to show a king in both crowns, and it carries some of the earliest hieroglyphs. Scholars still debate whether it shows a real conquest or a ritual claim to rule both lands. Either way, its central image of the king with his mace raised over an enemy became the standard picture of kingship for the next 3,000 years, and I kept meeting it, down to the last Greek kings at Edfu and Philae.
+
+Narmer's successors ruled from Memphis, near modern Cairo. By the Old Kingdom the king was treated as a god on earth, and the state's main project was his tomb. I started where that project started.
 
 Little of Memphis survives above ground, largely because later builders carried off its stone. At its open-air museum, a limestone colossus of Ramesses II lies on its back, a reminder that the city stayed a royal seat long after the pyramid age.
 
@@ -64,10 +72,22 @@ Little of Memphis survives above ground, largely because later builders carried 
 *The fallen colossus of Ramesses II at Memphis.*
 {: .caption}
 
+Before the pyramids, kings were buried under mastabas, flat-topped tombs of mud brick or stone, and officials kept using them long after. Saqqara is full of them. In one, I found a false door carved into the wall: a doorway that does not open, framed by the owner's names and titles, with a panel above showing him seated at a table of offerings. Egyptians believed the ka, the part of the soul that needed food, passed through it to collect what the living left on the stone slab in front.
+
+![A carved false door in a mastaba tomb at Saqqara, with an offering slab in front](/assets/images/egypt-2023/saqqara-false-door.jpg)
+*A false door in a mastaba at Saqqara. The doorway is solid stone; only the ka could pass through it.*
+{: .caption}
+
 The Step Pyramid of Djoser at Saqqara, designed by the architect Imhotep around 2670 BC, is the oldest large stone building in the world. It is six mastabas stacked into a staircase to the sky, and you can see the idea being invented.
 
 ![The Step Pyramid of Djoser at Saqqara](/assets/images/egypt-2023/step-pyramid.jpg)
 *The Step Pyramid of Djoser at Saqqara.*
+{: .caption}
+
+Djoser himself is in the Egyptian Museum. His limestone statue, found in 1925 in a serdab, a sealed chamber beside the pyramid, is the oldest known life-size statue from ancient Egypt. The serdab had two small eye holes so the king could watch the offerings, and a copy now sits in his place. Behind the statue, the museum has set a wall of blue faience tiles from the chambers under his pyramid.
+
+![The seated limestone statue of Djoser in front of a wall of blue tiles](/assets/images/egypt-2023/djoser-statue.jpg)
+*Djoser, Egyptian Museum, Cairo, in front of tiles from the chambers beneath his pyramid.*
 {: .caption}
 
 At Dahshur, the Bent Pyramid of Sneferu <span class="cartouche" role="img" aria-label="Sneferu in hieroglyphs">𓋴𓄤𓂋𓅱</span> shows that invention going wrong. Partway up, the builders reduced the angle, probably because the structure was becoming unstable. Sneferu then built the Red Pyramid nearby with the correction applied, and his son Khufu <span class="cartouche" role="img" aria-label="Khufu in hieroglyphs">𓐍𓅱𓆑𓅱</span> took the lesson to Giza.
@@ -77,6 +97,12 @@ At Dahshur, the Bent Pyramid of Sneferu <span class="cartouche" role="img" aria-
 {: .caption}
 
 The Great Pyramid remained the tallest man-made structure on earth for nearly 4,000 years. Inside, the climb up the Grand Gallery to the King's Chamber is steep, hot, and cramped, and the chamber itself is bare granite. That emptiness is the point. Everything else I saw that week, from Abu Simbel's colossi to the last hieroglyphs at Philae, descends from the confidence this building expressed.
+
+The pyramid did not always look like this. The stepped blocks visible today are its core. When it was finished, it was faced with fine white limestone, polished smooth, which would have shone in the sun. Over the centuries, most of that casing was carried off for other buildings, much of it for medieval Cairo. The capstone is gone too. Some pyramid capstones were gilded or covered in electrum, an alloy of gold and silver, but no one knows what Khufu's was made of.
+
+![The north face of the Great Pyramid with visitors at its base](/assets/images/egypt-2023/great-pyramid-base.jpg)
+*At the foot of the Great Pyramid. What remains is the core; the white casing is almost all gone.*
+{: .caption}
 
 ![The Sphinx with the pyramids of Khafre and Khufu behind it](/assets/images/egypt-2023/giza-sphinx.jpg)
 *The Sphinx, probably carved for Khafre <span class="cartouche" role="img" aria-label="Khafre in hieroglyphs">𓇳𓈍𓆑</span>, with his pyramid and Khufu's behind it.*
@@ -101,6 +127,12 @@ The Old Kingdom ended in more than a century of division. Kings from Thebes, mod
 ### Karnak: A City of Temples
 
 Karnak is less a temple than a city of temples, enlarged by king after king for some 2,000 years. The 134 columns of the Great Hypostyle Hall, completed under Seti I and Ramesses II, are the reason to go, and the scale is difficult to convey. Standing among them, you feel the purpose of the design, which was to make a human feel small before Amun <span class="hg" role="img" aria-label="Amun in hieroglyphs">𓇋𓏠𓈖</span>, whose name means "the hidden one." The columns of the central aisle are carved as open papyrus flowers.
+
+The way in is an avenue of ram-headed sphinxes, the ram being one of Amun's animals, each with a small figure of the king under its chin for protection. They lead to the first pylon, begun by Nectanebo I in the fourth century BC and never finished. Because the temple grew from the inside out, the first thing a visitor walks through is one of the last things built.
+
+![The avenue of ram-headed sphinxes leading to the first pylon at Karnak](/assets/images/egypt-2023/karnak-entrance.jpg)
+*The entrance to Karnak: ram-headed sphinxes and the unfinished first pylon.*
+{: .caption}
 
 The kings of this period also changed how they were buried. Egyptians built for the living on the east bank and buried their dead on the west, where the sun sets. Pyramids had proven too easy to rob, so the New Kingdom's kings cut their tombs instead into a hidden valley on the west bank, the Valley of the Kings.
 
@@ -184,7 +216,7 @@ After Alexander died, his general Ptolemy took Egypt, and his descendants ruled 
 
 Kom Ombo is unusual because it is a double temple, split between the crocodile god Sobek and the falcon god Haroeris. Next door, a small museum holds mummified crocodiles, which the priests once kept and buried.
 
-Edfu, dedicated to Horus, is the best-preserved temple in Egypt. Granite falcons of the god stand at its doors, and its pylon shows Ptolemy XII smiting his enemies before Horus, an image any pharaoh 1,500 years earlier would have recognized.
+Edfu, dedicated to Horus, is the best-preserved temple in Egypt. Granite falcons of the god stand at its doors, and its pylon shows Ptolemy XII smiting his enemies before Horus, the same image Narmer used on his palette some 3,000 years earlier.
 
 ![Granite statue of Horus as a falcon at Edfu](/assets/images/egypt-2023/edfu-horus.jpg)
 *Horus as a falcon, at the temple of Edfu.*
@@ -217,7 +249,13 @@ The inscription of AD 394 is a few lines on a wall here. After it, Egyptians wro
 *The Rosetta Stone, British Museum.*
 {: .caption}
 
-The key turned out to be a Ptolemaic decree. The Rosetta Stone, which French soldiers found in 1799 and which has been in the British Museum since 1802, records a decree of 196 BC in three scripts: hieroglyphs, Demotic, and Greek. Because the Greek could be read, Jean-François Champollion could match the royal names in its cartouches, Ptolemy <span class="cartouche" role="img" aria-label="Ptolemy in hieroglyphs">𓊪𓏏𓅱𓃭𓅓𓇋𓇋𓋴</span> first, and then Cleopatra on an obelisk taken from Philae itself. He announced the decipherment in 1822. Some 3,000 years after Djoser's pyramid, Philae is where the writing ended, and a name carved under the Ptolemies is where it was read again.
+The key turned out to be a Ptolemaic decree. The Rosetta Stone, which French soldiers found in 1799 and which has been in the British Museum since 1802, records a decree of 196 BC in three scripts: hieroglyphs, Demotic, and Greek. Because the Greek could be read, Jean-François Champollion could match the royal names in its cartouches, Ptolemy <span class="cartouche" role="img" aria-label="Ptolemy in hieroglyphs">𓊪𓏏𓅱𓃭𓅓𓇋𓇋𓋴</span> first, and then Cleopatra on an obelisk taken from Philae itself. He announced the decipherment in 1822.
+
+The stone's significance reaches well beyond Egyptology. Reading hieroglyphs again gave back three millennia of Egypt's own records, which until then had been known largely through Greek and Roman writers and the Bible. Its name has also become shorthand for any key to a hard problem. The text itself is modest: a decree by priests at Memphis honoring the young Ptolemy V, closer to political messaging than to scripture, much like Abu Simbel a thousand years earlier.
+
+It is also contested. British forces took the stone from the French under the surrender terms of 1801, and it has been in London ever since. Petitions in Egypt, including one led by former antiquities minister Zahi Hawass, call for its return, some proposing the Grand Egyptian Museum as its new home. The British Museum's position is that the 1801 agreement was signed on Egypt's behalf by an Ottoman admiral, since the Ottoman sultan nominally ruled Egypt at the time.
+
+Some 3,000 years after Djoser's pyramid, Philae is where the writing ended, and a name carved under the Ptolemies is where it was read again.
 
 ## The Route
 
