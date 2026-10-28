@@ -52,7 +52,9 @@ layout: default
   <section class="inner" style="padding-bottom:56px">
     <div class="shead"><div><div class="eyebrow">Elsewhere</div><h2>Things I Build and Keep</h2></div></div>
     <div class="cards">
-      {%- for a in site.data.standalone %}
+      {%- for p in site.pillars %}
+      {%- assign apps = site.data.standalone | where: "pillar", p.id %}
+      {%- for a in apps %}
       <a class="card p-{{ a.pillar }}" href="{{ a.url | relative_url }}">
         {%- if a.image %}<div class="card-photo"><img src="{{ a.image | relative_url }}" alt="" loading="lazy"></div>{% endif %}
         <div class="eyebrow">{{ a.title }}</div>
@@ -60,13 +62,14 @@ layout: default
         <p>{{ a.blurb }}</p>
       </a>
       {%- endfor %}
-      {%- if site.github %}
+      {%- if p.id == "academic" and site.github %}
       <a class="card p-academic" href="https://github.com/{{ site.github }}">
         <div class="eyebrow">GitHub · {{ site.github }}</div>
         <h3>Code</h3>
         <p>The portfolio optimization library, multivariate outlier detection in R, and the variational autoencoder.</p>
       </a>
       {%- endif %}
+      {%- endfor %}
     </div>
   </section>
   {%- endif %}
