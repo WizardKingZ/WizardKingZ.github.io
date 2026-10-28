@@ -222,3 +222,13 @@ a.card:hover h3{text-decoration:underline}
 
 @media print{.band,.tabs,.post-aside,.site-foot,.post-foot{display:none!important}body{background:#fff}}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+
+/* Values grid (used in posts) */
+.kv{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:22px 0}
+.kv-card{background:var(--surface);border:1px solid var(--rule);border-top:3px solid var(--pc,var(--accent));padding:14px 18px 10px;min-width:0}
+.kv-n{font-family:var(--mono);font-size:11px;color:var(--pc,var(--accent));letter-spacing:.08em}
+.kv-card h3{font-family:var(--display);font-weight:400;font-size:24px;margin:2px 0 6px;color:var(--ink)}
+.kv-card .kv-def{margin:0 0 8px;font-size:15px;line-height:1.5}
+.kv-card .kv-q{margin:0 0 8px;font-style:italic;color:var(--pc,var(--accent));font-weight:600}
+.kv-card ul{margin:0;padding-left:18px}.kv-card li{margin:3px 0;font-size:15px}
+@media (max-width:700px){.kv{grid-template-columns:1fr}}

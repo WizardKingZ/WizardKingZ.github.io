@@ -68,9 +68,9 @@ pillars:
     series: [travel, food, history, books]
   - id: sports
     name: Sports
-    title: Celtics, Tennis, and the Numbers
-    blurb: Notes on the Celtics, the games I play, and sports analytics.
-    series: [celtics, tennis, analytics]
+    title: Teams, Capital, and Culture
+    blurb: How teams are owned and financed, what makes great teams work, and the games I play.
+    series: [leadership, celtics, tennis, analytics]
 
 series_names:
   research: Research
@@ -83,6 +83,7 @@ series_names:
   food: Food
   history: History
   books: Books
+  leadership: Leadership
   celtics: Celtics
   tennis: Tennis
   analytics: Analytics
