@@ -13,6 +13,10 @@ redirect_from:
   - /egypt-backwards-in-time/
 ---
 
+![An old-style map of Egypt marking the places in this post along the Nile](/assets/images/egypt-2023/egypt-map.jpg)
+*Egypt, drawn for this post in the style of an old map. The places I visited run along the Nile from Abu Simbel to Rosetta; ancient names are in italics.*
+{: .caption}
+
 On a wall at Philae, near Aswan, there is a short inscription carved in AD 394. It is the last dated text anyone wrote in Egyptian hieroglyphs. No later one has been found, and the script that had recorded some 3,500 years of kings went silent. I stood in front of it in November 2023, and only later realized that the week had covered nearly the whole arc of that civilization, from its first stone building to its last word. So I have written it up in the order of Egypt's history rather than the order of my route.
 
 ## The Periods, and Where I Saw Them
@@ -230,6 +234,12 @@ Edfu, dedicated to Horus, is often called the best-preserved temple in Egypt. Gr
 
 ![Johnew with two local men among the carved columns of Edfu's hypostyle hall](/assets/images/egypt-2023/edfu-hypostyle.jpg)
 *My best impression of an archaeologist, among the columns at Edfu.*
+{: .caption}
+
+High on one wall, under a winged sun disk, the emblem of Horus of Behdet, Edfu's own form of the god, a band of text includes an elephant. The elephant is a hieroglyph, read *abu*. It was the Egyptian word for elephant and also the name of Elephantine, the island at Aswan that marked Egypt's southern border and traded in ivory from farther south; the Greek name Elephantine simply translates it. So the sign here most likely names a place rather than an animal. The Ptolemies who built Edfu knew real elephants as well. They sent hunting expeditions down the Red Sea coast to capture African elephants for their army, an answer to the Indian war elephants of their Seleucid rivals in Syria.
+
+![An elephant hieroglyph in a band of text below a winged sun disk at Edfu](/assets/images/egypt-2023/edfu-elephant.jpg)
+*An elephant among the hieroglyphs at Edfu, below the winged sun disk of Horus of Behdet.*
 {: .caption}
 
 ## Roman Egypt: Where the Writing Ended
