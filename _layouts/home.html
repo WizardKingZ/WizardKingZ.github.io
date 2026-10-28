@@ -22,16 +22,6 @@ layout: default
     <div class="hero-photo"><img class="portrait" src="{{ site.picture | relative_url }}" alt="{{ site.name }}" width="220" height="220"></div>
   </section>
 
-  <section class="inner" id="latest">
-    <div class="shead">
-      <div><div class="eyebrow">Latest</div><h2>Recent Writing</h2></div>
-      <a class="more" href="{{ '/tags/' | relative_url }}">Browse by tag →</a>
-    </div>
-    {%- for post in visible limit: page.latest_count %}
-      {% include post-row.html post=post show_pillar=true %}
-    {%- endfor %}
-  </section>
-
   <section class="inner">
     <div class="shead"><div><div class="eyebrow">The site</div><h2>What I Write About</h2></div></div>
     <div class="cards">
@@ -46,6 +36,16 @@ layout: default
       </a>
       {%- endif %}{% endfor %}
     </div>
+  </section>
+
+  <section class="inner" id="latest">
+    <div class="shead">
+      <div><div class="eyebrow">Latest</div><h2>Recent Writing</h2></div>
+      <a class="more" href="{{ '/tags/' | relative_url }}">Browse by tag →</a>
+    </div>
+    {%- for post in visible limit: page.latest_count %}
+      {% include post-row.html post=post show_pillar=true %}
+    {%- endfor %}
   </section>
 
   {%- if site.data.standalone.size > 0 or site.github %}
