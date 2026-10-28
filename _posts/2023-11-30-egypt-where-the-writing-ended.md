@@ -221,12 +221,12 @@ The key turned out to be a Ptolemaic decree. The Rosetta Stone, which French sol
 
 ## The Route
 
-| Day | Date | Base | What I did |
+| Day | Date | Where | What I did |
 |---|---|---|---|
-| 1 | Mon 20 Nov | Cairo (Four Seasons Nile Plaza) | Memphis, Saqqara (Djoser), Dahshur (Bent Pyramid), Giza (inside the Great Pyramid) and the Sphinx; lunch at Khufu's; Egyptian Museum with an Egyptologist |
-| 2 | Tue 21 Nov | Aswan (Old Cataract) | Flight to Aswan; High Dam, Philae, Nubian village and tea |
-| 3 | Wed 22 Nov | Aswan (Old Cataract) | Flight to Abu Simbel and back; Nubian Museum; felucca at sunset |
-| 4 | Thu 23 Nov | Luxor (Winter Palace) | Drive north (~3.5 h) via Kom Ombo, Edfu, and Esna |
-| 5 | Fri 24 Nov | Luxor (Winter Palace) | West Bank: Valley of the Kings (Seti I, Tutankhamun), Hatshepsut's temple, Valley of the Queens (Nefertari); afternoon at the hotel |
-| 6 | Sat 25 Nov | Cairo (Four Seasons) | Karnak, Luxor Temple, Luxor Museum; evening flight to Cairo |
+| 1 | Sun 19–Mon 20 Nov | Cairo | Memphis, Saqqara (Djoser), Dahshur (Bent Pyramid), Giza (inside the Great Pyramid) and the Sphinx; lunch at Khufu's; Egyptian Museum with an Egyptologist |
+| 2 | Tue 21 Nov | Aswan | Flight to Aswan; High Dam, Philae, Nubian village and tea |
+| 3 | Wed 22 Nov | Aswan | Flight to Abu Simbel and back; Nubian Museum; felucca at sunset |
+| 4 | Thu 23 Nov | Luxor | Drive north (~3.5 h) via Kom Ombo, Edfu, and Esna |
+| 5 | Fri 24 Nov | Luxor | West Bank: Valley of the Kings (Seti I, Tutankhamun), Hatshepsut's temple, Valley of the Queens (Nefertari); afternoon at the hotel |
+| 6 | Sat 25 Nov | Cairo | Karnak, Luxor Temple, Luxor Museum; evening flight to Cairo |
 | 7 | Sun 26 Nov | — | Flight home from Cairo |
