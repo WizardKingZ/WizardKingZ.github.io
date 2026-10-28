@@ -68,9 +68,9 @@ pillars:
     series: [travel, food, history, books]
   - id: sports
     name: Sports
-    title: Teams, Capital, and Culture
-    blurb: How teams are owned and financed, what makes great teams work, and the games I play.
-    series: [leadership, celtics, tennis, analytics]
+    title: The Game and Its Lessons
+    blurb: "Writing about sports: the game itself, its philosophy, and what I take from it."
+    series: [celtics, tennis, analytics]
 
 series_names:
   research: Research
@@ -83,7 +83,6 @@ series_names:
   food: Food
   history: History
   books: Books
-  leadership: Leadership
   celtics: Celtics
   tennis: Tennis
   analytics: Analytics

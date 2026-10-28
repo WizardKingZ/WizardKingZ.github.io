@@ -16,6 +16,7 @@ layout: default
     {%- for s in p.series %}{% assign c = posts | where: "series", s | size %}{% if c > 0 %}<span><b>{{ c }}</b> {{ site.series_names[s] | downcase }}</span>{% endif %}{% endfor %}
     {%- for a in apps %}<span><b>1</b> {{ a.title }}</span>{% endfor %}
   </p>
+  {%- if page.motto %}{% include {{ page.motto }} %}{% endif %}
   {%- if posts.size > 0 %}
   <nav class="chips" aria-label="Jump to group">
     {%- if apps.size > 0 %}<a class="chip" href="#pages">Pages <b>{{ apps.size }}</b></a>{% endif %}
