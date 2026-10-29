@@ -141,14 +141,14 @@ That afternoon I was looking down on the Shibuya crossing, where up to about 3,0
 *The Shibuya crossing, mid-scramble.*
 {: .caption}
 
-Akihabara's arcades and Shinjuku's alleys were Tokyo at its most playful. Kabukichō, under its red neon arch, is named for a kabuki theater planned there after the war that was never built. Taiyaki, the fish-shaped cake filled with sweet bean paste that I ate on the street nearby, is another Meiji-era invention. At night the city glows without trying to impress, and there is comfort in that.
+Akihabara's arcades and Shinjuku's alleys were Tokyo at its most playful. Kabukichō, under its red neon arch, is named for a kabuki theater planned there after the war that was never built. Taiyaki, the fish-shaped cake filled with sweet bean paste that I ate on the street nearby, is said to date from 1909, late in the Meiji era. At night the city glows without trying to impress, and there is comfort in that.
 
 <div class="pair">
   <figure><img src="/assets/images/japan-2025/kabukicho.jpg" alt="The red neon arch at the entrance to Kabukichō at night" loading="lazy"><figcaption>Kabukichō, Shinjuku.</figcaption></figure>
   <figure><img src="/assets/images/japan-2025/taiyaki.jpg" alt="A fish-shaped taiyaki filled with sweet bean paste, held over a busy street" loading="lazy"><figcaption>Taiyaki in Shinjuku.</figcaption></figure>
 </div>
 
-The Japan I visited was also in the middle of a change that I follow for work. Sanae Takaichi had become its first woman prime minister a few months earlier. A record 42.7 million foreign visitors came in 2025, and on some streets it felt like it. After decades of near-zero interest rates, the Bank of Japan has been raising rates and shrinking its holdings of government bonds, which it had bought until it owned about half the market. Japan's government debt is close to 200 percent of GDP, and the country is the largest foreign holder of US Treasuries, so what happens to yields in Tokyo travels. I track all of this in the Japan section of my [Macro Monitor](/macro-monitor/). Standing in Shibuya, it was a useful reminder that the charts are about a place.
+The Japan I visited was also in the middle of a change that I follow for work. Sanae Takaichi had become its first woman prime minister two months earlier. A record 42.7 million foreign visitors came in 2025, and on some streets it felt like it. After decades of near-zero interest rates, the Bank of Japan has been raising rates and shrinking its holdings of government bonds, which it had bought until it owned about half the market. Japan's government debt is close to 200 percent of GDP, and the country is the largest foreign holder of US Treasuries, so what happens to yields in Tokyo travels. I track all of this in the Japan section of my [Macro Monitor](/macro-monitor/). Standing in Shibuya, it was a useful reminder that the charts are about a place.
 
 ### Mt Fuji and Hakone
 
@@ -166,9 +166,9 @@ Climbing Fuji was historically a pilgrimage rather than a sport. In the Edo peri
 *Fuji, mostly in its own weather.*
 {: .caption}
 
-It is also the most painted mountain in Japan, and the story of how it came to be painted is the story of Japanese painting in brief. Court painters of the Heian period developed *yamato-e*, a native style of bright color and gentle landscapes. Zen monks brought ink painting from China, and the monk Sesshū made it Japanese in the 15th century. The Kanō school painted gold-leaf folding screens for warlords and shoguns. Then, in Edo, woodblock prints, *ukiyo-e*, "pictures of the floating world," put art within reach of merchants and townspeople; printers even used techniques such as *mokume-zuri*, printing the grain of the wood itself for texture. In the Meiji era, the word *nihonga* was coined for painting in these traditions, to tell it apart from the Western-style painting arriving at the same time.
+It is also perhaps the most painted mountain in Japan, and the story of how it came to be painted is the story of Japanese painting in brief. Court painters of the Heian period developed *yamato-e*, a native style of bright color and gentle landscapes. Zen monks brought ink painting from China, and the monk Sesshū made it Japanese in the 15th century. The Kanō school painted gold-leaf folding screens for warlords and shoguns. Then, in Edo, woodblock prints, *ukiyo-e*, "pictures of the floating world," put art within reach of merchants and townspeople; printers even used techniques such as *mokume-zuri*, printing the grain of the wood itself for texture. In the Meiji era, the word *nihonga* was coined for painting in these traditions, to tell it apart from the Western-style painting arriving at the same time.
 
-Katsushika Hokusai's *Under the Wave off Kanagawa*, from his series *Thirty-Six Views of Mount Fuji*, printed around 1830 to 1832, is the best-known Japanese image in the world. A wave the size of a cliff curls over three fishing boats, and Fuji sits small and calm in the distance, the one thing in the picture that will still be there afterward. Hokusai printed it with Prussian blue, a pigment newly imported from Europe, and the print later traveled back the other way: Debussy put it on the cover of the score of *La Mer* in 1905. Public-domain impressions are in the [Metropolitan Museum of Art](https://www.metmuseum.org/art/collection/search/56353) and the [Art Institute of Chicago](https://www.artic.edu/artworks/24645).
+Katsushika Hokusai's *Under the Wave off Kanagawa*, from his series *Thirty-Six Views of Mount Fuji*, printed around 1830 to 1832, is often called the best-known Japanese image in the world. A wave the size of a cliff curls over three fishing boats, and Fuji sits small and calm in the distance, the one thing in the picture that will still be there afterward. Hokusai printed it with Prussian blue, a pigment newly imported from Europe, and the print later traveled back the other way: Debussy put it on the cover of the score of *La Mer* in 1905. Public-domain impressions are in the [Metropolitan Museum of Art](https://www.metmuseum.org/art/collection/search/56353) and the [Art Institute of Chicago](https://www.artic.edu/artworks/24645).
 
 In the afternoon I crossed into Hakone, the volcanic hot-spring district where the old Tōkaidō climbed over the mountains and the shogunate kept a checkpoint. Steam still vents from the hillsides, and a cable car hauls visitors up slopes the old travelers walked. I came back to Tokyo tired, but steadier.
 
@@ -210,7 +210,7 @@ What stayed with me was how quiet the city actually is, how normal it feels to b
 Wed 24–Fri 26 Dec · Kyoto, Nara, Arashiyama · Days 6–8
 {: .dayline}
 
-On the morning I left Tokyo, I ate oysters at the Tsukiji outer market, which stayed when the wholesale fish market moved to Toyosu in 2018. Then I took the Shinkansen down the corridor the Tōkaidō once followed. The line opened in 1964, the world's first high-speed railway, and covers in a little over two hours a road that took travelers on foot about two weeks.
+On the morning I left Tokyo, I ate oysters at the Tsukiji outer market, which stayed when the wholesale fish market moved to Toyosu in 2018. Then I took the Shinkansen down the corridor the Tōkaidō once followed. The line opened in 1964 as the world's first high-speed railway, and covers in a little over two hours a road that took travelers on foot about two weeks.
 
 ![A large raw oyster held up at a stall in the Tsukiji outer market](/assets/images/japan-2025/tsukiji-oyster.jpg)
 *Breakfast at Tsukiji.*
