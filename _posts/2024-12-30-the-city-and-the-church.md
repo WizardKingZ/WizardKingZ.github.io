@@ -32,7 +32,7 @@ Historians usually divide the history of this coast by who ruled it: Bronze Age 
 | Roman | 133 BC–AD 330 | Ephesus, the Agora of Smyrna, Hierapolis, Laodicea |
 | Eastern Roman (Byzantine) | 330–1453 | Hagia Sophia, Hagia Irene, the Basilica Cistern, the land walls, Chora, the Basilica of St John, Galata Tower |
 | Ottoman | 1453–1922 | Topkapı, Süleymaniye, the Blue Mosque, the bazaars, Dolmabahçe, Pera, Çanakkale, Ayvalık, İzmir |
-| Republic | 1923– | İstiklal Avenue, and Hagia Sophia again |
+| Republic | 1923– | İstiklal Avenue and Hagia Sophia |
 
 ## Two Seas and Two Continents
 
@@ -44,7 +44,7 @@ Istanbul sits where Europe and Asia almost touch. The Bosphorus, a strait about 
 
 The city has had three names, and they are a short history in themselves. Greek settlers called it Byzantion. Constantine refounded it as Constantinople, "the city of Constantine." Istanbul most likely comes from the Greek *eis tin polin*, "to the city," which is what people said when they were heading there.
 
-The people we call Byzantines never used the word. A German scholar, Hieronymus Wolf, introduced "Byzantine" in 1557, and it caught on later. They called themselves Romans, *Rhomaioi*, and their state Romania. The Ottomans took them at their word: they called the empire's Greek-speaking Christians Rum, "Romans," and after 1453 Mehmed II took the title Kayser-i Rum, "Caesar of Rome."
+The people we call Byzantines never used the word. A German scholar, Hieronymus Wolf, introduced "Byzantine" in 1557, and it caught on later. The people themselves were Romans, *Rhomaioi*, and their state Romania. The Ottomans took them at their word: they called the empire's Greek-speaking Christians Rum, "Romans," and after 1453 Mehmed II took the title Kayser-i Rum, "Caesar of Rome."
 
 ## Bronze Age: Troy
 
@@ -53,7 +53,7 @@ c. 3000–1180 BC · Troy, Çanakkale · Day 5
 
 I drove south from Istanbul on Christmas Day to the Dardanelles. Troy sits on a low mound called Hisarlık, a few kilometers from the strait it once watched. It is less a single city than about nine of them stacked on top of each other, from around 3000 BC into the Roman period. Heinrich Schliemann began excavating in 1871, convinced he would find Homer's city, and in his hurry he dug a trench straight through several of the layers he was looking for. The layers usually linked to the Trojan War, Troy VI and VIIa, date to around 1300–1180 BC. The gold he called "Priam's Treasure" is in fact about a thousand years older, and most of it is now in the Pushkin Museum in Moscow.
 
-The site is modest to look at: low walls, wells, and ramps, seen from wooden boardwalks, with the Troy Museum, opened nearby in 2018, doing much of the work of explaining them. On a wet Christmas Day I had it nearly to myself, apart from a local dog that walked the boardwalks with me.
+The site is modest to look at: low walls, wells, and ramps, seen from wooden boardwalks, with the Troy Museum, opened nearby in 2018, doing much of the work of explaining them. In the rain I had it nearly to myself, apart from a local dog that walked the boardwalks with me.
 
 ![Walls of Troy below a grey sky, with wooden boardwalks around them](/assets/images/turkey-2024/troy-walls.jpg)
 *The walls of Troy, with the visitor boardwalks around them.*
@@ -76,22 +76,22 @@ The Hellespont itself carries the next layer of myth. The Greeks named it for He
 c. 1050–334 BC · Kadıköy, Teos, Ephesus · Days 2–4 and 7
 {: .dayline}
 
-From around 1050 BC, Greek settlers spread along the Aegean coast of Anatolia. The central stretch, around Smyrna and Ephesus, became Ionia, and in the 6th century BC it was the most advanced part of the Greek world: Thales and the first Greek philosophers came from Miletus, a little south of Ephesus. The Ionian cities then sent colonists of their own. Teos, a small city on the coast west of İzmir, was the birthplace of the poet Anacreon and founded colonies as far away as Thrace and the Black Sea. Its Temple of Dionysus was designed by Hermogenes, one of the leading architects of the 2nd century BC, and part of it has been re-erected.
+From around 1050 BC, Greek settlers spread along the Aegean coast of Anatolia. The central stretch, around Smyrna and Ephesus, became Ionia, and in the 6th century BC it was among the most advanced parts of the Greek world: Thales and the first Greek philosophers came from Miletus, a little south of Ephesus. The Ionian cities then sent colonists of their own. Teos, a small city on the coast southwest of İzmir, was the birthplace of the poet Anacreon and founded colonies as far away as Thrace and the Black Sea. Its Temple of Dionysus was designed by Hermogenes, one of the leading architects of the 2nd century BC, and part of it has been re-erected.
 
 At Ephesus, the Temple of Artemis was counted among the Seven Wonders of the World. A man named Herostratus burned it in 356 BC to make himself famous, by tradition on the night Alexander the Great was born. Today a single column, reassembled from fragments, stands in a marshy field outside Selçuk.
 
-Byzantion began the same way. Greek colonists from Megara founded it around 667 or 657 BC on the European side of the Bosphorus. Settlers from the same city had founded Chalcedon, on the Asian shore opposite, about 17 years earlier. Herodotus says a Persian general later called the Chalcedonians blind for choosing the worse site when the better one was in plain view across the water. Chalcedon is now Kadıköy, a ferry ride from the old city, and the view from its waterfront makes the general's point.
+Byzantion was another Greek colony. Settlers from Megara, near Athens, founded it around 667 or 657 BC on the European side of the Bosphorus. Settlers from the same city had founded Chalcedon, on the Asian shore opposite, about 17 years earlier. Herodotus says a Persian general later called the Chalcedonians blind for choosing the worse site when the better one was in plain view across the water. Chalcedon is now Kadıköy, a ferry ride from the old city, and the view from its waterfront makes the general's point.
 
 ## Hellenistic: Alexander's Successors
 
 334–133 BC · Alexandria Troas, İzmir, Pamukkale · Days 5, 6, and 8
 {: .dayline}
 
-Alexander crossed the Hellespont into Asia in 334 BC, and he stopped first at Troy, where he honored the tomb of Achilles. Within a decade he had conquered the Persian Empire, and after his death his generals divided it. On this coast, one of them, Antigonus, founded a port city south of Troy around 306 BC and named it Antigonia; a rival, Lysimachus, took it and renamed it Alexandria Troas. Its ruins lie near the sea, a short drive south of Troy.
+Alexander crossed the Hellespont into Asia in 334 BC, and he stopped first at Troy, where he honored the tomb of Achilles. Within a decade he had conquered the Persian Empire, and after his death his generals divided it. On this coast, one of them, Antigonus, founded a port city south of Troy around 306 BC and named it Antigonia; a rival, Lysimachus, took it and renamed it Alexandria Troas. Its ruins lie near the sea, a short drive from Troy.
 
 Smyrna, modern İzmir, was refounded in the same years on the slopes of Mount Pagos, now Kadifekale. Pausanias tells the story that Alexander fell asleep there while hunting and dreamed that the goddesses called the Nemeses told him to build a city on the spot. The hill still looks out over the whole bay.
 
-Inland, the hot springs above the Lycus valley became Hierapolis, the "holy city," founded in the Hellenistic period; sources differ on whether the Seleucid or the Pergamene kings founded it.
+Inland, the hot springs above the Lycus valley became Hierapolis, the "holy city." It was founded in the Hellenistic period, by either the Seleucid or the Pergamene kings; the sources differ.
 
 ## Roman Asia: A Province of Cities
 
@@ -100,7 +100,9 @@ Inland, the hot springs above the Lycus valley became Hierapolis, the "holy city
 
 In 133 BC, the last king of Pergamon left his kingdom to Rome in his will, and it became the province of Asia, with Ephesus as its leading city. For the next four centuries it was among the wealthiest parts of the empire.
 
-Ephesus is the reason most visitors come to this coast, and it is the best place to see what a Roman city looked like. Its main street runs downhill, paved in marble, to the Library of Celsus. Gaius Julius Aquila built it in the early 2nd century AD in honor of his father, Tiberius Julius Celsus Polemaeanus, a governor of the province, who is buried in a crypt beneath it. It held about 12,000 scrolls. The two-story façade fell in an earthquake and was re-erected in the 1970s from the original pieces. Its niches hold statues of four qualities credited to Celsus: Sophia, Arete, Ennoia, and Episteme, or Wisdom, Virtue, Intelligence, and Knowledge. The ones there now are copies; the originals went to Vienna after they were excavated. The city's theater seated about 25,000 people, and it is where, according to the Acts of the Apostles, a crowd of silversmiths drowned out the apostle Paul by shouting "Great is Artemis of the Ephesians" for two hours. Ephesus was a port; silt from the river has since pushed the sea several kilometers away, which is part of why the city declined.
+Ephesus is the reason most visitors come to this coast, and it is one of the best places anywhere to see what a Roman city looked like. Its main street runs downhill, paved in marble, to the Library of Celsus. Gaius Julius Aquila built it in the early 2nd century AD in honor of his father, Tiberius Julius Celsus Polemaeanus, a governor of the province, who is buried in a crypt beneath it. It held about 12,000 scrolls. The two-story façade fell in an earthquake and was re-erected in the 1970s from the original pieces. Its niches hold statues of four qualities credited to Celsus: Sophia, Arete, Ennoia, and Episteme, or Wisdom, Virtue, Intelligence, and Knowledge. The ones there now are copies; the originals went to Vienna after they were excavated.
+
+The city's theater seated about 25,000 people, and it is where, according to the Acts of the Apostles, a crowd of silversmiths drowned out the apostle Paul by shouting "Great is Artemis of the Ephesians" for two hours. Ephesus was a port; silt from the river has since pushed the sea several kilometers away, which is part of why the city declined.
 
 ![The two-story façade of the Library of Celsus at Ephesus, with statues in its niches](/assets/images/turkey-2024/celsus-facade.jpg)
 *The Library of Celsus, with copies of its statues in the niches.*
@@ -138,7 +140,7 @@ Hierapolis grew into a spa town under Rome. Its springs deposit calcium carbonat
 *The Roman theater at Hierapolis, on the hillside above the city.*
 {: .caption}
 
-Hierapolis also produced the best-known Stoic of the Roman era. Epictetus was born here around AD 50, was taken to Rome as a slave, and after he was freed taught philosophy in Greece. His student Arrian, the historian whose account of Alexander includes the visit to Achilles' tomb, wrote down his lectures. The Stoics held that virtue is a kind of knowledge, the same idea carved into the façade of the Library of Celsus, and they named four virtues:
+Hierapolis also produced one of the best-known Stoics of the Roman era. Epictetus was born here around AD 50, was taken to Rome as a slave, and after he was freed taught philosophy in Greece. His student Arrian, the historian whose account of Alexander includes the visit to Achilles' tomb, wrote down his lectures. The Stoics held that virtue is a kind of knowledge, the same idea carved into the façade of the Library of Celsus, and they named four virtues:
 
 - **Wisdom:** knowing what is good and what is bad.
 - **Courage:** knowing what is to be feared and what is not.
@@ -168,7 +170,7 @@ The church Constantine's successors built on this site burned twice. The second 
 *Hagia Sophia from the square. The buttresses and minarets were added over the centuries that followed.*
 {: .caption}
 
-Foreign visitors now see the interior from the upper gallery, which is where I stood. From there the scale is easier to take in than from the floor. The great green roundels hanging from the piers are Ottoman, painted in the 1840s by the calligrapher Kazasker Mustafa İzzet Efendi, with the names of God, the Prophet Muhammad, the first four caliphs, and Muhammad's grandsons Hasan and Husayn.
+Foreign visitors now see the interior from the upper gallery, which is where I stood. The great green roundels hanging from the piers are Ottoman, painted in the 1840s by the calligrapher Kazasker Mustafa İzzet Efendi, with the names of God, the Prophet Muhammad, the first four caliphs, and Muhammad's grandsons Hasan and Husayn.
 
 ![The interior of Hagia Sophia from the upper gallery, with two calligraphic roundels](/assets/images/turkey-2024/hagia-sophia-gallery.jpg)
 *From the gallery: the roundels for the caliph Uthman, left, and Hasan, center.*
@@ -231,7 +233,7 @@ In the second court, the Imperial Council met in a domed hall under the Tower of
 *Cypresses in the palace grounds.*
 {: .caption}
 
-From the terraces at the far end, the view explains why every ruler of the city wanted this spot. On one side, the Bosphorus opens toward the Black Sea, with the Byzantine sea walls still running along the shore below. On the other, the Golden Horn and Galata Tower.
+From the terraces at the far end, the view explains why every ruler of the city wanted this spot. On one side, the Bosphorus opens toward the Black Sea, with the Byzantine sea walls still running along the shore below. On the other lie the Golden Horn and Galata Tower.
 
 ![The Bosphorus from Topkapı, with a stretch of the Byzantine sea walls below](/assets/images/turkey-2024/topkapi-bosphorus.jpg)
 *The Bosphorus from Topkapı. The crenellated wall along the shore is part of the old sea walls.*
@@ -247,7 +249,7 @@ From the terraces at the far end, the view explains why every ruler of the city 
 
 ### Mosques and Bazaars
 
-The Ottomans answered Hagia Sophia rather than replaced it. Mimar Sinan, the empire's great architect, built the Süleymaniye for Süleyman the Magnificent between 1550 and 1557 on the city's third hill, and Sultan Ahmed I built the Blue Mosque, with its six minarets, directly facing Hagia Sophia between 1609 and 1616.
+The Ottomans answered Hagia Sophia rather than replacing it. Mimar Sinan, the empire's great architect, built the Süleymaniye for Süleyman the Magnificent between 1550 and 1557 on the city's third hill, and Sultan Ahmed I built the Blue Mosque, with its six minarets, directly facing Hagia Sophia between 1609 and 1616.
 
 ![The Blue Mosque behind palm trees in Sultanahmet Square, with scaffolding on one minaret](/assets/images/turkey-2024/blue-mosque.jpg)
 *The Blue Mosque from Sultanahmet Square, with one minaret under repair.*
@@ -255,7 +257,7 @@ The Ottomans answered Hagia Sophia rather than replaced it. Mimar Sinan, the emp
 
 Down by the water, the Spice Bazaar was finished in the 1660s as part of the New Mosque complex and is still called the Mısır Çarşısı, the "Egyptian Bazaar," because revenues from the Ottoman province of Egypt paid for it.
 
-The fishermen on the Galata Bridge are a more recent tradition, though not by much: the first bridge here opened in 1845, and the current one in 1994. They line both rails in all weather, and the grilled-fish sandwiches sold at the foot of the bridge are the other half of the scene.
+The fishermen on the Galata Bridge are a newer tradition: the first bridge here opened in 1845, and the current one in 1994. They line both rails in all weather, and the grilled-fish sandwiches sold at the foot of the bridge are the other half of the scene.
 
 ![Fishermen with rods on the Galata Bridge, with the Bosphorus behind](/assets/images/turkey-2024/galata-bridge-fishermen.jpg)
 *Fishermen on the Galata Bridge, looking toward the Bosphorus.*
@@ -277,7 +279,7 @@ In the 19th century, the European quarter across the Golden Horn, Pera, became t
 *İstiklal Avenue, once the Grande Rue de Péra.*
 {: .caption}
 
-I was there three days before Christmas, and St. Anthony of Padua, the largest Catholic church in the city, was decorated for it. It was built between 1906 and 1912 in Venetian neo-Gothic, and in the 1930s and 1940s the Vatican's envoy to Turkey, Angelo Roncalli, preached here; he later became Pope John XXIII.
+I walked İstiklal three days before Christmas, and St. Anthony of Padua, the largest Catholic church in the city, was decorated for it. It was built between 1906 and 1912 in Venetian neo-Gothic, and in the 1930s and 1940s the Vatican's envoy to Turkey, Angelo Roncalli, preached here; he later became Pope John XXIII.
 
 ![The vaulted, lit interior of St. Anthony of Padua, decorated for Christmas](/assets/images/turkey-2024/st-anthony.jpg)
 *St. Anthony of Padua on İstiklal, decorated for Christmas.*
@@ -287,7 +289,7 @@ On the Bosphorus shore below, Sultan Abdülmecid I moved the court out of Topkap
 
 ### The End of the Empire
 
-The empire's last decade ran through the places on my route. At the Dardanelles in 1915, the minelayer *Nusret* laid the mines that sank three Allied battleships on 18 March, and the campaign on the Gallipoli peninsula that followed made the name of a young officer, Mustafa Kemal. A replica of *Nusret* sits by the naval museum in Çanakkale. In İzmir, the clock tower on Konak Square was built in 1901 for Sultan Abdülhamid II's jubilee, with a clock given by Kaiser Wilhelm II. Twenty-one years later, in September 1922, at the end of the Greco-Turkish War, Turkish forces entered the city, and a fire destroyed most of its Greek and Armenian quarters. The population exchange between Greece and Turkey followed in 1923, and the Greek world on this coast, nearly 3,000 years old, came to an end.
+The empire's last decade ran through the places on my route. At the Dardanelles in 1915, the minelayer *Nusret* laid the mines that sank three Allied battleships on 18 March, and the campaign on the Gallipoli peninsula that followed made the name of a young officer, Mustafa Kemal, the future Atatürk. A replica of *Nusret* sits by the naval museum in Çanakkale. In İzmir, the clock tower on Konak Square was built in 1901 for Sultan Abdülhamid II's jubilee, with a clock given by Kaiser Wilhelm II. Twenty-one years later, in September 1922, at the end of the Greco-Turkish War, Turkish forces entered the city, and a fire destroyed most of its Greek and Armenian quarters. The population exchange between Greece and Turkey followed in 1923, and the Greek world on this coast, nearly 3,000 years old, came to an end.
 
 On the drive south from Troy, I stopped at Ayvalık, a town that was mostly Greek Orthodox until 1922. Most of its Christians left for Lesbos, just across the water, and Muslims from Lesbos and Crete arrived in their place; some of their descendants still speak Greek at home.
 
@@ -306,7 +308,7 @@ Istanbul's street cats, estimated at well over 100,000, belong to no period and 
 1923– · Istanbul · Days 2–4
 {: .dayline}
 
-The Republic of Turkey was declared in 1923, with its capital in Ankara, and for the first time in 1,600 years Istanbul was not the seat of an empire. Hagia Sophia has changed status with the country. It was a church for more than 900 years and a mosque for nearly 500. A cabinet decree in 1934 made it a museum, and in July 2020 it became a mosque again. Its Christian mosaics are still there, and the vestibule mosaic is still above its door.
+The Republic of Turkey was declared in 1923, with its capital in Ankara, and for the first time in 1,600 years Istanbul was not the seat of an empire. Hagia Sophia has changed status with the country. It was a church for more than 900 years and a mosque for nearly 500. A cabinet decree in 1934 made it a museum, and in July 2020 it became a mosque again. Its Christian mosaics remain, and the vestibule mosaic is still above its door.
 
 The city and the church have changed hands, names, and faiths since the 10th century, but in that mosaic Constantine and Justinian are still holding them out.
 
