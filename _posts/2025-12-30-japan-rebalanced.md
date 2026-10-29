@@ -14,7 +14,7 @@ image: /assets/images/japan-2025/yasaka-pagoda.jpg
 *Central Japan, drawn for this post in the style of an old map. The dashed line follows the Tōkaidō Shinkansen; old names and provinces are in italics.*
 {: .caption}
 
-This trip was not an escape. I arrived in Japan in December 2025 with more open questions than answers, and with a plan that was really a hypothesis: that a country where solitude is not loneliness, where restraint is a form of strength, and where beauty often lives in what is left unsaid might be a good place to reset my orientation. I did not need answers. I wanted clarity of mind, steadiness of body, and a little quiet.
+This trip was not an escape. It was about resetting my orientation. I arrived in Japan in December 2025 with more open questions than answers, but I was no longer panicking about that uncertainty; I was learning to stand inside it. My planning notes called the trip Project Samurai, for the discipline more than the swords, and the plan was really a hypothesis: that a country where solitude is not loneliness, where restraint is a form of strength, and where beauty often lives in what is left unsaid might be the right place for that. I did not need answers. I wanted clarity of mind, steadiness of body, and a little quiet.
 
 The route followed the Tōkaidō, the old "Eastern Sea Road" between the shogun's city of Edo and the emperor's city of Kyoto, and on to the merchants' city of Osaka. Each turned out to have something to teach: Tokyo independence, Kyoto restraint, and Osaka ease. Along the way, the trip also ran backward through Japanese history, from the Tokyo of today to Edo, the courts of Kyoto and Nara, and the wars that decided who would rule. So I have written it up by city, with the history and the food folded in where I met them.
 
@@ -50,7 +50,7 @@ Fri 19–Tue 23 Dec · Tokyo, Mt Fuji, Hakone · Days 1–5
 *Tokyo, drawn for this post in the style of an old map, with the places I visited. The bay shore is approximate.*
 {: .caption}
 
-The city did not wait for me. It moved immediately, trains, people, and lights, all with precision. I was anonymous, and that felt good. On my first night I ate at Ichiran, a tonkotsu ramen chain from Fukuoka where each diner sits in a booth with partitions on either side, which may be the most Tokyo way possible to eat alone without explanation. (At home, my own attempt is a [double-soup shoyu ramen](/kitchen/#r-double-soup-shoyu-ramen), topped with [ajitama](/kitchen/#r-adam-liaws-ajitama-ramen-eggs).)
+Tokyo was where I landed back into the world. The city did not wait for me. It moved immediately, trains, people, and lights, all with precision. I was anonymous, and that felt good: no one was watching, and no one expected anything. I walked without a destination, and the city absorbed me. On my first night I ate at Ichiran, a tonkotsu ramen chain from Fukuoka where each diner sits in a booth with partitions on either side, which may be the most Tokyo way possible to eat alone without explanation. (At home, my own attempt is a [double-soup shoyu ramen](/kitchen/#r-double-soup-shoyu-ramen), topped with [ajitama](/kitchen/#r-adam-liaws-ajitama-ramen-eggs).)
 
 ### Edo
 
@@ -150,7 +150,7 @@ From the roof of Shibuya Sky, about 230 meters up, the day's route lay in a sing
 *The Shibuya crossing, mid-scramble.*
 {: .caption}
 
-Tokyo is less one city than a set of them. Shibuya is youth, fashion, and energy; Shinjuku is offices, the metropolitan government, and nightlife. Shinjuku's narrow alleys, and the tiny bars of Golden Gai, were Tokyo at its most playful. Kabukichō, under its red neon arch, is named for a kabuki theater planned there after the war that was never built. Taiyaki, the fish-shaped cake filled with sweet bean paste that I ate on the street nearby, is said to date from 1909, late in the Meiji era. At night the city glows without trying to impress, and there is comfort in that.
+Tokyo is less one city than a set of them. Shibuya is youth, fashion, and energy; Shinjuku is offices, the metropolitan government, and nightlife. Shinjuku's narrow alleys, and the tiny bars of Golden Gai, were Tokyo at its most playful and slightly absurd. I watched people more than I took part, and that was enough; it was enough to be present. Kabukichō, under its red neon arch, is named for a kabuki theater planned there after the war that was never built. Taiyaki, the fish-shaped cake filled with sweet bean paste that I ate on the street nearby, is said to date from 1909, late in the Meiji era. At night the city glows without trying to impress, and there is comfort in that.
 
 <div class="pair">
   <figure><img src="/assets/images/japan-2025/kabukicho.jpg" alt="The red neon arch at the entrance to Kabukichō at night" loading="lazy"><figcaption>Kabukichō, Shinjuku.</figcaption></figure>
@@ -233,7 +233,7 @@ I took the Shinkansen down the corridor the Tōkaidō once followed. The line op
 
 ### Kyoto: The Emperor's City
 
-The court moved to Heian-kyō, modern Kyoto, in 794, and the emperors stayed for more than a thousand years, until 1869. Kyoto arrived softly. It does not announce itself; it reveals itself slowly, in wooden buildings, narrower streets, and warmer light.
+The court moved to Heian-kyō, modern Kyoto, in 794, and the emperors stayed for more than a thousand years, until 1869. Kyoto arrived softly. It does not announce itself; it reveals itself slowly, in wooden buildings, narrower streets, and warmer light. It is not a city for distraction.
 
 At dusk I walked through Gion, past Yasaka Shrine and down Hanamikoji, and along the Shirakawa canal. Time stretched. Nothing was rushed, and even my thoughts slowed down. The light caught the five-story pagoda of Hōkan-ji, the "Yasaka pagoda," above the tiled roofs.
 
@@ -352,7 +352,7 @@ Osaka did not ask me to reflect. It asked me to enjoy. Walking through Dōtonbor
 
 ## Rebalanced
 
-The trip moved in an arc. Tokyo taught me independence, Kyoto taught me restraint, and Osaka taught me ease. Underneath all three ran the two ideas I started with: kami in the mountains and the trees, and the Buddhist sense that everything passes, which is why the blossom is loved more than the rock. I did not leave Japan transformed. I left it rebalanced, and that was enough.
+Looking back, the trip moved in a deliberate arc. Tokyo taught me independence, Kyoto taught me restraint, and Osaka taught me ease. Underneath all three ran the two ideas I started with: kami in the mountains and the trees, and the Buddhist sense that everything passes, which is why the blossom is loved more than the rock. None of the questions I arrived with were answered, and that turned out to be fine; I had come to learn to stand inside them, and the samurai virtue I came home with was the quiet one, restraint as a form of strength. I did not leave Japan transformed. I left it rebalanced, and that was enough.
 
 ## Getting Around
 
