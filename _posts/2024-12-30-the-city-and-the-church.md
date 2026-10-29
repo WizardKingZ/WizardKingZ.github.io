@@ -53,7 +53,19 @@ c. 3000–1180 BC · Troy, Çanakkale · Day 5
 
 I drove south from Istanbul on Christmas Day to the Dardanelles. Troy sits on a low mound called Hisarlık, a few kilometers from the strait it once watched. It is less a single city than about nine of them stacked on top of each other, from around 3000 BC into the Roman period. Heinrich Schliemann began excavating in 1871, convinced he would find Homer's city, and in his hurry he dug a trench straight through several of the layers he was looking for. The layers usually linked to the Trojan War, Troy VI and VIIa, date to around 1300–1180 BC. The gold he called "Priam's Treasure" is in fact about a thousand years older, and most of it is now in the Pushkin Museum in Moscow.
 
-The site is modest to look at, and the Troy Museum, opened nearby in 2018, does much of the work of explaining it.
+The site is modest to look at: low walls, wells, and ramps, seen from wooden boardwalks, with the Troy Museum, opened nearby in 2018, doing much of the work of explaining them. On a wet Christmas Day I had it nearly to myself, apart from a local dog that walked the boardwalks with me.
+
+![Walls of Troy below a grey sky, with wooden boardwalks around them](/assets/images/turkey-2024/troy-walls.jpg)
+*The walls of Troy, with the visitor boardwalks around them.*
+{: .caption}
+
+![Stone wells and altars among older walls at Troy](/assets/images/turkey-2024/troy-sanctuary.jpg)
+*Wells and altars from later Troy, built among the walls of earlier cities.*
+{: .caption}
+
+![Johnew walking along a wet boardwalk at Troy, with a dog following](/assets/images/turkey-2024/troy-boardwalk.jpg)
+*My guide at Troy, who asked for nothing.*
+{: .caption}
 
 Çanakkale, the town on the strait, has its own wooden horse on the waterfront. It is the prop from the 2004 film *Troy*, which Warner Bros. gave to the city, so the most photographed Trojan horse in Turkey came from Hollywood.
 
