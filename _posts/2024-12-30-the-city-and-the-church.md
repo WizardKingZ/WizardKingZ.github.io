@@ -67,7 +67,7 @@ The site is modest to look at: low walls, wells, and ramps, seen from wooden boa
 *My guide at Troy, who asked for nothing.*
 {: .caption}
 
-Çanakkale, the town on the strait, has its own wooden horse on the waterfront. It is the prop from the 2004 film *Troy*, which Warner Bros. gave to the city, so the most photographed Trojan horse in Turkey came from Hollywood.
+Çanakkale, the town on the strait, has its own wooden horse on the waterfront, a film prop that Warner Bros. gave to the city, so the most photographed Trojan horse in Turkey came from Hollywood. *Update, 2026:* the horse is back on screen in Christopher Nolan's *The Odyssey*, released in July, with Matt Damon's Odysseus waiting inside.
 
 The Hellespont itself carries the next layer of myth. The Greeks named it for Helle, who in legend fell from the golden-fleeced ram into these waters, and Leander was said to swim it nightly to reach Hero on the other side. Lord Byron swam it in 1810 to prove it could be done.
 
