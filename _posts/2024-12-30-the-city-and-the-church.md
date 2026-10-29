@@ -106,6 +106,18 @@ In İzmir, the Roman agora of Smyrna survives in the middle of the modern city. 
 
 Hierapolis grew into a spa town under Rome. Its springs deposit calcium carbonate down the hillside, and over thousands of years they have built the white terraces of Pamukkale, the "cotton castle." Hotels once stood on the terraces; they were torn down after the site became a UNESCO World Heritage Site in 1988, and one hotel's pool, full of fallen Roman columns, survives as the Antique Pool, which local legend says Mark Antony gave to Cleopatra. The city also had a Plutonium, a gate to the underworld, where carbon dioxide seeping from the ground killed the animals that priests led into it.
 
+![Turquoise pools on the white travertine terraces of Pamukkale, with the village and a lake below](/assets/images/turkey-2024/pamukkale-pools.jpg)
+*The travertines of Pamukkale, with the modern village below.*
+{: .caption}
+
+![The white crust of the travertines under a hazy late-afternoon sky](/assets/images/turkey-2024/pamukkale-terraces.jpg)
+*Calcium carbonate, laid down by the springs one thin layer at a time.*
+{: .caption}
+
+![A paved Roman street at Hierapolis under an orange evening sky](/assets/images/turkey-2024/hierapolis-street.jpg)
+*The main street of Hierapolis at dusk.*
+{: .caption}
+
 Hierapolis also produced the best-known Stoic of the Roman era. Epictetus was born here around AD 50, was taken to Rome as a slave, and after he was freed taught philosophy in Greece. His student Arrian, the historian whose account of Alexander includes the visit to Achilles' tomb, wrote down his lectures. The Stoics held that virtue is a kind of knowledge, and they named four virtues:
 
 - **Wisdom:** knowing what is good and what is bad.
@@ -114,6 +126,10 @@ Hierapolis also produced the best-known Stoic of the Roman era. Epictetus was bo
 - **Justice:** knowing what to give others and what not to.
 
 They also named four passions, each resting on a mistaken judgment: fear of an apparent bad to come, desire for an apparent good to come, pleasure in a good we believe we have, and distress at a bad we believe we have. A sage, who holds no false beliefs, feels none of them. He does feel three "good feelings," the *eupatheiai*: wish, the rational pursuit of something; caution, its rational avoidance; and joy, rational elation. Each has gentler forms: goodwill and kindness under wish, modesty and reverence under caution, and delight and cheerfulness under joy. The Plutonium, a short walk away, is a good place to practice caution.
+
+![Johnew in silhouette on the edge of the travertines, facing the setting sun over the valley](/assets/images/turkey-2024/pamukkale-sunset.jpg)
+*Sunset over the Lycus valley from the edge of the travertines.*
+{: .caption}
 
 Across the valley, Laodicea was a rich banking and textile city. It is one of the seven churches of Asia addressed in the Book of Revelation, alongside Ephesus and Smyrna, and it is the one rebuked for being "lukewarm, and neither cold nor hot." A common reading links the line to its water, which arrived by aqueduct neither as hot as the springs at Hierapolis nor as cold as the water at nearby Colossae.
 
