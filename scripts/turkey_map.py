@@ -47,7 +47,7 @@ def label(x, y, t, size=10, style="normal", color=INK, ha="center", sp=0, rot=0,
     ax.text(x, y, t, fontsize=size, style=style, color=color, ha=ha, va="center", rotation=rot, weight=weight, path_effects=halo, zorder=z)
 # Route driven (approximate), dashed
 route = [(28.98, 41.01), (28.2, 41.05), (27.5, 40.98), (26.95, 40.62), (26.68, 40.40), (26.41, 40.15), (26.24, 39.96), (26.16, 39.75),
-         (26.45, 39.6), (26.9, 39.3), (27.05, 38.9), (27.14, 38.42), (27.25, 38.15), (27.34, 37.94), (26.78, 38.18), (27.37, 37.95),
+         (26.45, 39.6), (26.69, 39.32), (26.95, 39.1), (27.05, 38.9), (27.14, 38.42), (27.25, 38.15), (27.34, 37.94), (26.78, 38.18), (27.37, 37.95),
          (28.0, 37.88), (28.6, 37.85), (29.12, 37.92)]
 ax.plot(*zip(*route), color=RED, lw=1.1, ls=(0, (4, 3)), alpha=0.8, zorder=7)
 label(31.0, 40.0, "")
@@ -64,6 +64,7 @@ places = [(28.98, 41.01, "Istanbul", "Byzantion · Constantinople", "l", 0.12),
           (26.41, 40.15, "Çanakkale", "", "r", 0),
           (26.24, 39.96, "Troy", "Ilion", "l", 0),
           (26.16, 39.75, "Alexandria Troas", "", "l", -0.04),
+          (26.69, 39.32, "Ayvalık", "Kydonies", "r", 0),
           (27.14, 38.42, "İzmir", "Smyrna", "r", 0),
           (26.78, 38.18, "Teos", "", "l", 0),
           (27.34, 37.94, "Ephesus · Selçuk", "Ephesos", "r", -0.1),

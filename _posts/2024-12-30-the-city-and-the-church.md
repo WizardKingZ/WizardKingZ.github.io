@@ -31,7 +31,7 @@ Historians usually divide the history of this coast by who ruled it: Bronze Age 
 | Hellenistic | 334–133 BC | Alexandria Troas, Kadifekale in İzmir, Hierapolis |
 | Roman | 133 BC–AD 330 | Ephesus, the Agora of Smyrna, Hierapolis, Laodicea |
 | Eastern Roman (Byzantine) | 330–1453 | Hagia Sophia, Hagia Irene, the Basilica Cistern, the land walls, Chora, the Basilica of St John, Galata Tower |
-| Ottoman | 1453–1922 | Topkapı, Süleymaniye, the Blue Mosque, the bazaars, Dolmabahçe, Pera, Çanakkale, İzmir |
+| Ottoman | 1453–1922 | Topkapı, Süleymaniye, the Blue Mosque, the bazaars, Dolmabahçe, Pera, Çanakkale, Ayvalık, İzmir |
 | Republic | 1923– | İstiklal Avenue, and Hagia Sophia again |
 
 ## Two Seas and Two Continents
@@ -95,7 +95,7 @@ Inland, the hot springs above the Lycus valley became Hierapolis, the "holy city
 
 ## Roman Asia: A Province of Cities
 
-133 BC–AD 330 · Ephesus, İzmir, Hierapolis, Laodicea · Days 6–8
+133 BC–AD 330 · Ephesus, İzmir, Hierapolis, Laodicea · Days 7 and 8
 {: .dayline}
 
 In 133 BC, the last king of Pergamon left his kingdom to Rome in his will, and it became the province of Asia, with Ephesus as its leading city. For the next four centuries it was among the wealthiest parts of the empire.
@@ -115,6 +115,10 @@ Ephesus is the reason most visitors come to this coast, and it is the best place
 {: .caption}
 
 In İzmir, the Roman agora of Smyrna survives in the middle of the modern city. It was rebuilt after an earthquake in AD 178 with help from Marcus Aurelius, and a portrait of his wife, Faustina, is carved on one of its arches.
+
+![Stone arches receding in a row in the vaulted basement of the Agora of Smyrna, with a water channel along the floor](/assets/images/turkey-2024/smyrna-agora-vaults.jpg)
+*The vaulted basement of the Agora of Smyrna, with water still running along its floor.*
+{: .caption}
 
 Hierapolis grew into a spa town under Rome. Its springs deposit calcium carbonate down the hillside, and over thousands of years they have built the white terraces of Pamukkale, the "cotton castle." Hotels once stood on the terraces; they were torn down after the site became a UNESCO World Heritage Site in 1988, and one hotel's pool, full of fallen Roman columns, survives as the Antique Pool, which local legend says Mark Antony gave to Cleopatra. The city also had a Plutonium, a gate to the underworld, where carbon dioxide seeping from the ground killed the animals that priests led into it.
 
@@ -200,7 +204,7 @@ The end came in the spring of 1453. Mehmed II, 21 years old, besieged the city w
 
 ## Ottoman Istanbul: Caesar of Rome
 
-1453–1922 · Istanbul, Çanakkale, İzmir · Days 2–6
+1453–1922 · Istanbul, Çanakkale, Ayvalık, İzmir · Days 2–6
 {: .dayline}
 
 Mehmed made the city his capital and set out to fill it again. He turned Hagia Sophia into a mosque, began the Grand Bazaar, and built a new palace on the point of the old city, where the Byzantine acropolis had stood. He also built the castle at Çanakkale, in 1462, to close the Dardanelles.
@@ -267,6 +271,12 @@ On the Bosphorus shore below, Sultan Abdülmecid I moved the court out of Topkap
 
 The empire's last decade ran through the places on my route. At the Dardanelles in 1915, the minelayer *Nusret* laid the mines that sank three Allied battleships on 18 March, and the campaign on the Gallipoli peninsula that followed made the name of a young officer, Mustafa Kemal. A replica of *Nusret* sits by the naval museum in Çanakkale. In İzmir, the clock tower on Konak Square was built in 1901 for Sultan Abdülhamid II's jubilee, with a clock given by Kaiser Wilhelm II. Twenty-one years later, in September 1922, at the end of the Greco-Turkish War, Turkish forces entered the city, and a fire destroyed most of its Greek and Armenian quarters. The population exchange between Greece and Turkey followed in 1923, and the Greek world on this coast, nearly 3,000 years old, came to an end.
 
+On the drive south from Troy, I stopped at Ayvalık, a town that was mostly Greek Orthodox until 1922. Most of its Christians left for Lesbos, just across the water, and Muslims from Lesbos and Crete arrived in their place; some of their descendants still speak Greek at home.
+
+![A pale blue scooter parked by the sea at Ayvalık, with a sailboat and the far shore behind](/assets/images/turkey-2024/ayvalik-scooter.jpg)
+*Ayvalık, on the Aegean, looking across the bay.*
+{: .caption}
+
 Istanbul's street cats, estimated at well over 100,000, belong to no period and to every one of them.
 
 ![A black-and-white cat asleep on a café chair](/assets/images/turkey-2024/street-cat.jpg)
@@ -289,8 +299,8 @@ The city and the church have changed hands, names, and faiths since the 10th cen
 | 1 | Sat 21 Dec | Istanbul | Arrival |
 | 2–4 | Sun 22–Tue 24 Dec | Istanbul | Galata, Karaköy, and İstiklal; Hagia Sophia, Hagia Irene, Topkapı, the Basilica Cistern, the Blue Mosque, Süleymaniye, Chora, and the land walls; the bazaars; Kadıköy by ferry; Dolmabahçe |
 | 5 | Wed 25 Dec | Çanakkale | Drive to the Dardanelles; the Trojan horse, the naval museum, and Çimenlik Castle; Troy and the Troy Museum; Alexandria Troas |
-| 6 | Thu 26 Dec | İzmir | Drive south; the Clock Tower, Kadifekale, the Agora of Smyrna, the Asansör, and Hisar Mosque |
-| 7 | Fri 27 Dec | Pamukkale | Ephesus, the Temple of Artemis, Teos, and the Basilica of St John; drive inland |
+| 6 | Thu 26 Dec | İzmir | Drive south by way of Ayvalık; the Clock Tower, Kadifekale, the Asansör, and Hisar Mosque |
+| 7 | Fri 27 Dec | Pamukkale | The Agora of Smyrna; Ephesus, the Temple of Artemis, Teos, and the Basilica of St John; drive inland |
 | 8 | Sat 28 Dec | Pamukkale | Laodicea; the travertines, Hierapolis, the Antique Pool, and the theater |
 | 9 | Sun 29 Dec | — | Flight from Denizli |
 
