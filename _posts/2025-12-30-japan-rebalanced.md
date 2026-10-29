@@ -47,7 +47,7 @@ The second idea is the difference between the emperor and the shogun. The imperi
 Fri 19–Tue 23 Dec · Tokyo, Mt Fuji, Hakone · Days 1–5
 {: .dayline}
 
-The city did not wait for me. It moved immediately, trains, people, and lights, all with precision. I was anonymous, and that felt good. On my first night I ate at Ichiran, a tonkotsu ramen chain from Fukuoka where each diner sits in a booth with partitions on either side, which may be the most Tokyo way possible to eat alone without explanation.
+The city did not wait for me. It moved immediately, trains, people, and lights, all with precision. I was anonymous, and that felt good. On my first night I ate at Ichiran, a tonkotsu ramen chain from Fukuoka where each diner sits in a booth with partitions on either side, which may be the most Tokyo way possible to eat alone without explanation. (At home, my own attempt is a [double-soup shoyu ramen](/kitchen/#r-double-soup-shoyu-ramen), topped with [ajitama](/kitchen/#r-adam-liaws-ajitama-ramen-eggs).)
 
 ### Edo
 
@@ -73,7 +73,7 @@ The shogun's roads began a few blocks away. In 1603 Ieyasu had a bridge put acro
 *A post from the 1875 Kyōbashi bridge, the next bridge down the Tōkaidō.*
 {: .caption}
 
-Edo was also where much of what the world now calls Japanese food took shape, as fast food for a crowded city of working men. Nigiri sushi, a slice of fish pressed onto vinegared rice, is credited to a vendor named Hanaya Yohei in the 1820s. Tempura had arrived earlier with Portuguese traders in Nagasaki and became an Edo street snack. Eel grilled in a sweet soy glaze, *kabayaki*, was another. Near Kanda I had it over rice for lunch, with karaage on the side.
+Edo was also where much of what the world now calls Japanese food took shape, as fast food for a crowded city of working men. Nigiri sushi, a slice of fish pressed onto vinegared rice, is credited to a vendor named Hanaya Yohei in the 1820s. Tempura had arrived earlier with Portuguese traders in Nagasaki and became an Edo street snack. Eel grilled in a sweet soy glaze, *kabayaki*, was another. Near Kanda I had it over rice for lunch, with [karaage](/kitchen/#r-chicken-karaage) on the side.
 
 ![A lacquered bowl of grilled eel over rice, with fried chicken, miso soup, and pickles on a tray](/assets/images/japan-2025/kanda-unagi.jpg)
 *Unagi over rice in Kanda, an Edo dish.*
@@ -95,6 +95,8 @@ In 1853 Commodore Perry's American warships anchored in Edo Bay and demanded tha
 
 Meiji Jingu, dedicated in 1920 to that emperor and his empress, is Shinto's answer to the modern city. It lies between Harajuku and Shinjuku, and its forest feels ancient, but it was planted: about 100,000 trees were donated from across Japan and beyond, and they have grown into a 70-hectare wood. The great torii on the approach, about 12 meters tall, is made of Taiwanese cypress more than 1,500 years old, and its crossbeam carries the imperial chrysanthemum. Along the path, sake brewers have stacked barrels as offerings; across from them, so have winemakers from Burgundy, a nod to the emperor's taste for French wine.
 
+Meiji Jingu was the first shrine of the trip, so it is where I learned how to pray at one. Bow once before passing under the torii, and walk to the side of the path, since the center is said to belong to the kami. At the water basin, the *temizuya*, take the ladle in your right hand and rinse your left hand, then your right; pour a little water into your cupped left hand to rinse your mouth, spit it to the side, and rinse the ladle's handle before putting it back. At the hall, drop a coin in the offering box, ring the bell if there is one, then bow twice, clap twice, pray, and bow once more. At a Buddhist temple the gestures are quieter: a bow, a coin, and palms pressed together, with no clapping.
+
 ![The great wooden torii at Meiji Jingu, with the imperial chrysanthemum crest on the crossbeam](/assets/images/japan-2025/meiji-torii.jpg)
 *The Ōtorii at Meiji Jingu.*
 {: .caption}
@@ -111,7 +113,7 @@ Meiji Jingu, dedicated in 1920 to that emperor and his empress, is Shinto's answ
 *The colonnade around the main courtyard.*
 {: .caption}
 
-Meiji changed the menu too. Buddhist teaching had discouraged eating meat for centuries, and in 1872 the emperor ate beef in public to show the country that modern people did. Beef hot pots, the ancestor of sukiyaki, spread through the port cities, and Chinese cooks in Yokohama's Chinatown brought the noodle soup that became ramen; the first dedicated ramen shop opened in Asakusa in 1910.
+Meiji changed the menu too. Buddhist teaching had discouraged eating meat for centuries, and in 1872 the emperor ate beef in public to show the country that modern people did. Beef hot pots, the ancestor of sukiyaki and of the [gyūdon](/kitchen/#r-gyudon-with-onsen-egg) beef bowl, spread through the port cities. Western-style dishes, *yōshoku*, followed, among them [curry rice](/kitchen/#r-japanese-beef-curry) and the breaded pork cutlet that became [tonkatsu](/kitchen/#r-adam-liaws-tonkatsu). Chinese cooks in Yokohama's Chinatown brought the noodle soup that became ramen; the first dedicated ramen shop opened in Asakusa in 1910.
 
 Tokyo Station faces the palace on purpose. Tatsuno Kingo's red-brick building opened in 1914, lost its domes to the air raids of 1945, made do with octagonal roofs for decades, and was restored to its original design in 2012.
 
@@ -260,12 +262,12 @@ At dusk I walked through Gion, past Yasaka Shrine and down Hanamikoji, and along
 {: .caption}
 
 ![A tray of wagyu slices, vegetables in a hot pot, rice, and dipping sauces](/assets/images/japan-2025/kyoto-wagyu.jpg)
-*Wagyu hot pot in Kyoto, a meal that would have been unthinkable before 1872.*
+*Wagyu hot pot in Kyoto, a meal that would have been unthinkable before 1872. At home I keep it simpler, with a [seared wagyu steak](/kitchen/#r-japanese-wagyu-steak).*
 {: .caption}
 
 ### Zen, Tea, and the Kyoto Table
 
-Kyoto is also where Zen became a way of living rather than only a doctrine. The great Zen temples here were patrons of ink painting and garden design, and the tea ceremony grew out of them. Sen no Rikyū, a merchant's son trained in Rinzai Zen, refined it in the 16th century as tea master to Hideyoshi, into the spare, rustic style called *wabi-cha*. The light meal served before tea became *kaiseki*, Japan's formal cuisine, and the temples' vegetarian cooking, *shōjin ryōri*, shaped it too. What reached the ordinary Kyoto table was *obanzai*, home-style dishes served in small portions, many at once.
+Kyoto is also where Zen became a way of living rather than only a doctrine. The great Zen temples here were patrons of ink painting and garden design, and the tea ceremony grew out of them. Sen no Rikyū, a merchant's son trained in Rinzai Zen, refined it in the 16th century as tea master to Hideyoshi, into the spare, rustic style called *wabi-cha*. The light meal served before tea became *kaiseki*, Japan's formal cuisine, and the temples' vegetarian cooking, *shōjin ryōri*, shaped it too. What reached the ordinary Kyoto table was *obanzai*, home-style dishes served in small portions, many at once, nearly all of them built on [dashi](/kitchen/#r-dashi-stock), the kelp-and-bonito stock that is also the base of [miso soup](/kitchen/#r-miso-soup).
 
 On my last morning I went west to Arashiyama, early enough to have the bamboo grove almost to myself; it runs beside Tenryū-ji, one of the city's great Zen temples. Then I rode out along the Hozu River gorge, where a crowd of ceramic tanuki waits on the platform at Hozukyo station. In folklore the tanuki is a shape-shifting trickster; in ceramics it is a round-bellied figure of good luck.
 
@@ -332,6 +334,14 @@ Osaka did not ask me to reflect. It asked me to enjoy. Walking through Dōtonbor
 ## Rebalanced
 
 The trip moved in an arc. Tokyo taught me independence, Kyoto taught me restraint, and Osaka taught me ease. Underneath all three ran the two ideas I started with: kami in the mountains and the trees, and the Buddhist sense that everything passes, which is why the blossom is loved more than the rock. I did not leave Japan transformed. I left it rebalanced, and that was enough.
+
+## Getting Around
+
+Japan is easy to move around once three things are sorted.
+
+- **An IC card.** Suica (JR East) and PASMO in Tokyo, and ICOCA in the Kansai region around Kyoto and Osaka, are rechargeable cards you tap at the ticket gates of trains, subways, and most buses, and at convenience stores and vending machines. The cards largely work across each other's networks, though not for every journey that crosses between regions. Physical cards are on sale again after a chip shortage in 2023 and 2024; visitors can also buy a Welcome Suica at airports and major stations, or add a Suica to an iPhone's Wallet and top it up with a credit card, which is what I did.
+- **Some cash.** Cards are now accepted widely, but small restaurants, temple and shrine offerings, market stalls, and the ticket machines at many ramen shops still want yen in coins and notes. Convenience-store ATMs, 7-Eleven's in particular, generally take foreign cards.
+- **The Shinkansen.** The Nozomi, the fastest service on the Tōkaidō line, runs between Tokyo, Kyoto, and Osaka several times an hour. Reserve a seat on the right side heading west, seat E, for a chance at Mt Fuji between Mishima and Shin-Fuji. Bags larger than 160 cm in total dimensions need a seat reserved with an oversized-baggage area, or there is a ¥1,000 charge. For a single run from Tokyo to Osaka, individual tickets are usually cheaper than the national Japan Rail Pass, whose price rose sharply in 2023; do the arithmetic for your own route.
 
 ## The Route
 
