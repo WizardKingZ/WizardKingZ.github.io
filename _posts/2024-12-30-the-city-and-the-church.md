@@ -100,7 +100,19 @@ Inland, the hot springs above the Lycus valley became Hierapolis, the "holy city
 
 In 133 BC, the last king of Pergamon left his kingdom to Rome in his will, and it became the province of Asia, with Ephesus as its leading city. For the next four centuries it was among the wealthiest parts of the empire.
 
-Ephesus is the reason most visitors come to this coast, and it is the best place to see what a Roman city looked like. Its main street runs downhill, paved in marble, to the Library of Celsus. Gaius Julius Aquila built it in the early 2nd century AD in honor of his father, Tiberius Julius Celsus Polemaeanus, a governor of the province, who is buried in a crypt beneath it. It held about 12,000 scrolls. The two-story façade fell in an earthquake and was re-erected in the 1970s from the original pieces. The city's theater seated about 25,000 people, and it is where, according to the Acts of the Apostles, a crowd of silversmiths drowned out the apostle Paul by shouting "Great is Artemis of the Ephesians" for two hours. Ephesus was a port; silt from the river has since pushed the sea several kilometers away, which is part of why the city declined.
+Ephesus is the reason most visitors come to this coast, and it is the best place to see what a Roman city looked like. Its main street runs downhill, paved in marble, to the Library of Celsus. Gaius Julius Aquila built it in the early 2nd century AD in honor of his father, Tiberius Julius Celsus Polemaeanus, a governor of the province, who is buried in a crypt beneath it. It held about 12,000 scrolls. The two-story façade fell in an earthquake and was re-erected in the 1970s from the original pieces. Its niches hold statues of four qualities credited to Celsus: Sophia, Arete, Ennoia, and Episteme, or Wisdom, Virtue, Intelligence, and Knowledge. The ones there now are copies; the originals went to Vienna after they were excavated. The city's theater seated about 25,000 people, and it is where, according to the Acts of the Apostles, a crowd of silversmiths drowned out the apostle Paul by shouting "Great is Artemis of the Ephesians" for two hours. Ephesus was a port; silt from the river has since pushed the sea several kilometers away, which is part of why the city declined.
+
+![The two-story façade of the Library of Celsus at Ephesus, with statues in its niches](/assets/images/turkey-2024/celsus-facade.jpg)
+*The Library of Celsus, with copies of its statues in the niches.*
+{: .caption}
+
+![Looking straight up between the columns of the Library of Celsus at its carved, coffered ceilings](/assets/images/turkey-2024/celsus-ceiling.jpg)
+*Looking up between the columns of the façade.*
+{: .caption}
+
+![A ginger cat and a black-and-white cat sitting on a marble column drum at Ephesus](/assets/images/turkey-2024/ephesus-cats.jpg)
+*The present tenants of Ephesus.*
+{: .caption}
 
 In İzmir, the Roman agora of Smyrna survives in the middle of the modern city. It was rebuilt after an earthquake in AD 178 with help from Marcus Aurelius, and a portrait of his wife, Faustina, is carved on one of its arches.
 
@@ -118,7 +130,11 @@ Hierapolis grew into a spa town under Rome. Its springs deposit calcium carbonat
 *The main street of Hierapolis at dusk.*
 {: .caption}
 
-Hierapolis also produced the best-known Stoic of the Roman era. Epictetus was born here around AD 50, was taken to Rome as a slave, and after he was freed taught philosophy in Greece. His student Arrian, the historian whose account of Alexander includes the visit to Achilles' tomb, wrote down his lectures. The Stoics held that virtue is a kind of knowledge, and they named four virtues:
+![The Roman theater at Hierapolis, with its stage building and curved rows of seats](/assets/images/turkey-2024/hierapolis-theater.jpg)
+*The Roman theater at Hierapolis, on the hillside above the city.*
+{: .caption}
+
+Hierapolis also produced the best-known Stoic of the Roman era. Epictetus was born here around AD 50, was taken to Rome as a slave, and after he was freed taught philosophy in Greece. His student Arrian, the historian whose account of Alexander includes the visit to Achilles' tomb, wrote down his lectures. The Stoics held that virtue is a kind of knowledge, the same idea carved into the façade of the Library of Celsus, and they named four virtues:
 
 - **Wisdom:** knowing what is good and what is bad.
 - **Courage:** knowing what is to be feared and what is not.
