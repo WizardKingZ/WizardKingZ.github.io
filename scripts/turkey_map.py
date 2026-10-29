@@ -4,7 +4,7 @@ import warnings, sys, json, numpy as np, matplotlib
 warnings.filterwarnings("ignore"); matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 from matplotlib import patheffects as pe
-from matplotlib.patches import Rectangle, Polygon as MPoly, Circle
+from matplotlib.patches import Rectangle, Polygon as MPoly, Circle, Ellipse
 from shapely.geometry import shape, box, LineString
 from shapely import contains_xy
 LAND, OUT = sys.argv[1], sys.argv[2]
@@ -70,8 +70,8 @@ places = [(28.98, 41.01, "Istanbul", "Byzantion · Constantinople", "l", 0.12),
           (27.34, 37.94, "Ephesus · Selçuk", "Ephesos", "r", -0.1),
           (29.12, 37.92, "Pamukkale", "Hierapolis · Laodicea", "l", 0.12)]
 for x, y, n, old, side, dy in places:
-    ax.add_patch(Circle((x, y), 0.045, facecolor=PAPER, edgecolor=RED, lw=1.4, zorder=10, transform=ax.transData))
-    ax.add_patch(Circle((x, y), 0.017, facecolor=RED, edgecolor="none", zorder=11))
+    ax.add_patch(Ellipse((x, y), 2*0.045, 2*0.045/k, facecolor=PAPER, edgecolor=RED, lw=1.4, zorder=10))
+    ax.add_patch(Ellipse((x, y), 2*0.017, 2*0.017/k, facecolor=RED, edgecolor="none", zorder=11))
     dx = 0.09 if side == "r" else -0.09; ha = "left" if side == "r" else "right"
     label(x + dx, y + dy + (0.035 if old else 0), n, 10.5, color=RED, ha=ha, weight="bold", z=12)
     if old: label(x + dx, y + dy - 0.065, old, 8.3, "italic", ha=ha, z=12)
@@ -102,11 +102,11 @@ ax.add_patch(Rectangle((tx, ty), tw, th, facecolor=PAPER, edgecolor=INK, lw=1.4,
 ax.add_patch(Rectangle((tx + .035, ty + .035), tw - .07, th - .07, fill=False, edgecolor=INK, lw=0.5, zorder=13))
 ax.text(tx + tw/2, ty + th - 0.17, "R O M A N I A", ha="center", va="center", fontsize=14, color=INK, weight="bold", zorder=14)
 ax.text(tx + tw/2, ty + th - 0.34, "The Romans' own name for their eastern empire", ha="center", va="center", fontsize=6.9, style="italic", color=INK, zorder=14)
-ax.add_patch(Circle((tx + .15, ty + .2), 0.035, facecolor=PAPER, edgecolor=RED, lw=1.2, zorder=14))
+ax.add_patch(Ellipse((tx + .15, ty + .2), 2*0.035, 2*0.035/k, facecolor=PAPER, edgecolor=RED, lw=1.2, zorder=14))
 ax.plot([tx + .1, tx + .2], [ty + .1, ty + .1], color=RED, lw=1.1, ls=(0, (4, 3)), zorder=14)
 ax.text(tx + .26, ty + .2, "Places in this post", ha="left", va="center", fontsize=7.8, color=RED, zorder=14)
 ax.text(tx + .26, ty + .1, "My route, by road", ha="left", va="center", fontsize=7.4, color=RED, zorder=14)
 yy, xx = np.mgrid[-1:1:400j, -1:1:400j]; v = np.clip((np.sqrt(xx**2 + yy**2) - .55)/.9, 0, 1)
 rgba = np.zeros((400, 400, 4)); rgba[..., 0], rgba[..., 1], rgba[..., 2], rgba[..., 3] = .36, .25, .12, v*.28
-ax.imshow(rgba, extent=(W, E, S, N), zorder=20, interpolation="bicubic", aspect="auto"); ax.set_xlim(W, E); ax.set_ylim(S, N)
+ax.imshow(rgba, extent=(W, E, S, N), zorder=20, interpolation="bicubic", aspect=k); ax.set_xlim(W, E); ax.set_ylim(S, N)
 fig.savefig(OUT, facecolor=PAPER, dpi=200); print("ok")

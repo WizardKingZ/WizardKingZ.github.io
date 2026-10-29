@@ -4,7 +4,7 @@ import warnings, sys, json, numpy as np, matplotlib
 warnings.filterwarnings("ignore"); matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 from matplotlib import patheffects as pe
-from matplotlib.patches import Rectangle, Polygon as MPoly, Circle
+from matplotlib.patches import Rectangle, Polygon as MPoly, Circle, Ellipse
 from shapely.geometry import shape, box, LineString
 from shapely import contains_xy
 LAND, OUT = sys.argv[1], sys.argv[2]
@@ -16,7 +16,7 @@ geo = json.load(open(LAND))
 land = shape(geo["features"][0]["geometry"] if "features" in geo else geo["geometry"]).intersection(box(W-2, S-2, E+2, N+2)).buffer(0)
 sea = frame.difference(land)
 k = 1/np.cos(np.radians(35))
-fig = plt.figure(figsize=(8, 8.9), dpi=200, facecolor=PAPER)
+fig = plt.figure(figsize=(10.0, round(10.0*0.88*k*(N-S)/(E-W)/0.91, 2)), dpi=200, facecolor=PAPER)
 ax = fig.add_axes([0.06, 0.045, 0.88, 0.91]); ax.set_xlim(W, E); ax.set_ylim(S, N); ax.set_aspect(k)
 ax.set_facecolor(SEA); ax.set_xticks([]); ax.set_yticks([])
 for s in ax.spines.values(): s.set_color(INK); s.set_linewidth(2.2)
@@ -47,7 +47,7 @@ def label(x, y, t, size=10, style="normal", color=INK, ha="center", sp=0, rot=0,
     ax.text(x, y, t, fontsize=size, style=style, color=color, ha=ha, va="center", rotation=rot, weight=weight, path_effects=halo, zorder=z)
 route = [(139.767,35.681),(139.617,35.507),(139.155,35.256),(138.911,35.126),(138.389,34.972),(137.734,34.704),(137.382,34.763),(136.881,35.171),(136.29,35.314),(135.758,34.985),(135.50,34.733)]
 ax.plot(*zip(*route), color=RED, lw=1.1, ls=(0, (4, 3)), alpha=0.8, zorder=7)
-label(138.3, 35.85, "Mare Iaponicum", 10.5, "italic"); label(135.75, 35.82, "Sea of Japan", 8, "italic")
+label(135.62, 35.9, "Mare Iaponicum", 10.5, "italic"); label(135.62, 35.84, "Sea of Japan", 8, "italic")
 label(138.9, 34.2, "MARE PACIFICUM", 10.5, "italic"); label(138.9, 34.08, "Pacific Ocean", 8, "italic")
 label(139.4, 35.92, "MUSASHI", 9, sp=1, color="#6b5536"); label(139.3, 35.42, "SAGAMI", 9, sp=1, color="#6b5536")
 label(138.45, 35.2, "SURUGA", 9, sp=1, color="#6b5536"); label(136.9, 35.45, "OWARI", 9, sp=1, color="#6b5536")
@@ -56,16 +56,16 @@ label(137.1, 34.92, "Tōkaidō", 9, "italic", color=RED, rot=-14)
 fx, fy = 138.727, 35.361
 ax.add_patch(MPoly([(fx-0.13, fy-0.07), (fx, fy+0.08), (fx+0.13, fy-0.07)], closed=True, facecolor=PAPER, edgecolor=INK, lw=1.2, zorder=10))
 ax.add_patch(MPoly([(fx-0.045, fy+0.028), (fx, fy+0.08), (fx+0.045, fy+0.028)], closed=True, facecolor="white", edgecolor=INK, lw=0.8, zorder=11))
-label(fx, fy - 0.15, "Mt Fuji", 10.5, color=RED, weight="bold", z=12)
+label(fx, fy + 0.15, "Mt Fuji", 10.5, color=RED, weight="bold", z=12)
 places = [(139.767, 35.681, "Tokyo", "Edo", "r", 0),
-          (139.02, 35.233, "Hakone", "", "l", 0.02),
+          (139.02, 35.233, "Hakone", "", "r", -0.03),
           (135.768, 35.011, "Kyoto", "Heian-kyō", "r", 0.05),
           (135.672, 35.02, "Arashiyama", "", "l", 0.06),
           (135.84, 34.685, "Nara", "Heijō-kyō", "r", -0.04),
           (135.502, 34.694, "Osaka", "Naniwa", "l", -0.04)]
 for x, y, n, old, side, dy in places:
-    ax.add_patch(Circle((x, y), 0.045, facecolor=PAPER, edgecolor=RED, lw=1.4, zorder=10, transform=ax.transData))
-    ax.add_patch(Circle((x, y), 0.017, facecolor=RED, edgecolor="none", zorder=11))
+    ax.add_patch(Ellipse((x, y), 2*0.045, 2*0.045/k, facecolor=PAPER, edgecolor=RED, lw=1.4, zorder=10))
+    ax.add_patch(Ellipse((x, y), 2*0.017, 2*0.017/k, facecolor=RED, edgecolor="none", zorder=11))
     dx = 0.09 if side == "r" else -0.09; ha = "left" if side == "r" else "right"
     label(x + dx, y + dy + (0.035 if old else 0), n, 10.5, color=RED, ha=ha, weight="bold", z=12)
     if old: label(x + dx, y + dy - 0.065, old, 8.3, "italic", ha=ha, z=12)
@@ -96,11 +96,11 @@ ax.add_patch(Rectangle((tx, ty), tw, th, facecolor=PAPER, edgecolor=INK, lw=1.4,
 ax.add_patch(Rectangle((tx + .035, ty + .035), tw - .07, th - .07, fill=False, edgecolor=INK, lw=0.5, zorder=13))
 ax.text(tx + tw/2, ty + th - 0.17, "N I P P O N", ha="center", va="center", fontsize=14, color=INK, weight="bold", zorder=14)
 ax.text(tx + tw/2, ty + th - 0.34, "Along the Tōkaidō, from Edo to Naniwa", ha="center", va="center", fontsize=6.9, style="italic", color=INK, zorder=14)
-ax.add_patch(Circle((tx + .15, ty + .2), 0.035, facecolor=PAPER, edgecolor=RED, lw=1.2, zorder=14))
+ax.add_patch(Ellipse((tx + .15, ty + .2), 2*0.035, 2*0.035/k, facecolor=PAPER, edgecolor=RED, lw=1.2, zorder=14))
 ax.plot([tx + .1, tx + .2], [ty + .1, ty + .1], color=RED, lw=1.1, ls=(0, (4, 3)), zorder=14)
 ax.text(tx + .26, ty + .2, "Places in this post", ha="left", va="center", fontsize=7.8, color=RED, zorder=14)
 ax.text(tx + .26, ty + .1, "My route, by train", ha="left", va="center", fontsize=7.4, color=RED, zorder=14)
 yy, xx = np.mgrid[-1:1:400j, -1:1:400j]; v = np.clip((np.sqrt(xx**2 + yy**2) - .55)/.9, 0, 1)
 rgba = np.zeros((400, 400, 4)); rgba[..., 0], rgba[..., 1], rgba[..., 2], rgba[..., 3] = .36, .25, .12, v*.28
-ax.imshow(rgba, extent=(W, E, S, N), zorder=20, interpolation="bicubic", aspect="auto"); ax.set_xlim(W, E); ax.set_ylim(S, N)
+ax.imshow(rgba, extent=(W, E, S, N), zorder=20, interpolation="bicubic", aspect=k); ax.set_xlim(W, E); ax.set_ylim(S, N)
 fig.savefig(OUT, facecolor=PAPER, dpi=200); print("ok")

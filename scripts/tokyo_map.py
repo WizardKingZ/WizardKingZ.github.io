@@ -4,7 +4,7 @@ import warnings, sys, json, numpy as np, matplotlib
 warnings.filterwarnings("ignore"); matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 from matplotlib import patheffects as pe
-from matplotlib.patches import Rectangle, Polygon as MPoly, Circle
+from matplotlib.patches import Rectangle, Polygon as MPoly, Circle, Ellipse
 from shapely.geometry import shape, box, LineString
 from shapely import contains_xy
 LAND, OUT = sys.argv[1], sys.argv[2]
@@ -26,7 +26,7 @@ odaiba = SPoly([(139.766, 35.632), (139.772, 35.634), (139.786, 35.630), (139.79
 land = frame.difference(bay).union(odaiba)
 sea = frame.difference(land)
 k = 1/np.cos(np.radians(35.67))
-fig = plt.figure(figsize=(8, 8.9), dpi=200, facecolor=PAPER)
+fig = plt.figure(figsize=(8.0, round(8.0*0.88*k*(N-S)/(E-W)/0.91, 2)), dpi=200, facecolor=PAPER)
 ax = fig.add_axes([0.06, 0.045, 0.88, 0.91]); ax.set_xlim(W, E); ax.set_ylim(S, N); ax.set_aspect(k)
 ax.set_facecolor(SEA); ax.set_xticks([]); ax.set_yticks([])
 for s in ax.spines.values(): s.set_color(INK); s.set_linewidth(2.2)
@@ -74,8 +74,8 @@ places = [(139.7528, 35.6852, "Imperial Palace", "Edo Castle", "l", 0.002),
           (139.7898, 35.6489, "Toyosu · teamLab", "", "r", 0),
           (139.7756, 35.6253, "Odaiba", "Daiba batteries", "r", 0)]
 for x, y, n, old, side, dy in places:
-    ax.add_patch(Circle((x, y), 0.0016, facecolor=PAPER, edgecolor=RED, lw=1.4, zorder=10, transform=ax.transData))
-    ax.add_patch(Circle((x, y), 0.0006, facecolor=RED, edgecolor="none", zorder=11))
+    ax.add_patch(Ellipse((x, y), 2*0.0016, 2*0.0016/k, facecolor=PAPER, edgecolor=RED, lw=1.4, zorder=10))
+    ax.add_patch(Ellipse((x, y), 2*0.0006, 2*0.0006/k, facecolor=RED, edgecolor="none", zorder=11))
     dx = 0.0032 if side == "r" else -0.09; ha = "left" if side == "r" else "right"
     label(x + dx, y + dy + (0.0013 if old else 0), n, 10.5, color=RED, ha=ha, weight="bold", z=12)
     if old: label(x + dx, y + dy - 0.0024, old, 8.3, "italic", ha=ha, z=12)
@@ -106,11 +106,11 @@ ax.add_patch(Rectangle((tx, ty), tw, th, facecolor=PAPER, edgecolor=INK, lw=1.4,
 ax.add_patch(Rectangle((tx + .0012, ty + .0012), tw - .0024, th - .0024, fill=False, edgecolor=INK, lw=0.5, zorder=13))
 ax.text(tx + tw/2, ty + th - 0.0045, "E D O · T O K Y O", ha="center", va="center", fontsize=14, color=INK, weight="bold", zorder=14)
 ax.text(tx + tw/2, ty + th - 0.009, "The shogun's city and the emperor's capital", ha="center", va="center", fontsize=6.9, style="italic", color=INK, zorder=14)
-ax.add_patch(Circle((tx + .005, ty + .0045), 0.0013, facecolor=PAPER, edgecolor=RED, lw=1.2, zorder=14))
+ax.add_patch(Ellipse((tx + .005, ty + .0045), 2*0.0013, 2*0.0013/k, facecolor=PAPER, edgecolor=RED, lw=1.2, zorder=14))
 ax.plot([], [], color=RED, lw=1.1, ls=(0, (4, 3)), zorder=14)
 ax.text(tx + .009, ty + .0045, "Places in this post", ha="left", va="center", fontsize=7.8, color=RED, zorder=14)
 ax.text(tx + .009, ty + .0045, "", ha="left", va="center", fontsize=7.4, color=RED, zorder=14)
 yy, xx = np.mgrid[-1:1:400j, -1:1:400j]; v = np.clip((np.sqrt(xx**2 + yy**2) - .55)/.9, 0, 1)
 rgba = np.zeros((400, 400, 4)); rgba[..., 0], rgba[..., 1], rgba[..., 2], rgba[..., 3] = .36, .25, .12, v*.28
-ax.imshow(rgba, extent=(W, E, S, N), zorder=20, interpolation="bicubic", aspect="auto"); ax.set_xlim(W, E); ax.set_ylim(S, N)
+ax.imshow(rgba, extent=(W, E, S, N), zorder=20, interpolation="bicubic", aspect=k); ax.set_xlim(W, E); ax.set_ylim(S, N)
 fig.savefig(OUT, facecolor=PAPER, dpi=200); print("ok")
