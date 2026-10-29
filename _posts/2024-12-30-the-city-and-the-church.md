@@ -39,7 +39,7 @@ Historians usually divide the history of this coast by who ruled it: Bronze Age 
 Istanbul sits where Europe and Asia almost touch. The Bosphorus, a strait about 30 kilometers long, joins the Black Sea to the Sea of Marmara, which the Greeks called the Propontis, the "sea before the Pontus." On the European side, an inlet called the Golden Horn makes a deep, sheltered harbor, and the triangle of land between the Horn and the Marmara is the old city. At the other end of the Marmara, the Dardanelles, the Hellespont of the Greeks, lead out into the Aegean. Whoever held both straits controlled the trade between the Black Sea and the Mediterranean, which is most of the reason this city mattered for 2,700 years.
 
 ![Seagull on a pier, with the historic peninsula of Istanbul across the water](/assets/images/turkey-2024/historic-peninsula.jpg)
-*The old city from across the water, with Topkapı on the point and minarets behind.*
+*The old city from across the Bosphorus: Topkapı and its Tower of Justice on the point, with Hagia Sophia and the Blue Mosque behind.*
 {: .caption}
 
 The city has had three names, and they are a short history in themselves. Greek settlers called it Byzantion. Constantine refounded it as Constantinople, "the city of Constantine." Istanbul most likely comes from the Greek *eis tin polin*, "to the city," which is what people said when they were heading there.
