@@ -253,7 +253,7 @@ The Ottomans answered Hagia Sophia rather than replaced it. Mimar Sinan, the emp
 *The Blue Mosque from Sultanahmet Square, with one minaret under repair.*
 {: .caption}
 
- Down by the water, the Spice Bazaar was finished in the 1660s as part of the New Mosque complex and is still called the Mısır Çarşısı, the "Egyptian Bazaar," because revenues from the Ottoman province of Egypt paid for it.
+Down by the water, the Spice Bazaar was finished in the 1660s as part of the New Mosque complex and is still called the Mısır Çarşısı, the "Egyptian Bazaar," because revenues from the Ottoman province of Egypt paid for it.
 
 The fishermen on the Galata Bridge are a more recent tradition, though not by much: the first bridge here opened in 1845, and the current one in 1994. They line both rails in all weather, and the grilled-fish sandwiches sold at the foot of the bridge are the other half of the scene.
 
