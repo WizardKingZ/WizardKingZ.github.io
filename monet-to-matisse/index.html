@@ -20,13 +20,7 @@
   --ui:Arial,Helvetica,sans-serif;
   --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
 }
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
-  color-scheme:dark;
-  --ground:#101512; --surface:#171d19; --surface-2:#1f2621; --ink:#e7ece7; --ink-2:#b8c2ba; --muted:#86928a; --ctl:#56615a;
-  --rule:#2f3832; --line-2:#3d473f; --band:#0b100d; --band-text:#eef2ec;
-  --accent:#5dbb95; --accent-soft:#183026; --chili:#ec7a63; --chili-soft:#3a201a; --amber:#e0a648; --amber-soft:#35290f;
-  --violet:#a9a0dc; --violet-soft:#25223a;
-}}
+
 :root[data-theme="dark"]{
   color-scheme:dark;
   --ground:#101512; --surface:#171d19; --surface-2:#1f2621; --ink:#e7ece7; --ink-2:#b8c2ba; --muted:#86928a; --ctl:#56615a;
@@ -51,7 +45,7 @@ img{max-width:100%}
 .band{background:var(--band);color:var(--band-text)}
 .band .inner{display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px;padding-block:12px}
 .brand{display:flex;align-items:center;gap:12px;min-width:0}
-.mark{flex:none;width:32px;height:32px;border:1.5px solid var(--band-text);display:grid;place-items:center;font-family:var(--display);font-size:17px;line-height:1}
+.mark{flex:none;width:32px;height:32px;border:1.5px solid var(--band-text);display:grid;place-items:center;font-family:var(--display);font-size:14px;letter-spacing:.02em;line-height:1}
 .band h1{font-family:var(--ui);font-size:14.5px;letter-spacing:.16em;text-transform:uppercase;font-weight:700}
 .band .sub{opacity:.78;font-family:var(--ui);font-size:11.5px;letter-spacing:.02em;margin-top:1px}
 .tog{margin-left:auto;font-family:var(--ui);font-size:12px;font-weight:600;letter-spacing:.05em;color:var(--band-text);background:transparent;border:1px solid color-mix(in srgb,var(--band-text) 55%,transparent);padding:7px 14px;border-radius:2px;cursor:pointer;white-space:nowrap}
@@ -170,7 +164,7 @@ td.y{font-family:var(--mono);font-size:12.5px;white-space:nowrap}
 
 <header class="hdr">
   <div class="band wrap"><div class="inner">
-    <div class="brand"><div class="mark">A</div><div><h1>Monet to Matisse Field Guide</h1><div class="sub">Art Gallery of Ontario · The Impressionist Revolution: Monet to Matisse · 2026</div></div></div>
+    <div class="brand"><div class="mark">JZ</div><div><h1>Monet to Matisse Field Guide</h1><div class="sub">Art Gallery of Ontario · The Impressionist Revolution: Monet to Matisse · 2026</div></div></div>
     <button type="button" class="tog" id="themeTog">Dark mode</button>
   </div></div>
   <nav class="tabs wrap" aria-label="Sections"><ul>
@@ -190,10 +184,10 @@ td.y{font-family:var(--mono);font-size:12.5px;white-space:nowrap}
   <p class="lede">Between 1870 and 1920, painting stopped being about the thing depicted and became about the act of seeing and, later, the act of feeling. Read each picture as an argument with the one before it, not as a finished object, and at every wall ask two questions: what did this artist keep, and what did they reject?</p>
   <div class="flow">
     <div><b>1 · Salon</b>Smooth finish, drawing first, brown shadows, grand subjects. The rules everyone else breaks.</div>
-    <div><b>2 · Impressionism</b>Light at one moment, caught outdoors in broken dabs of pure colour. 1874–86.</div>
-    <div><b>3 · Structure</b>Cézanne and Seurat keep the colour but want weight and permanence back.</div>
-    <div><b>4 · Feeling</b>Van Gogh and Gauguin make colour express the painter, not the light.</div>
-    <div><b>5 · Colour itself</b>Matisse and Mondrian free colour from description entirely. 1905–20.</div>
+    <div><b>2 · Impressionism</b>Light at one moment, caught outdoors in broken dabs of pure color. 1874–86.</div>
+    <div><b>3 · Structure</b>Cézanne and Seurat keep the color but want weight and permanence back.</div>
+    <div><b>4 · Feeling</b>Van Gogh and Gauguin make color express the painter, not the light.</div>
+    <div><b>5 · Color itself</b>Matisse and Mondrian free color from description entirely. 1905–20.</div>
   </div>
   <div class="prose">
     <h3 class="sub">Why we look without seeing</h3>
@@ -201,14 +195,14 @@ td.y{font-family:var(--mono);font-size:12.5px;white-space:nowrap}
     <p>The first move is to reconstruct a correct painting in Paris in 1870. It was made for the Salon, the annual state-sanctioned exhibition that decided careers, and it followed five rules:</p>
     <ul>
       <li><strong>Finish:</strong> smooth brushwork that leaves no visible stroke.</li>
-      <li><strong>Drawing first:</strong> careful drawing underneath, with colour added last.</li>
-      <li><strong>Grand subject:</strong> history, myth or the Bible.</li>
-      <li><strong>Dark shadow:</strong> muted browns and greys.</li>
+      <li><strong>Drawing first:</strong> careful drawing underneath, with color added last.</li>
+      <li><strong>Grand subject:</strong> history, myth, or the Bible.</li>
+      <li><strong>Dark shadow:</strong> muted browns and grays.</li>
       <li><strong>Edge-to-edge resolution:</strong> every inch of the canvas resolved.</li>
     </ul>
     <p>Bouguereau's polished nudes and Cabanel's <em>Birth of Venus</em> are the models. They took months, and they looked it. Every Impressionist choice reads as a deliberate refusal of one of those rules. Once you can name the rule being broken, you stop looking at a painting and start watching a decision.</p>
     <h3 class="sub">Why it is called a revolution</h3>
-    <p>Three things changed for good. First, painters no longer needed the state's permission: the 1874 show was the first modern independent exhibition, and today's gallery-and-dealer system descends from it. Second, painting moved from subject to perception, then to emotion, then to the painting itself. Third, the visible brushstroke, once the mark of an unfinished sketch, became the artist's signature.</p>
+    <p>Three things changed for good. First, painters no longer needed the state's permission: the 1874 show is often called the first independent group exhibition, and today's gallery-and-dealer system descends from it. Second, painting moved from subject to perception, then to emotion, then to the painting itself. Third, the visible brushstroke, once the mark of an unfinished sketch, became the artist's signature.</p>
     <p>So the feeling to carry into the rooms is not "isn't that pretty" but "someone risked a career on this dab of violet."</p>
   </div>
 </div></section>
@@ -216,7 +210,7 @@ td.y{font-family:var(--mono);font-size:12.5px;white-space:nowrap}
 <!-- MY VISIT -->
 <section id="v-visit" class="wrap"><div class="inner">
   <div class="shead"><div class="eyebrow">My visit · eight paintings I stopped for</div><h2>Forty-five years of light, from Boudin's sky to Mondrian's farm</h2></div>
-  <p class="lede">These are the paintings I photographed, arranged in the order they were painted rather than the order I walked past them. Read in sequence, they tell the same story as the rest of this guide: from a sky caught outdoors in 1871, through Monet's water lilies dissolving into colour, to Mondrian reducing trees to a dark grid.</p>
+  <p class="lede">These are the paintings I photographed, arranged in the order they were painted rather than the order I walked past them. Read in sequence, they tell the same story as the rest of this guide: from a sky caught outdoors in 1871, through Monet's water lilies dissolving into color, to Mondrian reducing trees to a dark grid.</p>
   <div class="grid" id="vgrid">
     <a class="rc" href="#p-boudin"><div class="ph"><img src="img/p3.jpg" alt="Boudin, ships in a bay under a cloudy sky" loading="lazy"></div><div class="bd"><div class="cu">Boudin</div><h3>The Bay at the Mouth of the Elorn</h3><div class="meta">1871</div></div></a>
     <a class="rc" href="#p-sisley"><div class="ph"><img src="img/p2.jpg" alt="Sisley, a village street curving between houses" loading="lazy"></div><div class="bd"><div class="cu">Sisley</div><h3>Street in Ville-d'Avray</h3><div class="meta">1873</div></div></a>
@@ -236,7 +230,7 @@ td.y{font-family:var(--mono);font-size:12.5px;white-space:nowrap}
       <div class="who">Eugène Boudin</div>
       <dl class="facts"><div><dt>Date</dt><dd>1871</dd></div><div><dt>Medium</dt><dd>Oil on canvas</dd></div><div><dt>Lent by</dt><dd>Dallas Museum of Art</dd></div></dl>
       <p class="take">The sky is the subject; the tall ships are there for scale.</p>
-      <p>Boudin gave more than half this canvas to cloud and used the ships and the dark rocks on the shore to show how large that sky is. He painted outdoors and quickly, to catch weather that changed by the minute, and that habit is his link to everything else in the show. In 1858 he met the teenage Monet at Le Havre and persuaded him to paint directly from nature.</p>
+      <p>Boudin gave more than half this canvas to cloud and used the ships and the dark rocks on the shore to show how large that sky is. He painted outdoors and quickly, to catch weather that changed by the minute, and that habit is his link to everything else in the show. Around 1858 he met the teenage Monet at Le Havre and persuaded him to paint directly from nature.</p>
       <p>The Impressionists invited Boudin to their first exhibition in 1874, and he showed six works. He never exhibited with them again and went back to the Salon, so he stands at the door of the revolution rather than inside it.</p>
       <div class="look"><div class="eyebrow">Look for</div><p>The reflections of the hulls, broken into short horizontal strokes. It is an early version of the water Monet would paint for the rest of his life.</p></div>
       <a class="totop" href="#vgrid">↑ All eight</a>
@@ -251,7 +245,7 @@ td.y{font-family:var(--mono);font-size:12.5px;white-space:nowrap}
       <div class="who">Alfred Sisley</div>
       <dl class="facts"><div><dt>Date</dt><dd>1873</dd></div><div><dt>Medium</dt><dd>Oil on canvas</dd></div><div><dt>Lent by</dt><dd>Dallas Museum of Art</dd></div></dl>
       <p class="take">An empty village road, made dramatic by viewpoint alone.</p>
-      <p>Sisley was a founding member of the group and showed in five of its eight exhibitions, yet he is the least known of the core painters. Here he uses his favourite motif, a road curving away through a village, and makes the subject deliberately ordinary. A low viewpoint and a wide, empty foreground pull the eye down the road and deep into the picture, so the drama comes from space rather than from story.</p>
+      <p>Sisley was a founding member of the group and showed in five of its eight exhibitions, yet he is the least known of the core painters. Here he uses his favorite motif, a road curving away through a village, and makes the subject deliberately ordinary. A low viewpoint and a wide, empty foreground pull the eye down the road and deep into the picture, so the drama comes from space rather than from story.</p>
       <p>The painting dates from a year before the first exhibition, when Sisley was working outdoors in the villages west of Paris. It shows the Impressionist rule-break at its quietest: no myth and no hero, just a road on an afternoon.</p>
       <div class="look"><div class="eyebrow">Look for</div><p>The two small figures halfway up the road, which set the scale, and the pale wall on the right catching the light.</p></div>
       <a class="totop" href="#vgrid">↑ All eight</a>
@@ -281,7 +275,7 @@ td.y{font-family:var(--mono);font-size:12.5px;white-space:nowrap}
       <div class="who">Claude Monet · <em>Étretat, l'Aiguille et la Porte d'Aval</em></div>
       <dl class="facts"><div><dt>Date</dt><dd>1885–86</dd></div><div><dt>Medium</dt><dd>Oil on panel</dd></div><div><dt>Collection</dt><dd>Art Gallery of Ontario</dd></div></dl>
       <p class="take">The cliffs dissolve into the same pastel light as the sea.</p>
-      <p>This painting belongs to the AGO rather than to Dallas. It shows two landmarks on the Normandy coast at Étretat: the Needle, a free-standing rock spire, and the Porte d'Aval, the arch in the cliff behind it. Monet returned to Étretat repeatedly in the mid-1880s, and here he paints the rocks with the same pale pinks, greens and blues as the water, so that solid stone and moving sea become one surface of light.</p>
+      <p>This painting belongs to the AGO rather than to Dallas. It shows two landmarks on the Normandy coast at Étretat: the Needle, a free-standing rock spire, and the Porte d'Aval, the arch in the cliff behind it. Monet returned to Étretat repeatedly in the mid-1880s, and here he paints the rocks with the same pale pinks, greens, and blues as the water, so that solid stone and moving sea become one surface of light.</p>
             <div class="look"><div class="eyebrow">Look for</div><p>The absence of a horizon line and of almost any dark tone. The rocks are built from the same short pastel strokes as the sea.</p></div>
       <a class="totop" href="#vgrid">↑ All eight</a>
     </div>
@@ -295,7 +289,7 @@ td.y{font-family:var(--mono);font-size:12.5px;white-space:nowrap}
       <div class="who">Gustave Caillebotte</div>
       <dl class="facts"><div><dt>Date</dt><dd>1886</dd></div><div><dt>Medium</dt><dd>Oil on canvas</dd></div><div><dt>Lent by</dt><dd>Dallas Museum of Art</dd></div></dl>
       <p class="take">A street painter's deep perspective, turned on his own garden.</p>
-      <p>Caillebotte joined the Impressionists in 1876 and took part in five of their eight exhibitions. He also helped to organise them and sometimes paid for them, and his wealth kept the group going in lean years. This path runs through the garden of the house he shared with his brother at Petit-Gennevilliers, a suburb west of Paris.</p>
+      <p>Caillebotte joined the Impressionists in 1876 and took part in five of their eight exhibitions. He also helped to organize them and sometimes paid for them, and his wealth kept the group going in lean years. This path runs through the garden of the house he shared with his brother at Petit-Gennevilliers, a suburb west of Paris.</p>
       <p>He brings to the garden the steep, plunging perspective of his famous Paris street scenes, and sets bold reds against greens. The result is an ordinary path that feels both still and in motion, pulling the eye up the slope toward the sunlit lawn.</p>
       <div class="look"><div class="eyebrow">Look for</div><p>The dappled shadows on the path. They are violet and blue, not brown, which is the Salon rule this guide tells you to watch being broken.</p></div>
       <a class="totop" href="#vgrid">↑ All eight</a>
@@ -311,7 +305,7 @@ td.y{font-family:var(--mono);font-size:12.5px;white-space:nowrap}
       <dl class="facts"><div><dt>Date</dt><dd>1903</dd></div><div><dt>Medium</dt><dd>Oil on canvas</dd></div><div><dt>Lent by</dt><dd>Dallas Museum of Art</dd></div></dl>
       <p class="take">The sky is painted in the water, and the land has moved to the top edge.</p>
       <p>Monet moved to Giverny in 1883 and in the 1890s built a Japanese-style water garden there. The lilies he planted became his main subject for the last two decades of his life. Early versions show the arched footbridge; by 1903 the subject is the surface of the water itself, which works both as a mirror of the sky and as a window into the pond.</p>
-      <p>The reflected clouds are so convincing that, when the painting was auctioned in 1917, the audience thought it was hanging upside down. Set it beside the Boudin: both are paintings of clouds, made thirty-two years apart, and the second no longer needs a sky to show them.</p>
+      <p>The reflected clouds are so convincing that, when the painting was auctioned in 1917, the audience is said to have thought it was hanging upside down. Set it beside the Boudin: both are paintings of clouds, made thirty-two years apart, and the second no longer needs a sky to show them.</p>
       <div class="look"><div class="eyebrow">Look for</div><p>The thin band of reeds along the top edge. It is the only land in the picture, and it sits where the sky should be.</p></div>
       <a class="totop" href="#vgrid">↑ All eight</a>
     </div>
@@ -325,9 +319,9 @@ td.y{font-family:var(--mono);font-size:12.5px;white-space:nowrap}
       <div class="who">Claude Monet · <em>Nymphéas</em></div>
       <dl class="facts"><div><dt>Date</dt><dd>1908</dd></div><div><dt>Medium</dt><dd>Oil on canvas, 81 cm diameter</dd></div><div><dt>Lent by</dt><dd>Dallas Museum of Art</dd></div></dl>
       <p class="take">Five years on, the horizon has gone, and so have the corners.</p>
-      <p>In 1903 a strip of reeds still marked the top of the pond. Here even that has disappeared, and nothing tells you which way is up. Monet's early water-lily pictures kept a bank or a horizon to guide the eye; over time he removed solid land altogether, and the lilies became loose, radiant strokes of colour moving toward abstraction.</p>
+      <p>In 1903 a strip of reeds still marked the top of the pond. Here even that has disappeared, and nothing tells you which way is up. Monet's early water-lily pictures kept a bank or a horizon to guide the eye; over time he removed solid land altogether, and the lilies became loose, radiant strokes of color moving toward abstraction.</p>
       <p>The round canvas completes the effect. Without corners or a top edge, the picture reads as a fragment of an endless surface, an idea Monet would take to its conclusion in the room-sized water-lily panels installed at the Orangerie in Paris in 1927, the year after his death.</p>
-      <div class="look"><div class="eyebrow">Look for</div><p>The yellow-green glow at the centre. It is reflected light, not an object, and the composition is built around it.</p></div>
+      <div class="look"><div class="eyebrow">Look for</div><p>The yellow-green glow at the center. It is reflected light, not an object, and the composition is built around it.</p></div>
       <a class="totop" href="#vgrid">↑ All eight</a>
     </div>
   </article>
@@ -340,8 +334,8 @@ td.y{font-family:var(--mono);font-size:12.5px;white-space:nowrap}
       <div class="who">Piet Mondrian</div>
       <dl class="facts"><div><dt>Date</dt><dd>c. 1916</dd></div><div><dt>Medium</dt><dd>Oil on canvas</dd></div><div><dt>Lent by</dt><dd>Dallas Museum of Art</dd></div></dl>
       <p class="take">The future painter of grids, still painting a farm, and already finding the grid in it.</p>
-      <p>Mondrian returned many times to this farm by the river near Amsterdam and painted it at different times of day, as Monet painted his haystacks and his pond. The flat, stylised house and trees and the patches of expressive colour show what came next: Van Gogh and Cézanne, whose retrospectives Mondrian saw in Amsterdam in 1905 and 1909.</p>
-      <p>This is where the show's lineage arrives. The light still comes from Impressionism, the emotion from Van Gogh and the structure from Cézanne. Within a few years Mondrian would discard the farm entirely and keep only the lines.</p>
+      <p>Mondrian returned many times to this farm by the river near Amsterdam and painted it at different times of day, as Monet painted his haystacks and his pond. The flat, stylized house and trees and the patches of expressive color show what came next: Van Gogh and Cézanne, whose retrospectives Mondrian saw in Amsterdam in 1905 and 1909.</p>
+      <p>This is where the show's lineage arrives. The light still comes from Impressionism, the emotion from Van Gogh, and the structure from Cézanne. Within a few years Mondrian would discard the farm entirely and keep only the lines.</p>
       <div class="look"><div class="eyebrow">Look for</div><p>The bare trees, reduced to a dark lattice of verticals and diagonals against the sunset. It is a grid before the grids.</p></div>
       <a class="totop" href="#vgrid">↑ All eight</a>
     </div>
@@ -352,29 +346,29 @@ td.y{font-family:var(--mono);font-size:12.5px;white-space:nowrap}
 <!-- BEFORE 1874 -->
 <section id="v-before" class="wrap"><div class="inner">
   <div class="shead"><div class="eyebrow">The prehistory · 1648 to 1874</div><h2>Impressionism ended a two-hundred-year argument</h2></div>
-  <p class="lede">Impressionism looks like a sudden break, but it came at the end of a long argument about what painting is for, who decides what is good, and how a picture should be made. To see why a few loose dabs of colour caused a scandal, you need three things: the system the Impressionists rebelled against, the rebels who came before them, and the technology and ideas that made their painting possible.</p>
+  <p class="lede">Impressionism looks like a sudden break, but it came at the end of a long argument about what painting is for, who decides what is good, and how a picture should be made. To see why a few loose dabs of color caused a scandal, you need three things: the system the Impressionists rebelled against, the rebels who came before them, and the technology and ideas that made their painting possible.</p>
   <div class="prose">
     <h3 class="sub"><span class="n">01</span>The Academy and the Salon set the rules</h3>
-    <p>In 1648 the French crown founded the Royal Academy of Painting and Sculpture, to make art a learned profession serving the state rather than a craft run by guilds. The Academy taught a method inherited from Raphael and Michelangelo: learn to draw first, copying antique sculpture and then the live model; build the composition from careful drawing; and apply colour last, smoothly, so that no brushstroke shows. From 1667 it held regular public exhibitions, which moved into the Louvre's Salon Carré and gave "the Salon" its name. By the nineteenth century the Salon was the one place a French painter could build a reputation, win state commissions and find buyers.</p>
-    <p>The Academy also ranked subjects in a <strong>hierarchy of genres</strong>. History painting came first: biblical, classical and historical scenes, painted large to teach a moral. Below it came portraits, then scenes of everyday life, then landscape, and finally still life. A landscape of a real field at a real hour was, by definition, a minor picture. That ranking is what Monet was up against.</p>
-    <h3 class="sub"><span class="n">02</span>Line against colour: the quarrel inside the system</h3>
-    <p>An old argument ran underneath. In the 1670s the Academy split between followers of Poussin, who held that drawing appeals to reason and should govern a painting, and followers of Rubens, who held that colour moves the viewer and matters as much. The line side generally won, and it was still winning in the 1800s. Around 1800 <strong>Jacques-Louis David</strong> and then <strong>Ingres</strong> led Neoclassicism: crisp contours, cool control and Roman subjects. Against them, <strong>Delacroix</strong> and <strong>Géricault</strong> led Romanticism, with dramatic subjects, energetic brushwork and colour used for its emotional force. Delacroix's shadows already carried colour, and his loose handling showed later painters that a visible brushstroke could carry meaning. When you reach Van Gogh, you are watching the Rubens side finally win.</p>
+    <p>In 1648 the French crown founded the Royal Academy of Painting and Sculpture, to make art a learned profession serving the state rather than a craft run by guilds. The Academy taught a method inherited from Raphael and Michelangelo: learn to draw first, copying antique sculpture and then the live model; build the composition from careful drawing; and apply color last, smoothly, so that no brushstroke shows. From 1667 it held regular public exhibitions, which moved into the Louvre's Salon Carré and gave "the Salon" its name. By the nineteenth century the Salon was the one place a French painter could build a reputation, win state commissions, and find buyers.</p>
+    <p>The Academy also ranked subjects in a <strong>hierarchy of genres</strong>. History painting came first: biblical, classical, and historical scenes, painted large to teach a moral. Below it came portraits, then scenes of everyday life, then landscape, and finally still life. A landscape of a real field at a real hour was, by definition, a minor picture. That ranking is what Monet was up against.</p>
+    <h3 class="sub"><span class="n">02</span>Line against color: the quarrel inside the system</h3>
+    <p>An old argument ran underneath. In the 1670s the Academy split between followers of Poussin, who held that drawing appeals to reason and should govern a painting, and followers of Rubens, who held that color moves the viewer and matters as much. The line side generally won, and it was still winning in the 1800s. Around 1800 <strong>Jacques-Louis David</strong> and then <strong>Ingres</strong> led Neoclassicism: crisp contours, cool control, and Roman subjects. Against them, <strong>Delacroix</strong> and <strong>Géricault</strong> led Romanticism, with dramatic subjects, energetic brushwork, and color used for its emotional force. Delacroix's shadows already carried color, and his loose handling showed later painters that a visible brushstroke could carry meaning. When you reach Van Gogh, you are watching the Rubens side finally win.</p>
     <h3 class="sub"><span class="n">03</span>The rebels before the rebels</h3>
     <ul>
-      <li><strong>The English landscape painters.</strong> Constable painted oil sketches outdoors to catch passing weather, and his work caused a stir in Paris in 1824. Turner dissolved storms, steam and sunsets into light and colour; Monet and Pissarro saw his work in London in 1870–71.</li>
-      <li><strong>The Barbizon school (1830s–1860s).</strong> Corot, Théodore Rousseau, Millet and others painted ordinary countryside in the forest of Fontainebleau for its own sake, making landscape serious and bringing painters outdoors. Boudin, who painted skies on the Normandy beaches, took the teenage Monet outside to paint at Le Havre around 1858, and Jongkind taught him to paint quickly. Boudin's <a href="#p-boudin" data-goto="visit">Elorn bay</a> is in the show.</li>
+      <li><strong>The English landscape painters.</strong> Constable painted oil sketches outdoors to catch passing weather, and his work caused a stir in Paris in 1824. Turner dissolved storms, steam, and sunsets into light and color; Monet and Pissarro saw his work in London in 1870–71.</li>
+      <li><strong>The Barbizon school (1830s–1860s).</strong> Corot, Théodore Rousseau, Millet, and others painted ordinary countryside in the forest of Fontainebleau for its own sake, making landscape serious and bringing painters outdoors. Boudin, who painted skies on the Normandy beaches, took the teenage Monet outside to paint at Le Havre around 1858, and Jongkind taught him to paint quickly. Boudin's <a href="#p-boudin" data-goto="visit">Elorn bay</a> is in the show.</li>
       <li><strong>Realism (1848–1860s).</strong> Courbet painted peasants and a village funeral on canvases as large as those reserved for history. When the jury of the 1855 World's Fair turned down major works, he built his own "Pavilion of Realism" next door: the first rehearsal for 1874, an artist going around the official system.</li>
-      <li><strong>Manet (1860s).</strong> The key figure between Realism and Impressionism. In 1863 the Salon rejected so many works that Napoleon III ordered a "Salon des Refusés" to show them, and Manet's <em>Le Déjeuner sur l'herbe</em>, with a naked woman picnicking beside clothed modern men, was its scandal. His <em>Olympia</em>, a Parisian courtesan posed like a Titian Venus and painted flatly, caused a bigger outcry at the 1865 Salon. Younger painters gathered around him at the Café Guerbois: Monet, Renoir, Degas, Bazille, Pissarro and Cézanne, the future Impressionist group, a decade before the first show.</li>
+      <li><strong>Manet (1860s).</strong> The key figure between Realism and Impressionism. In 1863 the Salon rejected so many works that Napoleon III ordered a "Salon des Refusés" to show them, and Manet's <em>Le Déjeuner sur l'herbe</em>, with a naked woman picnicking beside clothed modern men, was its scandal. His <em>Olympia</em>, a Parisian courtesan posed like a Titian Venus and painted flatly, caused a bigger outcry at the 1865 Salon. Younger painters gathered around him at the Café Guerbois: Monet, Renoir, Degas, Bazille, Pissarro, and Cézanne, the future Impressionist group, a decade before the first show.</li>
     </ul>
     <h3 class="sub"><span class="n">04</span>Seven changes made the new painting possible</h3>
   </div>
   <div class="refgrid">
-    <div class="card"><div class="eyebrow">1841</div><h4>Paint in tubes</h4><p>The American painter John Goffe Rand patented the collapsible metal paint tube. Before it, paint was ground by hand and stored in pig bladders, which kept most painting in the studio. Renoir later said, in effect, that without tube paint there would have been no Impressionism.</p></div>
-    <div class="card"><div class="eyebrow">1820s onward</div><h4>New pigments</h4><p>Industrial chemistry produced cheap, brilliant colours: synthetic ultramarine, cobalt blue, chrome yellow and emerald green. The bright palette in the show was partly a purchase.</p></div>
-    <div class="card"><div class="eyebrow">1839</div><h4>Colour science</h4><p>Chevreul, who oversaw dyes at the Gobelins tapestry works, published his law of simultaneous contrast: colours placed side by side change how each looks, and complementaries intensify each other. It is the principle behind dabs mixing in the eye, and later behind Seurat's dots.</p></div>
-    <div class="card"><div class="eyebrow">1839</div><h4>Photography</h4><p>Once a machine could record a likeness exactly, painting had to justify itself another way. Photography also taught painters to see like a snapshot: figures cut off by the frame, off-centre compositions, a single frozen moment.</p></div>
-    <div class="card"><div class="eyebrow">1850s–1867</div><h4>Japanese prints</h4><p>Japan opened to Western trade in the 1850s, and woodblock prints by Hokusai and Hiroshige flooded Paris, especially after the 1867 World's Fair. Their flat colour, strong outlines, high viewpoints and cropping show up in Degas, Monet, Van Gogh and Gauguin.</p></div>
-    <div class="card"><div class="eyebrow">1853–70</div><h4>The railway and the new Paris</h4><p>Baron Haussmann rebuilt Paris with boulevards, cafés, parks and stations, and new railways carried Parisians to the riverside suburbs and the Normandy coast. That gave the Impressionists their subject: modern leisure, modern crowds, boating at Argenteuil.</p></div>
+    <div class="card"><div class="eyebrow">1841</div><h4>Paint in tubes</h4><p>The American painter John Goffe Rand patented the collapsible metal paint tube. Before it, paint was ground by hand and stored in pig bladders, which kept most painting in the studio. Renoir is reported to have said that without tube paint there would have been no Impressionism.</p></div>
+    <div class="card"><div class="eyebrow">1820s onward</div><h4>New pigments</h4><p>Industrial chemistry produced cheap, brilliant colors: synthetic ultramarine, cobalt blue, chrome yellow, and emerald green. The bright palette in the show was partly a purchase.</p></div>
+    <div class="card"><div class="eyebrow">1839</div><h4>Color science</h4><p>Chevreul, who oversaw dyes at the Gobelins tapestry works, published his law of simultaneous contrast: colors placed side by side change how each looks, and complementaries intensify each other. It is the principle behind dabs mixing in the eye, and later behind Seurat's dots.</p></div>
+    <div class="card"><div class="eyebrow">1839</div><h4>Photography</h4><p>Once a machine could record a likeness exactly, painting had to justify itself another way. Photography also taught painters to see like a snapshot: figures cut off by the frame, off-center compositions, a single frozen moment.</p></div>
+    <div class="card"><div class="eyebrow">1850s–1867</div><h4>Japanese prints</h4><p>Japan opened to Western trade in the 1850s, and woodblock prints by Hokusai and Hiroshige flooded Paris, especially after the 1867 World's Fair. Their flat color, strong outlines, high viewpoints, and cropping show up in Degas, Monet, Van Gogh, and Gauguin.</p></div>
+    <div class="card"><div class="eyebrow">1853–70</div><h4>The railway and the new Paris</h4><p>Baron Haussmann rebuilt Paris with boulevards, cafés, parks, and stations, and new railways carried Parisians to the riverside suburbs and the Normandy coast. That gave the Impressionists their subject: modern leisure, modern crowds, boating at Argenteuil.</p></div>
     <div class="card"><div class="eyebrow">1870s</div><h4>A new market</h4><p>A growing middle class wanted smaller pictures for apartments, not vast canvases for churches and ministries. Dealers such as Paul Durand-Ruel, whom Monet and Pissarro met in London in 1870–71, bought and promoted artists directly. For the first time a painter could live without the Salon.</p></div>
   </div>
   <div class="prose">
@@ -387,11 +381,11 @@ td.y{font-family:var(--mono);font-size:12.5px;white-space:nowrap}
     <tbody>
       <tr><td class="y">1648</td><td>Royal Academy of Painting and Sculpture founded</td><td>Art becomes a state-sanctioned profession with fixed rules</td></tr>
       <tr><td class="y">1667</td><td>First Academy exhibition; hierarchy of genres codified</td><td>History painting at the top, landscape near the bottom</td></tr>
-      <tr><td class="y">1670s</td><td>Poussinistes vs Rubénistes</td><td>The line-versus-colour argument that Impressionism reopens</td></tr>
-      <tr><td class="y">c. 1800–1850</td><td>David and Ingres vs Delacroix</td><td>Neoclassical control vs Romantic colour and brushwork</td></tr>
+      <tr><td class="y">1670s</td><td>Poussinistes vs Rubénistes</td><td>The line-versus-color argument that Impressionism reopens</td></tr>
+      <tr><td class="y">c. 1800–1850</td><td>David and Ingres vs Delacroix</td><td>Neoclassical control vs Romantic color and brushwork</td></tr>
       <tr><td class="y">1824</td><td>Constable shown in Paris</td><td>Fresh outdoor landscape impresses the French</td></tr>
       <tr><td class="y">1830s–60s</td><td>Barbizon school</td><td>Landscape made serious; painting from nature</td></tr>
-      <tr><td class="y">1839</td><td>Daguerre's photography; Chevreul's colour law</td><td>Painting must do what the camera can't; colours mix in the eye</td></tr>
+      <tr><td class="y">1839</td><td>Daguerre's photography; Chevreul's color law</td><td>Painting must do what the camera can't; colors mix in the eye</td></tr>
       <tr><td class="y">1841</td><td>Collapsible paint tube patented</td><td>Painting outdoors becomes practical</td></tr>
       <tr><td class="y">1853–70</td><td>Haussmann rebuilds Paris</td><td>The modern city and its leisure become the subject</td></tr>
       <tr><td class="y">1855</td><td>Courbet's Pavilion of Realism</td><td>First artist-run show outside the official system</td></tr>
@@ -406,7 +400,7 @@ td.y{font-family:var(--mono);font-size:12.5px;white-space:nowrap}
 
 <!-- LINEAGE -->
 <section id="v-lineage" class="wrap"><div class="inner">
-  <div class="shead"><div class="eyebrow">The lineage · room by room</div><h2>From light, to structure, to feeling, to colour itself</h2></div>
+  <div class="shead"><div class="eyebrow">The lineage · room by room</div><h2>From light, to structure, to feeling, to color itself</h2></div>
   <p class="lede">The exhibition runs roughly in chronological order. Each movement below shows what it kept from its parent and what it threw out, with the paintings from my visit placed where they belong.</p>
 
   <div class="era">
@@ -424,9 +418,9 @@ td.y{font-family:var(--mono);font-size:12.5px;white-space:nowrap}
     <div>
       <h3>Impressionism<span class="years">1874–1886</span></h3>
       <svg class="stroke" viewBox="0 0 600 40" preserveAspectRatio="none" aria-hidden="true"><rect width="600" height="40" fill="#CFD9E6"/><g opacity=".9"><rect x="10" y="6" width="38" height="12" rx="3" fill="#8FA9D6"/><rect x="60" y="20" width="44" height="12" rx="3" fill="#E6C9A8"/><rect x="118" y="5" width="36" height="12" rx="3" fill="#A9B8D9"/><rect x="170" y="22" width="48" height="12" rx="3" fill="#B7C9A6"/><rect x="230" y="8" width="40" height="12" rx="3" fill="#D9C4D6"/><rect x="284" y="20" width="42" height="12" rx="3" fill="#8FA9D6"/><rect x="340" y="6" width="38" height="12" rx="3" fill="#F0D6B5"/><rect x="392" y="20" width="46" height="12" rx="3" fill="#A9B8D9"/><rect x="452" y="5" width="36" height="12" rx="3" fill="#B7C9A6"/><rect x="500" y="22" width="48" height="12" rx="3" fill="#9FB3D6"/><rect x="556" y="8" width="34" height="12" rx="3" fill="#E6C9A8"/></g></svg>
-      <p>Monet, Morisot, Degas, Pissarro, Renoir, Sisley and Caillebotte. Rejected by the Salon, they rented a photographer's studio in 1874 and showed on their own, and a critic's sneer at one Monet as a mere "impression" gave them their name.</p>
-      <p>Their real subject is not the pond or the port but light striking a surface at one particular moment. That is why Monet painted the same grainstack about twenty-five times: the stack did not matter, the four o'clock light did. To catch it they painted outdoors and quickly, with broken dabs of pure colour that the eye blends from a distance. Shadows became violet and blue, because that is how shadows look in sunlight once you stop assuming they are brown.</p>
-      <dl class="kv"><dt>Kept</dt><dd>Very little. This is the break.</dd><dt>Rejected</dt><dd>Finish, drawing first, dark shadows, grand subjects and the Salon itself</dd><dt>Subject</dt><dd>Modern leisure: boating, cafés, railway stations, suburban gardens</dd><dt>My visit</dt><dd><a href="#p-sisley" data-goto="visit">Sisley, 1873</a>; <a href="#p-lavacourt" data-goto="visit">Monet, 1880</a>; <a href="#p-etretat" data-goto="visit">Monet, 1885–86</a>; <a href="#p-caillebotte" data-goto="visit">Caillebotte, 1886</a></dd></dl>
+      <p>Monet, Morisot, Degas, Pissarro, Renoir, Sisley, and Caillebotte. Rejected by the Salon, they rented a photographer's studio in 1874 and showed on their own, and a critic's sneer at one Monet as a mere "impression" gave them their name.</p>
+      <p>Their real subject is not the pond or the port but light striking a surface at one particular moment. That is why Monet painted the same grainstack about twenty-five times: the stack did not matter, the four o'clock light did. To catch it they painted outdoors and quickly, with broken dabs of pure color that the eye blends from a distance. Shadows became violet and blue, because that is how shadows look in sunlight once you stop assuming they are brown.</p>
+      <dl class="kv"><dt>Kept</dt><dd>Very little. This is the break.</dd><dt>Rejected</dt><dd>Finish, drawing first, dark shadows, grand subjects, and the Salon itself</dd><dt>Subject</dt><dd>Modern leisure: boating, cafés, railway stations, suburban gardens</dd><dt>My visit</dt><dd><a href="#p-sisley" data-goto="visit">Sisley, 1873</a>; <a href="#p-lavacourt" data-goto="visit">Monet, 1880</a>; <a href="#p-etretat" data-goto="visit">Monet, 1885–86</a>; <a href="#p-caillebotte" data-goto="visit">Caillebotte, 1886</a></dd></dl>
       <div class="spot"><div class="eyebrow">How to spot it</div><p>Stand 30 cm away, then 3 m. Up close it is chaos; from a distance it resolves. Look for unfinished corners (Morisot's <em>Port of Nice</em>), for violet in the shadows, and for a horizon or figure cut off by the frame as a snapshot would cut it.</p></div>
     </div>
   </div>
@@ -436,8 +430,8 @@ td.y{font-family:var(--mono);font-size:12.5px;white-space:nowrap}
     <div>
       <h3>Post-Impressionism: the structure camp<span class="years">1880s–1906</span></h3>
       <svg class="stroke" viewBox="0 0 600 40" preserveAspectRatio="none" aria-hidden="true"><rect width="600" height="40" fill="#D8CDB8"/><rect x="0" y="0" width="120" height="20" fill="#B48A5A"/><rect x="120" y="0" width="120" height="20" fill="#7E9A6E"/><rect x="240" y="0" width="120" height="20" fill="#C9A24A"/><rect x="360" y="0" width="120" height="20" fill="#8A7A9A"/><rect x="480" y="0" width="120" height="20" fill="#B48A5A"/><rect x="60" y="20" width="120" height="20" fill="#7E9A6E"/><rect x="180" y="20" width="120" height="20" fill="#8A7A9A"/><rect x="300" y="20" width="120" height="20" fill="#B48A5A"/><rect x="420" y="20" width="120" height="20" fill="#C9A24A"/></svg>
-      <p>Cézanne and Seurat loved Impressionist colour but thought the pictures had gone soft: everything dissolved into light, and nothing had weight. Cézanne wanted to "make of Impressionism something solid, like the art of the museums," and rebuilt the scene from slabs of colour, treating an apple or a mountain as geometry. Seurat went the other way and systematised the dabs into a scientific grid of dots.</p>
-      <dl class="kv"><dt>Kept</dt><dd>Bright palette, visible mark, everyday subjects</dd><dt>Rejected</dt><dd>The fleeting moment. They wanted permanence back.</dd></dl>
+      <p>Cézanne and Seurat loved Impressionist color but thought the pictures had gone soft: everything dissolved into light, and nothing had weight. Cézanne is said to have wanted to "make of Impressionism something solid, like the art of the museums," and rebuilt the scene from slabs of color, treating an apple or a mountain as geometry. Seurat went the other way and systematized the dabs into a scientific grid of dots.</p>
+      <dl class="kv"><dt>Kept</dt><dd>Bright palette, visible mark, and everyday subjects</dd><dt>Rejected</dt><dd>The fleeting moment. They wanted permanence back.</dd></dl>
       <div class="spot"><div class="eyebrow">How to spot it</div><p>Parallel marks like hatching, and objects that look faceted or tilted toward you. Cézanne's tables never obey a single perspective because he moves around the object and paints all of it. This is the seed of Cubism.</p></div>
     </div>
   </div>
@@ -447,9 +441,9 @@ td.y{font-family:var(--mono);font-size:12.5px;white-space:nowrap}
     <div>
       <h3>Post-Impressionism: the feeling camp<span class="years">1886–1903</span></h3>
       <svg class="stroke" viewBox="0 0 600 40" preserveAspectRatio="none" aria-hidden="true"><rect width="600" height="40" fill="#E9C84A"/><g fill="none" stroke="#2F4C8A" stroke-width="7" stroke-linecap="round"><path d="M10 32 C 40 4, 70 38, 100 10"/><path d="M110 34 C 140 6, 170 36, 200 8"/><path d="M215 32 C 245 4, 275 38, 305 10"/><path d="M320 34 C 350 6, 380 36, 410 8"/><path d="M425 32 C 455 4, 485 38, 515 10"/><path d="M525 34 C 555 6, 585 36, 600 12"/></g></svg>
-      <p>Van Gogh and Gauguin took the same inheritance and asked a different question: what if the mark and the colour expressed the painter's inner state rather than the light? Van Gogh's brushstroke grows thick, directional and agitated, so a wheat field writhes because he did. Gauguin flattened everything into bold zones of unmixed colour, outlined like stained glass, and left France for Brittany and Tahiti in search of something he felt Paris had lost.</p>
-      <dl class="kv"><dt>Kept</dt><dd>The visible stroke and the pure colour</dd><dt>Rejected</dt><dd>Fidelity to what the eye sees. Colour is now emotional, not optical.</dd></dl>
-      <div class="spot"><div class="eyebrow">How to spot it</div><p>Ask whether the colour could have been in front of the painter. A green sky, a red ground or blue tree trunks put you in this camp. Van Gogh's <em>Sheaves of Wheat</em>, painted in the last month of his life, is a good test: the strokes are the subject, and the wheat is almost incidental.</p></div>
+      <p>Van Gogh and Gauguin took the same inheritance and asked a different question: what if the mark and the color expressed the painter's inner state rather than the light? Van Gogh's brushstroke grows thick, directional, and agitated, so a wheat field writhes because he did. Gauguin flattened everything into bold zones of unmixed color, outlined like stained glass, and left France for Brittany and Tahiti in search of something he felt Paris had lost.</p>
+      <dl class="kv"><dt>Kept</dt><dd>The visible stroke and the pure color</dd><dt>Rejected</dt><dd>Fidelity to what the eye sees. Color is now emotional, not optical.</dd></dl>
+      <div class="spot"><div class="eyebrow">How to spot it</div><p>Ask whether the color could have been in front of the painter. A green sky, a red ground, or blue tree trunks put you in this camp. Van Gogh's <em>Sheaves of Wheat</em>, painted in the last month of his life, is a good test: the strokes are the subject, and the wheat is almost incidental.</p></div>
     </div>
   </div>
 
@@ -458,9 +452,9 @@ td.y{font-family:var(--mono);font-size:12.5px;white-space:nowrap}
     <div>
       <h3>The next avant-garde: Monet late, Matisse, Munch, Mondrian<span class="years">1903–1920</span></h3>
       <svg class="stroke" viewBox="0 0 600 40" preserveAspectRatio="none" aria-hidden="true"><rect width="600" height="40" fill="#F2EFE6"/><rect x="0" y="0" width="210" height="40" fill="#D6342B"/><rect x="216" y="0" width="150" height="40" fill="#2F58A6"/><rect x="372" y="0" width="90" height="40" fill="#F0C532"/><rect x="468" y="0" width="6" height="40" fill="#1C1C1C"/><rect x="480" y="0" width="120" height="40" fill="#F2EFE6"/></svg>
-      <p>Here colour comes fully unhooked from description. Monet's late water lilies drop the horizon and drift toward abstraction. Matisse and the Fauves ("wild beasts," another critic's insult) used colour for pure sensation, so a face can be green if green makes the picture sing. Munch pushed Van Gogh's emotion into psychology and dread. Mondrian, the surprise of the final rooms, is on his way to pure grids; his <em>Windmill</em> of c. 1917 is painted from a low angle to stress the vertical, and you can watch him wrestling the object into abstraction.</p>
-      <dl class="kv"><dt>Kept</dt><dd>Everything Impressionism made permissible: any colour, any mark, any subject</dd><dt>Rejected</dt><dd>The last obligation to represent. After this, a painting can be about the painting.</dd><dt>My visit</dt><dd><a href="#p-clouds" data-goto="visit">Monet, 1903</a>; <a href="#p-tondo" data-goto="visit">Monet, 1908</a>; <a href="#p-mondrian" data-goto="visit">Mondrian, c. 1916</a></dd></dl>
-      <div class="spot"><div class="eyebrow">How to spot it</div><p>Cover the label and ask what the picture is "of." If you hesitate, the painter has won. Look at the edges between colours: Matisse lets them vibrate, while Mondrian starts drawing hard black lines. Both are the end of the road that began with Monet's dabs.</p></div>
+      <p>Here color comes fully unhooked from description. Monet's late water lilies drop the horizon and drift toward abstraction. Matisse and the Fauves ("wild beasts," another critic's insult) used color for pure sensation, so a face can be green if green makes the picture sing. Munch pushed Van Gogh's emotion into psychology and dread. Mondrian, the surprise of the final rooms, is on his way to pure grids; his <em>Windmill</em> of c. 1917 is painted from a low angle to stress the vertical, and you can watch him wrestling the object into abstraction.</p>
+      <dl class="kv"><dt>Kept</dt><dd>Everything Impressionism made permissible: any color, any mark, any subject</dd><dt>Rejected</dt><dd>The last obligation to represent. After this, a painting can be about the painting.</dd><dt>My visit</dt><dd><a href="#p-clouds" data-goto="visit">Monet, 1903</a>; <a href="#p-tondo" data-goto="visit">Monet, 1908</a>; <a href="#p-mondrian" data-goto="visit">Mondrian, c. 1916</a></dd></dl>
+      <div class="spot"><div class="eyebrow">How to spot it</div><p>Cover the label and ask what the picture is "of." If you hesitate, the painter has won. Look at the edges between colors: Matisse lets them vibrate, while Mondrian starts drawing hard black lines. Both are the end of the road that began with Monet's dabs.</p></div>
     </div>
   </div>
 
@@ -473,7 +467,7 @@ td.y{font-family:var(--mono);font-size:12.5px;white-space:nowrap}
       <tr><td class="k">Monet</td><td>The light on the water at 7 p.m.</td><td>Violet, blue</td><td>Broken dabs</td><td>What does it look like <em>right now</em>?</td></tr>
       <tr><td class="k">Cézanne</td><td>The bank as a set of solid planes</td><td>Cool blue slabs</td><td>Parallel hatching</td><td>What is its structure?</td></tr>
       <tr><td class="k">Van Gogh</td><td>The river as he feels about it tonight</td><td>Whatever expresses it</td><td>Thick, swirling</td><td>What does it feel like?</td></tr>
-      <tr><td class="k">Matisse</td><td>A red river and green sky, if the harmony works</td><td>None needed</td><td>Flat zones</td><td>Does the colour sing?</td></tr>
+      <tr><td class="k">Matisse</td><td>A red river and green sky, if the harmony works</td><td>None needed</td><td>Flat zones</td><td>Does the color sing?</td></tr>
     </tbody>
   </table></div>
 </div></section>
@@ -485,9 +479,9 @@ td.y{font-family:var(--mono);font-size:12.5px;white-space:nowrap}
   <ol class="steps">
     <li><div><b>Look before you read</b><p>Give the picture thirty seconds with the label covered. Decide what it is "of" and what mood it has, then read the wall text and notice where it corrects you.</p></div></li>
     <li><div><b>Walk the distance</b><p>Stand nose to canvas, then move across the room. The distance at which a painting snaps into focus tells you how much work the painter left to your eye.</p></div></li>
-    <li><div><b>Find the broken rule</b><p>Name which of the five Salon rules (finish, drawing first, dark shadow, grand subject, edge-to-edge resolution) is being refused, in one sentence.</p></div></li>
+    <li><div><b>Find the broken rule</b><p>Name which of the five Salon rules (finish, drawing first, dark shadow, grand subject, and edge-to-edge resolution) is being refused, in one sentence.</p></div></li>
     <li><div><b>Ask what is kept and what is rejected</b><p>Place the painting on <a href="#lineage" data-goto="lineage">the lineage</a>. Is this artist arguing with Impressionism or extending it?</p></div></li>
-    <li><div><b>Find the one strange decision</b><p>Every good painting has a choice that does not quite make sense at first: an unfinished corner, a figure cut off, a colour that could not have been there. That is usually where the painter speaks to you directly, like the reeds at the top of Monet's <a href="#p-clouds" data-goto="visit">1903 pond</a>.</p></div></li>
+    <li><div><b>Find the one strange decision</b><p>Every good painting has a choice that does not quite make sense at first: an unfinished corner, a figure cut off, a color that could not have been there. That is usually where the painter speaks to you directly, like the reeds at the top of Monet's <a href="#p-clouds" data-goto="visit">1903 pond</a>.</p></div></li>
   </ol>
   <div class="refgrid">
     <div class="card"><div class="eyebrow">Practice pair · clouds</div><h4>Boudin 1871 and Monet 1903</h4><p>Both are paintings of clouds. Boudin needs a sky and ships to show them; Monet shows them only in the water.</p></div>
@@ -530,7 +524,7 @@ td.y{font-family:var(--mono);font-size:12.5px;white-space:nowrap}
   document.querySelectorAll('.totop').forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();e.stopPropagation();document.getElementById('vgrid').scrollIntoView({block:'start'});});});
   route();
   var tog=document.getElementById('themeTog'),root=document.documentElement;
-  function isDark(){var t=root.getAttribute('data-theme');if(t)return t==='dark';return window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches;}
+  function isDark(){return root.getAttribute('data-theme')==='dark';}
   function label(){tog.textContent=isDark()?'Light mode':'Dark mode';}
   tog.addEventListener('click',function(){var n=isDark()?'light':'dark';root.setAttribute('data-theme',n);try{localStorage.setItem('ago-theme',n)}catch(_){}label();});
   label();
