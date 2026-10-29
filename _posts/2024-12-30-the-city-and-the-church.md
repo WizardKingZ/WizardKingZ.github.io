@@ -1,13 +1,12 @@
 ---
 title: "The City and the Church: From Troy to Constantinople in Nine Days"
-date: 2025-12-30 12:00
+date: 2024-12-30 12:00
 pillar: culture
 series: travel
 topic: Turkey, December 2024
 math: false
 summary: "Nine days in Istanbul and on the Aegean coast, told in the order of its history: from Troy to the Greek cities of Ionia, Roman Ephesus, the eastern Roman Empire, and the Ottomans."
 tags: ["travel", "Turkey", "history"]
-hidden: true
 image: /assets/images/turkey-2024/vestibule-mosaic.jpg
 ---
 
@@ -94,6 +93,15 @@ Ephesus is the reason most visitors come to this coast, and it is the best place
 In İzmir, the Roman agora of Smyrna survives in the middle of the modern city. It was rebuilt after an earthquake in AD 178 with help from Marcus Aurelius, and a portrait of his wife, Faustina, is carved on one of its arches.
 
 Hierapolis grew into a spa town under Rome. Its springs deposit calcium carbonate down the hillside, and over thousands of years they have built the white terraces of Pamukkale, the "cotton castle." Hotels once stood on the terraces; they were torn down after the site became a UNESCO World Heritage Site in 1988, and one hotel's pool, full of fallen Roman columns, survives as the Antique Pool, which local legend says Mark Antony gave to Cleopatra. The city also had a Plutonium, a gate to the underworld, where carbon dioxide seeping from the ground killed the animals that priests led into it.
+
+Hierapolis also produced the best-known Stoic of the Roman era. Epictetus was born here around AD 50, was taken to Rome as a slave, and after he was freed taught philosophy in Greece. His student Arrian, the historian whose account of Alexander includes the visit to Achilles' tomb, wrote down his lectures. The Stoics held that virtue is a kind of knowledge, and they named four virtues:
+
+- **Wisdom:** knowing what is good and what is bad.
+- **Courage:** knowing what is to be feared and what is not.
+- **Moderation:** knowing what to pursue and what to avoid.
+- **Justice:** knowing what to give others and what not to.
+
+They also named four passions, each resting on a mistaken judgment: fear of an apparent bad to come, desire for an apparent good to come, pleasure in a good we believe we have, and distress at a bad we believe we have. A sage, who holds no false beliefs, feels none of them. He does feel three "good feelings," the *eupatheiai*: wish, the rational pursuit of something; caution, its rational avoidance; and joy, rational elation. Each has gentler forms: goodwill and kindness under wish, modesty and reverence under caution, and delight and cheerfulness under joy. The Plutonium, a short walk away, is a good place to practice caution.
 
 Across the valley, Laodicea was a rich banking and textile city. It is one of the seven churches of Asia addressed in the Book of Revelation, alongside Ephesus and Smyrna, and it is the one rebuked for being "lukewarm, and neither cold nor hot." A common reading links the line to its water, which arrived by aqueduct neither as hot as the springs at Hierapolis nor as cold as the water at nearby Colossae.
 
