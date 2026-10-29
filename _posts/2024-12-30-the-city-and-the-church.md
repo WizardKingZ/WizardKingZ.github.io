@@ -180,7 +180,11 @@ Next door, Hagia Irene is the city's other great early church, and the simplest 
 *The Iconoclast cross in the apse of Hagia Irene.*
 {: .caption}
 
-Justinian also built the Basilica Cistern, under the square, in 532, and he reused whatever stone came to hand: two of its columns stand on Roman heads of Medusa, one on its side and one upside down.
+Justinian also built the Basilica Cistern, under the square, in 532. It is a forest of 336 columns, each about 9 meters tall, and it could hold up to 80,000 cubic meters of water piped in from outside the city. The builders reused whatever stone came to hand: two of its columns stand on Roman heads of Medusa, one on its side and one upside down. James Bond rowed through it in *From Russia with Love* in 1963, and Robert Langdon came back for Dan Brown's *Inferno* in 2016.
+
+![Rows of lit marble columns rising from shallow water in the Basilica Cistern](/assets/images/turkey-2024/basilica-cistern.jpg)
+*The Basilica Cistern, built under Justinian in 532.*
+{: .caption}
 
 ### Ephesus Again
 
@@ -243,7 +247,13 @@ From the terraces at the far end, the view explains why every ruler of the city 
 
 ### Mosques and Bazaars
 
-The Ottomans answered Hagia Sophia rather than replaced it. Mimar Sinan, the empire's great architect, built the Süleymaniye for Süleyman the Magnificent between 1550 and 1557 on the city's third hill, and Sultan Ahmed I built the Blue Mosque, with its six minarets, directly facing Hagia Sophia between 1609 and 1616. Down by the water, the Spice Bazaar was finished in the 1660s as part of the New Mosque complex and is still called the Mısır Çarşısı, the "Egyptian Bazaar," because revenues from the Ottoman province of Egypt paid for it.
+The Ottomans answered Hagia Sophia rather than replaced it. Mimar Sinan, the empire's great architect, built the Süleymaniye for Süleyman the Magnificent between 1550 and 1557 on the city's third hill, and Sultan Ahmed I built the Blue Mosque, with its six minarets, directly facing Hagia Sophia between 1609 and 1616.
+
+![The Blue Mosque behind palm trees in Sultanahmet Square, with scaffolding on one minaret](/assets/images/turkey-2024/blue-mosque.jpg)
+*The Blue Mosque from Sultanahmet Square, with one minaret under repair.*
+{: .caption}
+
+ Down by the water, the Spice Bazaar was finished in the 1660s as part of the New Mosque complex and is still called the Mısır Çarşısı, the "Egyptian Bazaar," because revenues from the Ottoman province of Egypt paid for it.
 
 The fishermen on the Galata Bridge are a more recent tradition, though not by much: the first bridge here opened in 1845, and the current one in 1994. They line both rails in all weather, and the grilled-fish sandwiches sold at the foot of the bridge are the other half of the scene.
 
