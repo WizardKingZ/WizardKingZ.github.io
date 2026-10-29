@@ -35,7 +35,7 @@ Historians name most of Japan's periods after the seat of power. The dates below
 
 Two ideas help with almost everything a visitor sees in Japan.
 
-The first is that Japan has two religions, and most people practice both. Shinto is the older one. It has no founder and no single scripture; it holds that *kami*, gods or spirits, live in the natural world, in mountains, rivers, trees, rocks, even earthquakes and volcanoes. In that sense it resembles other nature religions, such as the old Norse one. Shinto sites are shrines, marked by a torii gate. Buddhism arrived in the 6th century, by tradition in 538 or 552, from India by way of China and the Korean kingdom of Baekje, bringing ideas of impermanence and enlightenment, monks, and scripture. It did not replace Shinto. It layered onto it, and for most of Japanese history the two were practiced together, often on the same grounds. Buddhist sites are temples. The habit continues: the government's religious yearbook counts about 87 million Shinto adherents and 83 million Buddhists in a country of about 125 million, because so many people are counted by both. A common description is that Japanese life begins at the shrine and ends at the temple, which handles most funerals.
+The first is that Japan has two main religions, and most people practice both. Shinto is the older one. It has no founder and no single scripture; it holds that *kami*, gods or spirits, live in the natural world, in mountains, rivers, trees, rocks, even earthquakes and volcanoes. In that sense it resembles other nature religions, such as the old Norse one. Shinto sites are shrines, marked by a torii gate. Buddhism arrived in the 6th century, by tradition in 538 or 552, from India by way of China and the Korean kingdom of Baekje, bringing ideas of impermanence and enlightenment, monks, and scripture. It did not replace Shinto. It layered onto it, and for most of Japanese history the two were practiced together, often on the same grounds. Buddhist sites are temples. The habit continues: the government's religious yearbook counts about 87 million Shinto adherents and 83 million Buddhists in a country of about 125 million, because so many people are counted by both. A common description is that Japanese life begins at the shrine and ends at the temple, which handles most funerals.
 
 Zen, the school of Buddhism best known abroad, came later. The monk Eisai brought Rinzai Zen back from China in 1191, along with a taste for powdered green tea, which he promoted in a book on the health benefits of drinking it. Dōgen founded the Sōtō school after returning in 1227. Zen's emphasis on discipline and direct experience appealed to the warrior class, and it shaped ink painting, rock gardens, and the tea ceremony.
 
@@ -82,6 +82,16 @@ Edo was also where much of what the world now calls Japanese food took shape, as
 *Unagi over rice in Kanda, an Edo dish.*
 {: .caption}
 
+Edo grew up around older places. Sensō-ji in Asakusa, on the Sumida River, is traditionally dated to 628, when two fishermen found a statue of Kannon in their net, which makes it older than Edo by eight centuries. Its inner gate, the Hōzōmon, hangs a red lantern marked 小舟町, for the neighborhood that donated it. Behind the main hall, koi drift under a stone bridge, and the noise of the shopping street disappears within a few steps.
+
+![A huge red paper lantern hanging in the vermilion Hōzōmon gate of Sensō-ji, flanked by two black-and-gold lanterns](/assets/images/japan-2025/hozomon.jpg)
+*The Hōzōmon at Sensō-ji. The red lantern names the Kobunachō neighborhood that gave it.*
+{: .caption}
+
+![Koi swimming in a dark pond under an arched stone bridge](/assets/images/japan-2025/sensoji-koi.jpg)
+*Koi in the garden at Sensō-ji.*
+{: .caption}
+
 The Tokugawa family temple, Zōjō-ji, holds the graves of six of the fifteen shoguns. It now sits at the foot of Tokyo Tower, a 1958 steel tower painted orange and white for air safety, which is a fair summary of what happened to Edo next.
 
 ![The main hall of Zōjō-ji with Tokyo Tower rising behind it at dusk](/assets/images/japan-2025/zojoji-tower.jpg)
@@ -126,19 +136,9 @@ Tokyo Station faces the palace on purpose. Tatsuno Kingo's red-brick building op
 
 After the war, the 1946 "Humanity Declaration" set aside the emperor's divine status, and the 1947 constitution made him "the symbol of the State and of the unity of the people." Shinto and the imperial house remain, as Meiji Jingu shows, but as heritage and ritual rather than as instruments of the state.
 
-### Sensō-ji, Shibuya, and the Tokyo of Today
+### Shibuya, Shinjuku, and the Tokyo of Today
 
-My first full day ran from the oldest part of the city to the newest. Sensō-ji in Asakusa is traditionally dated to 628, when two fishermen found a statue of Kannon in their net, which makes it older than Edo by eight centuries. Its inner gate, the Hōzōmon, hangs a red lantern marked 小舟町, for the neighborhood that donated it. Behind the main hall, koi drift under a stone bridge, and the noise of the shopping street disappears within a few steps.
-
-![A huge red paper lantern hanging in the vermilion Hōzōmon gate of Sensō-ji, flanked by two black-and-gold lanterns](/assets/images/japan-2025/hozomon.jpg)
-*The Hōzōmon at Sensō-ji. The red lantern names the Kobunachō neighborhood that gave it.*
-{: .caption}
-
-![Koi swimming in a dark pond under an arched stone bridge](/assets/images/japan-2025/sensoji-koi.jpg)
-*Koi in the garden at Sensō-ji.*
-{: .caption}
-
-That afternoon I was looking down on the Shibuya crossing, where up to about 3,000 people cross on a single light change. One moment I had been in quiet greenery at Meiji Jingu; the next I was watching thousands of people flow past one another in near silence. It was crowded but not chaotic. Everyone had somewhere to be, and no one was in anyone else's way. That was when I understood something about Tokyo: here, independence is not defiance. It is normal.
+From Meiji Jingu I walked down through Harajuku and Omotesando to Shibuya and looked down on its crossing, where up to about 3,000 people cross on a single light change. One moment I had been in quiet greenery at Meiji Jingu; the next I was watching thousands of people flow past one another in near silence. It was crowded but not chaotic. Everyone had somewhere to be, and no one was in anyone else's way. That was when I understood something about Tokyo: here, independence is not defiance. It is normal.
 
 ![The Shibuya scramble crossing from above, full of people, surrounded by billboards](/assets/images/japan-2025/shibuya-crossing.jpg)
 *The Shibuya crossing, mid-scramble.*
@@ -155,7 +155,7 @@ The Japan I visited was also in the middle of a change that I follow for work. S
 
 ### Mt Fuji and Hakone
 
-Leaving the city made Tokyo feel even sharper in hindsight. Mt Fuji, 3,776 meters high, is an active volcano that last erupted in 1707, and in Shinto it is a kami. The goddess of the mountain is Konohanasakuya-hime, "the princess who makes the trees blossom," often linked with the cherry blossom, and she is worshipped at some 1,300 Sengen shrines, headed by Fujisan Hongū Sengen Taisha at the mountain's foot. Fear of the volcano and reverence for it grew together; worship was partly a way to calm it.
+Leaving the city made Tokyo feel even sharper in hindsight. Mt Fuji, 3,776 meters high, is an active volcano that last erupted in 1707, and in Shinto it is a kami. The goddess of the mountain is Konohanasakuya-hime, "the princess who makes the trees blossom," often linked with the cherry blossom, and she is worshipped at some 1,300 Sengen shrines, headed by Fujisan Hongū Sengen Taisha at the mountain's foot. Fear of the volcano and reverence for it grew together, and worship is often described as partly a way to calm it.
 
 At the fifth station, the road ends beside Komitake Shrine, which honors her older sister, Iwanaga-hime, the goddess of rock. In the old chronicles, the heavenly prince Ninigi was offered both sisters and chose the beautiful Konohanasakuya-hime over the enduring Iwanaga-hime, and so, the story goes, human lives became as brief as blossoms rather than as lasting as stone. It is the Japanese idea of impermanence in a single myth.
 
@@ -171,7 +171,7 @@ Climbing Fuji was historically a pilgrimage rather than a sport. In the Edo peri
 
 It is also perhaps the most painted mountain in Japan, and the story of how it came to be painted is the story of Japanese painting in brief. Court painters of the Heian period developed *yamato-e*, a native style of bright color and gentle landscapes. Zen monks brought ink painting from China, and the monk Sesshū made it Japanese in the 15th century. The Kanō school painted gold-leaf folding screens for warlords and shoguns. Then, in Edo, woodblock prints, *ukiyo-e*, "pictures of the floating world," put art within reach of merchants and townspeople; printers even used techniques such as *mokume-zuri*, printing the grain of the wood itself for texture. In the Meiji era, the word *nihonga* was coined for painting in these traditions, to tell it apart from the Western-style painting arriving at the same time.
 
-Its most famous image came from an artist who was already old. Katsushika Hokusai was born in Edo in 1760 in the district of Katsushika, which gave him the name he is known by. He was apprenticed to a woodcarver at 14 and joined the studio of the print designer Katsukawa Shunshō at 18. He used at least 30 names over his career, and he was about 70 when the publisher Nishimuraya Yohachi brought out his *Thirty-Six Views of Mount Fuji*. In the colophon to his later *One Hundred Views of Mount Fuji*, he wrote that nothing he drew before 70 was worth noticing, and that by 110 every dot and line would be alive; he died in 1849, at 88, reportedly wishing for a few more years to become a real painter. From 1834 he signed his work Gakyō Rōjin Manji, "the old man mad about art."
+The mountain's most famous image came from an artist who was already old. Katsushika Hokusai was born in Edo in 1760 in the district of Katsushika, which gave him the name he is known by. He was apprenticed to a woodcarver at 14 and joined the studio of the print designer Katsukawa Shunshō at 18. He used at least 30 names over his career, and he was about 70 when the publisher Nishimuraya Yohachi brought out his *Thirty-Six Views of Mount Fuji*. In the colophon to his later *One Hundred Views of Mount Fuji*, he wrote that nothing he drew before 70 was worth noticing, and that by 110 every dot and line would be alive. He died in 1849, at 88, reportedly wishing for a few more years to become a real painter. From 1834 he signed his work Gakyō Rōjin Manji, "the old man mad about art."
 
 The first print of the series, *Under the Wave off Kanagawa*, printed around 1830 to 1832, is often called the best-known Japanese image in the world. A wave the size of a cliff curls over three fishing boats, and Fuji sits small and calm in the distance, the one thing in the picture that will still be there afterward. Hokusai printed it with Prussian blue, a pigment newly imported from Europe, and the print later traveled back the other way: Debussy put it on the cover of the score of *La Mer* in 1905. Public-domain impressions are in the [Metropolitan Museum of Art](https://www.metmuseum.org/art/collection/search/56353) and the [Art Institute of Chicago](https://www.artic.edu/artworks/24645).
 
@@ -179,7 +179,7 @@ The first print of the series, *Under the Wave off Kanagawa*, printed around 183
 *Katsushika Hokusai, Under the Wave off Kanagawa (c. 1830–32), from Thirty-Six Views of Mount Fuji; shown here in a later woodblock reproduction. Original impressions: Metropolitan Museum of Art and Art Institute of Chicago.*
 {: .caption}
 
-In the afternoon I crossed into Hakone, the volcanic hot-spring district where the old Tōkaidō climbed over the mountains and the shogunate kept a checkpoint. Steam still vents from the hillsides, and a cable car hauls visitors up slopes the old travelers walked. I came back to Tokyo tired, but steadier.
+That afternoon, after the fifth station, I crossed into Hakone, the volcanic hot-spring district where the old Tōkaidō climbed over the mountains and the shogunate kept a checkpoint. Steam still vents from the hillsides, and a cable car hauls visitors up slopes the old travelers walked. I came back to Tokyo tired, but steadier.
 
 ![Steam venting from a forested, cloud-covered mountainside in Hakone](/assets/images/japan-2025/hakone-steam.jpg)
 *Steam on the hillside in Hakone.*
@@ -191,7 +191,11 @@ In the afternoon I crossed into Hakone, the volcanic hot-spring district where t
 
 ### Odaiba: The Future's Waiting Room
 
-My last Tokyo day was spent on the reclaimed land around Odaiba. It felt like the future's waiting room: wide, quiet, and slightly unreal, with a replica of the Statue of Liberty facing the Rainbow Bridge and, until 2026, a life-size Unicorn Gundam standing guard over a shopping mall.
+My last Tokyo day began with oysters at the Tsukiji outer market, which stayed put when the wholesale fish market left for Toyosu in 2018. From there I went out onto the reclaimed land of the bay. Odaiba felt like the future's waiting room: wide, quiet, and slightly unreal, with a replica of the Statue of Liberty facing the Rainbow Bridge and, until 2026, a life-size Unicorn Gundam standing guard over a shopping mall.
+
+![A large raw oyster held up at a stall in the Tsukiji outer market](/assets/images/japan-2025/tsukiji-oyster.jpg)
+*Breakfast at Tsukiji.*
+{: .caption}
 
 ![A replica of the Statue of Liberty in Odaiba, with the Rainbow Bridge across the bay](/assets/images/japan-2025/odaiba-liberty.jpg)
 *Odaiba's Statue of Liberty, with the Rainbow Bridge behind.*
@@ -219,10 +223,32 @@ What stayed with me was how quiet the city actually is, how normal it feels to b
 Wed 24–Fri 26 Dec · Kyoto, Nara, Arashiyama · Days 6–8
 {: .dayline}
 
-On the morning I left Tokyo, I ate oysters at the Tsukiji outer market, which stayed when the wholesale fish market moved to Toyosu in 2018. Then I took the Shinkansen down the corridor the Tōkaidō once followed. The line opened in 1964 as the world's first high-speed railway, and covers in a little over two hours a road that took travelers on foot about two weeks.
+I took the Shinkansen down the corridor the Tōkaidō once followed. The line opened in 1964 as the world's first high-speed railway, and covers in a little over two hours a road that took travelers on foot about two weeks.
 
-![A large raw oyster held up at a stall in the Tsukiji outer market](/assets/images/japan-2025/tsukiji-oyster.jpg)
-*Breakfast at Tsukiji.*
+### Kyoto: The Emperor's City
+
+The court moved to Heian-kyō, modern Kyoto, in 794, and the emperors stayed for more than a thousand years, until 1869. Kyoto arrived softly. It does not announce itself; it reveals itself slowly, in wooden buildings, narrower streets, and warmer light.
+
+At dusk I walked through Gion, past Yasaka Shrine and down Hanamikoji, and along the Shirakawa canal. Time stretched. Nothing was rushed, and even my thoughts slowed down. The light caught the five-story pagoda of Hōkan-ji, the "Yasaka pagoda," above the tiled roofs.
+
+![The five-story Yasaka pagoda above tiled rooftops at sunset](/assets/images/japan-2025/yasaka-pagoda.jpg)
+*The Yasaka pagoda at dusk.*
+{: .caption}
+
+![A tray of wagyu slices, vegetables in a hot pot, rice, and dipping sauces](/assets/images/japan-2025/kyoto-wagyu.jpg)
+*Wagyu hot pot in Kyoto, a meal that would have been unthinkable before 1872. At home I keep it simpler, with a [seared wagyu steak](/kitchen/#r-japanese-wagyu-steak).*
+{: .caption}
+
+### Fushimi Inari
+
+Fushimi Inari sits on the rail line from Kyoto to Nara, which makes it a natural first stop on the way. Founded in 711, it is the head of some 30,000 to 40,000 Inari shrines across Japan. Inari began as the kami of rice, and since rice was once how wealth, taxes, and power were measured, Inari became the kami of business and prosperity as well. That makes it one of the most practical gods in Shinto.
+
+The shrine is less a building than a mountain, which suits a religion that places the divine in nature rather than in buildings: its paths climb Mount Inari under thousands of vermilion torii, each given by a business or a family, often in thanks after a wish came true, and inscribed with the donor's name and the date. The vermilion is said to ward off misfortune and, practically, to help protect the wood from decay. The foxes that guard the paths are not gods but Inari's messengers, chosen because foxes hunt the rodents that eat the rice; they often hold a key to the granary, a jewel, or a scroll in their mouths, for access to abundance, stored wealth, and knowledge.
+
+Walking through the gates is an act of gratitude rather than petition, and the long climb turns that into a ritual. As the path rises, the crowds thin, the gates grow older, and the mountain grows quieter; the full walk to the summit and back takes two to three hours, and many visitors turn back early. The idea it expresses is reciprocity: effort comes first, and thanks follow success. It is easy to see why it suited Kyoto's merchants, and why it still suits a country that values patience and long commitment.
+
+![A tunnel of vermilion torii gates at Fushimi Inari, inscribed in black](/assets/images/japan-2025/fushimi-inari.jpg)
+*The torii at Fushimi Inari, each inscribed with its donor.*
 {: .caption}
 
 ### Nara: Where Buddhism Became the State's
@@ -250,28 +276,6 @@ A short walk away, the two religions sit side by side. Kasuga Taisha, a Shinto s
 
 ![A bowl of ramen with cabbage, bean sprouts, and an egg in a Kamukura bowl](/assets/images/japan-2025/kamukura.jpg)
 *Lunch in Nara, from an Osaka ramen chain: a preview of what was coming.*
-{: .caption}
-
-### Kyoto: The Emperor's City
-
-The court moved to Heian-kyō, modern Kyoto, in 794, and the emperors stayed for more than a thousand years, until 1869. Kyoto arrived softly. It does not announce itself; it reveals itself slowly, in wooden buildings, narrower streets, and warmer light.
-
-I went first to Fushimi Inari, founded in 711 and the head of some 30,000 to 40,000 Inari shrines across Japan. Inari began as the kami of rice, and since rice was once how wealth, taxes, and power were measured, Inari became the kami of business and prosperity as well. That makes it one of the most practical gods in Shinto. The shrine is less a building than a mountain, which suits a religion that places the divine in nature rather than in buildings: its paths climb Mount Inari under thousands of vermilion torii, each given by a business or a family, often in thanks after a wish came true, and inscribed with the donor's name and the date. The vermilion is said to ward off misfortune and, practically, to help protect the wood from decay. The foxes that guard the paths are not gods but Inari's messengers, chosen because foxes hunt the rodents that eat the rice; they often hold a key to the granary, a jewel, or a scroll in their mouths, for access to abundance, stored wealth, and knowledge.
-
-Walking through the gates is an act of gratitude rather than petition, and the long climb turns that into a ritual. As the path rises, the crowds thin, the gates grow older, and the mountain grows quieter; the full walk to the summit and back takes two to three hours, and many visitors turn back early. The idea it expresses is reciprocity: effort comes first, and thanks follow success. It is easy to see why it suited Kyoto's merchants, and why it still suits a country that values patience and long commitment.
-
-![A tunnel of vermilion torii gates at Fushimi Inari, inscribed in black](/assets/images/japan-2025/fushimi-inari.jpg)
-*The torii at Fushimi Inari, each inscribed with its donor.*
-{: .caption}
-
-At dusk I walked through Gion, past Yasaka Shrine and down Hanamikoji, and along the Shirakawa canal. Time stretched. Nothing was rushed, and even my thoughts slowed down. The light caught the five-story pagoda of Hōkan-ji, the "Yasaka pagoda," above the tiled roofs.
-
-![The five-story Yasaka pagoda above tiled rooftops at sunset](/assets/images/japan-2025/yasaka-pagoda.jpg)
-*The Yasaka pagoda at dusk.*
-{: .caption}
-
-![A tray of wagyu slices, vegetables in a hot pot, rice, and dipping sauces](/assets/images/japan-2025/kyoto-wagyu.jpg)
-*Wagyu hot pot in Kyoto, a meal that would have been unthinkable before 1872. At home I keep it simpler, with a [seared wagyu steak](/kitchen/#r-japanese-wagyu-steak).*
 {: .caption}
 
 ### Zen, Tea, and the Kyoto Table
@@ -354,17 +358,19 @@ Japan is easy to move around once three things are sorted.
 
 ## The Route
 
-| Day | Date | Where | What I did |
+This is the order I would follow if I did the trip again. It keeps each day in one part of the city and puts Fushimi Inari on the way to Nara; my own days ran in a slightly different order.
+
+| Day | Date | Where | What to do |
 |---|---|---|---|
-| 1 | Fri 19 Dec | Tokyo | Arrival; ramen at Ichiran |
-| 2 | Sat 20 Dec | Tokyo | Sensō-ji; Meiji Jingu; Harajuku and Omotesando; Shibuya Sky |
-| 3 | Sun 21 Dec | Mt Fuji, Hakone | Fuji's fifth station and Komitake Shrine; Hakone |
-| 4 | Mon 22 Dec | Tokyo | Kanda; Akihabara; Zōjō-ji and Tokyo Tower; Shinjuku, Golden Gai, and Kabukichō |
-| 5 | Tue 23 Dec | Tokyo | teamLab Planets; Odaiba; Nihonbashi, Tokyo Station, and the Imperial Palace |
-| 6 | Wed 24 Dec | Kyoto | Tsukiji; Shinkansen to Kyoto; Fushimi Inari; Gion, Yasaka Shrine, Hanamikoji, and Shirakawa |
-| 7 | Thu 25 Dec | Nara | Kasuga Taisha, Nara Park, and Tōdai-ji |
+| 1 | Fri 19 Dec | Tokyo | Arrive; ramen at Ichiran |
+| 2 | Sat 20 Dec | Tokyo | Old Edo: the Imperial Palace, Tokyo Station, Nihonbashi and Kyōbashi; lunch in Kanda; Akihabara; Sensō-ji in Asakusa |
+| 3 | Sun 21 Dec | Tokyo | West Tokyo: Meiji Jingu; Harajuku and Omotesando; Shibuya Sky at sunset; Shinjuku, Golden Gai, and Kabukichō |
+| 4 | Mon 22 Dec | Mt Fuji, Hakone | Fuji's fifth station and Komitake Shrine; Hakone |
+| 5 | Tue 23 Dec | Tokyo | The bay: Tsukiji; teamLab Planets in Toyosu; Odaiba; Zōjō-ji and Tokyo Tower at dusk |
+| 6 | Wed 24 Dec | Kyoto | Shinkansen to Kyoto; Gion, Yasaka Shrine, Hanamikoji, and Shirakawa at dusk |
+| 7 | Thu 25 Dec | Nara | Fushimi Inari on the way; Kasuga Taisha, Nara Park, and Tōdai-ji |
 | 8 | Fri 26 Dec | Osaka | Arashiyama and the Hozu gorge; train to Osaka; Osaka Castle, Shinsekai, and Dōtonbori |
-| 9 | Sat 27 Dec | — | Sumiyoshi Taisha; flight from Kansai |
+| 9 | Sat 27 Dec | — | Sumiyoshi Taisha; fly home from Kansai |
 
 ## Appendix: A Short Glossary
 
