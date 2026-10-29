@@ -185,10 +185,10 @@ The first print of the series, *Under the Wave off Kanagawa*, printed around 183
 *Katsushika Hokusai, Under the Wave off Kanagawa (c. 1830–32), from Thirty-Six Views of Mount Fuji; shown here in a later woodblock reproduction. Original impressions: Metropolitan Museum of Art and Art Institute of Chicago.*
 {: .caption}
 
-That afternoon, after the fifth station, I crossed into Hakone, the volcanic hot-spring district where the old Tōkaidō climbed over the mountains and the shogunate kept a checkpoint. Steam still vents from the hillsides, and a cable car hauls visitors up slopes the old travelers walked. I came back to Tokyo tired, but steadier.
+That afternoon, after the fifth station, I crossed into Hakone, the volcanic hot-spring district where the old Tōkaidō climbed over the mountains and the shogunate kept a checkpoint. Hakone sits inside the caldera of Mt Hakone, a volcano that is still alive. White plumes rise from its slopes: these are fumaroles, vents where volcanic gas, mostly water vapor laced with sulfur, escapes from the hot rock below. They are densest at Ōwakudani, the "Great Boiling Valley," where the ground was last blown open by small steam-driven explosions, and the same heat feeds the town's hot springs. A cable car hauls visitors up slopes the old travelers walked. I came back to Tokyo tired, but steadier.
 
-![Steam venting from a forested, cloud-covered mountainside in Hakone](/assets/images/japan-2025/hakone-steam.jpg)
-*Steam on the hillside in Hakone.*
+![A white plume of volcanic gas rising from a fumarole on a forested, cloud-covered mountainside in Hakone](/assets/images/japan-2025/hakone-steam.jpg)
+*A fumarole on the slopes of Mt Hakone: volcanic gas venting from the hillside.*
 {: .caption}
 
 ![The track of the Hakone cable car running steeply downhill between station roofs](/assets/images/japan-2025/hakone-cable-car.jpg)
