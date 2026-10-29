@@ -237,14 +237,22 @@ From the terraces at the far end, the view explains why every ruler of the city 
 *Across the Golden Horn to Galata, from the palace.*
 {: .caption}
 
+![A gilded throne in a glass case inside a tiled pavilion at Topkapı](/assets/images/turkey-2024/topkapi-throne.jpg)
+*A gilded throne on display in one of the tiled pavilions of the palace's innermost court.*
+{: .caption}
+
 ### Mosques and Bazaars
 
-The Ottomans answered Hagia Sophia rather than replaced it. Mimar Sinan, the empire's great architect, built the Süleymaniye for Süleyman the Magnificent between 1550 and 1557 on the city's third hill, and Sultan Ahmed I built the Blue Mosque, with its six minarets, directly facing Hagia Sophia between 1609 and 1616. Down by the water, the Spice Bazaar was finished in the 1660s and is still called the Mısır Çarşısı, the "Egyptian Bazaar," because revenues from the Ottoman province of Egypt paid for it.
+The Ottomans answered Hagia Sophia rather than replaced it. Mimar Sinan, the empire's great architect, built the Süleymaniye for Süleyman the Magnificent between 1550 and 1557 on the city's third hill, and Sultan Ahmed I built the Blue Mosque, with its six minarets, directly facing Hagia Sophia between 1609 and 1616. Down by the water, the Spice Bazaar was finished in the 1660s as part of the New Mosque complex and is still called the Mısır Çarşısı, the "Egyptian Bazaar," because revenues from the Ottoman province of Egypt paid for it.
 
 The fishermen on the Galata Bridge are a more recent tradition, though not by much: the first bridge here opened in 1845, and the current one in 1994. They line both rails in all weather, and the grilled-fish sandwiches sold at the foot of the bridge are the other half of the scene.
 
 ![Fishermen with rods on the Galata Bridge, with the Bosphorus behind](/assets/images/turkey-2024/galata-bridge-fishermen.jpg)
 *Fishermen on the Galata Bridge, looking toward the Bosphorus.*
+{: .caption}
+
+![The Galata Bridge at dusk, with the domes and minarets of the New Mosque across the water](/assets/images/turkey-2024/galata-bridge-dusk.jpg)
+*The Galata Bridge at dusk, with the New Mosque and the Spice Bazaar on the far shore.*
 {: .caption}
 
 ### Pera
