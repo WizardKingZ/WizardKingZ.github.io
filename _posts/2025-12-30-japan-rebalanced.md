@@ -7,7 +7,6 @@ topic: Japan, December 2025
 math: false
 summary: "Nine days down the old Tōkaidō, from Tokyo to Kyoto, Nara, and Osaka, with Shinto and Zen, shoguns and emperors, and what Japan ate along the way."
 tags: ["travel", "Japan", "history"]
-hidden: true
 image: /assets/images/japan-2025/yasaka-pagoda.jpg
 ---
 
@@ -46,6 +45,10 @@ The second idea is the difference between the emperor and the shogun. The imperi
 
 Fri 19–Tue 23 Dec · Tokyo, Mt Fuji, Hakone · Days 1–5
 {: .dayline}
+
+![An old-style map of Tokyo marking the Imperial Palace, Tokyo Station, Nihonbashi, Kanda, Akihabara, Asakusa, Shinjuku, Meiji Jingu, Shibuya, Zōjō-ji, Tsukiji, Toyosu, and Odaiba](/assets/images/japan-2025/tokyo-map.jpg)
+*Tokyo, drawn for this post in the style of an old map, with the places I visited. The bay shore is approximate.*
+{: .caption}
 
 The city did not wait for me. It moved immediately, trains, people, and lights, all with precision. I was anonymous, and that felt good. On my first night I ate at Ichiran, a tonkotsu ramen chain from Fukuoka where each diner sits in a booth with partitions on either side, which may be the most Tokyo way possible to eat alone without explanation. (At home, my own attempt is a [double-soup shoyu ramen](/kitchen/#r-double-soup-shoyu-ramen), topped with [ajitama](/kitchen/#r-adam-liaws-ajitama-ramen-eggs).)
 
