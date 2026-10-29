@@ -140,6 +140,12 @@ After the war, the 1946 "Humanity Declaration" set aside the emperor's divine st
 
 From Meiji Jingu I walked down through Harajuku and Omotesando to Shibuya and looked down on its crossing, where up to about 3,000 people cross on a single light change. One moment I had been in quiet greenery at Meiji Jingu; the next I was watching thousands of people flow past one another in near silence. It was crowded but not chaotic. Everyone had somewhere to be, and no one was in anyone else's way. That was when I understood something about Tokyo: here, independence is not defiance. It is normal.
 
+From the roof of Shibuya Sky, about 230 meters up, the day's route lay in a single view: the dark forest of Meiji Jingu, the shrine to the emperor in whose name Japan remade itself after 1868; in front of it, Kenzō Tange's sweeping gymnasium for the 1964 Olympics, the event that announced Japan's postwar recovery; and behind it, the towers of Shinjuku. It is about a century and a half of modern Japan in one frame.
+
+![The Meiji Jingu forest seen from Shibuya Sky, with the Yoyogi National Gymnasium in front and the Shinjuku skyline behind](/assets/images/japan-2025/shibuya-sky-meiji.jpg)
+*From Shibuya Sky: the Meiji Jingu forest, the 1964 Olympic gymnasium in front of it, and Shinjuku beyond.*
+{: .caption}
+
 ![The Shibuya scramble crossing from above, full of people, surrounded by billboards](/assets/images/japan-2025/shibuya-crossing.jpg)
 *The Shibuya crossing, mid-scramble.*
 {: .caption}
