@@ -76,7 +76,7 @@ Little of Memphis survives above ground, largely because later builders carried 
 *The fallen colossus of Ramesses II at Memphis.*
 {: .caption}
 
-Saqqara, the burial ground of Memphis, is where that project started. Before the pyramids, kings were buried under mastabas, flat-topped tombs of mud brick or stone, and officials kept using them long after. In one, I found a false door carved into the wall: a doorway that does not open, framed by the owner's names and titles, with a panel above showing him seated at a table of offerings. Egyptians believed the ka, the part of the soul that needed food, passed through it to collect what the living left on the stone slab in front.
+Saqqara, the burial ground of Memphis, is where the tomb-building started. Before the pyramids, kings were buried under mastabas, flat-topped tombs of mud brick or stone, and officials kept using them long after. In one, I found a false door carved into the wall: a doorway that does not open, framed by the owner's names and titles, with a panel above showing him seated at a table of offerings. Egyptians believed the ka, the part of the soul that needed food, passed through it to collect what the living left on the stone slab in front.
 
 ![A carved false door in a mastaba tomb at Saqqara, with an offering slab in front](/assets/images/egypt-2023/saqqara-false-door.jpg)
 *A false door in a mastaba at Saqqara. The doorway is solid stone; only the ka could pass through it.*
@@ -105,6 +105,8 @@ Khufu's Great Pyramid remained the tallest man-made structure on earth for nearl
 ![The north face of the Great Pyramid with visitors at its base](/assets/images/egypt-2023/great-pyramid-base.jpg)
 *At the foot of the Great Pyramid. What remains is the core; the white casing is almost all gone.*
 {: .caption}
+
+Those bare steps also made the pyramid climbable, and for most of modern history visitors went up the outside. Nineteenth-century travelers treated the summit as part of the tour, hauled up the waist-high blocks by local guides who pulled from above, pushed from below, and expected a tip at the top. Mark Twain made the climb in 1867 and wrote about the help with little affection. Egypt banned climbing in 1951, partly because climbers had fallen to their deaths and partly to protect the stone, though the rule was loosely enforced for decades. In 2020, parliament made climbing an antiquity without a permit a crime, punishable by a month in prison, a fine, or both. My own ascent therefore ended a few courses up, at the tourist entrance, which was as high as the law, and my knees, would allow.
 
 Inside, the climb up the Grand Gallery to the King's Chamber is steep, hot, and cramped, and the chamber itself is bare granite. That emptiness is the point. Everything else I saw that week, from Abu Simbel's colossi to the last hieroglyphs at Philae, descends from the confidence this building expressed.
 
@@ -138,9 +140,9 @@ Karnak is less a temple than a city of temples, enlarged by king after king for 
 
 Beyond it, the 134 columns of the Great Hypostyle Hall, completed under Seti I and Ramesses II, are the reason to go, and the scale is difficult to convey. Standing among them, you feel the purpose of the design, which was to make a human feel small before Amun <span class="hg" role="img" aria-label="Amun in hieroglyphs">𓇋𓏠𓈖</span>, whose name means "the hidden one." The columns of the central aisle are carved as open papyrus flowers.
 
-The kings of this period also changed how they were buried. Egyptians built for the living on the east bank and buried their dead on the west, where the sun sets. Pyramids had proven too easy to rob, so the New Kingdom's kings cut their tombs instead into a hidden valley on the west bank, the Valley of the Kings.
-
 ### Hatshepsut
+
+The kings of this period also changed how they were buried. Egyptians built for the living on the east bank and buried their dead on the west, where the sun sets. Pyramids had proven too easy to rob, so the New Kingdom's kings cut their tombs instead into a hidden valley on the west bank, the Valley of the Kings.
 
 Hatshepsut ruled as pharaoh for about 20 years, from around 1479 BC. Her terraced temple at Deir el-Bahari reads almost as modern architecture. Her successor, Thutmose III, later tried to erase her from the record, but her obelisk still stands at Karnak, a reminder that the erasure did not entirely succeed.
 
@@ -150,7 +152,7 @@ Hatshepsut ruled as pharaoh for about 20 years, from around 1479 BC. Her terrace
 
 ### Amenhotep III, Akhenaten, and Tutankhamun
 
-Luxor Temple, begun under Amenhotep III around 1390 BC, carries the marks of the religious crisis that followed. His son Akhenaten abandoned Amun for the single sun disc of the Aten and moved the capital to a new city. The Luxor Museum, small, well lit, and the best-curated collection of the trip, shows that break directly: one wall is rebuilt from blocks of temples Akhenaten raised to the Aten at Karnak, which later kings pulled down and used as fill inside their own pylons.
+Luxor Temple was begun under Amenhotep III around 1390 BC, just before a religious crisis. His son Akhenaten abandoned Amun for the single sun disc of the Aten and moved the capital to a new city. The Luxor Museum, small, well lit, and the best-curated collection of the trip, shows that break directly: one wall is rebuilt from blocks of temples Akhenaten raised to the Aten at Karnak, which later kings pulled down and used as fill inside their own pylons.
 
 The crisis ended with Tutankhamun <span class="cartouche" role="img" aria-label="Tutankhamun in hieroglyphs">𓇋𓏠𓈖𓏏𓅱𓏏𓋹</span>, who was born Tutankhaten, changed his name, and restored Amun. The name means "living image of Amun." Amun's name is written first in the cartouche out of respect, and the ankh <span class="hg" role="img" aria-label="Ankh in hieroglyphs">𓋹</span>, the sign for life, sits at the end.
 
@@ -236,7 +238,7 @@ Edfu, dedicated to Horus, is often called the best-preserved temple in Egypt. Gr
 *My best impression of an archaeologist, among the columns at Edfu.*
 {: .caption}
 
-High on one wall, under a winged sun disk, the emblem of Horus of Behdet, Edfu's own form of the god, a band of text includes an elephant. The elephant is a hieroglyph, read *abu*. It was the Egyptian word for elephant and also the name of Elephantine, the island at Aswan that marked Egypt's southern border and traded in ivory from farther south; the Greek name Elephantine simply translates it. So the sign here most likely names a place rather than an animal. The Ptolemies who built Edfu knew real elephants as well. They sent hunting expeditions down the Red Sea coast to capture African elephants for their army, an answer to the Indian war elephants of their Seleucid rivals in Syria.
+High on one wall, a band of text runs under a winged sun disk, the emblem of Horus of Behdet, Edfu's own form of the god. In the middle of it is an elephant. The elephant is a hieroglyph, read *abu*. It was the Egyptian word for elephant and also the name of Elephantine, the island at Aswan that marked Egypt's southern border and traded in ivory from farther south. The Greek name, Elephantine, simply translates it. So the sign here most likely names a place rather than an animal. The Ptolemies who built Edfu knew real elephants as well. They sent hunting expeditions down the Red Sea coast to capture African elephants for their army, an answer to the Indian war elephants of their Seleucid rivals in Syria.
 
 ![An elephant hieroglyph in a band of text below a winged sun disk at Edfu](/assets/images/egypt-2023/edfu-elephant.jpg)
 *An elephant among the hieroglyphs at Edfu, below the winged sun disk of Horus of Behdet.*
@@ -249,7 +251,7 @@ High on one wall, under a winged sun disk, the emblem of Horus of Behdet, Edfu's
 
 Rome took Egypt from Cleopatra, and Roman emperors in turn had themselves carved as pharaohs. Esna, the third temple on the drive north, is dedicated to the creator god Khnum and sits below the level of the modern town. Its hall, decorated largely under the Romans, has been cleaned in recent years to reveal color that was invisible for centuries.
 
-Philae is where the story ends. In the UNESCO campaign, the temple of Isis was dismantled and rebuilt block by block on higher ground on Agilkia Island, which is why the most romantic site in Egypt is also, in a sense, a reconstruction. Its importance lies not in its age, since most of what stands is Ptolemaic and Roman, but in its longevity. Isis was still worshipped here long after Christianity became Rome's official religion, and the temple stayed open until Justinian closed it around AD 537.
+Philae is where the story ends. In the UNESCO campaign, the temple of Isis was dismantled and rebuilt block by block on higher ground on Agilkia Island, which is why the site I found most romantic in Egypt is also, in a sense, a reconstruction. Its importance lies not in its age, since most of what stands is Ptolemaic and Roman, but in its longevity. Isis was still worshipped here long after Christianity became Rome's official religion, and the temple stayed open until Justinian closed it around AD 537.
 
 ![The first pylon of the temple of Isis at Philae](/assets/images/egypt-2023/philae-pylon.jpg)
 *The first pylon at Philae, where Ptolemy XII smites his enemies before Isis, as he does at Edfu.*
