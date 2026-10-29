@@ -76,7 +76,7 @@ The shogun's roads began a few blocks away. In 1603 Ieyasu had a bridge put acro
 *A post from the 1875 Kyōbashi bridge, the next bridge down the Tōkaidō.*
 {: .caption}
 
-Edo was also where much of what the world now calls Japanese food took shape, as fast food for a crowded city of working men. Nigiri sushi, a slice of fish pressed onto vinegared rice, is credited to a vendor named Hanaya Yohei in the 1820s. Tempura had arrived earlier with Portuguese traders in Nagasaki and became an Edo street snack. Eel grilled in a sweet soy glaze, *kabayaki*, was another. Near Kanda I had it over rice for lunch, with [karaage](/kitchen/#r-chicken-karaage) on the side.
+Edo was also where much of what the world now calls Japanese food took shape, as fast food for a crowded city of working men. Nigiri sushi, a slice of fish pressed onto vinegared rice, is credited to a vendor named Hanaya Yohei in the 1820s. Tempura had arrived earlier with Portuguese traders in Nagasaki and became an Edo street snack. Eel grilled in a sweet soy glaze, *kabayaki*, was another. Near Kanda I had it over rice for lunch, with [karaage](/kitchen/#r-chicken-karaage) on the side. Next door, Akihabara grew from a postwar black market in radio parts into the city's district of electronics, anime, and arcades.
 
 ![A lacquered bowl of grilled eel over rice, with fried chicken, miso soup, and pickles on a tray](/assets/images/japan-2025/kanda-unagi.jpg)
 *Unagi over rice in Kanda, an Edo dish.*
@@ -138,7 +138,7 @@ After the war, the 1946 "Humanity Declaration" set aside the emperor's divine st
 
 ### Shibuya, Shinjuku, and the Tokyo of Today
 
-From Meiji Jingu I walked down through Harajuku and Omotesando to Shibuya and looked down on its crossing, where up to about 3,000 people cross on a single light change. One moment I had been in quiet greenery at Meiji Jingu; the next I was watching thousands of people flow past one another in near silence. It was crowded but not chaotic. Everyone had somewhere to be, and no one was in anyone else's way. That was when I understood something about Tokyo: here, independence is not defiance. It is normal.
+From Meiji Jingu I walked down through Harajuku and Omotesando to Shibuya, where the famous crossing takes up to about 3,000 people on a single light change. One moment I had been in quiet greenery; the next I was watching thousands of people flow past one another in near silence. It was crowded but not chaotic. Everyone had somewhere to be, and no one was in anyone else's way. That was when I understood something about Tokyo: here, independence is not defiance. It is normal.
 
 From the roof of Shibuya Sky, about 230 meters up, the day's route lay in a single view: the dark forest of Meiji Jingu, the shrine to the emperor in whose name Japan remade itself after 1868; in front of it, Kenzō Tange's sweeping gymnasium for the 1964 Olympics, the event that announced Japan's postwar recovery; and behind it, the towers of Shinjuku. It is about a century and a half of modern Japan in one frame.
 
@@ -150,7 +150,7 @@ From the roof of Shibuya Sky, about 230 meters up, the day's route lay in a sing
 *The Shibuya crossing, mid-scramble.*
 {: .caption}
 
-Tokyo is less one city than a set of them. Shibuya is youth, fashion, and energy; Shinjuku is offices, the metropolitan government, and nightlife. Akihabara's arcades and Shinjuku's alleys were Tokyo at its most playful. Kabukichō, under its red neon arch, is named for a kabuki theater planned there after the war that was never built. Taiyaki, the fish-shaped cake filled with sweet bean paste that I ate on the street nearby, is said to date from 1909, late in the Meiji era. At night the city glows without trying to impress, and there is comfort in that.
+Tokyo is less one city than a set of them. Shibuya is youth, fashion, and energy; Shinjuku is offices, the metropolitan government, and nightlife. Shinjuku's narrow alleys, and the tiny bars of Golden Gai, were Tokyo at its most playful. Kabukichō, under its red neon arch, is named for a kabuki theater planned there after the war that was never built. Taiyaki, the fish-shaped cake filled with sweet bean paste that I ate on the street nearby, is said to date from 1909, late in the Meiji era. At night the city glows without trying to impress, and there is comfort in that.
 
 <div class="pair">
   <figure><img src="/assets/images/japan-2025/kabukicho.jpg" alt="The red neon arch at the entrance to Kabukichō at night" loading="lazy"><figcaption>Kabukichō, Shinjuku.</figcaption></figure>
