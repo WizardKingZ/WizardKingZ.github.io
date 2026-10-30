@@ -150,6 +150,7 @@ a.card:hover h3{text-decoration:underline}
 .prose li{margin:4px 0}
 .prose blockquote{margin:0 0 16px;padding:4px 16px;border-left:3px solid var(--rule);color:var(--ink-2)}
 .prose table{border-collapse:collapse;display:block;overflow-x:auto;max-width:100%;margin:0 0 16px;font-size:14px}
+.prose table:has(+ .caption){width:max-content;margin-left:auto;margin-right:auto}
 .prose th,.prose td{border:1px solid var(--rule);padding:6px 10px}
 .prose code{font-family:var(--mono);font-size:.86em;background:var(--surface-2);padding:1px 5px;border-radius:2px}
 .prose pre{background:var(--surface);border:1px solid var(--rule);border-radius:3px;padding:12px 14px;overflow-x:auto;font-size:13.5px;line-height:1.5}
