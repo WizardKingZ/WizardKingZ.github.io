@@ -51,6 +51,6 @@
   pillar: "academic"
   url: "/portfolio-optimizer/"
   eyebrow: "Mean-Variance and Black-Litterman, in the Browser"
-  blurb: "My 2018 portfolio optimization library ported to the browser: pick an objective, set bounds and views on the Fama-French five factors, and watch the efficient frontier move."
+  blurb: "My 2018 portfolio optimization library ported to the browser: pick an objective, set bounds and views on the Fama-French factors, a 12-asset policy portfolio, or six regional ETFs, and watch the efficient frontier move."
   image: "/assets/images/cards/portfolio-optimizer.jpg"
   note: "Inputs, not forecasts. Not investment advice."
