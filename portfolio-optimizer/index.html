@@ -1,0 +1,2233 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style><!-- jz-meta --><meta name="description" content="My 2018 portfolio optimization library ported to the browser: pick an objective, set bounds and views on the Fama-French five factors, and watch the efficient frontier move."><meta property="og:title" content="Portfolio Optimizer"><meta property="og:description" content="My 2018 portfolio optimization library ported to the browser: pick an objective, set bounds and views on the Fama-French five factors, and watch the efficient frontier move."><meta property="og:type" content="website"><meta property="og:url" content="https://wizardkingz.github.io/portfolio-optimizer/"><link rel="canonical" href="https://wizardkingz.github.io/portfolio-optimizer/"><meta property="og:image" content="https://wizardkingz.github.io/assets/images/cards/portfolio-optimizer.jpg"><meta name="twitter:card" content="summary_large_image"><!-- /jz-meta --></head><body>
+<title>Portfolio Optimizer</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<script>(function(){try{var s=localStorage.getItem('po-calc-theme');if(s)document.documentElement.setAttribute('data-theme',s)}catch(e){}})();</script>
+<style>
+:root{
+  --surface-0:#f4f3f0; --surface-1:#fcfcfb; --surface-2:#edece8; --border:#e6e4de; --rule:#d3d7de; --grid:#eeece7;
+  --text-primary:#0b0b0b; --text-secondary:#52514e; --text-muted:#7c7a75;
+  --ink:#0b1f3a; --band:#0b1f3a; --band-text:#f3f5f9; --accent:#6a3d8f;
+  --s1:#2a78d6; --s2:#eb6834; --s3:#1baf7a; --s4:#c98a00; --s5:#8a62c9; --s6:#7c7a75;
+  --c1:#2a78d6; --c2:#eb6834; --c3:#1baf7a; --c4:#d6a100; --c5:#8a62c9; --c6:#d04f7f; --c7:#2fa3b5; --c8:#8c6d46; --c9:#5f7f2a; --c10:#b33a3a; --c11:#4a5ea8; --c12:#9a9790;
+  --good:#1a7f37; --warn:#b26a00; --critical:#b91c1c;
+  --thbg:#0b1f3a; --thfg:#ffffff; --sub:#e9edf3;
+  --font:Arial,Helvetica,sans-serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --surface-0:#121211; --surface-1:#1a1a19; --surface-2:#242422; --border:#2c2c2a; --rule:#363b44; --grid:#242422;
+  --text-primary:#f0efec; --text-secondary:#c3c2b7; --text-muted:#8e8c85;
+  --ink:#dbe4f1; --band:#0c1829; --band-text:#eef2f8; --accent:#b48ee0;
+  --s1:#5b93dc; --s2:#e2733f; --s3:#2bb886; --s4:#d9a21a; --s5:#a585dc; --s6:#8e8c85;
+  --c1:#5b93dc; --c2:#e2733f; --c3:#2bb886; --c4:#d9b02a; --c5:#a585dc; --c6:#e0709a; --c7:#46b8c9; --c8:#b08d62; --c9:#86a64a; --c10:#d65f5f; --c11:#7d8fd6; --c12:#a8a59c;
+  --good:#3fb950; --warn:#d29922; --critical:#f85149;
+  --thbg:#1d3557; --thfg:#f3f5f9; --sub:#20262f; color-scheme:dark }}
+:root[data-theme="dark"]{
+  --surface-0:#121211; --surface-1:#1a1a19; --surface-2:#242422; --border:#2c2c2a; --rule:#363b44; --grid:#242422;
+  --text-primary:#f0efec; --text-secondary:#c3c2b7; --text-muted:#8e8c85;
+  --ink:#dbe4f1; --band:#0c1829; --band-text:#eef2f8; --accent:#b48ee0;
+  --s1:#5b93dc; --s2:#e2733f; --s3:#2bb886; --s4:#d9a21a; --s5:#a585dc; --s6:#8e8c85;
+  --c1:#5b93dc; --c2:#e2733f; --c3:#2bb886; --c4:#d9b02a; --c5:#a585dc; --c6:#e0709a; --c7:#46b8c9; --c8:#b08d62; --c9:#86a64a; --c10:#d65f5f; --c11:#7d8fd6; --c12:#a8a59c;
+  --good:#3fb950; --warn:#d29922; --critical:#f85149;
+  --thbg:#1d3557; --thfg:#f3f5f9; --sub:#20262f; color-scheme:dark }
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--surface-0);color:var(--text-primary);font:15px/1.45 var(--font);font-variant-numeric:lining-nums}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--band)}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--surface-1)}
+.band{background:var(--band);color:var(--band-text);display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px;padding-block:12px;padding-left:max(24px,env(safe-area-inset-left,0px));padding-right:max(24px,env(safe-area-inset-right,0px))}
+.brand{display:flex;align-items:center;gap:12px;min-width:0}
+.mark{flex:none;width:30px;height:30px;border:1.5px solid var(--band-text);display:grid;place-items:center;font-weight:700;font-size:14px}
+header h1{font-size:15.5px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--band-text);margin:0}
+.bsub{color:var(--band-text);opacity:.8;font-size:12.5px;margin-top:1px}
+.bandr{margin-left:auto;display:flex;gap:8px}
+.bandbtn{font:inherit;font-size:13px;font-weight:600;letter-spacing:.05em;color:var(--band-text);background:transparent;border:1px solid var(--band-text);padding:7px 14px;border-radius:2px;cursor:pointer;white-space:nowrap}
+.bandbtn:hover{opacity:.85}
+.ctrl{display:flex;flex-wrap:wrap;align-items:center;border-bottom:1px solid var(--rule);padding-left:max(24px,env(safe-area-inset-left,0px));padding-right:max(24px,env(safe-area-inset-right,0px));overflow-x:auto}
+#tabs{display:flex;flex-wrap:nowrap}
+#tabs button{font:inherit;font-size:14px;color:var(--text-muted);padding:11px 10px 9px;border:0;border-bottom:2px solid transparent;background:none;cursor:pointer;white-space:nowrap}
+#tabs button:hover{color:var(--text-primary)}
+#tabs button.on{border-bottom-color:var(--accent);color:var(--ink);font-weight:650}
+.eng{margin-left:auto;font-size:12px;color:var(--text-muted);white-space:nowrap;padding-left:12px}
+button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+main{padding-block:22px 48px;padding-left:max(24px,env(safe-area-inset-left,0px));padding-right:max(24px,env(safe-area-inset-right,0px))}
+@media (max-width:640px){.band,.ctrl,main,footer{padding-left:max(16px,env(safe-area-inset-left,0px))!important;padding-right:max(16px,env(safe-area-inset-right,0px))!important}header{position:static}}
+.layout{display:grid;grid-template-columns:minmax(0,360px) minmax(0,1fr);gap:22px;align-items:start}
+@media (max-width:1020px){.layout{grid-template-columns:minmax(0,1fr)}}
+section{margin:0 0 28px}
+.sechead{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 12px;border-bottom:2px solid var(--ink);padding-bottom:7px;margin-bottom:10px}
+.sechead .num{font-size:13px;font-weight:700;color:var(--surface-1);background:var(--ink);padding:2px 8px}
+.sechead h2{font-size:20px;font-weight:700;margin:0;color:var(--ink);letter-spacing:-.01em;text-wrap:balance}
+.sechead .hz{margin-left:auto;font-size:12.5px;color:var(--text-muted)}
+.lens{font-size:13px;color:var(--text-secondary);max-width:110ch;margin:0 0 12px}
+.exec{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);border:1px solid var(--rule);background:var(--surface-1);margin:0 0 16px}
+.exec>div{padding:18px 22px;min-width:0}
+.exec-r{border-left:1px solid var(--rule);background:var(--surface-2)}
+@media (max-width:1150px){.exec{grid-template-columns:1fr}.exec-r{border-left:0;border-top:1px solid var(--rule)}}
+.eyebrow{font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;font-weight:700;color:var(--accent);margin-bottom:8px}
+.eyebrow span{color:var(--text-muted);font-weight:600}
+.headline{font-size:22px;line-height:1.3;font-weight:700;color:var(--ink);letter-spacing:-.01em;text-wrap:balance}
+.exec-sub{font-size:14px;line-height:1.5;color:var(--text-secondary);margin:9px 0 0;max-width:80ch}
+.tp{padding:8px 0;border-top:1px solid var(--rule)}
+.tp:first-child{border-top:0;padding-top:0}
+.tpn{font-size:11px;letter-spacing:.11em;text-transform:uppercase;font-weight:700;color:var(--accent);margin-bottom:2px}
+.tps{font-size:16px;font-weight:700;color:var(--ink);font-variant-numeric:tabular-nums}
+.tpt{font-size:13px;line-height:1.45;color:var(--text-secondary)}
+.kpis{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:12px;margin:0 0 16px}
+@media (max-width:1450px){.kpis{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:560px){.kpis{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.kpi{background:var(--surface-1);border:1px solid var(--rule);border-radius:3px;padding:12px 14px;min-width:0}
+.kpi .l{font-size:12px;letter-spacing:.02em;text-transform:uppercase;color:var(--text-muted)}
+.kpi .v{font-size:24px;font-weight:650;letter-spacing:-.02em;margin:2px 0;font-variant-numeric:tabular-nums;color:var(--ink)}
+.kpi .d{font-size:12px;color:var(--text-muted)}
+.kpi .d b.up{color:var(--good)} .kpi .d b.dn{color:var(--critical)}
+.crow{display:grid;gap:16px;margin:0 0 14px}
+.crow.c2{grid-template-columns:repeat(2,minmax(0,1fr))}
+@media (max-width:1500px){.crow.c2{grid-template-columns:minmax(0,1fr)}}
+.card{background:var(--surface-1);border:1px solid var(--rule);border-radius:3px;padding:12px 14px 10px;min-width:0}
+.card .ch{border-bottom:1px solid var(--border);padding-bottom:6px;margin-bottom:8px;display:flex;flex-wrap:wrap;gap:4px 10px;align-items:baseline}
+.card h3{font-size:14.5px;font-weight:700;color:var(--ink);margin:0}
+.card .ch span{font-size:12px;color:var(--text-muted)}
+.take{font-size:13px;line-height:1.4;background:var(--surface-2);border-left:2px solid var(--accent);padding:6px 9px;margin:0 0 8px}
+.take b{color:var(--accent);margin-right:5px;font-size:12px;text-transform:uppercase;letter-spacing:.04em}
+.foot{border-top:1px solid var(--border);padding-top:6px;margin-top:8px;font-size:12px;color:var(--text-muted)}
+.panel{background:var(--surface-1);border:1px solid var(--rule);padding:12px 16px;min-width:0}
+.ptitle{font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:var(--thfg);background:var(--thbg);margin:-12px -16px 10px;padding:6px 16px}
+aside.inputs{position:sticky;top:104px;max-height:calc(100vh - 116px);overflow:auto}
+@media (max-width:1020px){aside.inputs{position:static;max-height:none}}
+h3.ss{font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink);font-weight:700;margin:16px 0 6px;border-bottom:1px solid var(--rule);padding-bottom:4px;display:flex;align-items:baseline;gap:8px}
+h3.ss .r{margin-left:auto;text-transform:none;letter-spacing:0;font-weight:400;color:var(--text-muted)}
+.objs{display:grid;gap:4px}
+.obj{font:inherit;font-size:13.5px;text-align:left;padding:7px 10px;border:1px solid var(--rule);background:var(--surface-0);color:var(--text-secondary);cursor:pointer;border-radius:2px;display:flex;justify-content:space-between;gap:8px}
+.obj:hover{border-color:var(--accent)}
+.obj.on{background:var(--ink);border-color:var(--ink);color:var(--surface-1);font-weight:700}
+.obj small{font-size:11.5px;opacity:.75;font-weight:400}
+.field{display:grid;grid-template-columns:minmax(0,1fr) 110px;gap:8px;align-items:center;padding:3px 0}
+.field label{font-size:13.5px;color:var(--text-secondary);line-height:1.3}
+.inbox{display:flex;align-items:center;border:1px solid var(--rule);border-radius:2px;background:var(--surface-0);min-width:0}
+.inbox input,.inbox select{width:100%;min-width:0;border:0;background:transparent;color:var(--accent);font:13.5px var(--font);padding:5px 6px;text-align:right;font-variant-numeric:tabular-nums}
+.inbox select{text-align:left;color:var(--text-primary)}
+.inbox .u{font-size:11.5px;color:var(--text-muted);padding-right:6px;white-space:nowrap}
+.tog{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:5px 0;font-size:13.5px;color:var(--text-secondary);cursor:pointer}
+.tog input{width:34px;height:18px;appearance:none;-webkit-appearance:none;background:var(--rule);border-radius:9px;position:relative;cursor:pointer;flex:none;margin:0}
+.tog input::after{content:"";position:absolute;top:2px;left:2px;width:14px;height:14px;border-radius:50%;background:var(--surface-1);transition:left .15s}
+.tog input:checked{background:var(--accent)}
+.tog input:checked::after{left:18px}
+.tog small{display:block;font-size:11.5px;color:var(--text-muted)}
+.atab{width:100%;border-collapse:collapse;font-size:13px}
+.atab th{background:none;color:var(--text-muted);font-size:11px;letter-spacing:.06em;text-transform:uppercase;font-weight:700;padding:3px 4px;text-align:right;border-bottom:1px solid var(--rule)}
+.atab th:first-child{text-align:left}
+.atab td{padding:2px 3px;border-bottom:1px solid var(--border)}
+.atab td:first-child{font-size:13px;color:var(--text-secondary);white-space:nowrap;max-width:120px;overflow:hidden;text-overflow:ellipsis}
+.atab input{width:100%;min-width:44px;border:1px solid transparent;background:transparent;color:var(--accent);font:13px var(--font);padding:3px 4px;text-align:right;font-variant-numeric:tabular-nums;border-radius:2px}
+.atab input:hover{border-color:var(--rule)}
+.atab input.chg{background:color-mix(in srgb,var(--accent) 10%,transparent)}
+.atab input:disabled{color:var(--text-muted)}
+.view{border:1px solid var(--rule);border-left:3px solid var(--s5);background:var(--surface-0);padding:8px 9px;margin:0 0 8px;border-radius:2px}
+.vhead{display:flex;gap:6px;align-items:center;margin-bottom:6px}
+.vhead input{flex:1;min-width:0;border:1px solid var(--rule);background:var(--surface-1);color:var(--text-primary);font:600 13.5px var(--font);padding:4px 6px;border-radius:2px}
+.x{font:inherit;font-size:13px;line-height:1;border:1px solid var(--rule);background:var(--surface-1);color:var(--text-muted);cursor:pointer;padding:4px 7px;border-radius:2px}
+.x:hover{color:var(--critical);border-color:var(--critical)}
+.leg{display:grid;grid-template-columns:minmax(0,1fr) 78px auto;gap:5px;margin:0 0 4px}
+.leg select,.vnum input{border:1px solid var(--rule);background:var(--surface-1);color:var(--text-primary);font:13px var(--font);padding:4px 5px;border-radius:2px;min-width:0;width:100%}
+.leg .inbox input{padding:4px 5px}
+.vnum{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;margin-top:6px}
+.vnum label{font-size:11px;color:var(--text-muted);text-transform:uppercase;letter-spacing:.05em;display:grid;gap:2px}
+.vnum input{text-align:right;color:var(--accent);font-variant-numeric:tabular-nums}
+.vsum{font-size:12px;color:var(--text-muted);margin-top:5px}
+.btn{font:inherit;font-size:13px;padding:5px 10px;border:1px solid var(--rule);background:var(--surface-1);color:var(--text-primary);cursor:pointer;border-radius:2px}
+.btn:hover{border-color:var(--accent);color:var(--accent)}
+.btn.lnk{border:0;background:none;color:var(--accent);padding:2px 0;font-size:12.5px}
+.note{font-size:12px;color:var(--text-muted);margin:8px 0 0;line-height:1.45}
+.hint{font-size:12.5px;line-height:1.45;color:var(--text-secondary);background:var(--surface-2);border-left:2px solid var(--accent);padding:6px 9px;margin:8px 0 4px}
+details.guide{border:1px solid var(--rule);background:var(--surface-0);margin:0 0 6px;border-radius:2px}
+details.guide summary{cursor:pointer;font-size:13px;font-weight:700;color:var(--ink);padding:7px 10px;list-style-position:inside}
+details.guide ol{margin:0;padding:0 12px 9px 30px}
+details.guide li{font-size:13px;line-height:1.45;color:var(--text-secondary);margin:3px 0}
+dl.gloss{display:grid;grid-template-columns:max-content minmax(0,1fr);gap:5px 12px;margin:0;font-size:13.5px;line-height:1.45}
+dl.gloss dt{font-weight:700;color:var(--text-primary)}
+dl.gloss dd{margin:0;color:var(--text-secondary)}
+@media (max-width:560px){dl.gloss{grid-template-columns:1fr}dl.gloss dd{margin-bottom:4px}}
+.tw{overflow-x:auto;min-width:0}
+table.t{border-collapse:collapse;width:100%;font-size:13.5px}
+.t th,.t td{padding:5px 8px;border-bottom:1px solid var(--border);text-align:left;vertical-align:middle}
+.t th{background:var(--thbg);color:var(--thfg);font-weight:700;font-size:11.5px;text-transform:uppercase;letter-spacing:.05em;white-space:nowrap}
+.t td.num,.t th.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.t td.lab{white-space:nowrap;color:var(--text-secondary)}
+.t tr.tot td{border-top:1px solid var(--ink);font-weight:700}
+.t tr.hl td{background:color-mix(in srgb,var(--s1) 9%,transparent)}
+.t td.neg{color:var(--critical)} .t td.pos{color:var(--good)}
+.bar{position:relative;height:12px;min-width:110px;background:linear-gradient(var(--rule),var(--rule)) no-repeat var(--zx,0) 0/1px 100%}
+.bar i{position:absolute;top:2px;height:8px;border-radius:1px}
+.pill{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.04em;padding:1px 6px;border-radius:2px;border:1px solid var(--border);color:var(--text-secondary);white-space:nowrap}
+.pill.good{border-color:var(--good);color:var(--good)}
+.pill.warn{border-color:var(--warn);color:var(--warn)}
+.pill.bad{border-color:var(--critical);color:var(--critical)}
+.pill.acc{border-color:var(--accent);color:var(--accent)}
+.box{border:1px solid var(--rule);border-left:3px solid var(--accent);background:var(--surface-1);padding:10px 14px;margin:0 0 14px;font-size:13.5px;line-height:1.5;color:var(--text-secondary)}
+.box.red{border-left-color:var(--critical);color:var(--critical)}
+.box.warn{border-left-color:var(--warn)}
+.legend{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:12.5px;color:var(--text-secondary);margin:0 0 6px}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:5px;vertical-align:-1px}
+.legend i.ln{height:2px;border-radius:0;vertical-align:3px;width:14px}
+.legend i.dot{border-radius:50%}
+.chart{display:block;width:100%;height:auto}
+.chart.wide{min-width:720px}
+.chart.half{max-height:440px}
+.chart text{fill:var(--text-secondary);font-family:var(--font);font-size:var(--fs,12.5px)}
+.chart .gl{stroke:var(--grid);stroke-width:1}
+.chart .ax{stroke:var(--rule);stroke-width:1}
+.chart .lbl{font-size:calc(var(--fs,12.5px) * .92);fill:var(--text-muted)}
+.hist{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:16px;align-items:stretch;margin:0 0 14px}
+@media (max-width:1500px){.hist{grid-template-columns:minmax(0,1fr)}}
+.hist .card{display:flex;flex-direction:column}
+.hist .card .note{margin-top:auto;padding-top:8px}
+.t.compact th,.t.compact td{padding:7px 8px}
+.t.grid{table-layout:fixed;min-width:520px}
+.t.grid td.lab{overflow:hidden;text-overflow:ellipsis}
+.heat td.num,.heat th.num{text-align:center}
+.heat th.num{white-space:normal;line-height:1.25;vertical-align:bottom;letter-spacing:0;text-transform:none;font-size:12px}
+.heat td.lab{white-space:nowrap}
+.t.heat.compact th.num,.t.heat.compact td.num{padding:7px 5px}
+.heat td.num{font-variant-numeric:tabular-nums}
+.heat td.diag{color:var(--text-muted)}
+.chart .hot{cursor:pointer}
+.tt{position:fixed;pointer-events:none;background:var(--surface-1);border:1px solid var(--rule);padding:6px 9px;font-size:13px;line-height:1.4;color:var(--text-primary);z-index:20;box-shadow:0 2px 8px rgba(0,0,0,.12);max-width:280px}
+.stale{opacity:.45;transition:opacity .2s}
+.meth{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+@media (max-width:1300px){.meth{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:900px){.meth{grid-template-columns:1fr}}
+.meth ul{margin:0;padding-left:18px}.meth li{font-size:13.5px;line-height:1.5;margin:4px 0;color:var(--text-secondary)}
+.meth li b{color:var(--text-primary)}
+footer a{color:var(--accent)}
+footer{color:var(--text-muted);font-size:12.5px;padding-block:20px;padding-left:max(24px,env(safe-area-inset-left,0px));padding-right:max(24px,env(safe-area-inset-right,0px));border-top:2px solid var(--ink)}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+<header>
+  <div class="band">
+    <div class="brand"><div class="mark">JZ</div><div><h1>Portfolio Optimizer</h1><div class="bsub">Mean-variance and Black-Litterman allocation</div></div></div>
+    <div class="bandr"><button id="resetbtn" class="bandbtn" type="button">Reset inputs</button><button id="themebtn" class="bandbtn" type="button" aria-label="Switch between light and dark mode">Dark</button></div>
+  </div>
+  <div class="ctrl"><nav id="tabs" aria-label="Universes"></nav><span class="eng" id="engine"></span></div>
+</header>
+<main>
+  <div class="layout">
+    <aside class="inputs panel" id="inputs" aria-label="Optimizer inputs"></aside>
+    <div id="results" style="min-width:0"></div>
+  </div>
+</main>
+<footer id="foot"></footer>
+<div class="tt" id="tt" hidden></div>
+
+<script>
+window.PO_DEFAULTS = {"universes": [{"key": "tutorial", "title": "Tutorial: Fama-French five factors", "asset_names": ["Market", "SMB", "HML", "RMW", "CMA"], "expected_returns": [0.10941688654353562, 0.05956939313984168, 0.0724749340369393, 0.06736622691292876, 0.0664179419525066], "covariance": [[0.023847861279596247, 0.004383944807548196, -0.0033555654248299954, -0.00235334583528231, -0.003963170839900592], [0.004383944807548196, 0.010941294118221137, 0.00017785468719392977, -0.002726546365426644, -0.0005729786419800423], [-0.0033555654248299954, 0.00017785468719392977, 0.010586383714635259, 0.0007780101627379295, 0.0050402871621419085], [-0.00235334583528231, -0.002726546365426644, 0.0007780101627379295, 0.0062748796494285514, 0.00011409058336789922], [-0.003963170839900592, -0.0005729786419800423, 0.0050402871621419085, 0.00011409058336789922, 0.00515637654733481]], "risk_free_rate": 0.0372, "bounds": {"Market": [0.0, 1.0], "HML": [0.5, 1.0], "SMB": [0.0, 1.0], "RMW": [0.0, 1.0], "CMA": [-0.5, 1.0]}, "current_weights": {}, "views": [{"label": "Market returns 1%", "weights": {"Market": 1.0}, "expected_return": 0.01, "confidence": 95, "band_percent": 5}, {"label": "SMB beats RMW by 1%", "weights": {"SMB": 1.0, "RMW": -1.0}, "expected_return": 0.01, "confidence": 90, "band_percent": 5}, {"label": "20% SMB + 80% HML beats RMW by 1%", "weights": {"SMB": 0.2, "HML": 0.8, "RMW": -1.0}, "expected_return": 0.01, "confidence": 99, "band_percent": 1}], "defaults": {"objective": "target_return", "target_return": 0.1, "target_volatility": 0.06, "risk_aversion": 20.0, "allow_cash": true, "use_bounds": false, "use_views": true, "tau": 0.1}, "source": "Ken French Data Library, Fama-French five-factor monthly returns, Jul 1963 to Aug 2026. Bounds and views follow my 2018 portfolio optimization tutorial.", "notes": ["The tutorial treats the five factors as investable assets, each held on cash collateral.", "Expected return is the mean annualized factor premium from Jul 1963 to Aug 2026, plus the trailing 12-month T-bill rate (3.72%), which is also the risk-free rate. Covariance is of the monthly premia, annualized.", "A one-asset view sets that asset's total expected return, so 'Market returns 1%' pulls the market toward 1%.", "The 2018 tutorial entered its returns (11%, 7%, 9%, 8%, 8%) and covariance by hand; this page estimates them from the full factor history instead."], "history": {"label": "Monthly total returns (factor premium plus T-bills), Jul 1963 to Aug 2026. Source: Ken French Data Library.", "horizons": [{"label": "1Y", "returns": [0.19833283063491436, 0.07632799601869822, 0.14427033248459686, -0.11360946268994654, 0.0322935220346765]}, {"label": "3Y", "returns": [0.20896217419073304, 0.0036409501670833233, 0.10016184037628251, -0.019367334802713798, 0.010064979115411932]}, {"label": "5Y", "returns": [0.1175060206787013, -0.009603036574555968, 0.10110988512422625, 0.050054006645317006, 0.04787471798027054]}, {"label": "10Y", "returns": [0.15199626213492823, -0.0016798623813055746, 0.012992994177468908, 0.04294222447213336, 0.013638820220393866]}, {"label": "20Y", "returns": [0.11443051815204242, 0.0075232507146119065, -0.0023691921650773606, 0.04368550124324777, 0.014779806671946227]}, {"label": "Since Jul 1963", "returns": [0.1088968027466537, 0.062198856865370855, 0.07598137559180729, 0.07285242756908339, 0.07242648441431698]}], "volatility": [0.15395248331023476, 0.10465511132375188, 0.10384618936525512, 0.0796674510894766, 0.07282274675664067], "max_drawdown": [-0.5030641442636924, -0.3133851030138711, -0.5247302663601936, -0.37489077723610265, -0.20959621242835014], "correlation": [[1.0, 0.26790093067622567, -0.20828860663077192, -0.19491080167573577, -0.35348712684945305], [0.26790093067622567, 1.0, 0.02598238499139578, -0.3220151823723311, -0.06480434574935166], [-0.20828860663077192, 0.02598238499139578, 1.0, 0.11033815994808308, 0.6892683636736825], [-0.19491080167573577, -0.3220151823723311, 0.11033815994808308, 1.0, 0.038522129821434256], [-0.35348712684945305, -0.06480434574935166, 0.6892683636736825, 0.038522129821434256, 1.0]]}}], "objectives": [{"key": "max_sharpe", "label": "Maximum Sharpe ratio"}, {"key": "min_volatility", "label": "Minimum volatility"}, {"key": "target_return", "label": "Minimum volatility for a target return"}, {"key": "target_volatility", "label": "Maximum return for a target volatility"}, {"key": "max_utility", "label": "Mean-variance utility (risk aversion)"}]};
+</script>
+<script>
+/* quadprog 1.6.1, MIT, Copyright (c) 2011 Alberto Santini https://github.com/albertosantini */
+(function(){var mods={};function req(n){return mods[n.replace("./","")];}
+mods["vsmall"]=(function(){var module={exports:{}};var exports=module.exports;var require=req;
+"use strict";
+
+let epsilon = 1.0e-60;
+let tmpa;
+let tmpb;
+
+do {
+    epsilon += epsilon;
+    tmpa = 1 + 0.1 * epsilon;
+    tmpb = 1 + 0.2 * epsilon;
+} while (tmpa <= 1 || tmpb <= 1);
+
+module.exports = epsilon;
+
+return module.exports;})();
+mods["dpofa"]=(function(){var module={exports:{}};var exports=module.exports;var require=req;
+"use strict";
+
+function dpofa(a, lda, n, info) {
+    let jm1, t, s;
+
+    for (let j = 1; j <= n; j += 1) {
+        info[1] = j;
+        s = 0;
+        jm1 = j - 1;
+        if (jm1 < 1) {
+            s = a[j][j] - s;
+            if (s <= 0) {
+                break;
+            }
+            a[j][j] = Math.sqrt(s);
+        } else {
+            for (let k = 1; k <= jm1; k += 1) {
+
+                // t = a[k][j] - ddot(k - 1, a[1][k], 1, a[1][j], 1);
+                t = a[k][j];
+                for (let i = 1; i < k; i += 1) {
+                    t -= a[i][j] * a[i][k];
+                }
+                t /= a[k][k];
+                a[k][j] = t;
+                s += t * t;
+            }
+            s = a[j][j] - s;
+            if (s <= 0) {
+                break;
+            }
+            a[j][j] = Math.sqrt(s);
+        }
+        info[1] = 0;
+    }
+}
+
+module.exports = dpofa;
+
+return module.exports;})();
+mods["dpori"]=(function(){var module={exports:{}};var exports=module.exports;var require=req;
+"use strict";
+
+function dpori(a, lda, n) {
+    let kp1, t;
+
+    for (let k = 1; k <= n; k += 1) {
+        a[k][k] = 1 / a[k][k];
+        t = -a[k][k];
+
+        // dscal(k - 1, t, a[1][k], 1);
+        for (let i = 1; i < k; i += 1) {
+            a[i][k] *= t;
+        }
+
+        kp1 = k + 1;
+        if (n < kp1) {
+            break;
+        }
+        for (let j = kp1; j <= n; j += 1) {
+            t = a[k][j];
+            a[k][j] = 0;
+
+            // daxpy(k, t, a[1][k], 1, a[1][j], 1);
+            for (let i = 1; i <= k; i += 1) {
+                a[i][j] += t * a[i][k];
+            }
+        }
+    }
+}
+
+module.exports = dpori;
+
+return module.exports;})();
+mods["dposl"]=(function(){var module={exports:{}};var exports=module.exports;var require=req;
+"use strict";
+
+function dposl(a, lda, n, b) {
+    let k, t;
+
+    for (k = 1; k <= n; k += 1) {
+
+        // t = ddot(k - 1, a[1][k], 1, b[1], 1);
+        t = 0;
+        for (let i = 1; i < k; i += 1) {
+            t += a[i][k] * b[i];
+        }
+
+        b[k] = (b[k] - t) / a[k][k];
+    }
+
+    for (let kb = 1; kb <= n; kb += 1) {
+        k = n + 1 - kb;
+        b[k] /= a[k][k];
+        t = -b[k];
+
+        // daxpy(k - 1, t, a[1][k], 1, b[1], 1);
+        for (let i = 1; i < k; i += 1) {
+            b[i] += t * a[i][k];
+        }
+    }
+}
+
+module.exports = dposl;
+
+return module.exports;})();
+mods["qpgen2"]=(function(){var module={exports:{}};var exports=module.exports;var require=req;
+"use strict";
+
+const vsmall = require("./vsmall");
+const dpori = require("./dpori");
+const dposl = require("./dposl");
+const dpofa = require("./dpofa");
+
+function qpgen2(dmat, dvec, fddmat, n, sol, lagr, crval, amat, bvec, fdamat, q, meq, iact, nnact = 0, iter, work, ierr) {
+    let l1, it1, nvl, nact, temp, sum, t1, tt, gc, gs, nu, t1inf, t2min, go;
+
+    const r = Math.min(n, q);
+
+    let l = 2 * n + (r * (r + 5)) / 2 + 2 * q + 1;
+
+    for (let i = 1; i <= n; i += 1) {
+        work[i] = dvec[i];
+    }
+    for (let i = n + 1; i <= l; i += 1) {
+        work[i] = 0;
+    }
+    for (let i = 1; i <= q; i += 1) {
+        iact[i] = 0;
+        lagr[i] = 0;
+    }
+
+    const info = [];
+
+    if (ierr[1] === 0) {
+        dpofa(dmat, fddmat, n, info);
+        if (info[1] !== 0) {
+            ierr[1] = 2;
+            return;
+        }
+        dposl(dmat, fddmat, n, dvec);
+        dpori(dmat, fddmat, n);
+    } else {
+        for (let j = 1; j <= n; j += 1) {
+            sol[j] = 0;
+            for (let i = 1; i <= j; i += 1) {
+                sol[j] += dmat[i][j] * dvec[i];
+            }
+        }
+        for (let j = 1; j <= n; j += 1) {
+            dvec[j] = 0;
+            for (let i = j; i <= n; i += 1) {
+                dvec[j] += dmat[j][i] * sol[i];
+            }
+        }
+    }
+
+    crval[1] = 0;
+    for (let j = 1; j <= n; j += 1) {
+        sol[j] = dvec[j];
+        crval[1] += work[j] * sol[j];
+        work[j] = 0;
+        for (let i = j + 1; i <= n; i += 1) {
+            dmat[i][j] = 0;
+        }
+    }
+    crval[1] = -crval[1] / 2;
+    ierr[1] = 0;
+
+    const iwzv = n;
+    const iwrv = iwzv + n;
+    const iwuv = iwrv + r;
+    const iwrm = iwuv + r + 1;
+    const iwsv = iwrm + (r * (r + 1)) / 2;
+    const iwnbv = iwsv + q;
+
+    for (let i = 1; i <= q; i += 1) {
+        sum = 0;
+        for (let j = 1; j <= n; j += 1) {
+            sum += amat[j][i] * amat[j][i];
+        }
+        work[iwnbv + i] = Math.sqrt(sum);
+    }
+
+    nact = nnact;
+
+    iter[1] = 0;
+    iter[2] = 0;
+
+    function fnGoto50() {
+        iter[1] += 1;
+
+        l = iwsv;
+        for (let i = 1; i <= q; i += 1) {
+            l += 1;
+            sum = -bvec[i];
+            for (let j = 1; j <= n; j += 1) {
+                sum += amat[j][i] * sol[j];
+            }
+            if (Math.abs(sum) < vsmall) {
+                sum = 0;
+            }
+            if (i > meq) {
+                work[l] = sum;
+            } else {
+                work[l] = -Math.abs(sum);
+                if (sum > 0) {
+                    for (let j = 1; j <= n; j += 1) {
+                        amat[j][i] = -amat[j][i];
+                    }
+                    bvec[i] = -bvec[i];
+                }
+            }
+        }
+
+        for (let i = 1; i <= nact; i += 1) {
+            work[iwsv + iact[i]] = 0;
+        }
+
+        nvl = 0;
+        temp = 0;
+        for (let i = 1; i <= q; i += 1) {
+            if (work[iwsv + i] < temp * work[iwnbv + i]) {
+                nvl = i;
+                temp = work[iwsv + i] / work[iwnbv + i];
+            }
+        }
+        if (nvl === 0) {
+            for (let i = 1; i <= nact; i += 1) {
+                lagr[iact[i]] = work[iwuv + i];
+            }
+            return 999;
+        }
+
+        return 0;
+    }
+
+    function fnGoto55() {
+        for (let i = 1; i <= n; i += 1) {
+            sum = 0;
+            for (let j = 1; j <= n; j += 1) {
+                sum += dmat[j][i] * amat[j][nvl];
+            }
+            work[i] = sum;
+        }
+
+        l1 = iwzv;
+        for (let i = 1; i <= n; i += 1) {
+            work[l1 + i] = 0;
+        }
+        for (let j = nact + 1; j <= n; j += 1) {
+            for (let i = 1; i <= n; i += 1) {
+                work[l1 + i] = work[l1 + i] + dmat[i][j] * work[j];
+            }
+        }
+
+        t1inf = true;
+        for (let i = nact; i >= 1; i -= 1) {
+            sum = work[i];
+            l = iwrm + (i * (i + 3)) / 2;
+            l1 = l - i;
+            for (let j = i + 1; j <= nact; j += 1) {
+                sum -= work[l] * work[iwrv + j];
+                l += j;
+            }
+            sum /= work[l1];
+            work[iwrv + i] = sum;
+            if (iact[i] <= meq) {
+                continue;
+            }
+            if (sum <= 0) {
+                continue;
+            }
+            t1inf = false;
+            it1 = i;
+        }
+
+        if (!t1inf) {
+            t1 = work[iwuv + it1] / work[iwrv + it1];
+            for (let i = 1; i <= nact; i += 1) {
+                if (iact[i] <= meq) {
+                    continue;
+                }
+                if (work[iwrv + i] <= 0) {
+                    continue;
+                }
+                temp = work[iwuv + i] / work[iwrv + i];
+                if (temp < t1) {
+                    t1 = temp;
+                    it1 = i;
+                }
+            }
+        }
+
+        sum = 0;
+        for (let i = iwzv + 1; i <= iwzv + n; i += 1) {
+            sum += work[i] * work[i];
+        }
+        if (Math.abs(sum) <= vsmall) {
+            if (t1inf) {
+                ierr[1] = 1;
+
+                return 999; // GOTO 999
+            }
+            for (let i = 1; i <= nact; i += 1) {
+                work[iwuv + i] = work[iwuv + i] - t1 * work[iwrv + i];
+            }
+            work[iwuv + nact + 1] = work[iwuv + nact + 1] + t1;
+
+            return 700; // GOTO 700
+        }
+        sum = 0;
+        for (let i = 1; i <= n; i += 1) {
+            sum += work[iwzv + i] * amat[i][nvl];
+        }
+        tt = -work[iwsv + nvl] / sum;
+        t2min = true;
+        if (!t1inf) {
+            if (t1 < tt) {
+                tt = t1;
+                t2min = false;
+            }
+        }
+
+        for (let i = 1; i <= n; i += 1) {
+            sol[i] += tt * work[iwzv + i];
+            if (Math.abs(sol[i]) < vsmall) {
+                sol[i] = 0;
+            }
+        }
+
+        crval[1] += tt * sum * (tt / 2 + work[iwuv + nact + 1]);
+        for (let i = 1; i <= nact; i += 1) {
+            work[iwuv + i] = work[iwuv + i] - tt * work[iwrv + i];
+        }
+        work[iwuv + nact + 1] = work[iwuv + nact + 1] + tt;
+
+        if (t2min) {
+            nact += 1;
+            iact[nact] = nvl;
+
+            l = iwrm + ((nact - 1) * nact) / 2 + 1;
+            for (let i = 1; i <= nact - 1; i += 1) {
+                work[l] = work[i];
+                l += 1;
+            }
+
+            if (nact === n) {
+                work[l] = work[n];
+            } else {
+                for (let i = n; i >= nact + 1; i -= 1) {
+                    if (work[i] === 0) {
+                        continue;
+                    }
+                    gc = Math.max(Math.abs(work[i - 1]), Math.abs(work[i]));
+                    gs = Math.min(Math.abs(work[i - 1]), Math.abs(work[i]));
+                    if (work[i - 1] >= 0) {
+                        temp = Math.abs(gc * Math.sqrt(1 + gs * gs /
+                            (gc * gc)));
+                    } else {
+                        temp = -Math.abs(gc * Math.sqrt(1 + gs * gs /
+                            (gc * gc)));
+                    }
+                    gc = work[i - 1] / temp;
+                    gs = work[i] / temp;
+
+                    if (gc === 1) {
+                        continue;
+                    }
+                    if (gc === 0) {
+                        work[i - 1] = gs * temp;
+                        for (let j = 1; j <= n; j += 1) {
+                            temp = dmat[j][i - 1];
+                            dmat[j][i - 1] = dmat[j][i];
+                            dmat[j][i] = temp;
+                        }
+                    } else {
+                        work[i - 1] = temp;
+                        nu = gs / (1 + gc);
+                        for (let j = 1; j <= n; j += 1) {
+                            temp = gc * dmat[j][i - 1] + gs * dmat[j][i];
+                            dmat[j][i] = nu * (dmat[j][i - 1] + temp) -
+                                dmat[j][i];
+                            dmat[j][i - 1] = temp;
+
+                        }
+                    }
+                }
+                work[l] = work[nact];
+            }
+        } else {
+            sum = -bvec[nvl];
+            for (let j = 1; j <= n; j += 1) {
+                sum += sol[j] * amat[j][nvl];
+            }
+            if (nvl > meq) {
+                work[iwsv + nvl] = sum;
+            } else {
+                work[iwsv + nvl] = -Math.abs(sum);
+                if (sum > 0) {
+                    for (let j = 1; j <= n; j += 1) {
+                        amat[j][nvl] = -amat[j][nvl];
+                    }
+                    bvec[nvl] = -bvec[nvl];
+                }
+            }
+
+            return 700; // GOTO 700
+        }
+
+        return 0;
+    }
+
+    function fnGoto797() {
+        l = iwrm + (it1 * (it1 + 1)) / 2 + 1;
+        l1 = l + it1;
+        if (work[l1] === 0) {
+            return 798; // GOTO 798
+        }
+        gc = Math.max(Math.abs(work[l1 - 1]), Math.abs(work[l1]));
+        gs = Math.min(Math.abs(work[l1 - 1]), Math.abs(work[l1]));
+        if (work[l1 - 1] >= 0) {
+            temp = Math.abs(gc * Math.sqrt(1 + gs * gs / (gc * gc)));
+        } else {
+            temp = -Math.abs(gc * Math.sqrt(1 + gs * gs / (gc * gc)));
+        }
+        gc = work[l1 - 1] / temp;
+        gs = work[l1] / temp;
+
+        if (gc === 1) {
+            return 798; // GOTO 798
+        }
+        if (gc === 0) {
+            for (let i = it1 + 1; i <= nact; i += 1) {
+                temp = work[l1 - 1];
+                work[l1 - 1] = work[l1];
+                work[l1] = temp;
+                l1 += i;
+            }
+            for (let i = 1; i <= n; i += 1) {
+                temp = dmat[i][it1];
+                dmat[i][it1] = dmat[i][it1 + 1];
+                dmat[i][it1 + 1] = temp;
+            }
+        } else {
+            nu = gs / (1 + gc);
+            for (let i = it1 + 1; i <= nact; i += 1) {
+                temp = gc * work[l1 - 1] + gs * work[l1];
+                work[l1] = nu * (work[l1 - 1] + temp) - work[l1];
+                work[l1 - 1] = temp;
+                l1 += i;
+            }
+            for (let i = 1; i <= n; i += 1) {
+                temp = gc * dmat[i][it1] + gs * dmat[i][it1 + 1];
+                dmat[i][it1 + 1] = nu * (dmat[i][it1] + temp) -
+                    dmat[i][it1 + 1];
+                dmat[i][it1] = temp;
+            }
+        }
+
+        return 0;
+    }
+
+    function fnGoto798() {
+        l1 = l - it1;
+        for (let i = 1; i <= it1; i += 1) {
+            work[l1] = work[l];
+            l += 1;
+            l1 += 1;
+        }
+
+        work[iwuv + it1] = work[iwuv + it1 + 1];
+        iact[it1] = iact[it1 + 1];
+        it1 += 1;
+        if (it1 < nact) {
+            return 797; // GOTO 797
+        }
+
+        return 0;
+    }
+
+    function fnGoto799() {
+        work[iwuv + nact] = work[iwuv + nact + 1];
+        work[iwuv + nact + 1] = 0;
+        iact[nact] = 0;
+        nact -= 1;
+        iter[2] += 1;
+
+        return 0;
+    }
+
+    go = 0;
+    while (true) { // eslint-disable-line no-constant-condition
+        go = fnGoto50();
+        if (go === 999) {
+            return;
+        }
+        while (true) { // eslint-disable-line no-constant-condition
+            go = fnGoto55();
+            if (go === 0) {
+                break;
+            }
+            if (go === 999) {
+                return;
+            }
+            if (go === 700) {
+                if (it1 === nact) {
+                    fnGoto799();
+                } else {
+                    while (true) { // eslint-disable-line no-constant-condition
+                        fnGoto797();
+                        go = fnGoto798();
+                        if (go !== 797) {
+                            break;
+                        }
+                    }
+                    fnGoto799();
+                }
+            }
+        }
+    }
+
+}
+
+module.exports = qpgen2;
+
+return module.exports;})();
+mods["quadprog"]=(function(){var module={exports:{}};var exports=module.exports;var require=req;
+"use strict";
+
+const qpgen2 = require("./qpgen2");
+
+function solveQP(Dmat, dvec, Amat, bvec = [], meq = 0, factorized = [0, 0]) {
+    const crval = [];
+    const iact = [];
+    const sol = [];
+    const lagr = [];
+    const work = [];
+    const iter = [];
+
+    let message = "";
+
+    // In Fortran the array index starts from 1
+    const n = Dmat.length - 1;
+    const q = Amat[1].length - 1;
+
+    if (!bvec) {
+        for (let i = 1; i <= q; i += 1) {
+            bvec[i] = 0;
+        }
+    }
+
+    if (n !== Dmat[1].length - 1) {
+        message = "Dmat is not symmetric!";
+    }
+    if (n !== dvec.length - 1) {
+        message = "Dmat and dvec are incompatible!";
+    }
+    if (n !== Amat.length - 1) {
+        message = "Amat and dvec are incompatible!";
+    }
+    if (q !== bvec.length - 1) {
+        message = "Amat and bvec are incompatible!";
+    }
+    if ((meq > q) || (meq < 0)) {
+        message = "Value of meq is invalid!";
+    }
+
+    if (message !== "") {
+        return {
+            message
+        };
+    }
+
+    for (let i = 1; i <= q; i += 1) {
+        iact[i] = 0;
+        lagr[i] = 0;
+    }
+
+    const nact = 0;
+    const r = Math.min(n, q);
+
+    for (let i = 1; i <= n; i += 1) {
+        sol[i] = 0;
+    }
+    crval[1] = 0;
+    for (let i = 1; i <= (2 * n + (r * (r + 5)) / 2 + 2 * q + 1); i += 1) {
+        work[i] = 0;
+    }
+    for (let i = 1; i <= 2; i += 1) {
+        iter[i] = 0;
+    }
+
+    qpgen2(Dmat, dvec, n, n, sol, lagr, crval, Amat, bvec, n, q, meq, iact, nact, iter, work, factorized);
+
+    if (factorized[1] === 1) {
+        message = "constraints are inconsistent, no solution!";
+    }
+    if (factorized[1] === 2) {
+        message = "matrix D in quadratic function is not positive definite!";
+    }
+
+    return {
+        solution: sol,
+        Lagrangian: lagr,
+        value: crval,
+        unconstrained_solution: dvec, // eslint-disable-line camelcase
+        iterations: iter,
+        iact,
+        message
+    };
+}
+
+exports.solveQP = solveQP;
+
+return module.exports;})();
+window.quadprog=mods["quadprog"];})();
+</script>
+<script>
+/* Browser port of the portfolio_optimization Python library.
+ * The QP solver is quadprog (Goldfarb-Idnani) in place of cvxopt; the
+ * problem each call sets up is the same.
+ */
+(function (root) {
+  'use strict';
+
+  const quadprog =
+    root.quadprog || (typeof require === 'function' ? require('./vendor/quadprog/quadprog.js') : null);
+
+  // Constants.
+  const SEARCH_TOLERANCE = 1e-10;
+  const MAX_SEARCH_STEPS = 200;
+  const FRONTIER_POINTS = 41;
+  const SLACK_RETURN_MARGIN = 1.0;
+  const GOLDEN = (Math.sqrt(5) - 1) / 2;
+  const FEASIBILITY_MARGIN = 1e-7;
+  const UNBOUNDED_CHART_STRETCH = 1.25;
+  const OBJECTIVE_LABELS = {
+    max_sharpe: 'Maximum Sharpe ratio',
+    min_volatility: 'Minimum volatility',
+    target_return: 'Minimum volatility for a target return',
+    target_volatility: 'Maximum return for a target volatility',
+    max_utility: 'Mean-variance utility (risk aversion)',
+  };
+
+  // Linear algebra on plain arrays.
+  const dot = (a, b) => a.reduce((s, v, i) => s + v * b[i], 0);
+  const matVec = (m, v) => m.map((row) => dot(row, v));
+  const transpose = (m) => m[0].map((_, j) => m.map((row) => row[j]));
+  const matMul = (a, b) => {
+    const bt = transpose(b);
+    return a.map((row) => bt.map((col) => dot(row, col)));
+  };
+  const sum = (v) => v.reduce((s, x) => s + x, 0);
+  const ones = (n) => new Array(n).fill(1);
+
+  function inverse(m) {
+    const n = m.length;
+    const a = m.map((row, i) => row.concat(ones(n).map((_, j) => (i === j ? 1 : 0))));
+    for (let c = 0; c < n; c += 1) {
+      let pivot = c;
+      for (let r = c + 1; r < n; r += 1) {
+        if (Math.abs(a[r][c]) > Math.abs(a[pivot][c])) pivot = r;
+      }
+      if (Math.abs(a[pivot][c]) < 1e-300) throw new Error('Singular matrix.');
+      [a[c], a[pivot]] = [a[pivot], a[c]];
+      const p = a[c][c];
+      for (let j = 0; j < 2 * n; j += 1) a[c][j] /= p;
+      for (let r = 0; r < n; r += 1) {
+        if (r === c) continue;
+        const f = a[r][c];
+        if (f !== 0) for (let j = 0; j < 2 * n; j += 1) a[r][j] -= f * a[c][j];
+      }
+    }
+    return a.map((row) => row.slice(n));
+  }
+
+  // Inverse survival function of the standard normal (scipy norm.isf).
+  // Acklam's rational approximation, refined with one Halley step.
+  function erfc(x) {
+    // Numerical Recipes 3rd ed., Chebyshev erfc for x >= 0.
+    const cof = [-1.3026537197817094, 6.4196979235649026e-1, 1.9476473204185836e-2,
+      -9.561514786808631e-3, -9.46595344482036e-4, 3.66839497852761e-4,
+      4.2523324806907e-5, -2.0278578112534e-5, -1.624290004647e-6, 1.30365583558e-6,
+      1.5626441722e-8, -8.5238095915e-8, 6.529054439e-9, 5.059343495e-9,
+      -9.91364156e-10, -2.27365122e-10, 9.6467911e-11, 2.394038e-12, -6.886027e-12,
+      8.94487e-13, 3.13092e-13, -1.12708e-13, 3.81e-16, 7.106e-15, -1.523e-15,
+      -9.4e-17, 1.21e-16, -2.8e-17];
+    const z = Math.abs(x);
+    const t = 2 / (2 + z);
+    const ty = 4 * t - 2;
+    let d = 0;
+    let dd = 0;
+    for (let j = cof.length - 1; j > 0; j -= 1) {
+      const tmp = d;
+      d = ty * d - dd + cof[j];
+      dd = tmp;
+    }
+    const r = t * Math.exp(-z * z + 0.5 * (cof[0] + ty * d) - dd);
+    return x >= 0 ? r : 2 - r;
+  }
+
+  function normIsf(q) {
+    const p = 1 - q;
+    const a = [-3.969683028665376e1, 2.209460984245205e2, -2.759285104469687e2,
+      1.38357751867269e2, -3.066479806614716e1, 2.506628277459239];
+    const b = [-5.447609879822406e1, 1.615858368580409e2, -1.556989798598866e2,
+      6.680131188771972e1, -1.328068155288572e1];
+    const c = [-7.784894002430293e-3, -3.223964580411365e-1, -2.400758277161838,
+      -2.549732539343734, 4.374664141464968, 2.938163982698783];
+    const d = [7.784695709041462e-3, 3.224671290700398e-1, 2.445134137142996,
+      3.754408661907416];
+    const lo = 0.02425;
+    let x;
+    if (p < lo) {
+      const s = Math.sqrt(-2 * Math.log(p));
+      x = (((((c[0] * s + c[1]) * s + c[2]) * s + c[3]) * s + c[4]) * s + c[5]) /
+        ((((d[0] * s + d[1]) * s + d[2]) * s + d[3]) * s + 1);
+    } else if (p <= 1 - lo) {
+      const s = p - 0.5;
+      const r = s * s;
+      x = (((((a[0] * r + a[1]) * r + a[2]) * r + a[3]) * r + a[4]) * r + a[5]) * s /
+        (((((b[0] * r + b[1]) * r + b[2]) * r + b[3]) * r + b[4]) * r + 1);
+    } else {
+      const s = Math.sqrt(-2 * Math.log(1 - p));
+      x = -(((((c[0] * s + c[1]) * s + c[2]) * s + c[3]) * s + c[4]) * s + c[5]) /
+        ((((d[0] * s + d[1]) * s + d[2]) * s + d[3]) * s + 1);
+    }
+    const e = 0.5 * erfc(-x / Math.SQRT2) - p;
+    const u = e * Math.sqrt(2 * Math.PI) * Math.exp((x * x) / 2);
+    return x - u / (1 + (x * u) / 2);
+  }
+
+  // portfolio_optimization: _solve_qp, min 1/2 x'Qx + p'x, Gx <= h, Ax = b.
+  function solveQp(Q, p, G, h, A, b) {
+    const n = Q.length;
+    const cols = [];
+    const rhs = [];
+    if (A) A.forEach((row, i) => { cols.push(row); rhs.push(b[i]); });
+    if (G) G.forEach((row, i) => { cols.push(row.map((v) => -v)); rhs.push(-h[i]); });
+    const D = [null];
+    const dv = [null];
+    const Am = [null];
+    for (let i = 0; i < n; i += 1) {
+      D.push([null].concat(Q[i].slice()));
+      dv.push(-p[i]);
+      Am.push([null].concat(cols.map((col) => col[i])));
+    }
+    const result = quadprog.solveQP(D, dv, Am, [null].concat(rhs), A ? A.length : 0);
+    if (result.message) throw new Error('QP solver status: ' + result.message);
+    return result.solution.slice(1);
+  }
+
+  // portfolio_optimization: util.create_constraints.
+  function createConstraints(names, constraints) {
+    const bounded = names.filter((a) => a in constraints);
+    const rows = bounded.map((a) => names.map((x) => (x === a ? 1 : 0)));
+    return {
+      G: rows.map((r) => r.map((v) => -v)).concat(rows),
+      h: bounded.map((a) => -constraints[a][0]).concat(bounded.map((a) => constraints[a][1])),
+    };
+  }
+
+  // portfolio_optimization: MarkowitzPortfolio on fixed returns.
+  class MarkowitzPortfolio {
+    constructor(mu, cov, names, rf) {
+      this.mu = mu;
+      this.cov = cov;
+      this.names = names;
+      this.rf = rf === undefined ? null : rf;
+      this.n = mu.length;
+      this.inv = inverse(cov);
+      const invMu = matVec(this.inv, mu);
+      this.B = sum(invMu);
+      this.C = sum(matVec(this.inv, ones(this.n)));
+    }
+
+    minVariance() {
+      return matVec(this.inv, ones(this.n)).map((v) => v / this.C);
+    }
+
+    tangency() {
+      const scale = this.B - this.rf * this.C;
+      return matVec(this.inv, this.mu.map((m) => m - this.rf)).map((v) => v / scale);
+    }
+
+    targetReturnRows(target) {
+      if (this.rf !== null) {
+        return { G: [this.mu.map((m) => -(m - this.rf))], h: [-target + this.rf] };
+      }
+      return { G: [this.mu.map((m) => -m)], h: [-target] };
+    }
+
+    budget() {
+      return this.rf !== null ? { A: null, b: null } : { A: [ones(this.n)], b: [1] };
+    }
+
+    allocate(cfg) {
+      const { A, b } = this.budget();
+      const n = this.n;
+      if (!cfg.constraints) {
+        if (cfg.riskAversion !== null) {
+          const lam = cfg.riskAversion;
+          if (this.rf !== null) {
+            return matVec(this.inv, this.mu.map((m) => m - this.rf)).map((v) => v / lam);
+          }
+          const tilt = matVec(this.inv, this.mu.map((m) => m - this.B / this.C));
+          return this.minVariance().map((w, i) => w + tilt[i] / lam);
+        }
+        const r = this.targetReturnRows(cfg.targetReturn);
+        return solveQp(this.cov, new Array(n).fill(0), r.G, r.h, A, b);
+      }
+      const box = createConstraints(this.names, cfg.constraints);
+      if (cfg.riskAversion !== null) {
+        const Q = this.cov.map((row) => row.map((v) => v * cfg.riskAversion));
+        const p = this.mu.map((m) => -(this.rf !== null ? m - this.rf : m));
+        return solveQp(Q, p, box.G, box.h, A, b);
+      }
+      const r = this.targetReturnRows(cfg.targetReturn);
+      return solveQp(this.cov, new Array(n).fill(0), box.G.concat(r.G), box.h.concat(r.h), A, b);
+    }
+  }
+
+  // portfolio_optimization: BlackLittermanPortfolio.update_views.
+  function viewVariance(mean, confidence, plusminus) {
+    const z = normIsf((1 - confidence * 0.01) / 2);
+    return Math.pow((mean * plusminus * 0.01) / z, 2);
+  }
+
+  function blackLitterman(prior, cov, names, packageViews, tau) {
+    const Q = [];
+    const omega = [];
+    const P = [];
+    Object.keys(packageViews).forEach((key) => {
+      const spec = packageViews[key];
+      if (spec.scale === 0) {
+        throw new Error(`View '${key}' has scale 0; its uncertainty is set as a percentage of the scale, so it must be nonzero.`);
+      }
+      Q.push(spec.scale);
+      omega.push(viewVariance(spec.scale, spec.confidence, spec['plusminus%']));
+      const row = new Array(names.length).fill(0);
+      if (spec.type === 'absolute') row[names.indexOf(key)] = 1;
+      else key.split('|').forEach((a, i) => { row[names.indexOf(a)] = spec.weights[i]; });
+      P.push(row);
+    });
+    const invCov = inverse(cov);
+    const Pt = transpose(P);
+    const PtOinv = Pt.map((row) => row.map((v, j) => v / omega[j]));
+    const pop = matMul(PtOinv, P);
+    const post = inverse(invCov.map((row, i) => row.map((v, j) => v + tau * pop[i][j])));
+    const rhs = matVec(invCov, prior).map((v, i) => v + tau * dot(PtOinv[i], Q));
+    return matVec(post, rhs);
+  }
+
+  // Allocation optimize..
+  function viewsToPackageFormat(views, names) {
+    const out = {};
+    views.forEach((view) => {
+      const legs = {};
+      Object.keys(view.weights).forEach((a) => { if (view.weights[a] !== 0) legs[a] = view.weights[a]; });
+      const unknown = Object.keys(legs).filter((a) => !names.includes(a));
+      if (unknown.length) throw new Error(`View '${view.label}': unknown ${JSON.stringify(unknown.sort())}.`);
+      if (!Object.keys(legs).length) throw new Error(`View '${view.label}' has no assets.`);
+      const ordered = names.filter((a) => a in legs);
+      const key = ordered.join('|');
+      if (key in out) throw new Error(`Two views on ${key}; combine them into one view.`);
+      const spec = { scale: view.expected_return, confidence: view.confidence, 'plusminus%': view.band_percent };
+      if (ordered.length === 1 && legs[ordered[0]] === 1) spec.type = 'absolute';
+      else { spec.type = 'relative'; spec.weights = ordered.map((a) => legs[a]); }
+      out[key] = spec;
+    });
+    return out;
+  }
+
+  const pct = (x) => (x * 100).toFixed(2) + '%';
+
+  function maxFeasibleReturn(mu, lower, upper, rf) {
+    if (!lower.every(Number.isFinite) || !upper.every(Number.isFinite)) return Infinity;
+    if (rf !== null) {
+      return rf + sum(mu.map((m, i) => (m - rf) * (m - rf > 0 ? upper[i] : lower[i])));
+    }
+    if (sum(lower) > 1 + 1e-12 || sum(upper) < 1 - 1e-12) {
+      throw new Error(`Bounds cannot sum to 100% (lower ${(sum(lower) * 100).toFixed(1)}%, upper ${(sum(upper) * 100).toFixed(1)}%).`);
+    }
+    const w = lower.slice();
+    let budget = 1 - sum(lower);
+    const order = mu.map((m, i) => i).sort((i, j) => mu[j] - mu[i] || i - j);
+    order.forEach((i) => {
+      const add = Math.min(upper[i] - lower[i], budget);
+      w[i] += add;
+      budget -= add;
+    });
+    return dot(w, mu);
+  }
+
+  function goldenSectionMax(f, lo, hi) {
+    let a = lo;
+    let b = hi;
+    let c = b - GOLDEN * (b - a);
+    let d = a + GOLDEN * (b - a);
+    let fc = f(c);
+    let fd = f(d);
+    for (let k = 0; k < MAX_SEARCH_STEPS; k += 1) {
+      if (b - a < SEARCH_TOLERANCE) break;
+      if (fc >= fd) {
+        b = d; d = c; fd = fc;
+        c = b - GOLDEN * (b - a);
+        fc = f(c);
+      } else {
+        a = c; c = d; fc = fd;
+        d = a + GOLDEN * (b - a);
+        fd = f(d);
+      }
+    }
+    return (a + b) / 2;
+  }
+
+  function bisectIncreasing(f, target, lo, hi) {
+    for (let k = 0; k < MAX_SEARCH_STEPS; k += 1) {
+      if (hi - lo < SEARCH_TOLERANCE) break;
+      const mid = (lo + hi) / 2;
+      if (f(mid) < target) lo = mid; else hi = mid;
+    }
+    return (lo + hi) / 2;
+  }
+
+  class PortfolioOptimizer {
+    constructor(universe, settings) {
+      this.universe = universe;
+      this.settings = settings;
+      this.names = universe.asset_names.slice();
+      this.priorReturns = universe.expected_returns.slice();
+      this.cov = universe.covariance;
+      this.rf = universe.risk_free_rate;
+      this.constraints = settings.use_bounds && Object.keys(universe.bounds || {}).length
+        ? universe.bounds : null;
+      this.lower = this.names.map((a) => (this.constraints && a in this.constraints ? this.constraints[a][0] : -Infinity));
+      this.upper = this.names.map((a) => (this.constraints && a in this.constraints ? this.constraints[a][1] : Infinity));
+      if (this.lower.some((v, i) => v > this.upper[i])) throw new Error('A lower bound is above its upper bound.');
+      this.mu = settings.use_views && settings.views.length
+        ? blackLitterman(this.priorReturns, this.cov, this.names,
+          viewsToPackageFormat(settings.views, this.names), settings.tau)
+        : this.priorReturns.slice();
+      this.invested = new MarkowitzPortfolio(this.mu, this.cov, this.names, null);
+      this.withCash = new MarkowitzPortfolio(this.mu, this.cov, this.names, this.rf);
+    }
+
+    allocate(cash, cfg) {
+      const full = Object.assign({ constraints: this.constraints, riskAversion: null, targetReturn: null }, cfg);
+      return (cash ? this.withCash : this.invested).allocate(full);
+    }
+
+    portfolioReturn(w, cash) {
+      let r = dot(w, this.mu);
+      if (cash) r += (1 - sum(w)) * this.rf;
+      return r;
+    }
+
+    volatility(w) { return Math.sqrt(dot(w, matVec(this.cov, w))); }
+
+    sharpe(w, cash) {
+      const v = this.volatility(w);
+      return v > 0 ? (this.portfolioReturn(w, cash) - this.rf) / v : 0;
+    }
+
+    slackTarget() { return Math.min(...this.mu) - SLACK_RETURN_MARGIN; }
+
+    maxReturn(cash) { return maxFeasibleReturn(this.mu, this.lower, this.upper, cash ? this.rf : null); }
+
+    minVolatility() {
+      if (!this.constraints) return this.invested.minVariance();
+      this.maxReturn(false);
+      return this.allocate(false, { targetReturn: this.slackTarget() });
+    }
+
+    targetReturn(target, cash) {
+      const ceiling = this.maxReturn(cash);
+      if (target > ceiling + FEASIBILITY_MARGIN) {
+        throw new Error(`Target return ${pct(target)} is above the ${pct(ceiling)} the bounds allow.`);
+      }
+      return this.allocate(cash, { targetReturn: target });
+    }
+
+    maxSharpe() {
+      if (!this.constraints) {
+        if (this.portfolioReturn(this.minVolatility(), false) <= this.rf) {
+          throw new Error('The risk-free rate is above the minimum-variance return, so the unbounded tangency portfolio does not exist. Turn on bounds.');
+        }
+        return this.withCash.tangency();
+      }
+      const lo = this.portfolioReturn(this.minVolatility(), false);
+      const hi = this.maxReturn(false) - FEASIBILITY_MARGIN;
+      if (hi <= lo) return this.minVolatility();
+      const best = goldenSectionMax((t) => this.sharpe(this.targetReturn(t, false), false), lo, hi);
+      return this.targetReturn(best, false);
+    }
+
+    targetVolatility() {
+      const cash = this.settings.allow_cash;
+      const goal = this.settings.target_volatility;
+      const floorW = this.allocate(cash, { targetReturn: this.slackTarget() });
+      const lo = this.portfolioReturn(floorW, cash);
+      const floorVol = this.volatility(floorW);
+      if (goal < floorVol - FEASIBILITY_MARGIN) {
+        throw new Error(`Target volatility ${pct(goal)} is below the minimum ${pct(floorVol)}.`);
+      }
+      let hi = this.maxReturn(cash) - FEASIBILITY_MARGIN;
+      if (!Number.isFinite(hi)) {
+        hi = lo + 1;
+        while (this.volatility(this.targetReturn(hi, cash)) < goal) hi = lo + 2 * (hi - lo);
+      } else if (this.volatility(this.targetReturn(hi, cash)) <= goal) {
+        return this.targetReturn(hi, cash);
+      }
+      const best = bisectIncreasing((t) => this.volatility(this.targetReturn(t, cash)), goal, lo, hi);
+      return this.targetReturn(best, cash);
+    }
+
+    maxUtility() {
+      return this.allocate(this.settings.allow_cash, { riskAversion: this.settings.risk_aversion });
+    }
+
+    solve(objective) {
+      switch (objective || this.settings.objective) {
+        case 'max_sharpe': return this.maxSharpe();
+        case 'min_volatility': return this.minVolatility();
+        case 'target_return': return this.targetReturn(this.settings.target_return, this.settings.allow_cash);
+        case 'target_volatility': return this.targetVolatility();
+        case 'max_utility': return this.maxUtility();
+        default: throw new Error(`Unknown objective ${objective}.`);
+      }
+    }
+
+    usesCash(objective) {
+      const o = objective || this.settings.objective;
+      return this.settings.allow_cash && o !== 'max_sharpe' && o !== 'min_volatility';
+    }
+
+    frontier(bounded) {
+      const solver = bounded ? this : this.unbounded();
+      const floor = solver.minVolatility();
+      const start = solver.portfolioReturn(floor, false);
+      let end;
+      if (!solver.constraints) {
+        const top = Math.max(Math.max(...this.mu), start);
+        end = start + (top - start) * UNBOUNDED_CHART_STRETCH;
+      } else {
+        end = solver.maxReturn(false) - FEASIBILITY_MARGIN;
+      }
+      const points = [];
+      for (let k = 0; k < FRONTIER_POINTS; k += 1) {
+        const target = start + ((end - start) * k) / (FRONTIER_POINTS - 1);
+        const w = k === 0 ? floor : solver.targetReturn(target, false);
+        points.push({ ret: solver.portfolioReturn(w, false), vol: solver.volatility(w), weights: w });
+      }
+      return points;
+    }
+
+    unbounded() {
+      if (!this.constraints) return this;
+      return new PortfolioOptimizer(this.universe, Object.assign({}, this.settings, { use_bounds: false }));
+    }
+  }
+
+  // Allocation analytics..
+  function riskContributions(w, cov) {
+    const sw = matVec(cov, w);
+    const variance = dot(w, sw);
+    return variance <= 0 ? w.map(() => 0) : w.map((x, i) => (x * sw[i]) / variance);
+  }
+
+  function statistics(w, mu, cov, rf, cash) {
+    let ret = dot(w, mu);
+    const vol = Math.sqrt(dot(w, matVec(cov, w)));
+    if (cash) ret += (1 - sum(w)) * rf;
+    const net = sum(w);
+    const invested = Math.abs(net) > 1e-12 ? w.map((x) => x / net) : w;
+    const squares = dot(invested, invested);
+    return {
+      ret, vol,
+      sharpe: vol > 0 ? (ret - rf) / vol : 0,
+      cash: cash ? 1 - net : 0,
+      gross: sum(w.map(Math.abs)),
+      net,
+      effective_n: squares > 0 ? 1 / squares : 0,
+      max_weight: Math.max(...w),
+    };
+  }
+
+  function activeRisk(w, ref, cov) {
+    const a = w.map((x, i) => x - ref[i]);
+    return {
+      turnover: sum(a.map(Math.abs)) / 2,
+      tracking_error: Math.sqrt(Math.max(dot(a, matVec(cov, a)), 0)),
+    };
+  }
+
+  // Allocation api..run.
+  function describe(opt, key, label, w, cash) {
+    return {
+      key, label, weights: w,
+      risk: riskContributions(w, opt.cov),
+      stats: statistics(w, opt.mu, opt.cov, opt.rf, cash),
+    };
+  }
+
+  function settingsFor(universe, request) {
+    const m = Object.assign({}, universe.defaults, request.settings || {});
+    return {
+      objective: m.objective,
+      target_return: +m.target_return,
+      target_volatility: +m.target_volatility,
+      risk_aversion: +m.risk_aversion,
+      allow_cash: !!m.allow_cash,
+      use_bounds: !!m.use_bounds,
+      use_views: !!m.use_views,
+      tau: +m.tau,
+      views: universe.views,
+    };
+  }
+
+  function run(request, universes) {
+    const base = universes.find((u) => u.key === request.universe);
+    if (!base) throw new Error(`Unknown universe ${request.universe}.`);
+    const universe = Object.assign({}, base);
+    ['expected_returns', 'bounds', 'current_weights', 'views'].forEach((f) => {
+      if (f in request) universe[f] = request[f];
+    });
+    const settings = settingsFor(universe, request);
+    const opt = new PortfolioOptimizer(universe, settings);
+    const warnings = [];
+    const optimal = describe(opt, 'optimal', 'Optimal', opt.solve(), opt.usesCash());
+    const portfolios = [optimal];
+    if (settings.use_views && settings.views.length) {
+      const prior = new PortfolioOptimizer(universe, Object.assign({}, settings, { use_views: false }));
+      portfolios.push(describe(opt, 'prior', 'Before views', prior.solve(), prior.usesCash()));
+    }
+    const current = universe.current_weights || {};
+    if (Object.keys(current).length) {
+      portfolios.push(describe(opt, 'current', 'Current', opt.names.map((a) => current[a] || 0), true));
+    }
+    [['max_sharpe', 'Max Sharpe'], ['min_volatility', 'Min volatility']].forEach(([key, label]) => {
+      if (key === settings.objective) return;
+      try {
+        portfolios.push(describe(opt, key, label, opt.solve(key), false));
+      } catch (error) {
+        warnings.push(`${label}: ${error.message}`);
+      }
+    });
+    const n = opt.names.length;
+    portfolios.push(describe(opt, 'equal', 'Equal weight', new Array(n).fill(1 / n), false));
+
+    const reference = portfolios.find((p) => p.key === 'current' || p.key === 'prior');
+    let active = null;
+    if (reference) {
+      const withCash = (p) => p.weights.concat([p.stats.cash]);
+      const padded = opt.cov.map((row) => row.concat([0])).concat([new Array(n + 1).fill(0)]);
+      active = Object.assign({ against: reference.label }, activeRisk(withCash(optimal), withCash(reference), padded));
+    }
+    const views = !settings.use_views ? [] : settings.views.map((v) => {
+      const p = opt.names.map((a) => v.weights[a] || 0);
+      return { label: v.label, view: v.expected_return, prior: dot(p, opt.priorReturns), posterior: dot(p, opt.mu) };
+    });
+    return {
+      universe: universe.key,
+      objective: settings.objective,
+      objective_label: OBJECTIVE_LABELS[settings.objective],
+      names: opt.names,
+      risk_free_rate: opt.rf,
+      prior_returns: opt.priorReturns,
+      expected_returns: opt.mu,
+      volatilities: opt.cov.map((row, i) => Math.sqrt(row[i])),
+      lower: opt.lower.map((v) => (Number.isFinite(v) ? v : null)),
+      upper: opt.upper.map((v) => (Number.isFinite(v) ? v : null)),
+      portfolios,
+      active,
+      views,
+      frontier: {
+        unbounded: opt.frontier(false),
+        bounded: opt.constraints ? opt.frontier(true) : null,
+      },
+      correlation: opt.cov.map((row, i) => row.map((v, j) => v / Math.sqrt(opt.cov[i][i] * opt.cov[j][j]))),
+      history: universe.history || {},
+      warnings,
+    };
+  }
+
+  const api = { run, normIsf, OBJECTIVE_LABELS };
+  root.POEngine = api;
+  if (typeof module !== 'undefined' && module.exports) module.exports = api;
+})(typeof window !== 'undefined' ? window : globalThis);
+
+</script>
+<script>
+(function () {
+  'use strict';
+  const D = window.PO_DEFAULTS;
+  const UNIVERSES = D.universes;
+  const OBJECTIVES = D.objectives;
+  const OBJ_SHORT = {
+    max_sharpe: ['Max Sharpe ratio', 'tangency'],
+    min_volatility: ['Min volatility', 'lowest risk'],
+    target_return: ['Target return', 'min risk for return'],
+    target_volatility: ['Target volatility', 'max return for risk'],
+    max_utility: ['Risk aversion', 'mean-variance utility'],
+  };
+  const OBJ_HELP = {
+    max_sharpe: 'Highest return per unit of risk, fully invested. Choose it when cash or leverage can scale the whole book up or down; the capital market line shows those mixes.',
+    min_volatility: 'Lowest-risk fully invested mix. It ignores expected returns, so choose it when you trust the risk estimates more than the return estimates.',
+    target_return: 'Lowest-risk mix that earns at least the target. Choose it when the return hurdle is fixed, such as a spending rule or a liability rate.',
+    target_volatility: 'Highest-return mix within a risk budget. Choose it when the board sets a volatility limit.',
+    max_utility: 'Maximizes expected return minus λ/2 × variance. A higher λ gives a more conservative mix; start near 3 and compare.',
+  };
+  let guideOpen = true;
+  try { guideOpen = localStorage.getItem('po-calc-guide') !== 'closed'; } catch (e) {}
+  const PORT_COLOR = { optimal: 'var(--s1)', current: 'var(--s2)', prior: 'var(--s5)', max_sharpe: 'var(--s3)', min_volatility: 'var(--s4)', equal: 'var(--s6)' };
+  const $ = (id) => document.getElementById(id);
+  const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+  // Rounds away negative zero so -0.0% never shows.
+  const fix = (x, d) => { const t = (x * 100).toFixed(d); return /^-0\.?0*$/.test(t) ? t.slice(1) : t; };
+  const pct = (x, d = 1) => (x == null || !isFinite(x) ? '–' : fix(x, d) + '%');
+  const pp = (x, d = 1) => { if (x == null) return '–'; const t = fix(x, d); return (t.startsWith('-') ? '' : '+') + t + ' pp'; };
+  // Table formats: negatives in parentheses, no plus signs.
+  const tpct = (x, d = 1) => { if (x == null || !isFinite(x)) return '–'; const t = fix(x, d); return t.startsWith('-') ? `(${t.slice(1)}%)` : t + '%'; };
+  const tpp = (x, d = 1) => { if (x == null) return '–'; const t = fix(x, d); if (/^0\.?0*$/.test(t)) return '–'; return t.startsWith('-') ? `(${t.slice(1)}) pp` : t + ' pp'; };
+  const num = (x, d = 2) => (x == null || !isFinite(x) ? '–' : x.toFixed(d));
+  const clone = (o) => JSON.parse(JSON.stringify(o));
+  const assetColor = (i) => `var(--c${(i % 12) + 1})`;
+
+  // State: one editable copy of each universe's inputs.
+  let state = {};
+  function freshState(u) {
+    return {
+      settings: clone(u.defaults),
+      expected_returns: u.expected_returns.slice(),
+      bounds: clone(u.bounds),
+      current_weights: clone(u.current_weights),
+      views: clone(u.views),
+    };
+  }
+  UNIVERSES.forEach((u) => { state[u.key] = freshState(u); });
+  let active = UNIVERSES[0].key;
+  try { const s = localStorage.getItem('po-calc-tab'); if (s && state[s]) active = s; } catch (e) {}
+  const uni = () => UNIVERSES.find((u) => u.key === active);
+  const st = () => state[active];
+
+  // Engine: the in-page port of the library.
+  let lastResult = null;
+  let seq = 0;
+
+  function request() {
+    const s = st();
+    return {
+      universe: active,
+      settings: s.settings,
+      expected_returns: s.expected_returns,
+      bounds: s.bounds,
+      current_weights: s.current_weights,
+      views: s.views,
+    };
+  }
+
+  async function compute(req) {
+    return window.POEngine.run(req, UNIVERSES);
+  }
+
+  let timer = null;
+  function refresh() {
+    clearTimeout(timer);
+    timer = setTimeout(async () => {
+      const my = ++seq;
+      const t0 = performance.now();
+      $('results').classList.add('stale');
+      try {
+        const res = await compute(request());
+        if (my !== seq) return;
+        lastResult = res;
+        renderResults(res, null);
+      } catch (e) {
+        if (my !== seq) return;
+        renderResults(lastResult && lastResult.universe === active ? lastResult : null, e.message);
+      }
+      $('results').classList.remove('stale');
+      $('engine').textContent = 'Runs in your browser' + ` · ${Math.round(performance.now() - t0)} ms`;
+    }, 120);
+  }
+
+  // Tabs and inputs.
+  function renderTabs() {
+    $('tabs').innerHTML = UNIVERSES.map((u) => `<button type="button" data-k="${u.key}" class="${u.key === active ? 'on' : ''}">${esc(u.title.split(':')[0])}</button>`).join('');
+    $('tabs').querySelectorAll('button').forEach((b) => b.addEventListener('click', () => {
+      active = b.dataset.k;
+      try { localStorage.setItem('po-calc-tab', active); } catch (e) {}
+      lastResult = null;
+      renderTabs(); renderInputs(); refresh();
+    }));
+  }
+
+  function pctInput(id, value, step, unit) {
+    return `<div class="inbox"><input id="${id}" type="number" step="${step}" value="${+(value * 100).toFixed(4)}"><span class="u">${unit || '%'}</span></div>`;
+  }
+
+  function renderInputs() {
+    const u = uni();
+    const s = st();
+    const S = s.settings;
+    const objParam = {
+      target_return: `<div class="field"><label for="p_tr">Target expected return</label>${pctInput('p_tr', S.target_return, 0.25)}</div>`,
+      target_volatility: `<div class="field"><label for="p_tv">Target volatility</label>${pctInput('p_tv', S.target_volatility, 0.25)}</div>`,
+      max_utility: `<div class="field"><label for="p_ra">Risk aversion (λ)</label><div class="inbox"><input id="p_ra" type="number" step="0.5" min="0.1" value="${S.risk_aversion}"><span class="u">×</span></div></div>`,
+    }[S.objective] || '';
+    const hasBounds = Object.keys(u.bounds).length > 0;
+    const hasCurrent = Object.keys(u.current_weights).length > 0;
+    const rows = u.asset_names.map((a, i) => {
+      const b = s.bounds[a] || [null, null];
+      const base = u.bounds[a] || [null, null];
+      const chg = (x, y) => (Math.abs((x ?? 0) - (y ?? 0)) > 1e-12 ? 'chg' : '');
+      return `<tr><td title="${esc(a)}"><i style="display:inline-block;width:8px;height:8px;border-radius:2px;background:${assetColor(i)};margin-right:5px"></i>${esc(a)}</td>
+        <td><input data-i="${i}" data-f="mu" type="number" step="0.1" class="${chg(s.expected_returns[i], u.expected_returns[i])}" value="${+(s.expected_returns[i] * 100).toFixed(3)}" aria-label="${esc(a)} expected return"></td>
+        <td><input data-a="${esc(a)}" data-f="lo" type="number" step="1" ${S.use_bounds ? '' : 'disabled'} class="${chg(b[0], base[0])}" value="${b[0] == null ? '' : +(b[0] * 100).toFixed(2)}" placeholder="–" aria-label="${esc(a)} minimum weight"></td>
+        <td><input data-a="${esc(a)}" data-f="hi" type="number" step="1" ${S.use_bounds ? '' : 'disabled'} class="${chg(b[1], base[1])}" value="${b[1] == null ? '' : +(b[1] * 100).toFixed(2)}" placeholder="–" aria-label="${esc(a)} maximum weight"></td></tr>`;
+    }).join('');
+    const views = s.views.map((v, k) => renderView(v, k, u)).join('');
+    $('inputs').innerHTML = `
+      <div class="ptitle">${esc(u.title)}</div>
+      <details class="guide" id="guide" ${guideOpen ? 'open' : ''}><summary>How to use this calculator</summary><ol>
+        <li>Choose an objective and set its target.</li>
+        <li>Set the rules: weight bounds, cash at the risk-free rate and views.</li>
+        <li>Edit expected returns or bounds in the asset table where you disagree with them.</li>
+        <li>Add view portfolios to express tactical calls.</li>
+        <li>Read the recommendation, then check where the mix sits on the frontier and how it changes with risk.</li>
+      </ol></details>
+      <h3 class="ss">Objective</h3>
+      <div class="objs">${OBJECTIVES.map((o) => `<button type="button" class="obj ${o.key === S.objective ? 'on' : ''}" data-o="${o.key}">${OBJ_SHORT[o.key][0]}<small>${OBJ_SHORT[o.key][1]}</small></button>`).join('')}</div>
+      <div class="hint">${OBJ_HELP[S.objective]}</div>
+      ${objParam}
+      <h3 class="ss">Rules</h3>
+      <label class="tog"><span>Weight bounds<small>${hasBounds ? 'Min and max per asset, below' : 'This universe has none'}</small></span><input type="checkbox" id="t_b" ${S.use_bounds ? 'checked' : ''} ${hasBounds ? '' : 'disabled'}></label>
+      <label class="tog"><span>Cash at the risk-free rate<small>Hold or borrow cash at ${pct(u.risk_free_rate, 2)} (target return, target volatility, risk aversion)</small></span><input type="checkbox" id="t_c" ${S.allow_cash ? 'checked' : ''}></label>
+      <label class="tog"><span>Apply views (Black-Litterman)<small>Blend the view portfolios below into expected returns</small></span><input type="checkbox" id="t_v" ${S.use_views ? 'checked' : ''}></label>
+      <div class="field"><label for="p_tau">Prior precision τ (model R²)</label><div class="inbox"><input id="p_tau" type="number" step="0.01" min="0.001" value="${S.tau}"><span class="u">τ</span></div></div>
+      <p class="note">τ sets how far views move expected returns: a higher τ gives views more weight. Values of 0.025–0.1 are common.</p>
+      <h3 class="ss">Assets <span class="r">annual, %</span></h3>
+      <table class="atab"><thead><tr><th>Asset</th><th>E[r]</th><th>Min</th><th>Max</th></tr></thead><tbody>${rows}</tbody></table>
+      <p class="note">Risk-free rate ${pct(u.risk_free_rate, 2)}.${hasCurrent ? ' Current holdings are loaded.' : ''} A blank minimum is 0% and a blank maximum 100%.</p>
+      <h3 class="ss">View portfolios <span class="r">${s.views.length} view${s.views.length === 1 ? '' : 's'}</span></h3>
+      ${views || '<p class="note" style="margin:0 0 8px">No views. Add a view portfolio to tilt expected returns.</p>'}
+      <div style="display:flex;gap:8px;flex-wrap:wrap"><button type="button" class="btn" id="addabs">+ Absolute view</button><button type="button" class="btn" id="addrel">+ Relative view</button></div>
+      <p class="note">A view states what a portfolio of assets will return. One asset at 100% sets that asset's total return; a long leg and a short leg set a spread. The band is ± a percent of the view's return, held with the stated confidence, so a 2% view with a 50% band means 1–3%.</p>`;
+    bindInputs();
+  }
+
+  function renderView(v, k, u) {
+    const legs = Object.entries(v.weights);
+    const opts = (sel) => u.asset_names.map((a) => `<option ${a === sel ? 'selected' : ''}>${esc(a)}</option>`).join('');
+    const net = legs.reduce((t, [, w]) => t + w, 0);
+    const kind = legs.length === 1 && legs[0][1] === 1 ? 'Absolute' : Math.abs(net) < 1e-9 ? 'Relative (zero cost)' : 'Basket';
+    return `<div class="view" data-k="${k}">
+      <div class="vhead"><input data-f="label" value="${esc(v.label)}" aria-label="View name"><button type="button" class="x" data-f="del" aria-label="Remove view">✕</button></div>
+      ${legs.map(([a, w], j) => `<div class="leg"><select data-f="asset" data-j="${j}" aria-label="Asset">${opts(a)}</select><div class="inbox"><input data-f="w" data-j="${j}" type="number" step="10" value="${+(w * 100).toFixed(2)}" aria-label="Weight"><span class="u">%</span></div><button type="button" class="x" data-f="dropleg" data-j="${j}" aria-label="Remove leg" ${legs.length < 2 ? 'disabled' : ''}>−</button></div>`).join('')}
+      <button type="button" class="btn lnk" data-f="addleg">+ Add leg</button>
+      <div class="vnum"><label>View return %<input data-f="er" type="number" step="0.25" value="${+(v.expected_return * 100).toFixed(3)}"></label><label>Confidence %<input data-f="conf" type="number" step="1" min="1" max="99.9" value="${v.confidence}"></label><label>Band ± % of view<input data-f="band" type="number" step="1" min="0.1" value="${v.band_percent}"></label></div>
+      <div class="vsum">${kind} · net weight ${pct(net, 0)}</div></div>`;
+  }
+
+  function bindInputs() {
+    const s = st();
+    const S = s.settings;
+    const onNum = (id, f) => { const el = $(id); if (el) el.addEventListener('input', () => { const x = parseFloat(el.value); if (isFinite(x)) { f(x); refresh(); } }); };
+    $('guide').addEventListener('toggle', () => {
+      guideOpen = $('guide').open;
+      try { localStorage.setItem('po-calc-guide', guideOpen ? 'open' : 'closed'); } catch (e) {}
+    });
+    document.querySelectorAll('.obj').forEach((b) => b.addEventListener('click', () => { S.objective = b.dataset.o; renderInputs(); refresh(); }));
+    onNum('p_tr', (x) => { S.target_return = x / 100; });
+    onNum('p_tv', (x) => { S.target_volatility = x / 100; });
+    onNum('p_ra', (x) => { if (x > 0) S.risk_aversion = x; });
+    onNum('p_tau', (x) => { if (x > 0) S.tau = x; });
+    [['t_b', 'use_bounds'], ['t_c', 'allow_cash'], ['t_v', 'use_views']].forEach(([id, f]) => {
+      $(id).addEventListener('change', () => { S[f] = $(id).checked; renderInputs(); refresh(); });
+    });
+    document.querySelectorAll('.atab input').forEach((el) => el.addEventListener('input', () => {
+      const raw = el.value.trim();
+      const x = parseFloat(raw);
+      if (el.dataset.f === 'mu') { if (!isFinite(x)) return; s.expected_returns[+el.dataset.i] = x / 100; }
+      else {
+        // A blank minimum means 0% and a blank maximum 100%.
+        const a = el.dataset.a;
+        const b = s.bounds[a] ? s.bounds[a].slice() : [0, 1];
+        const side = el.dataset.f === 'lo' ? 0 : 1;
+        if (raw !== '' && !isFinite(x)) return;
+        b[side] = raw === '' ? side : x / 100;
+        s.bounds[a] = b;
+      }
+      refresh();
+    }));
+    document.querySelectorAll('.view').forEach((box) => {
+      const v = s.views[+box.dataset.k];
+      const legs = () => Object.entries(v.weights);
+      const setLegs = (arr) => { v.weights = {}; arr.forEach(([a, w]) => { v.weights[a] = (v.weights[a] || 0) + w; }); };
+      box.querySelectorAll('[data-f]').forEach((el) => {
+        const f = el.dataset.f;
+        const j = +el.dataset.j;
+        if (f === 'del') el.addEventListener('click', () => { s.views.splice(+box.dataset.k, 1); renderInputs(); refresh(); });
+        else if (f === 'addleg') el.addEventListener('click', () => {
+          const used = Object.keys(v.weights);
+          const free = uni().asset_names.find((a) => !used.includes(a));
+          if (!free) return;
+          v.weights[free] = -1; renderInputs(); refresh();
+        });
+        else if (f === 'dropleg') el.addEventListener('click', () => { const L = legs(); L.splice(j, 1); setLegs(L); renderInputs(); refresh(); });
+        else if (f === 'asset') el.addEventListener('change', () => { const L = legs(); L[j][0] = el.value; setLegs(L); renderInputs(); refresh(); });
+        else if (f === 'label') el.addEventListener('input', () => { v.label = el.value; refresh(); });
+        else el.addEventListener('input', () => {
+          const x = parseFloat(el.value);
+          if (!isFinite(x)) return;
+          if (f === 'w') { const L = legs(); L[j][1] = x / 100; setLegs(L); box.querySelector('.vsum').textContent = 'Edited · net weight ' + pct(L.reduce((t, l) => t + l[1], 0), 0); }
+          if (f === 'er') v.expected_return = x / 100;
+          if (f === 'conf') v.confidence = x;
+          if (f === 'band') v.band_percent = x;
+          refresh();
+        });
+      });
+    });
+    const addView = (rel) => {
+      const names = uni().asset_names;
+      const n = s.views.length;
+      const a = names[n % names.length];
+      const b = names[(n + 1) % names.length];
+      s.views.push(rel
+        ? { label: `${a} beats ${b} by 2%`, weights: { [a]: 1, [b]: -1 }, expected_return: 0.02, confidence: 80, band_percent: 50 }
+        : { label: `${a} returns 8%`, weights: { [a]: 1 }, expected_return: 0.08, confidence: 80, band_percent: 25 });
+      S.use_views = true;
+      renderInputs(); refresh();
+    };
+    $('addabs').addEventListener('click', () => addView(false));
+    $('addrel').addEventListener('click', () => addView(true));
+  }
+
+  // Results.
+  function binding(r, i, w) {
+    const lo = r.lower[i];
+    const hi = r.upper[i];
+    if (lo != null && hi != null && Math.abs(hi - lo) < 1e-9) return '<span class="pill">fixed</span>';
+    if (lo != null && Math.abs(w - lo) < 1e-6) return '<span class="pill warn">at min</span>';
+    if (hi != null && Math.abs(w - hi) < 1e-6) return '<span class="pill warn">at max</span>';
+    return '';
+  }
+
+  function renderResults(r, error) {
+    const host = $('results');
+    if (!r) {
+      host.innerHTML = `<div class="box red">${esc(error || 'No result.')}</div>`;
+      return;
+    }
+    const u = uni();
+    const P = Object.fromEntries(r.portfolios.map((p) => [p.key, p]));
+    const opt = P.optimal;
+    const ref = P.current || P.prior || null;
+    const o = opt.stats;
+    const objLabel = r.objective_label;
+    const order = opt.weights.map((w, i) => i).sort((a, b) => opt.weights[b] - opt.weights[a]);
+    const top = order.slice(0, 3).map((i) => `${r.names[i]} ${pct(opt.weights[i], 0)}`).join(', ');
+    const binds = r.names.filter((a, i) => /at m/.test(binding(r, i, opt.weights[i])));
+    const lev = o.cash < -1e-6;
+    const cashTxt = Math.abs(o.cash) < 1e-6 ? 'Fully invested' : lev ? `Borrows ${pct(-o.cash)} at the risk-free rate` : `Holds ${pct(o.cash)} in cash`;
+    const maxS = P.max_sharpe ? P.max_sharpe.stats.sharpe : (r.objective === 'max_sharpe' ? o.sharpe : null);
+    const sharpeGap = maxS != null ? o.sharpe - maxS : null;
+
+    const deltas = ref ? r.names.map((a, i) => ({ a, d: opt.weights[i] - ref.weights[i] })).sort((x, y) => Math.abs(y.d) - Math.abs(x.d)) : [];
+    const moveTxt = ref ? deltas.slice(0, 3).filter((x) => Math.abs(x.d) > 0.0005).map((x) => `${x.a} ${pp(x.d, 1)}`).join(', ') : '';
+
+    let viewTxt = '';
+    if (r.views.length) {
+      const sh = r.names.map((a, i) => ({ a, d: r.expected_returns[i] - r.prior_returns[i] })).sort((x, y) => Math.abs(y.d) - Math.abs(x.d))[0];
+      viewTxt = `Views moved ${sh.a}'s expected return most (${pp(sh.d, 2)}).`;
+    }
+
+    const kpi = (l, v, d) => `<div class="kpi"><div class="l">${l}</div><div class="v">${v}</div><div class="d">${d}</div></div>`;
+    const refD = (k, f) => (ref ? `${esc(ref.label)} ${f(ref.stats[k])}` : '');
+    const warn = [];
+    if (error) warn.push(`<div class="box red"><b>Inputs not solvable:</b> ${esc(error)} Showing the last result that solved.</div>`);
+    r.warnings.forEach((w) => warn.push(`<div class="box warn">${esc(w)}</div>`));
+    if (o.gross > 1.5) warn.push(`<div class="box warn">Gross exposure is ${pct(o.gross, 0)}. Without bounds the optimizer leans on shorts and leverage; turn on weight bounds or raise risk aversion for an investable book.</div>`);
+
+    host.innerHTML = `
+      ${warn.join('')}
+      <div class="exec">
+        <div>
+          <div class="eyebrow">Recommendation <span>· ${esc(objLabel)}${r.views.length ? ' · with views' : ''}</span></div>
+          <div class="headline">${pct(o.ret)} expected return at ${pct(o.vol)} volatility, a Sharpe ratio of ${num(o.sharpe)}.</div>
+          <p class="exec-sub">Largest positions: ${esc(top)}. ${esc(cashTxt)}.${binds.length ? ` ${binds.length} bound${binds.length > 1 ? 's' : ''} bind (${esc(binds.slice(0, 4).join(', '))}${binds.length > 4 ? '…' : ''}).` : ''} ${esc(viewTxt)}</p>
+        </div>
+        <div class="exec-r">
+          ${ref ? `<div class="tp"><div class="tpn">Versus ${esc(ref.label.toLowerCase())}</div><div class="tps">${pp(o.ret - ref.stats.ret, 2)} return · ${pp(o.vol - ref.stats.vol, 2)} risk</div><div class="tpt">Biggest moves: ${esc(moveTxt || 'none')}. One-way turnover ${pct(r.active.turnover)}, tracking error ${pct(r.active.tracking_error, 2)}.</div></div>` : ''}
+          <div class="tp"><div class="tpn">Risk budget</div><div class="tps">${esc(r.names[opt.risk.indexOf(Math.max(...opt.risk))])} carries ${pct(Math.max(...opt.risk), 0)} of variance</div><div class="tpt">Effective number of positions ${num(o.effective_n, 1)} of ${r.names.length}.</div></div>
+          ${sharpeGap != null && r.objective !== 'max_sharpe' ? `<div class="tp"><div class="tpn">Cost of the objective</div><div class="tps">${sharpeGap > -0.005 ? 'None: same Sharpe ratio as the max-Sharpe mix' : `Sharpe ratio ${num(-sharpeGap)} below the max-Sharpe mix`}</div><div class="tpt">${sharpeGap > -0.005 && Math.abs(o.cash) > 1e-6 ? 'Cash and the tangency portfolio combine on the capital market line. ' : ''}The maximum Sharpe ratio portfolio earns ${pct(P.max_sharpe.stats.ret)} at ${pct(P.max_sharpe.stats.vol)}.</div></div>` : ''}
+        </div>
+      </div>
+      <div class="kpis">
+        ${kpi('Expected return', pct(o.ret, 2), refD('ret', (x) => pct(x, 2)) || `Risk-free ${pct(r.risk_free_rate, 2)}`)}
+        ${kpi('Volatility', pct(o.vol, 2), refD('vol', (x) => pct(x, 2)) || 'Annual, ex ante')}
+        ${kpi('Sharpe ratio', num(o.sharpe), refD('sharpe', num) || 'Over the risk-free rate')}
+        ${kpi(lev ? 'Borrowing' : 'Cash', pct(Math.abs(o.cash)), `Gross exposure ${pct(o.gross, 0)}`)}
+        ${kpi('Effective positions', num(o.effective_n, 1), `Largest weight ${pct(o.max_weight, 1)}`)}
+        ${kpi('Turnover', ref ? pct(r.active.turnover) : '–', ref ? `One way, vs ${esc(ref.label.toLowerCase())}` : 'No current book loaded')}
+      </div>
+
+      <section>
+        <div class="sechead"><span class="num">1</span><h2>Allocation</h2><span class="hz">Weights, change and share of risk</span></div>
+        ${allocationTable(r, opt, ref)}
+      </section>
+
+      <section>
+        <div class="sechead"><span class="num">2</span><h2>Where the portfolio sits</h2><span class="hz">Efficient frontier, annual</span></div>
+        <div class="crow c2">
+          <div class="card"><div class="ch"><h3>Risk and return</h3><span>Hover a point for detail</span></div><div class="take"><b>Read</b>${esc(frontierTake(r, P))}</div>${frontierChart(r, P)}</div>
+          <div class="card"><div class="ch"><h3>Portfolios compared</h3><span>All scored on the returns in use</span></div>${compareTable(r)}</div>
+        </div>
+      </section>
+
+      ${r.views.length ? `<section>
+        <div class="sechead"><span class="num">3</span><h2>What the views did</h2><span class="hz">Black-Litterman, τ = ${num(st().settings.tau, 3)}</span></div>
+        <div class="crow c2">
+          <div class="card"><div class="ch"><h3>View portfolios</h3><span>Return of each view portfolio</span></div><div class="take"><b>Read</b>${esc(viewsTake(r))}</div>${viewsTable(r)}</div>
+          <div class="card"><div class="ch"><h3>Expected returns, prior to posterior</h3><span>Per asset</span></div>${returnShift(r)}</div>
+        </div>
+      </section>` : ''}
+
+      <section>
+        <div class="sechead"><span class="num">${r.views.length ? 4 : 3}</span><h2>How the mix changes with risk</h2><span class="hz">Fully invested, ${r.frontier.bounded ? 'with bounds' : 'no bounds'}</span></div>
+        <div class="card"><div class="ch"><h3>Weights along the efficient frontier</h3><span>From minimum volatility (left) to the highest return the rules allow (right)</span></div><div class="take"><b>Read</b>${esc(transitionTake(r))}</div>${transitionChart(r)}</div>
+      </section>
+
+      <section>
+        <div class="sechead"><span class="num">${r.views.length ? 5 : 4}</span><h2>History: returns and correlations</h2><span class="hz">${esc(r.history.horizons ? 'Realized' : 'Case assumptions')}</span></div>
+        ${historySection(r)}
+      </section>
+
+      <section>
+        <div class="sechead"><span class="num">${r.views.length ? 6 : 5}</span><h2>Inputs and method</h2></div>
+        <div class="meth">
+          <div class="card"><div class="ch"><h3>This universe</h3></div><ul style="margin:0;padding-left:18px">${u.notes.map((n) => `<li>${esc(n)}</li>`).join('')}<li><b>Source:</b> ${esc(u.source)}</li></ul></div>
+          <div class="card"><div class="ch"><h3>Reading the numbers</h3></div><dl class="gloss">
+            <dt>Sharpe ratio</dt><dd>(Expected return − risk-free rate) ÷ volatility.</dd>
+            <dt>Risk share</dt><dd>Each asset's share of portfolio variance. Shares sum to 100%; a negative share marks a hedge.</dd>
+            <dt>Effective positions</dt><dd>1 ÷ the sum of squared weights: 1 for a single asset, N for N equal weights.</dd>
+            <dt>Turnover</dt><dd>Half the sum of absolute weight changes, cash included: the share of the book that trades.</dd>
+            <dt>Tracking error</dt><dd>Volatility of the difference between the optimal and reference portfolios.</dd>
+            <dt>At min / at max</dt><dd>A binding bound. Loosening it would improve the objective.</dd>
+            <dt>Capital market line</dt><dd>Mixes of cash and the max-Sharpe portfolio; every point on it has that Sharpe ratio.</dd>
+          </dl></div>
+          <div class="card"><div class="ch"><h3>Method</h3></div><ul style="margin:0;padding-left:18px">
+            <li><b>Solver.</b> The <code>portfolio_optimization</code> package (0.1.0): <code>MarkowitzPortfolio</code> for minimum variance, tangency, target return and risk aversion; <code>BlackLittermanPortfolio.update_views</code> for the views.</li>
+            <li><b>Bounded max Sharpe, min volatility and target volatility</b> search the package's bounded target-return frontier (golden section and bisection to 1e-10).</li>
+            <li><b>Views.</b> Posterior μ = [Σ⁻¹ + τP′Ω⁻¹P]⁻¹ [Σ⁻¹π + τP′Ω⁻¹Q]; each view's variance is (Q × band ÷ z)², z set by its confidence.</li>
+            <li><b>Cash.</b> With cash on, weights need not sum to 100% and the rest earns or pays the risk-free rate. Max Sharpe and min volatility are always fully invested.</li>
+          </ul></div>
+        </div>
+      </section>`;
+    bindTips();
+    fitCharts();
+  }
+
+  function allocationTable(r, opt, ref) {
+    const all = r.portfolios.filter((p) => p.key !== 'equal');
+    const lo = Math.min(0, ...opt.weights, ...(ref ? ref.weights : []));
+    const hi = Math.max(0.0001, ...opt.weights, ...(ref ? ref.weights : []));
+    const span = hi - lo;
+    const zx = ((-lo) / span) * 100;
+    const bar = (w, c, top) => {
+      const a = Math.min(w, 0);
+      const b = Math.max(w, 0);
+      return `<i style="left:${((a - lo) / span) * 100}%;width:${Math.max(((b - a) / span) * 100, 0.4)}%;background:${c};top:${top}px;height:${ref ? 4 : 8}px"></i>`;
+    };
+    const order = opt.weights.map((w, i) => i).sort((a, b) => opt.weights[b] - opt.weights[a]);
+    const hasBounds = r.lower.some((v) => v != null);
+    const rows = order.map((i) => {
+      const w = opt.weights[i];
+      const d = ref ? w - ref.weights[i] : null;
+      const lb = r.lower[i];
+      const ub = r.upper[i];
+      return `<tr><td class="lab"><i style="display:inline-block;width:8px;height:8px;border-radius:2px;background:${assetColor(r.names.indexOf(r.names[i]))};margin-right:6px"></i>${esc(r.names[i])}</td>
+        <td class="num"><b>${tpct(w)}</b></td>
+        ${ref ? `<td class="num">${tpct(ref.weights[i])}</td><td class="num ${d > 0.0005 ? 'pos' : d < -0.0005 ? 'neg' : ''}">${tpp(d)}</td>` : ''}
+        <td style="width:28%"><div class="bar" style="--zx:${zx}%">${bar(w, 'var(--s1)', ref ? 1 : 2)}${ref ? bar(ref.weights[i], PORT_COLOR[ref.key], 6) : ''}</div></td>
+        <td class="num">${tpct(opt.risk[i])}</td>
+        <td class="num">${tpct(r.expected_returns[i])}</td>
+        ${hasBounds ? `<td class="num" style="color:var(--text-muted)">${tpct(lb, 0)} to ${tpct(ub, 0)}</td><td>${binding(r, i, w)}</td>` : ''}</tr>`;
+    }).join('');
+    const o = opt.stats;
+    const cashRow = Math.abs(o.cash) > 1e-6 || (ref && Math.abs(ref.stats.cash) > 1e-6)
+      ? `<tr><td class="lab">Cash (risk-free)</td><td class="num"><b>${tpct(o.cash)}</b></td>${ref ? `<td class="num">${tpct(ref.stats.cash)}</td><td class="num">${tpp(o.cash - ref.stats.cash)}</td>` : ''}<td></td><td class="num">0.0%</td><td class="num">${tpct(r.risk_free_rate)}</td>${hasBounds ? '<td></td><td></td>' : ''}</tr>` : '';
+    return `<div class="card"><div class="take"><b>Read</b>Sorted by optimal weight. ${ref ? `Blue bar is the optimal weight, ${PORT_COLOR[ref.key] === 'var(--s2)' ? 'orange' : 'purple'} is ${esc(ref.label.toLowerCase())}. ` : ''}Risk share is each asset's contribution to portfolio variance.</div>
+      <div class="tw"><table class="t"><thead><tr><th>Asset</th><th class="num">Optimal</th>${ref ? `<th class="num">${esc(ref.label)}</th><th class="num">Change</th>` : ''}<th>Weight</th><th class="num">Risk share</th><th class="num">E[r]</th>${hasBounds ? '<th class="num">Bounds</th><th></th>' : ''}</tr></thead>
+      <tbody>${rows}${cashRow}<tr class="tot"><td>Total</td><td class="num">${tpct(o.net + o.cash)}</td>${ref ? `<td class="num">${tpct(ref.stats.net + ref.stats.cash)}</td><td></td>` : ''}<td></td><td class="num">100.0%</td><td class="num">${tpct(o.ret)}</td>${hasBounds ? '<td></td><td></td>' : ''}</tr></tbody></table></div></div>`;
+  }
+
+  function compareTable(r) {
+    const rows = r.portfolios.map((p) => `<tr class="${p.key === 'optimal' ? 'hl' : ''}"><td class="lab"><i style="display:inline-block;width:9px;height:9px;border-radius:50%;background:${PORT_COLOR[p.key]};margin-right:6px"></i>${esc(p.label)}</td>
+      <td class="num">${tpct(p.stats.ret, 2)}</td><td class="num">${tpct(p.stats.vol, 2)}</td><td class="num">${num(p.stats.sharpe)}</td><td class="num">${tpct(p.stats.cash, 2)}</td><td class="num">${num(p.stats.effective_n, 1)}</td><td class="num">${tpct(p.stats.max_weight, 2)}</td></tr>`).join('');
+    return `<div class="tw"><table class="t"><thead><tr><th>Portfolio</th><th class="num">E[r]</th><th class="num">Vol</th><th class="num">Sharpe</th><th class="num">Cash</th><th class="num">Eff. N</th><th class="num">Max wt</th></tr></thead><tbody>${rows}</tbody></table></div>
+      <p class="note">Optimal is the selected objective. Max Sharpe and min volatility obey the same bounds; equal weight ignores them. ${r.portfolios.some((p) => p.key === 'prior') ? 'Before views solves the same objective on the prior returns and is scored on the posterior returns.' : ''}</p>`;
+  }
+
+  function viewsTable(r) {
+    const rows = r.views.map((v) => `<tr><td class="lab" style="white-space:normal">${esc(v.label)}</td><td class="num">${tpct(v.view, 2)}</td><td class="num">${tpct(v.prior, 2)}</td><td class="num"><b>${tpct(v.posterior, 2)}</b></td><td class="num">${tpp(v.posterior - v.prior, 2)}</td></tr>`).join('');
+    return `<div class="tw"><table class="t"><thead><tr><th>View</th><th class="num">View</th><th class="num">Prior</th><th class="num">Posterior</th><th class="num">Shift</th></tr></thead><tbody>${rows}</tbody></table></div>
+      <p class="note">A posterior close to the view means the view outweighed the prior. To lean on a view more, narrow its band, raise its confidence or raise τ.</p>`;
+  }
+
+  // Keeps chart text at CHART_FONT_PX screen pixels however wide the chart is drawn.
+  const CHART_FONT_PX = 12.5;
+  // Below this drawn-to-viewBox ratio (phones), text shrinks with the chart.
+  const MIN_CHART_SCALE = 0.8;
+  // Expected drawn-to-viewBox ratio of a half-width card chart, used to size
+  // label boxes before the chart is in the page.
+  function halfChartScale() {
+    const w = $('results').clientWidth || 1000;
+    const card = window.innerWidth > 1500 ? (w - 16) / 2 - 30 : w - 30;
+    return Math.max(card / W, MIN_CHART_SCALE);
+  }
+  function fitCharts() {
+    document.querySelectorAll('svg.chart').forEach((svg) => {
+      const vb = svg.viewBox.baseVal;
+      const box = svg.getBoundingClientRect();
+      // The drawing scales to fit both sides, so the tighter side sets the scale.
+      const k = vb.width && vb.height ? Math.min(box.width / vb.width, box.height / vb.height) : 0;
+      if (k > 0) svg.style.setProperty('--fs', `${(CHART_FONT_PX / Math.max(k, MIN_CHART_SCALE)).toFixed(2)}px`);
+    });
+  }
+  window.addEventListener('resize', () => { clearTimeout(fitCharts.t); fitCharts.t = setTimeout(fitCharts, 100); });
+
+  // History: realized returns by horizon and the correlation matrix.
+  function heatColor(rho) {
+    const a = Math.round(Math.min(Math.abs(rho), 1) * 55);
+    return `color-mix(in srgb, ${rho >= 0 ? 'var(--s1)' : 'var(--s2)'} ${a}%, transparent)`;
+  }
+
+  // Equal-width number columns after a label column sized to its longest
+  // label (about 8px a character at 13.5px Arial, plus padding).
+  function gridCols(labels, n) {
+    const label = Math.max(...labels.map((a) => a.length)) * 8 + 34;
+    return `<colgroup><col style="width:${label}px">${'<col>'.repeat(n)}</colgroup>`;
+  }
+
+  function correlationTable(names, corr) {
+    const short = (a) => (a.match(/\(([^)]+)\)$/) || [null, a])[1];
+    // Long single words get a soft hyphen so narrow columns break cleanly.
+    const soft = (t) => esc(t).replace(/\b(\w{6})(\w{4,})\b/g, '$1&shy;$2');
+    const head = names.map((a) => `<th class="num" title="${esc(a)}">${soft(short(a))}</th>`).join('');
+    const rows = names.map((a, i) => `<tr><td class="lab" title="${esc(a)}">${esc(short(a))}</td>${corr[i].map((v, j) => (i === j
+      ? '<td class="num diag">100%</td>'
+      : `<td class="num" style="background:${heatColor(v)}">${tpct(v, 0)}</td>`)).join('')}</tr>`).join('');
+    return `<div class="tw"><table class="t heat compact grid">${gridCols(names.map(short), names.length)}<thead><tr><th></th>${head}</tr></thead><tbody>${rows}</tbody></table></div>`;
+  }
+
+  function corrExtremes(names, corr) {
+    const pairs = [];
+    names.forEach((a, i) => names.forEach((b, j) => { if (j > i) pairs.push({ a, b, v: corr[i][j] }); }));
+    pairs.sort((x, y) => y.v - x.v);
+    return { hi: pairs[0], lo: pairs[pairs.length - 1] };
+  }
+
+  function historySection(r) {
+    const h = r.history;
+    const n = r.names;
+    if (!h.horizons) {
+      const ex = corrExtremes(n, r.correlation);
+      return `<div class="card"><div class="ch"><h3>Correlation matrix used by the optimizer</h3><span>Case assumptions; this universe has no return history</span></div>
+        <div class="take"><b>Read</b>${esc(`The most correlated pair is ${ex.hi.a} and ${ex.hi.b} (${pct(ex.hi.v, 0)}); the least is ${ex.lo.a} and ${ex.lo.b} (${pct(ex.lo.v, 0)}).`)}</div>
+        ${correlationTable(n, r.correlation)}</div>`;
+    }
+    const full = h.horizons[h.horizons.length - 1];
+    const order = full.returns.map((v, i) => i).sort((a, b) => full.returns[b] - full.returns[a]);
+    const best = order[0];
+    const worst = order[order.length - 1];
+    const ex = corrExtremes(n, h.correlation);
+    const cell = (v) => `<td class="num ${v < -0.0005 ? 'neg' : ''}">${tpct(v)}</td>`;
+    const rows = n.map((a, i) => `<tr><td class="lab"><i style="display:inline-block;width:8px;height:8px;border-radius:2px;background:${assetColor(i)};margin-right:6px"></i>${esc(a)}</td>${h.horizons.map((x) => cell(x.returns[i])).join('')}<td class="num">${tpct(h.volatility[i])}</td>${cell(h.max_drawdown[i])}</tr>`).join('');
+    const head = (x) => x.label.replace(/^Since \w+ /, 'Since ');
+    return `<div class="hist">
+      <div class="card"><div class="ch"><h3>Annualized total return</h3><span>Trailing, compounded</span></div>
+        <div class="take"><b>Read</b>${esc(`${full.label}, ${n[best]} returned most (${pct(full.returns[best])} a year) and ${n[worst]} least (${pct(full.returns[worst])}).`)}</div>
+        <div class="tw"><table class="t compact grid">${gridCols(n, h.horizons.length + 2)}<thead><tr><th>Asset</th>${h.horizons.map((x) => `<th class="num">${esc(head(x))}</th>`).join('')}<th class="num">Vol</th><th class="num">Max DD</th></tr></thead><tbody>${rows}</tbody></table></div>
+        <p class="note">${esc(h.label)} Vol and max drawdown (Max DD) cover the full history.</p></div>
+      <div class="card"><div class="ch"><h3>Correlation matrix</h3><span>${esc(full.label)}, ${esc(h.label.split(',')[0].split(' ')[0].toLowerCase())} returns</span></div>
+        <div class="take"><b>Read</b>${esc(`The most correlated pair is ${ex.hi.a} and ${ex.hi.b} (${pct(ex.hi.v, 0)}); the least is ${ex.lo.a} and ${ex.lo.b} (${pct(ex.lo.v, 0)}).`)}</div>
+        ${correlationTable(n, h.correlation)}
+        <p class="note">Shading deepens with the size of the correlation; negatives are in parentheses.</p></div>
+    </div>`;
+  }
+
+  // One-line readings for the cards.
+  function frontierTake(r, P) {
+    const o = P.optimal.stats;
+    const best = (f) => Math.max(...f.map((p) => (p.ret - r.risk_free_rate) / p.vol));
+    const parts = [];
+    if (Math.abs(o.cash) > 1e-6) {
+      parts.push(`The optimal mix ${o.cash > 0 ? `holds ${pct(o.cash)} cash` : `borrows ${pct(-o.cash)}`} against risky assets, so it sits on the capital market line.`);
+    } else if (r.objective === 'max_sharpe') {
+      parts.push('The optimal mix is the tangency portfolio: the highest Sharpe ratio the rules allow.');
+    } else {
+      parts.push(`The optimal mix sits on the ${r.frontier.bounded ? 'bounded ' : ''}frontier at ${pct(o.vol)} volatility.`);
+    }
+    if (r.frontier.bounded) {
+      const gap = best(r.frontier.unbounded) - best(r.frontier.bounded);
+      if (gap > 0.005) parts.push(`Bounds cost ${num(gap)} of Sharpe ratio: the best unbounded mix reaches ${num(best(r.frontier.unbounded))}, against ${num(best(r.frontier.bounded))} with bounds.`);
+      else parts.push('Bounds cost almost nothing in Sharpe ratio here.');
+    }
+    return parts.join(' ');
+  }
+
+  function viewsTake(r) {
+    const shifts = r.names.map((a, i) => ({ a, d: r.expected_returns[i] - r.prior_returns[i] }))
+      .sort((x, y) => Math.abs(y.d) - Math.abs(x.d)).slice(0, 2).filter((x) => Math.abs(x.d) > 0.00005);
+    const close = r.views.filter((v) => Math.abs(v.posterior - v.view) < Math.abs(v.prior - v.view) * 0.2).length;
+    const moved = shifts.length ? `Views moved expected returns most for ${shifts.map((x) => `${x.a} (${pp(x.d, 2)})`).join(' and ')}. ` : 'Views barely moved expected returns. ';
+    return moved + `${close} of ${r.views.length} view${r.views.length > 1 ? 's' : ''} ended within 20% of ${r.views.length > 1 ? 'their' : 'its'} stated return, so the views${close ? '' : ' do not'} outweigh the prior there.`;
+  }
+
+  function transitionTake(r) {
+    const f = r.frontier.bounded || r.frontier.unbounded;
+    const first = f[0].weights;
+    const last = f[f.length - 1].weights;
+    const moves = r.names.map((a, i) => ({ a, d: last[i] - first[i], from: first[i], to: last[i] }));
+    const up = moves.slice().sort((x, y) => y.d - x.d)[0];
+    const down = moves.slice().sort((x, y) => x.d - y.d)[0];
+    const fmt = (m) => `${m.a} (${pct(m.from, 0)} to ${pct(m.to, 0)})`;
+    if (up.d < 0.005 && down.d > -0.005) return 'The mix barely changes along the frontier: the bounds fix most weights.';
+    return `Taking more risk, the optimizer adds most to ${fmt(up)} and cuts ${fmt(down)}, from minimum volatility to the highest return the rules allow.`;
+  }
+
+  // SVG helpers.
+  const W = 640;
+  function scale(d0, d1, r0, r1) { const k = (r1 - r0) / (d1 - d0 || 1); return (v) => r0 + (v - d0) * k; }
+  function ticks(a, b, n) {
+    const step0 = (b - a) / n;
+    const mag = Math.pow(10, Math.floor(Math.log10(step0)));
+    const step = [1, 2, 2.5, 5, 10].map((m) => m * mag).find((s) => s >= step0) || step0;
+    const out = [];
+    for (let v = Math.ceil(a / step - 1e-9) * step; v <= b + 1e-12; v += step) out.push(+v.toFixed(10));
+    // Decimals the step needs in percent: 5% -> 0, 2.5% -> 1, 0.25% -> 2.
+    const stepPct = Math.round(step * 1e6) / 1e4;
+    out.dp = [0, 1, 2, 3].find((d) => Math.abs(stepPct * Math.pow(10, d) - Math.round(stepPct * Math.pow(10, d))) < 1e-6) ?? 2;
+    out.step = step;
+    return out;
+  }
+  // Widens [a, b] to whole tick steps so the outermost marks are labelled.
+  function niceDomain(a, b, n) {
+    const t = ticks(a, b, n);
+    return [Math.floor(a / t.step + 1e-9) * t.step, Math.ceil(b / t.step - 1e-9) * t.step];
+  }
+
+  function returnShift(r) {
+    const H = 30 + r.names.length * 24;
+    const vals = r.prior_returns.concat(r.expected_returns);
+    const lo = Math.min(0, ...vals);
+    const hi = Math.max(...vals);
+    const pad = (hi - lo) * 0.06;
+    const x = scale(lo - pad, hi + pad, 110, W - 20);
+    let s = `<svg class="chart" viewBox="0 0 ${W} ${H}" role="img" aria-label="Prior and posterior expected returns">`;
+    ticks(lo, hi, 5).forEach((t, i, T) => { s += `<line class="gl" x1="${x(t)}" x2="${x(t)}" y1="8" y2="${H - 20}"/><text x="${x(t)}" y="${H - 6}" text-anchor="middle">${pct(t, T.dp)}</text>`; });
+    r.names.forEach((a, i) => {
+      const y = 20 + i * 24;
+      const p = r.prior_returns[i];
+      const q = r.expected_returns[i];
+      s += `<text x="102" y="${y + 4}" text-anchor="end">${esc(a.length > 15 ? a.slice(0, 14) + '…' : a)}</text>`;
+      s += `<line x1="${x(p)}" x2="${x(q)}" y1="${y}" y2="${y}" stroke="var(--s5)" stroke-width="2"/>`;
+      s += `<circle cx="${x(p)}" cy="${y}" r="4" fill="var(--surface-1)" stroke="var(--text-muted)" stroke-width="1.5"/><circle cx="${x(q)}" cy="${y}" r="4.5" fill="var(--s5)" class="hot" data-tip="${esc(`<b>${a}</b><br>Prior ${pct(p, 2)} → posterior ${pct(q, 2)} (${pp(q - p, 2)})`)}"/>`;
+    });
+    return `<div class="legend"><span><i class="dot" style="background:var(--surface-1);border:1.5px solid var(--text-muted)"></i>Prior</span><span><i class="dot" style="background:var(--s5)"></i>Posterior</span></div>${s}</svg>`;
+  }
+
+  // Places each label beside its point (right, left, above, below), skipping
+  // positions that hit a placed label, a marker or the plot edge. Labels
+  // with no free position are hidden; their points keep their tooltips.
+  const LABEL_CHAR_PX = 6.6;
+  const LABEL_HEIGHT_PX = 12.5;
+  function placeLabels(labels, marks, frame) {
+    const boxes = marks.map((m) => ({ x0: m.x - m.r, x1: m.x + m.r, y0: m.y - m.r, y1: m.y + m.r }))
+      .concat(labels.map((l) => ({ x0: l.x - 4, x1: l.x + 4, y0: l.y - 4, y1: l.y + 4 })));
+    const hit = (b) => b.x0 < frame.x0 || b.x1 > frame.x1 || b.y0 < frame.y0 || b.y1 > frame.y1 ||
+      boxes.some((o) => b.x0 < o.x1 && b.x1 > o.x0 && b.y0 < o.y1 && b.y1 > o.y0);
+    const shown = [];
+    let hidden = 0;
+    const k = halfChartScale();
+    labels.slice().sort((a, b) => a.y - b.y || a.x - b.x).forEach((l) => {
+      const w = (l.text.length * LABEL_CHAR_PX) / k;
+      const h = LABEL_HEIGHT_PX / k;
+      const options = [
+        { tx: l.x + 7, ty: l.y + 3.5, anchor: 'start', b: { x0: l.x + 6, x1: l.x + 8 + w, y0: l.y - h / 2, y1: l.y + h / 2 } },
+        { tx: l.x - 7, ty: l.y + 3.5, anchor: 'end', b: { x0: l.x - 8 - w, x1: l.x - 6, y0: l.y - h / 2, y1: l.y + h / 2 } },
+        { tx: l.x, ty: l.y - 7, anchor: 'middle', b: { x0: l.x - w / 2, x1: l.x + w / 2, y0: l.y - 7 - h + 2, y1: l.y - 5 } },
+        { tx: l.x, ty: l.y + 15, anchor: 'middle', b: { x0: l.x - w / 2, x1: l.x + w / 2, y0: l.y + 6, y1: l.y + 6 + h } },
+      ];
+      const pick = options.find((o) => !hit(o.b));
+      if (!pick) { hidden += 1; return; }
+      boxes.push(pick.b);
+      shown.push(Object.assign({ text: l.text }, pick));
+    });
+    return { shown, hidden };
+  }
+
+  // Fits variance = a r² + b r + c through the first, middle and last points
+  // of an unbounded frontier; rMin is the minimum-variance return.
+  function hyperbola(f) {
+    const pts3 = [f[0], f[Math.floor(f.length / 2)], f[f.length - 1]].map((p) => [p.ret, p.vol * p.vol]);
+    const [[r1, v1], [r2, v2], [r3, v3]] = pts3;
+    const d = (r1 - r2) * (r1 - r3) * (r2 - r3);
+    const a = (r3 * (v2 - v1) + r2 * (v1 - v3) + r1 * (v3 - v2)) / d;
+    const b = (r3 * r3 * (v1 - v2) + r2 * r2 * (v3 - v1) + r1 * r1 * (v2 - v3)) / d;
+    const c = (r2 * r3 * (r2 - r3) * v1 + r3 * r1 * (r3 - r1) * v2 + r1 * r2 * (r1 - r2) * v3) / d;
+    // Returns on the lower and upper branch where volatility equals vol.
+    const returnsAt = (vol) => {
+      const disc = b * b - 4 * a * (c - vol * vol);
+      if (!(a > 0) || disc < 0) return [Infinity, -Infinity];
+      return [(-b - Math.sqrt(disc)) / (2 * a), (-b + Math.sqrt(disc)) / (2 * a)];
+    };
+    return { variance: (ret) => a * ret * ret + b * ret + c, rMin: -b / (2 * a), returnsAt };
+  }
+
+  function frontierChart(r, P) {
+    const H = 380;
+    const fu = r.frontier.unbounded;
+    const fb = r.frontier.bounded;
+    const pts = r.portfolios;
+    const xs = [0].concat(fu.map((p) => p.vol), fb ? fb.map((p) => p.vol) : [], r.volatilities, pts.map((p) => p.stats.vol));
+    const ys = [r.risk_free_rate].concat(fu.map((p) => p.ret), fb ? fb.map((p) => p.ret) : [], r.expected_returns, pts.map((p) => p.stats.ret));
+    const xmax = Math.max(...xs) * 1.06;
+    // Stretch the return axis so the unbounded frontier reaches the right
+    // edge on both branches, up to 60% of the data range on each side.
+    const hyp = hyperbola(fu);
+    const dataLo = Math.min(...ys);
+    const dataHi = Math.max(...ys);
+    const span = dataHi - dataLo;
+    const [edgeLo, edgeHi] = hyp.returnsAt(xmax);
+    const ymin = Math.max(Math.min(dataLo, edgeLo), dataLo - 0.6 * span);
+    const ymax = Math.min(Math.max(dataHi, edgeHi), dataHi + 0.6 * span);
+    const yp = (ymax - ymin) * 0.04;
+    const x = scale(0, xmax, 52, W - 16);
+    const top = 28;
+    const y = scale(ymin - yp, ymax + yp, H - 34, top);
+    let s = `<svg class="chart half" viewBox="0 0 ${W} ${H}" role="img" aria-label="Efficient frontier with portfolios and assets">`;
+    // One decimal setting for both axes, so 5% and 5.0% never sit side by side.
+    const XT = ticks(0, xmax, 6);
+    const YT = ticks(ymin - yp, ymax + yp, 6);
+    const dp = Math.max(XT.dp, YT.dp);
+    XT.forEach((t) => { s += `<line class="gl" x1="${x(t)}" x2="${x(t)}" y1="${top}" y2="${H - 34}"/><text x="${x(t)}" y="${H - 18}" text-anchor="middle">${pct(t, dp)}</text>`; });
+    YT.forEach((t) => { s += `<line class="gl" x1="52" x2="${W - 16}" y1="${y(t)}" y2="${y(t)}"/><text x="46" y="${y(t) + 4}" text-anchor="end">${pct(t, dp)}</text>`; });
+    s += `<text x="${W - 16}" y="${H - 3}" text-anchor="end" class="lbl">Volatility →</text><text x="8" y="12" class="lbl">Expected return ↑</text>`;
+    s += `<clipPath id="fc"><rect x="52" y="${top}" width="${W - 68}" height="${H - 34 - top}"/></clipPath><g clip-path="url(#fc)">`;
+    const ms = P.max_sharpe || (r.objective === 'max_sharpe' ? P.optimal : null);
+    if (ms) {
+      const k = ms.stats.sharpe;
+      s += `<line x1="${x(0)}" y1="${y(r.risk_free_rate)}" x2="${x(xmax)}" y2="${y(r.risk_free_rate + k * xmax)}" stroke="var(--s3)" stroke-width="1.2" stroke-dasharray="5 4"/>`;
+    }
+    const path = (f) => f.map((p, i) => `${i ? 'L' : 'M'}${x(p.vol).toFixed(1)},${y(p.ret).toFixed(1)}`).join('');
+    // The unbounded frontier is a hyperbola: variance is quadratic in return.
+    // Fit it through three solved points and draw it across the whole chart,
+    // with the inefficient lower branch dashed (as in the 2018 package plot).
+    const yLo = ymin - yp;
+    const yHi = ymax + yp;
+    const branch = (r0, r1) => {
+      const pts2 = [];
+      for (let k = 0; k <= 160; k += 1) {
+        const ret = r0 + ((r1 - r0) * k) / 160;
+        pts2.push({ ret, vol: Math.sqrt(Math.max(hyp.variance(ret), 0)) });
+      }
+      return path(pts2);
+    };
+    s += `<path d="${branch(Math.min(yLo, hyp.rMin), Math.max(yHi, hyp.rMin))}" fill="none" stroke="var(--text-muted)" stroke-width="1.6"/>`;
+    if (fb) s += `<path d="${path(fb)}" fill="none" stroke="var(--ink)" stroke-width="2"/>`;
+    s += '</g>';
+    // Markers first, then labels placed around them without collisions.
+    const marks = pts.map((p) => ({ x: x(p.stats.vol), y: y(p.stats.ret), r: p.key === 'optimal' ? 8 : 6 }));
+    const labels = [{ x: x(0), y: y(r.risk_free_rate), r: 4, text: 'Risk-free' }];
+    r.names.forEach((a, i) => {
+      const cx = x(r.volatilities[i]);
+      const cy = y(r.expected_returns[i]);
+      s += `<rect x="${cx - 3.5}" y="${cy - 3.5}" width="7" height="7" fill="${assetColor(i)}" class="hot" data-tip="${esc(`<b>${a}</b><br>E[r] ${pct(r.expected_returns[i], 2)} · vol ${pct(r.volatilities[i], 1)}`)}"/>`;
+      labels.push({ x: cx, y: cy, r: 4, text: a.length > 22 ? a.slice(0, 21) + '…' : a });
+    });
+    s += `<circle cx="${x(0)}" cy="${y(r.risk_free_rate)}" r="3.5" fill="var(--text-muted)"/>`;
+    const placed = placeLabels(labels, marks, { x0: 52, x1: W - 4, y0: top, y1: H - 30 });
+    placed.shown.forEach((l) => { s += `<text x="${l.tx.toFixed(1)}" y="${l.ty.toFixed(1)}" text-anchor="${l.anchor}" class="lbl">${esc(l.text)}</text>`; });
+    pts.slice().reverse().forEach((p) => {
+      const big = p.key === 'optimal';
+      s += `<circle cx="${x(p.stats.vol)}" cy="${y(p.stats.ret)}" r="${big ? 7.5 : 5.5}" fill="${PORT_COLOR[p.key]}" stroke="var(--surface-1)" stroke-width="2" class="hot" data-tip="${esc(`<b>${p.label}</b><br>E[r] ${pct(p.stats.ret, 2)} · vol ${pct(p.stats.vol, 2)}<br>Sharpe ${num(p.stats.sharpe)} · cash ${pct(p.stats.cash, 1)}`)}"/>`;
+    });
+    s += '</svg>';
+    const leg = [`<span><i class="ln" style="background:var(--ink)"></i>Frontier, with bounds</span>`, `<span><i class="ln" style="background:var(--text-muted)"></i>Frontier, no bounds</span>`, ms ? `<span><i class="ln" style="background:var(--s3)"></i>Capital market line</span>` : '']
+      .filter((x, i) => fb || i !== 0).concat(pts.map((p) => `<span><i class="dot" style="background:${PORT_COLOR[p.key]}"></i>${esc(p.label)}</span>`));
+    return `<div class="legend">${leg.join('')}</div>${s}<div class="foot">Squares are single assets${placed.hidden ? `; ${placed.hidden} label${placed.hidden > 1 ? 's' : ''} hidden where points overlap (hover for the name)` : ''}. The grey curve is the frontier with no bounds, both halves; ${fb ? 'the dark line is the frontier with bounds.' : 'the upper half is efficient.'}</div>`;
+  }
+
+  function transitionChart(r) {
+    const f = r.frontier.bounded || r.frontier.unbounded;
+    const H = 320;
+    const W = 1100;
+    const n = r.names.length;
+    const anyShort = f.some((p) => p.weights.some((w) => w < -1e-6));
+    const x = scale(f[0].vol, f[f.length - 1].vol, 52, W - 16);
+    let s = `<svg class="chart wide" viewBox="0 0 ${W} ${H}" role="img" aria-label="Asset weights along the efficient frontier">`;
+    let y;
+    if (!anyShort) {
+      y = scale(0, 1, H - 34, 12);
+      [0, 0.25, 0.5, 0.75, 1].forEach((t) => { s += `<line class="gl" x1="52" x2="${W - 16}" y1="${y(t)}" y2="${y(t)}"/><text x="46" y="${y(t) + 4}" text-anchor="end">${pct(t, 0)}</text>`; });
+      const base = f.map(() => 0);
+      for (let i = 0; i < n; i += 1) {
+        const top = f.map((p, k) => base[k] + Math.max(p.weights[i], 0));
+        const d = top.map((v, k) => `${k ? 'L' : 'M'}${x(f[k].vol).toFixed(1)},${y(v).toFixed(1)}`).join('') +
+          base.map((v, k) => [k, v]).reverse().map(([k, v]) => `L${x(f[k].vol).toFixed(1)},${y(v).toFixed(1)}`).join('') + 'Z';
+        s += `<path d="${d}" fill="${assetColor(i)}" fill-opacity=".85" stroke="var(--surface-1)" stroke-width=".6"/>`;
+        top.forEach((v, k) => { base[k] = v; });
+      }
+    } else {
+      const all = f.flatMap((p) => p.weights);
+      const [lo, hi] = niceDomain(Math.min(...all, 0), Math.max(...all), 6);
+      y = scale(lo, hi, H - 34, 12);
+      ticks(lo, hi, 6).forEach((t, i, T) => { s += `<line class="${Math.abs(t) < 1e-12 ? 'ax' : 'gl'}" x1="52" x2="${W - 16}" y1="${y(t)}" y2="${y(t)}"/><text x="46" y="${y(t) + 4}" text-anchor="end">${pct(t, T.dp)}</text>`; });
+      for (let i = 0; i < n; i += 1) {
+        s += `<path d="${f.map((p, k) => `${k ? 'L' : 'M'}${x(p.vol).toFixed(1)},${y(p.weights[i]).toFixed(1)}`).join('')}" fill="none" stroke="${assetColor(i)}" stroke-width="2"/>`;
+      }
+    }
+    ticks(f[0].vol, f[f.length - 1].vol, 6).forEach((t, i, T) => { s += `<text x="${x(t)}" y="${H - 18}" text-anchor="middle">${pct(t, T.dp)}</text>`; });
+    s += `<text x="${W - 16}" y="${H - 3}" text-anchor="end" class="lbl">Portfolio volatility →</text>`;
+    const ov = r.portfolios[0].stats.vol;
+    if (ov >= f[0].vol - 1e-9 && ov <= f[f.length - 1].vol + 1e-9 && Math.abs(r.portfolios[0].stats.cash) < 1e-6) {
+      s += `<line x1="${x(ov)}" x2="${x(ov)}" y1="12" y2="${H - 34}" stroke="var(--ink)" stroke-width="1.5" stroke-dasharray="4 3"/><text x="${x(ov) + (x(ov) > W - 90 ? -5 : 5)}" y="24" text-anchor="${x(ov) > W - 90 ? 'end' : 'start'}" style="fill:var(--ink);font-weight:700">Optimal</text>`;
+    }
+    s += `<rect x="52" y="12" width="${W - 68}" height="${H - 46}" fill="transparent" id="trhot"/></svg>`;
+    const leg = r.names.map((a, i) => `<span><i style="background:${assetColor(i)}"></i>${esc(a)}</span>`).join('');
+    return `<div class="legend">${leg}</div><div class="tw">${s}</div><div class="foot">${anyShort ? 'Lines, because the frontier holds short positions here.' : 'Stacked weights; each column sums to 100%.'} ${r.frontier.bounded ? '' : 'No bounds are on, so the frontier is unconstrained.'}</div>`;
+  }
+
+  function bindTips() {
+    const tt = $('tt');
+    document.querySelectorAll('.hot').forEach((el) => {
+      el.addEventListener('mousemove', (e) => {
+        tt.innerHTML = el.dataset.tip; tt.hidden = false;
+        const w = tt.offsetWidth;
+        tt.style.left = Math.min(e.clientX + 14, window.innerWidth - w - 8) + 'px';
+        tt.style.top = e.clientY + 14 + 'px';
+      });
+      el.addEventListener('mouseleave', () => { tt.hidden = true; });
+    });
+    const hot = $('trhot');
+    if (hot && lastResult) {
+      const r = lastResult;
+      const f = r.frontier.bounded || r.frontier.unbounded;
+      hot.addEventListener('mousemove', (e) => {
+        const box = hot.getBoundingClientRect();
+        const t = Math.max(0, Math.min(1, (e.clientX - box.left) / box.width));
+        const p = f[Math.round(t * (f.length - 1))];
+        const rows = p.weights.map((w, i) => [r.names[i], w]).filter(([, w]) => Math.abs(w) > 0.0005).sort((a, b) => b[1] - a[1]).slice(0, 8);
+        tt.innerHTML = `<b>Vol ${pct(p.vol, 2)} · E[r] ${pct(p.ret, 2)}</b><br>` + rows.map(([a, w]) => `${esc(a)} ${tpct(w)}`).join('<br>');
+        tt.hidden = false;
+        tt.style.left = Math.min(e.clientX + 14, window.innerWidth - tt.offsetWidth - 8) + 'px';
+        tt.style.top = e.clientY + 14 + 'px';
+      });
+      hot.addEventListener('mouseleave', () => { tt.hidden = true; });
+    }
+  }
+
+  // Theme and reset.
+  function themeNow() {
+    const t = document.documentElement.getAttribute('data-theme');
+    if (t) return t;
+    return window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  }
+  function paintThemeBtn() { $('themebtn').textContent = themeNow() === 'dark' ? 'Light' : 'Dark'; }
+  $('themebtn').addEventListener('click', () => {
+    const next = themeNow() === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    try { localStorage.setItem('po-calc-theme', next); } catch (e) {}
+    paintThemeBtn();
+  });
+  $('resetbtn').addEventListener('click', () => { state[active] = freshState(uni()); renderInputs(); refresh(); });
+  $('foot').innerHTML = 'Built on my <a href="/portfolio-optimization/"><code>portfolio_optimization</code></a> Python library (2018), ported to run in the browser. Factor data from the <a href="https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html">Ken French Data Library</a>. Expected returns, bounds and views are inputs, not forecasts. The views here are my own and do not represent those of my employer. Nothing here is investment advice.';
+
+  paintThemeBtn();
+  renderTabs();
+  renderInputs();
+  refresh();
+})();
+</script>
+
+<script src="/assets/js/return-strip.js" data-section="Academic" data-section-url="/academic/" data-title="Portfolio Optimizer" data-note="Inputs, not forecasts. Not investment advice." defer></script>
+</body></html>

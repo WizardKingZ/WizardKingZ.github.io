@@ -10,6 +10,8 @@ tags: ["portfolio theory", "optimization", "finance", "Python"]
 
 As part of an ongoing effort to provide finance-related Python libraries, I will start with portfolio optimization. This page documents the library's Hello-World version.
 
+*Update: the library now also runs in the browser. The [Portfolio Optimizer](/portfolio-optimizer/) loads this tutorial's five factors, bounds, and views so you can change them and watch the frontier move.*
+
 ## Installation
 
 If you have Python 3.6+ installed, run the following in your terminal:
