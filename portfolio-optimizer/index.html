@@ -6,30 +6,23 @@
 :root{
   --surface-0:#f4f3f0; --surface-1:#fcfcfb; --surface-2:#edece8; --border:#e6e4de; --rule:#d3d7de; --grid:#eeece7;
   --text-primary:#0b0b0b; --text-secondary:#52514e; --text-muted:#7c7a75;
-  --ink:#0b1f3a; --band:#0b1f3a; --band-text:#f3f5f9; --accent:#6a3d8f;
+  --ink:#3d2257; --band:#4b2a6e; --band-text:#f6f2fa; --accent:#6a3d8f;
   --s1:#2a78d6; --s2:#eb6834; --s3:#1baf7a; --s4:#c98a00; --s5:#8a62c9; --s6:#7c7a75;
   --c1:#2a78d6; --c2:#eb6834; --c3:#1baf7a; --c4:#d6a100; --c5:#8a62c9; --c6:#d04f7f; --c7:#2fa3b5; --c8:#8c6d46; --c9:#5f7f2a; --c10:#b33a3a; --c11:#4a5ea8; --c12:#9a9790;
   --good:#1a7f37; --warn:#b26a00; --critical:#b91c1c;
-  --thbg:#0b1f3a; --thfg:#ffffff; --sub:#e9edf3;
+  --thbg:#4b2a6e; --thfg:#ffffff; --sub:#e9edf3;
   --font:Arial,Helvetica,sans-serif;
   color-scheme:light;
 }
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
-  --surface-0:#121211; --surface-1:#1a1a19; --surface-2:#242422; --border:#2c2c2a; --rule:#363b44; --grid:#242422;
-  --text-primary:#f0efec; --text-secondary:#c3c2b7; --text-muted:#8e8c85;
-  --ink:#dbe4f1; --band:#0c1829; --band-text:#eef2f8; --accent:#b48ee0;
-  --s1:#5b93dc; --s2:#e2733f; --s3:#2bb886; --s4:#d9a21a; --s5:#a585dc; --s6:#8e8c85;
-  --c1:#5b93dc; --c2:#e2733f; --c3:#2bb886; --c4:#d9b02a; --c5:#a585dc; --c6:#e0709a; --c7:#46b8c9; --c8:#b08d62; --c9:#86a64a; --c10:#d65f5f; --c11:#7d8fd6; --c12:#a8a59c;
-  --good:#3fb950; --warn:#d29922; --critical:#f85149;
-  --thbg:#1d3557; --thfg:#f3f5f9; --sub:#20262f; color-scheme:dark }}
+
 :root[data-theme="dark"]{
   --surface-0:#121211; --surface-1:#1a1a19; --surface-2:#242422; --border:#2c2c2a; --rule:#363b44; --grid:#242422;
   --text-primary:#f0efec; --text-secondary:#c3c2b7; --text-muted:#8e8c85;
-  --ink:#dbe4f1; --band:#0c1829; --band-text:#eef2f8; --accent:#b48ee0;
+  --ink:#e6dcf2; --band:#2a1a3d; --band-text:#f1ecf7; --accent:#b48ee0;
   --s1:#5b93dc; --s2:#e2733f; --s3:#2bb886; --s4:#d9a21a; --s5:#a585dc; --s6:#8e8c85;
   --c1:#5b93dc; --c2:#e2733f; --c3:#2bb886; --c4:#d9b02a; --c5:#a585dc; --c6:#e0709a; --c7:#46b8c9; --c8:#b08d62; --c9:#86a64a; --c10:#d65f5f; --c11:#7d8fd6; --c12:#a8a59c;
   --good:#3fb950; --warn:#d29922; --critical:#f85149;
-  --thbg:#1d3557; --thfg:#f3f5f9; --sub:#20262f; color-scheme:dark }
+  --thbg:#3a2552; --thfg:#f3f5f9; --sub:#20262f; color-scheme:dark }
 *{box-sizing:border-box}
 html,body{margin:0;background:var(--surface-0);color:var(--text-primary);font:15px/1.45 var(--font);font-variant-numeric:lining-nums}
 body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--band)}
@@ -2210,7 +2203,7 @@ window.quadprog=mods["quadprog"];})();
   function themeNow() {
     const t = document.documentElement.getAttribute('data-theme');
     if (t) return t;
-    return window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    return 'light';
   }
   function paintThemeBtn() { $('themebtn').textContent = themeNow() === 'dark' ? 'Light' : 'Dark'; }
   $('themebtn').addEventListener('click', () => {
