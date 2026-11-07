@@ -398,6 +398,8 @@ table.bk tr:last-child td{border-bottom:1px solid var(--ink)}
 .grid .card{height:auto}
 .grid .card .plot{flex:none;height:360px}
 .grid .card.tallc .plot{height:460px}
+#ovErpGrid .card.tallc .plot{height:560px}
+table.bk td.n{text-align:right;white-space:nowrap}
 table.bk.fixed{table-layout:fixed}
 table.bk.fixed td,table.bk.fixed th{overflow-wrap:anywhere}
 table.bk.fixed td.lab,table.bk.fixed th.lab,table.bk.fixed td:first-child{white-space:normal}
@@ -441,6 +443,7 @@ footer a{color:var(--accent)}
     <p><b>How it becomes a risk premium.</b> Each stock gets one beta for each kind of news, and each beta has a price. In the data, a unit of profit beta is paid <span class="pgcf"></span>% a month and a unit of fear beta <span class="pgdr"></span>%, a ratio of about seven to one. For the market as a whole, <span class="pbcf"></span> × <span class="pgcf"></span>% + <span class="pbdr"></span> × <span class="pgdr"></span>% gives an equity risk premium of about <span class="perp"></span>% a month (~<span class="perpa"></span>% a year), against <span class="pmu"></span>% actually earned.</p>
     <p><b>What I find.</b> The model gets the market right but not the 25 size and value portfolios: value stocks no longer carry more of the bad beta, and small growth stocks earn far less than their betas imply. Volatility news helps explain value, momentum and carry, but its price is not statistically reliable.</p>
   </div>
+  <div class="grid" id="ovErpGrid" style="margin-bottom:14px"></div>
   <div class="grid two" id="ovGrid"></div>
   <h2 class="sub">Introduction</h2>
   <div class="card prose">
@@ -739,7 +742,7 @@ const HEAT_G={what:['How strongly each portfolio moves with one kind of news (it
 const ERP_G={what:['Two estimates of the US equity risk premium over T-bills from the same VARs, set against what the market went on to earn. Solid lines are risk-based: the market\'s betas on cash-flow, discount-rate and volatility news (the news in the chart below) over the past seven years, each multiplied by its price from the 25 portfolios. Dotted lines are the VAR forecast: the average return the VAR expects over the next three years, given today\'s valuations, rates and spreads','The amber line is the realized return over the following three years, plotted at the start date, so it ends three years before the data; it is the outcome the estimates are judged against. The realized return over the past seven years is in the legend; click to show it'],
  so:['Risk-based says what the market should earn for the risks it carries; the forecast says what it is priced to earn. In the model the two should match. Since 1970 the risk-based lines average about '+num(D.erp_avg66.rb2,0)+'–'+num(D.erp_avg66.rb3,0)+'% a year, the forecast '+num(D.erp_avg66.erp2,0)+'% and the realized forward return '+num(D.erp_avg66.fwd,0)+'%, so the portfolio-fitted prices overstate the market\'s own premium by about two points','Each month, realized = VAR forecast + cash-flow news − discount-rate news; a run of positive −N<sub>DR</sub> (falling discount rates) lifts prices now and lowers the forecast later','Today the two disagree: the risk-based premium is high because the seven-year window still holds the 2020–22 shocks to profits, while the forecast is low because the price-earnings ratio is near its record'],
  how:['Annualized, in % per year of log excess return (add about 1 point for a simple return)','Seven years covers about one business cycle. The risk-based lines start in 1970, seven years into the 1963 test sample whose prices they use; the three-beta line swings more because its volatility price (t ≈ −1.8) is large and imprecise','All coefficients and prices are estimated once on the full sample, so this is an in-sample decomposition, not a real-time forecast','Use 10y / 20y / 50y / Max or drag the slider to zoom']};
-const GUIDE={ovNews:NEWS_G,fig1:NEWS_G,fig2:NEWS_G,ovScatter:SCAT_G,scCapm:SCAT_G,sc2:SCAT_G,sc3:SCAT_G,b2cf:HEAT_G,b2dr:HEAT_G,b3v:HEAT_G,
+const GUIDE={ovErp:ERP_G,ovNews:NEWS_G,fig1:NEWS_G,fig2:NEWS_G,ovScatter:SCAT_G,scCapm:SCAT_G,sc2:SCAT_G,sc3:SCAT_G,b2cf:HEAT_G,b2dr:HEAT_G,b3v:HEAT_G,
  alphas:{what:['The return each strategy earned beyond what each model can explain, % per month'],
   so:['A bar that shrinks toward zero under the three-beta model means volatility exposure explains part of that strategy\'s return'],
   how:['Compare blue (three-beta) with gold (CAPM)','Value, momentum and carry shrink; profitability and investment do not']}};
@@ -838,6 +841,7 @@ function alphaChart(div){
 }
 
 /* ---------- overview charts ---------- */
+card($('#ovErpGrid'),'ovErp','Risk says a high equity premium; valuations say a low one',`Over the past seven years, the market's betas, priced by the 25 portfolios, imply a US equity risk premium of about ${num(D.erp_now.rb2,1)}% a year (two-beta) and ${num(D.erp_now.rb3,1)}% (three-beta). Looking three years ahead from today's valuations, rates and spreads, the VARs expect about ${num(D.erp_now.erp2,1)}% and ${num(D.erp_now.erp3,1)}%, because the price-earnings ratio is near its record.`,newsChart(['rb2','rb3','erp2','erp3','fwd','act'],'% per year, log excess return'),SRC,{wide:true,tall:true});
 const ov=$('#ovGrid');
 card(ov,'ovNews','Discount-rate and volatility news dominate the crises',`Discount-rate news falls hardest in the Depression and in 2008, and volatility news rises in both: crises raise expected volatility as well as expected returns. Cash-flow news moves less (standard deviation ${pct(D.news_sd.cf,1)} a month against ${pct(D.news_sd.dr,1)} for discount-rate news).`,newsChart(['cf3','neg_dr3','v']),SRC,{tall:true});
 card(ov,'ovScatter','The three-beta model misses the corners of the grid',`Small growth earns ${num(D.realized[0],1)}% a year against ${num(D.predicted['Three-beta ICAPM'][0],1)}% predicted; points off the dotted line are pricing errors.`,scatterChart('Three-beta ICAPM','Three-beta ICAPM'),SRC,{tall:true});
