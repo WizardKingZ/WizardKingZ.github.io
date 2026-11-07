@@ -12,6 +12,8 @@ tags: ["finance", "ICAPM", "stochastic volatility", "cross-section returns"]
 
 I replicate the return decompositions of Campbell and Vuolteenaho (2004) and Campbell, Giglio, Polk, and Turley (2018), which explained the size and value “anomalies” in stock returns. Because cash-flow and discount-rate news co-move in the modern period, I find little evidence that value stocks have significantly higher cash-flow betas than growth stocks; news about expected future market volatility, however, effectively disentangles the size-and-value puzzle. Small and value stocks require a smaller hedging premium than large and growth stocks. Their methodology also shows some ability to price the abnormal returns of popular equity strategies and currency carry trade premiums.
 
+*Update: I reran these tests on public data through September 2026. The [refreshed version](/icapm/) has the updated tables and interactive charts.*
+
 ---
 
 ## Introduction
