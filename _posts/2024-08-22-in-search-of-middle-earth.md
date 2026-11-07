@@ -5,7 +5,6 @@ pillar: culture
 series: travel
 topic: New Zealand, August 2024
 math: false
-hidden: true
 summary: "A winter journey through New Zealand in search of Middle-earth, from the glaciers of Aoraki to the lakes around Glenorchy and the volcanoes of the North Island."
 tags: ["travel", "New Zealand", "nature"]
 image: /assets/images/new-zealand-2024/glenorchy-tussock.jpg
