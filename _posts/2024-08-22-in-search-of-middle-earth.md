@@ -11,7 +11,7 @@ tags: ["travel", "New Zealand", "nature"]
 image: /assets/images/new-zealand-2024/glenorchy-tussock.jpg
 ---
 
-![An old-style map of New Zealand marking Auckland, Rotorua, Wai-O-Tapu, Christchurch, Tekapo, Aoraki/Mt Cook, Lake Pukaki, Moeraki, Dunedin, Arrowtown, Queenstown, and Glenorchy, with my route by road and air](/assets/images/new-zealand-2024/nz-map.jpg)
+![An old-style map of New Zealand marking Auckland, Waitomo, Rotorua, Wai-O-Tapu, Christchurch, Tekapo, Aoraki/Mt Cook, Lake Pukaki, Oamaru, Moeraki, Dunedin, Arrowtown, Queenstown, and Glenorchy, with my route by road and air](/assets/images/new-zealand-2024/nz-map.jpg)
 *New Zealand, drawn for this post in the style of an old map. Māori names are in italics; the green dot marks a Middle-earth filming site on my route. Coastlines and lakes are approximate.*
 {: .caption}
 
@@ -79,16 +79,16 @@ In the morning the lake was still. Lake Tekapo, like the other lakes of the basi
 
 Aoraki/Mt Cook, at 3,724 meters, is the highest mountain in New Zealand, and the highest point of Zealandia that rises above the sea. In Ngāi Tahu tradition, Aoraki and his brothers were sky children whose canoe ran aground and turned to stone; the canoe is said to have become the South Island, and the brothers the peaks of the Southern Alps.
 
-I saw it the way it is best seen, from the air. Running down the mountain's eastern side is the Tasman Glacier, at about 23.5 kilometers New Zealand's longest. From above, it looks less like ice than like a river of gray rubble, because its lower reaches are buried under rock. At its foot is a lake that is only a few decades old. Meltwater ponds began to form on the glacier in the early 1970s, joined into Tasman Lake by 1990, and the lake has grown ever since as the ice retreats.
+I saw it the way it is best seen, from a helicopter. Running down the mountain's eastern side is the Tasman Glacier, at about 23.5 kilometers New Zealand's longest. From above, it looks less like ice than like a river of gray rubble, because its lower reaches are buried under rock. At its foot is a lake that is only a few decades old. Meltwater ponds began to form on the glacier in the early 1970s, joined into Tasman Lake by 1990, and the lake has grown ever since as the ice retreats.
 
 ![The Tasman Glacier seen from the air, a long gray river of ice and rock between snowy ridges, with a turquoise lake at its foot](/assets/images/new-zealand-2024/tasman-glacier-air.jpg)
-*The Tasman Glacier from the air, with Tasman Lake at its foot.*
+*The Tasman Glacier from the helicopter, with Tasman Lake at its foot.*
 {: .caption}
 
-The flight landed on the snow high above the valley. The cold was sharp and the silence was complete. Standing there, looking down a glacier toward a lake that is only a few decades old, I felt small in the right way. My own questions did not disappear, but they took their proper size.
+The helicopter landed on the snow high above the valley. The cold was sharp and the silence was complete. Standing there, looking down a glacier toward a lake that is only a few decades old, I felt small in the right way. My own questions did not disappear, but they took their proper size.
 
 ![Deep snow on a high slope above a glacier valley, with snow-covered peaks under a blue sky](/assets/images/new-zealand-2024/tasman-snow-landing.jpg)
-*The snow landing, high above the Tasman valley.*
+*The helicopter's snow landing, high above the Tasman valley.*
 {: .caption}
 
 Back on the ground, I walked part of the Hooker Valley Track, which follows the Hooker River toward the mountain through tussock and alpine scrub. Cloud sat on the peaks, and the glacial lakes below them were the same impossible turquoise as Tekapo.
@@ -114,10 +114,14 @@ What stayed with me from the Mackenzie Country was the scale: a sky with no ligh
 
 ## The Otago Coast: Stone and Time
 
-Sat 17 Aug · Moeraki, Dunedin · Day 4
+Fri 16–Sat 17 Aug · Oamaru, Moeraki, Dunedin · Days 3 and 4
 {: .dayline}
 
-The road from the mountains runs down the Waitaki valley to the Pacific coast and turns south.
+The road from the mountains runs down the Waitaki valley to the Pacific coast at Oamaru.
+
+### Oamaru: The Smallest Penguins
+
+That evening I watched the little blue penguins come home. The kororā is the world's smallest penguin, about 30 centimeters tall, with slate-blue feathers. It spends the day fishing at sea and comes ashore after dusk, in small groups, to waddle up the rocks to its burrow. The Ōamaru Blue Penguin Colony, set up in 1993 with 30 breeding pairs, protects a colony on the edge of the town, and visitors watch the return from a grandstand in the dark. Photography is not allowed during the evening viewing, since light disturbs the birds, so I have no picture of them. I did not mind. For once there was nothing to do but watch.
 
 ### The Moeraki Boulders
 
@@ -268,10 +272,16 @@ That evening I went up the Sky Tower, which opened in 1997 and at 328 meters is 
 
 ## Rotorua: Where the Ground Breathes
 
-Tue 20–Wed 21 Aug · Rotorua, Wai-O-Tapu · Days 7 and 8
+Tue 20–Wed 21 Aug · Waitomo, Rotorua, Wai-O-Tapu · Days 7 and 8
 {: .dayline}
 
-The road south from Auckland crosses green dairy country to Rotorua, on the volcanic plateau of the North Island.
+The road south from Auckland crosses green dairy country toward Rotorua, on the volcanic plateau of the North Island. On the way I stopped at Waitomo.
+
+### Waitomo: Stars Underground
+
+Below the farmland around Waitomo, underground streams have carved caves through the limestone, and their ceilings are lit by glowworms. The name is misleading: the glowworm, *Arachnocampa luminosa*, is the larva of a small fungus gnat found only in New Zealand. Each one hangs sticky threads of silk from the rock and glows to lure insects into them. Local Māori knew the caves long before Chief Tane Tinorau and the English surveyor Fred Mace explored this one in December 1887, floating in on a raft of flax stems by candlelight. Tane Tinorau and his wife, Huti, were leading visitors through it by 1889, and in 1989 the land and the cave were returned to their descendants.
+
+The tour ends with a boat ride, in silence and in the dark, through the Glowworm Grotto. Cameras are not allowed, so again I have no photo. Five days after the stars over Tekapo, I found a second night sky, this one underground and alive.
 
 ### Farm Country
 
@@ -350,6 +360,7 @@ New Zealand is easy to travel, but it is bigger and emptier than it looks on a m
 - **Biosecurity.** New Zealand protects its farms and native species strictly. Declare all food, plant, and animal products on arrival, along with outdoor gear such as hiking boots.
 - **Flying to save days.** Distances are long and roads wind through mountains. Domestic flights between Auckland, Christchurch, and Queenstown turned what would have been days of driving into hours, and let me see both islands in one trip.
 - **Driving.** Traffic keeps left. Many rural roads are two lanes with one-lane bridges, and in winter mountain roads can ice over or close, so allow more time than the map suggests.
+- **Cameras.** Two of the best experiences ban photography: the evening penguin viewing at Oamaru and the Waitomo Glowworm Cave. Plan to remember them instead.
 - **Season.** I went in August, which is winter. The days were short and cold, but the mountains were white, the skies were clear at night, and the famous spots were quiet. In winter, pack layers and expect weather to change plans.
 
 ## The Route
@@ -360,11 +371,11 @@ This is the order I followed, and the order I would follow again: south through 
 |---|---|---|---|
 | 1 | Wed 14 Aug | In flight | Flight to Auckland |
 | 2 | Thu 15 Aug | Christchurch, Tekapo | Flew to Christchurch; drove across the Canterbury Plains; stargazing at Tekapo |
-| 3 | Fri 16 Aug | Tekapo, Aoraki/Mt Cook, Lake Pukaki | Church of the Good Shepherd; flight over the Tasman Glacier with a snow landing; Hooker Valley Track; salmon at Lake Pukaki; drove to the coast |
+| 3 | Fri 16 Aug | Tekapo, Aoraki/Mt Cook, Lake Pukaki, Oamaru | Church of the Good Shepherd; helicopter over the Tasman Glacier with a snow landing; Hooker Valley Track; salmon at Lake Pukaki; little blue penguins at Oamaru |
 | 4 | Sat 17 Aug | Moeraki, Dunedin, Arrowtown, Queenstown | Moeraki Boulders; Dunedin Railway Station and Baldwin Street; Arrowtown; Fergburger |
 | 5 | Sun 18 Aug | Glenorchy, Queenstown | The Glenorchy road, Bennetts Bluff, and the lagoon boardwalk; Skyline gondola; St Peter's; crayfish |
 | 6 | Mon 19 Aug | Auckland | Flew to Auckland; Weta Workshop Unleashed; Sky Tower; Ferry Building and Queen Street |
-| 7 | Tue 20 Aug | Rotorua | Agrodome farm show and tour; Government Gardens; the Redwoods |
+| 7 | Tue 20 Aug | Waitomo, Rotorua | Waitomo Glowworm Caves; Agrodome farm show and tour; Government Gardens; the Redwoods |
 | 8 | Wed 21 Aug | Wai-O-Tapu, Auckland | Champagne Pool and Devil's Bath; Mount Eden; Ōrākei and the Savage Memorial; overnight flight home |
 | 9 | Thu 22 Aug | — | Home |
 
