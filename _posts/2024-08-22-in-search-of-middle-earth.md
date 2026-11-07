@@ -365,9 +365,9 @@ New Zealand is easy to travel, but it is bigger and emptier than it looks on a m
 
 ## The Route
 
-This is the order I followed, and the order I would follow again: south through the Mackenzie Country to the coast and the lakes, then north to the volcanic plateau.
+This is the order I would follow if I did the trip again: south through the Mackenzie Country to the coast and the lakes, then north to the volcanic plateau, with each stop on the road it sits on, so Waitomo falls on the drive from Auckland to Rotorua. My own days ran in a slightly different order.
 
-| Day | Date | Where | What I did |
+| Day | Date | Where | What to do |
 |---|---|---|---|
 | 1 | Wed 14 Aug | In flight | Flight to Auckland |
 | 2 | Thu 15 Aug | Christchurch, Tekapo | Flew to Christchurch; drove across the Canterbury Plains; stargazing at Tekapo |
