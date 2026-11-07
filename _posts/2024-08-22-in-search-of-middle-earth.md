@@ -47,6 +47,7 @@ The films used all of this. Peter Jackson shot the three *Lord of the Rings* fil
 ## The Mackenzie Country: Sky, Ice, and Perspective
 
 Wed 14–Fri 16 Aug · Christchurch, Tekapo, Aoraki/Mt Cook, Lake Pukaki · Days 1–3
+{: .dayline}
 
 I flew overnight to Auckland and on to Christchurch. The first kiwi I saw in New Zealand was on a billboard at the baggage claim, selling a retirement savings plan. It was also the last.
 
@@ -114,6 +115,7 @@ What stayed with me from the Mackenzie Country was the scale: a sky with no ligh
 ## The Otago Coast: Stone and Time
 
 Sat 17 Aug · Moeraki, Dunedin · Day 4
+{: .dayline}
 
 The road from the mountains runs down the Waitaki valley to the Pacific coast and turns south.
 
@@ -146,6 +148,7 @@ The Otago coast taught me patience. The boulders took millions of years, the sta
 ## The Southern Lakes: Into Middle-earth
 
 Sat 17–Sun 18 Aug · Arrowtown, Queenstown, Glenorchy · Days 4 and 5
+{: .dayline}
 
 ### Arrowtown and the Ford of Bruinen
 
@@ -231,6 +234,7 @@ The Southern Lakes taught me that the story was real, but quieter than the films
 ## Auckland: Behind the Curtain
 
 Mon 19 Aug · Auckland · Day 6
+{: .dayline}
 
 I left Queenstown on a clear morning, with fresh snow on the Remarkables above the airport.
 
@@ -265,6 +269,7 @@ That evening I went up the Sky Tower, which opened in 1997 and at 328 meters is 
 ## Rotorua: Where the Ground Breathes
 
 Tue 20–Wed 21 Aug · Rotorua, Wai-O-Tapu · Days 7 and 8
+{: .dayline}
 
 The road south from Auckland crosses green dairy country to Rotorua, on the volcanic plateau of the North Island.
 
@@ -314,6 +319,7 @@ The books end with fire: the long journey finishes at the volcano where the Ring
 ## Auckland: Standing in a Crater
 
 Wed 21 Aug · Auckland · Day 8
+{: .dayline}
 
 On the last afternoon, back in Auckland, I climbed Maungawhau/Mount Eden. At 196 meters it is the highest natural point on the Auckland isthmus, and it is one of about 53 volcanoes in the Auckland volcanic field, on which most of the city is built. The volcano last erupted about 28,000 years ago and left a bowl-shaped crater 50 meters deep. The crater is tapu, sacred, known as Te Ipu Kai a Mataaho, the food bowl of Mataaho, the god of things hidden in the ground, and visitors are asked not to enter it. I stood on the rim with my shadow stretched across the grass.
 
