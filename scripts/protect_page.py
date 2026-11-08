@@ -51,7 +51,7 @@ FORBIDDEN = json.loads(base64.b64decode(
 
 
 def site_edits(head, app, tail):
-    """Public-site presentation: JZ logo box, no To-do tab and no PDF download."""
+    """Public-site presentation: "Macro Monitor" name, JZ logo box, no To-do tab and no PDF download."""
     app = re.sub(r"\{id:'todo',\s*label:'[^']*'\},?\s*", "", app)
     m = re.search(r"const TODO\s*=\s*\[", app)
     if m:
@@ -76,6 +76,8 @@ def site_edits(head, app, tail):
     html = head + SLOT + tail
     html = re.sub(r'<section id="todo" class="tab"(?! hidden)', '<section id="todo" class="tab" hidden style="display:none!important"', html)
     html = html.replace('class="mark">T<', 'class="mark">JZ<')  # site logo box
+    html = html.replace("Trident Macro Monitor", "Macro Monitor")  # public name
+    app = app.replace("Trident Macro Monitor", "Macro Monitor")
     if "#pdfbtn,#pdfdlg{display:none!important}" not in html:
         html = html.replace("</style>", "#pdfbtn,#pdfdlg{display:none!important}\n</style>", 1)
     return html, app

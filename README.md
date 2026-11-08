@@ -1,6 +1,6 @@
 # WizardKingZ.github.io
 
-Johnew Zhang's personal site, built with Jekyll and hosted on GitHub Pages. The design follows the same house format as the Trident Macro Monitor and Johnew's Kitchen: a navy band, underline tabs, ruled section heads and one accent colour per pillar.
+Johnew Zhang's personal site, built with Jekyll and hosted on GitHub Pages. The design follows the same house format as the Macro Monitor and Johnew's Kitchen: a navy band, underline tabs, ruled section heads and one accent colour per pillar.
 
 ## Writing a post
 
@@ -35,7 +35,7 @@ python3 scripts/add_page.py ~/Downloads/page.html my-page \
 
 This writes `my-page/index.html` and lists the page in `_data/standalone.yml`, so it shows on the home page and in its pillar's tab. Run the same command again to replace the HTML with a newer copy.
 
-### Trident Macro Monitor
+### Macro Monitor
 
 A scheduled task refreshes this copy every Sunday evening, after the private weekly Monitor update has published. It reads the private artifact, runs the two commands below, checks the page, and pushes it. It never changes the private Monitor or its update. To do it by hand, copy in the new export, then pack its data so the page source isn't readable:
 
@@ -44,7 +44,7 @@ python3 scripts/add_page.py ~/Downloads/trident-macro-monitor.html macro-monitor
 python3 scripts/protect_page.py macro-monitor/index.html
 ```
 
-`protect_page.py` rounds the data, swaps internal file names for provider names, minifies the code, and gzips and encodes everything. It also drops the PDF library and adds the copyright line to the footer. The browser unpacks it on load. This stops casual copying but not a determined visitor. It needs `node`.
+`protect_page.py` shows the page as "Macro Monitor" with a JZ logo box, rounds the data, swaps internal file names for provider names, minifies the code, and gzips and encodes everything. It also drops the PDF library and adds the copyright line to the footer. The browser unpacks it on load. This stops casual copying but not a determined visitor. It needs `node`.
 
 ### Johnew's Kitchen
 
