@@ -78,6 +78,14 @@ def site_edits(head, app, tail):
     html = html.replace('class="mark">T<', 'class="mark">JZ<')  # site logo box
     html = html.replace("Trident Macro Monitor", "Macro Monitor")  # public name
     app = app.replace("Trident Macro Monitor", "Macro Monitor")
+    # Broker named only as "Market data" on the public site.
+    for old, new in [("'Interactive Brokers'", "'Market data'"),
+                     ('"IBKR (', '"Market data ('),
+                     ("'IBKR ETFs'", "'ETF prices'"),
+                     ("'IBKR fed funds futures'", "'Fed funds futures'"),
+                     ("Interactive Brokers", "Market data")]:
+        app = app.replace(old, new)
+        html = html.replace(old, new)
     if "#pdfbtn,#pdfdlg{display:none!important}" not in html:
         html = html.replace("</style>", "#pdfbtn,#pdfdlg{display:none!important}\n</style>", 1)
     return html, app
@@ -276,6 +284,8 @@ def main():
     # Self-check before writing: nothing licensed or private may ship.
     bad = [k for k in data["series"] if re.match(r"(jpm|gs)_", k)]
     bad += [s for s in FORBIDDEN if s in code or s in html]
+    bad += [s for s in ("Interactive Brokers",) if s in code or s in html]
+    bad += ["IBKR in source " + k for k, s in data["series"].items() if "IBKR" in str(s.get("source", ""))]
     if bad:
         sys.exit("Refusing to write; found: " + ", ".join(bad[:10]))
 
